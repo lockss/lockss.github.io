@@ -17,7 +17,7 @@ title: LOCKSS Developer Pages
 email: lockss-support (at) lockss (dot) org
 description: >- # this means to ignore newlines until "baseurl:"
   This GitHub Pages site is the home of the LOCKSS developer community. The
-  Program at Stanford University Libraries maintains distributed digital
+  LOCKSS Program at Stanford University Libraries maintains distributed digital
   preservation software, including the classic LOCKSS daemon and the LOCKSS
   suite of Web Services components.
 baseurl: "" # the subpath of your site, e.g. /blog
