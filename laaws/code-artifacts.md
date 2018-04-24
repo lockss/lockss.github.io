@@ -6,40 +6,6 @@ permalink: /laaws/code-artifacts/
 
 The Maven code artifacts of the LOCKSS software are:
 
-## POM Files
-
-### Parent POMs
-
-*   `org.lockss:lockss-parent-pom`
-    *   Stable version: 1.8.0
-    *   Development version: 1.9.0-SNAPSHOT
-    *   GitHub: https://github.com/lockss/lockss-parent-pom
-
-### Bundles
-
-* `org.lockss:lockss-core-bundle`
-    *   Maven dependency type: `<type>pom</type>`
-    *   Stable version: 1.1.1
-    *   Development version: 1.2.0-SNAPSHOT
-    *   Note: Unless otherwise specified, version matches `lockss-core` version
-    *   GitHub: https://github.com/lockss/lockss-core-bundle
-*   `org.lockss:lockss-junit4-bundle`
-    *   Maven dependency type: `<type>pom</type>`
-    *   Maven dependency scope: `<scope>test</scope>`
-    *   Stable version: 1.1.0
-    *   Development version: 1.2.0-SNAPSHOT
-    *   GitHub: https://github.com/lockss/lockss-junit4-bundle
-*   `org.lockss:lockss-junit5-bundle`
-    *   Maven dependency type: `<type>pom</type>`
-    *   Maven dependency scope: `<scope>test</scope>`
-    *   Stable version: 1.1.0
-    *   Development version: 1.2.0-SNAPSHOT
-    *   GitHub: https://github.com/lockss/lockss-junit5-bundle
-*   `org.lockss:lockss-spring-bundle`
-    *   Stable version: 1.7.0
-    *   Development version: 1.8.0-SNAPSHOT
-    *   GitHub: https://github.com/lockss/lockss-spring-bundle
-
 ## Core
 
 *   `org.lockss.laaws:lockss-core`
@@ -61,6 +27,68 @@ The Maven code artifacts of the LOCKSS software are:
     *   Stable version: 1.5.0
     *   Development version: 1.6.0-SNAPSHOT
     *   GitHub: https://github.com/lockss/laaws-repository-client
+
+## Metadata
+
+*   `org.lockss.laaws:laaws-metadata-extraction-service`
+    *   Stable version: 1.0.0
+    *   Development version: 1.1.0-SNAPSHOT
+    *   GitHub: https://github.com/lockss/laaws-metadataextractor
+*   `org.lockss.laaws:laaws-metadata-service`
+    *   Development version: 1.0.0-SNAPSHOT
+    *   GitHub: https://github.com/lockss/laaws-metadataservice
+*   `org.lockss.laaws:laaws-metadataextractor-common`
+    *   Stable version: 1.2.0
+    *   Development version: 1.3.0-SNAPSHOT
+    *   GitHub: https://github.com/lockss/laaws-metadataextractor-common
+
+## Infrastructural
+
+*   `org.lockss:lockss-configuration-service`
+    *   Stable version: 1.0.0
+    *   Development version: 1.1.0-SNAPSHOT
+    *   GitHub: https://github.com/lockss/laaws-configservice
+
+## Ancillary
+
+### Parent POMs
+
+*   `org.lockss:lockss-parent-pom`
+    *   Stable version: 1.8.0
+    *   Development version: 1.9.0-SNAPSHOT
+    *   GitHub: https://github.com/lockss/lockss-parent-pom
+
+### POM Bundles
+
+* `org.lockss:lockss-core-bundle`
+    *   Maven dependency type: `<type>pom</type>`
+    *   Stable version: 1.1.1
+    *   Development version: 1.2.0-SNAPSHOT
+    *   Note: Unless otherwise specified, version matches `lockss-core` version
+    *   GitHub: https://github.com/lockss/lockss-core-bundle
+*   `org.lockss:lockss-junit4-bundle`
+    *   Maven dependency type: `<type>pom</type>`
+    *   Maven dependency scope: `<scope>test</scope>`
+    *   Stable version: 1.1.0
+    *   Development version: 1.2.0-SNAPSHOT
+    *   GitHub: https://github.com/lockss/lockss-junit4-bundle
+*   `org.lockss:lockss-junit5-bundle`
+    *   Maven dependency type: `<type>pom</type>`
+    *   Maven dependency scope: `<scope>test</scope>`
+    *   Stable version: 1.1.0
+    *   Development version: 1.2.0-SNAPSHOT
+    *   GitHub: https://github.com/lockss/lockss-junit5-bundle
+
+# Code Bundles
+
+*   `org.lockss:lockss-util`
+    *   Stable version: 1.6.0
+    *   Development version: 1.7.0-SNAPSHOT
+    *   GitHub: https://github.com/lockss/lockss-util
+*   `org.lockss:lockss-spring-bundle`
+    *   Stable version: 1.7.0
+    *   Development version: 1.8.0-SNAPSHOT
+    *   GitHub: https://github.com/lockss/lockss-spring-bundle
 
 ## Attic
 
