@@ -11,7 +11,7 @@ The Maven code artifacts of the LOCKSS software are:
 *   `org.lockss.laaws:lockss-core`
     *   Stable version: 1.1.1
     *   Development version: 1.2.0-SNAPSHOT
-    *   GitHub: https://github.com/lockss/lockss-core
+    *   GitHub: <https://github.com/lockss/lockss-core>
 
 ## Repository
 
