@@ -10,9 +10,9 @@ layout: home
 * [Restoring content from an ADPN node](http://www.adpn.org/docs/pdf/UA_LOCKSS_restoration_documentation.pdf) (2010) (PDF)
 
 ## Discovery system integration<a name="discovery_system_integration"></a>
-* [Integrate with link resolvers and catalog systems](https://lockss.org/locksswiki/files/Link_Resolver_Integration_White_Paper.pdf) (2010) (PDF)
-* [Integrate with 360 Link](https://www.lockss.org/locksswp/wp-content/uploads/2012/08/360-Link-Integration-Guide.pdf) (2012) (PDF)
-* [Integrate with SFX](https://www.lockss.org/locksswp/wp-content/uploads/2012/03/SFX-Integration-Guide.pdf) (2012) (PDF)
+* [Integrate with link resolvers and catalog systems](https://web.stanford.edu/group/lockss/documentation/Accessing_LOCKSS_Content_through_OPACs_and_Link_Resolvers.pdf) (2010) (PDF)
+* [Integrate with 360 Link](https://web.stanford.edu/group/lockss/documentation/LOCKSS_and_360_Link_Integration_Guide.pdf) (2012) (PDF)
+* [Integrate with SFX](https://web.stanford.edu/group/lockss/documentation/SFX_Integration_Guide.pdf) (2012) (PDF)
 * [Integrate with SFX](https://vimeo.com/30661065) (2012)
 * [Integrate with WebBridge](https://www.lockss.org/locksswp/wp-content/uploads/2012/03/Innovative-WebBridge-LR-Integration-Guide.pdf) (2014) (PDF)
 
