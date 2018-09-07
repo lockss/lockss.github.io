@@ -16,6 +16,10 @@ layout: home
 * [Integrate with SFX](https://vimeo.com/30661065) (2012)
 * [Integrate with WebBridge](https://www.lockss.org/locksswp/wp-content/uploads/2012/03/Innovative-WebBridge-LR-Integration-Guide.pdf) (2014) (PDF)
 
+## Network setup<a name="network_setup"></a>
+* [Network setup overview](https://web.stanford.edu/group/lockss/documentation/How_to_set_up_a_Private_LOCKSS_Network_(PLN).pdf) (2016) (PDF)
+* [Network setup overview and node setup configuration](https://plnwiki.lockss.org/index.php?title=LOCKSS_Technical_Manual) (2016)
+
 ## Node management<a name="node_management"></a>
 * [Add journal titles to be preserved](https://www.lockss.org/support/use-a-lockss-box/adding-titles/) (2012)
 * [Add journal titles to be preserved](https://www.youtube.com/watch?v=LNujd_mEHW8) (2012)
@@ -26,8 +30,10 @@ layout: home
 
 ## Node setup<a name="node_setup"></a>
 * [ADPN recommended node hardware specifications](http://www.adpn.org/docs/pdf/ADPNet_Technical_Specifications.pdf) (2015) (PDF)
+* [Configure LCAP to use SSL](https://web.stanford.edu/group/lockss/documentation/LCAP_over_SSL.docx) (2012) (DOCX)
+* [Configure a node to join the LOCKSS-USDocs network](https://web.stanford.edu/group/lockss/documentation/U.S._Documents_Private_LOCKSS_Network_Configuration.docx) (2012) (DOCX)
 * [MetaArchive node hardware, software, staffing specifications](https://metaarchive.org/wp-content/uploads/2017/03/ma_technicalspecifications.pdf) (2015)
-* [Network setup overview and node setup configuration](https://plnwiki.lockss.org/index.php?title=LOCKSS_Technical_Manual) (2016)
+* [Software configuration](https://web.stanford.edu/group/lockss/documentation/LOCKSS_Network_Administration.pdf) (2012) (PDF)
 * [Software overview and configuration](http://www.adpn.org/wiki/LOCKSS_Software) (2016)
 
 ## Ingest content<a name="ingest_content"></a>
@@ -39,6 +45,7 @@ layout: home
 * [Stage content and develop plugin for ingest](http://www.adpn.org/docs/pdf/LOCKSS_Step_By_Step_Guide.pdf) (2013) (PDF)
 
 ## Technical architecture<a name="technical_architecture"></a>
+* [Basic LOCKSS network architecture diagram](https://web.stanford.edu/group/lockss/documentation/generic_PLN_architecture.pdf) (2016) (PDF)
 * [LOCKSS basic concepts](https://documents.clockss.org/index.php?title=LOCKSS:_Basic_Concepts) (2018)
 * [LOCKSS format migration](https://documents.clockss.org/index.php?title=LOCKSS:_Format_Migration) (2018)
 * [LOCKSS Content Audit Protocol](https://documents.clockss.org/index.php?title=LOCKSS:_Polling_and_Repair_Protocol) (2018)
