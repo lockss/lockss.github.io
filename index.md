@@ -33,6 +33,7 @@ layout: home
 * [Configure LCAP to use SSL](https://web.stanford.edu/group/lockss/documentation/LCAP_over_SSL.docx) (2012) (DOCX)
 * [Configure a node to join the LOCKSS-USDocs network](https://web.stanford.edu/group/lockss/documentation/U.S._Documents_Private_LOCKSS_Network_Configuration.docx) (2012) (DOCX)
 * [MetaArchive node hardware, software, staffing specifications](https://metaarchive.org/wp-content/uploads/2017/03/ma_technicalspecifications.pdf) (2015)
+* [Setup a LOCKSS node](https://web.stanford.edu/group/lockss/documentation/LOCKSS_Node_Setup_Guide.pdf) (2018) (PDF)
 * [Software configuration](https://web.stanford.edu/group/lockss/documentation/LOCKSS_Network_Administration.pdf) (2012) (PDF)
 * [Software overview and configuration](http://www.adpn.org/wiki/LOCKSS_Software) (2016)
 
