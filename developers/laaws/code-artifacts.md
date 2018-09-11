@@ -1,7 +1,7 @@
 ---
 layout: page
+title: Code Artifacts
 ---
-# Code Artifacts
 
 The Maven code artifacts of the LOCKSS software are:
 

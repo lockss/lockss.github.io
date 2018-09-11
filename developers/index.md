@@ -1,7 +1,7 @@
 ---
 layout: page
+title: Developers
 ---
-# Developers
 
 **Welcome to the LOCKSS Developers Portal.**
 

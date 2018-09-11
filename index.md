@@ -1,5 +1,6 @@
 ---
 layout: page
+title: LOCKSS Documentation Portal
 ---
 
 ## Access preserved content<a id="access_preserved_content"></a>

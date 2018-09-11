@@ -1,7 +1,7 @@
 ---
 layout: page
+title: LAAWS
 ---
-# LAAWS
 
 **Welcome to the LAAWS Portal.**
 
