@@ -1,6 +1,5 @@
 ---
 layout: page
-permalink: /developers/laaws/code-artifacts
 ---
 # Code Artifacts
 
