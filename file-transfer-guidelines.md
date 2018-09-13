@@ -20,8 +20,7 @@ To ingest content via file transfer technology for LOCKSS network preservation, 
 * Already supported formats include RIS, JATS, ONIX, PubMed, & CrossRef in addition to some popular publishing platform internal schemas.  
   * For JATS examples for journal article content, see: [http://jats.nlm.nih.gov/index.html](http://jats.nlm.nih.gov/index.html).
   * Sample files can be found at: [http://jats.nlm.nih.gov/publishing/tag-library/1.1d1/n-cq42.html](http://jats.nlm.nih.gov/publishing/tag-library/1.1d1/n-cq42.html).
-  * For ONIX examples for book content, see:
-  * For specific information about what is allowed in the schema, go to: [http://www.editeur.org/93/Release-3.0-Downloads/](http://www.editeur.org/93/Release-3.0-Downloads/).
+  * For ONIX examples for book content, see: [http://www.editeur.org/93/Release-3.0-Downloads/](http://www.editeur.org/93/Release-3.0-Downloads/).
   * Sample files can be found at: [http://www.editeur.org/files/ONIX%203/ONIX_Books_3.0_sample_2.zip](http://www.editeur.org/files/ONIX%203/ONIX_Books_3.0_sample_2.zip).
 * Metadata to be supplied: DOI, publisher, publication date, ISSN or ISBN, and as appropriate: publication title, article/book title, series title, volume, issue.
 * DOIs for journal articles and book titles are required.
