@@ -4,7 +4,7 @@ title: Home
 ---
 
 ## Access preserved content<a id="access_preserved_content"></a>
-* [Access modes for viewing preserved e-resources](https://www.lockss.org/support/use-a-lockss-box/view-your-preserved-content/) (2012)
+* [Access modes for viewing preserved e-resources](https://web.stanford.edu/group/lockss/documentation/Providing_Access_with_LOCKSS_Boxes.pdf) (2012) (PDF)
 * [Restoring content from an ADPN node](http://www.adpn.org/docs/pdf/UA_LOCKSS_restoration_documentation.pdf) (2010) (PDF)
 
 ## Discovery system integration<a id="discovery_system_integration"></a>
