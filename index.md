@@ -40,6 +40,7 @@ title: Home
 * [Annotated plugin](https://plnwiki.lockss.org/index.php?title=Plugins/Plugin_XML_Format) (2013)
 * [Facilitate content ingest by web harvest](web-harvest-guidelines.md) (2018)
 * [Register IP address to preserve Atypon content in Global LOCKSS Network node](https://www.lockss.org/support/use-a-lockss-box/adding-titles/publisher-ip-address-registration-contacts-for-global-lockss-network/) (2014)
+* [Setup file transfer content stream](file-transfer-guidelines.md) (2018)
 * [Setup file transfer content stream for CLOCKSS](https://www.clockss.org/clocksswiki/files/File_Transfer_Guidelines_-_CLOCKSS.pdf) (2016) (PDF)
 * [Stage content and develop plugin for ingest](http://www.adpn.org/docs/pdf/LOCKSS_Step_By_Step_Guide.pdf) (2013) (PDF)
 
