@@ -12,7 +12,7 @@ title: Home
 * [Integrate with 360 Link](https://web.stanford.edu/group/lockss/documentation/LOCKSS_and_360_Link_Integration_Guide.pdf) (2012) (PDF)
 * [Integrate with SFX](https://web.stanford.edu/group/lockss/documentation/SFX_Integration_Guide.pdf) (2012) (PDF)
 * [Integrate with SFX](https://vimeo.com/30661065) (2012)
-* [Integrate with WebBridge](https://www.lockss.org/locksswp/wp-content/uploads/2012/03/Innovative-WebBridge-LR-Integration-Guide.pdf) (2014) (PDF)
+* [Integrate with WebBridge](https://web.stanford.edu/group/lockss/documentation/WebBridge_LR_Integration_Guide.pdf) (2014) (PDF)
 
 ## Network setup<a id="network_setup"></a>
 * [Network setup overview](https://web.stanford.edu/group/lockss/documentation/How_to_set_up_a_Private_LOCKSS_Network_(PLN).pdf) (2016) (PDF)
@@ -38,7 +38,7 @@ title: Home
 ## Ingest content<a id="ingest_content"></a>
 * [Annotated ADPN plugin](http://www.adpn.org/docs/pdf/ADPNAnnotation.pdf) (2012) (PDF)
 * [Annotated plugin](https://plnwiki.lockss.org/index.php?title=Plugins/Plugin_XML_Format) (2013)
-* [Facilitate content ingest by web harvest](https://www.lockss.org/support/prepare-your-content/) (2011)
+* [Facilitate content ingest by web harvest](web-harvest-guidelines.md) (2018)
 * [Register IP address to preserve Atypon content in Global LOCKSS Network node](https://www.lockss.org/support/use-a-lockss-box/adding-titles/publisher-ip-address-registration-contacts-for-global-lockss-network/) (2014)
 * [Setup file transfer content stream for CLOCKSS](https://www.clockss.org/clocksswiki/files/File_Transfer_Guidelines_-_CLOCKSS.pdf) (2016) (PDF)
 * [Stage content and develop plugin for ingest](http://www.adpn.org/docs/pdf/LOCKSS_Step_By_Step_Guide.pdf) (2013) (PDF)
