@@ -19,7 +19,7 @@ title: Home
 * [Network setup overview and node setup configuration](https://plnwiki.lockss.org/index.php?title=LOCKSS_Technical_Manual) (2016)
 
 ## Node management<a id="node_management"></a>
-* [Add journal titles to be preserved](https://www.lockss.org/support/use-a-lockss-box/adding-titles/) (2012)
+* [Add journal titles to be preserved](https://web.stanford.edu/group/lockss/documentation/Adding_Titles.pdf) (2012) (PDF)
 * [Add journal titles to be preserved](https://www.youtube.com/watch?v=LNujd_mEHW8) (2012)
 * [Add, monitor, remove, and access preserved content](http://www.lockssalliance.ac.uk/files/2012/01/LOCKSS_Quick_Start_Reference_v1.2.pdf) (2012) (PDF)
 * [Monitor content for collection](https://www.youtube.com/watch?v=_iicceVKKFw) (2012)
@@ -39,7 +39,7 @@ title: Home
 * [Annotated ADPN plugin](http://www.adpn.org/docs/pdf/ADPNAnnotation.pdf) (2012) (PDF)
 * [Annotated plugin](https://plnwiki.lockss.org/index.php?title=Plugins/Plugin_XML_Format) (2013)
 * [Facilitate content ingest by web harvest](web-harvest-guidelines.md) (2018)
-* [Register IP address to preserve Atypon content in Global LOCKSS Network node](https://www.lockss.org/support/use-a-lockss-box/adding-titles/publisher-ip-address-registration-contacts-for-global-lockss-network/) (2014)
+* [Register IP address to preserve Atypon content in Global LOCKSS Network node](https://web.stanford.edu/group/lockss/documentation/Publisher_IP_Address_Registration_Contacts_for_Global_LOCKSS_Network.pdf) (2014) (PDF)
 * [Setup file transfer content stream](file-transfer-guidelines.md) (2018)
 * [Setup file transfer content stream for CLOCKSS](https://www.clockss.org/clocksswiki/files/File_Transfer_Guidelines_-_CLOCKSS.pdf) (2016) (PDF)
 * [Stage content and develop plugin for ingest](http://www.adpn.org/docs/pdf/LOCKSS_Step_By_Step_Guide.pdf) (2013) (PDF)
