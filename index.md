@@ -23,6 +23,7 @@ title: Home
 * [Add journal titles to be preserved](https://web.stanford.edu/group/lockss/documentation/Adding_Titles.pdf) (2012) (PDF)
 * [Add journal titles to be preserved](https://www.youtube.com/watch?v=LNujd_mEHW8) (2012)
 * [Add, monitor, remove, and access preserved content](http://www.lockssalliance.ac.uk/files/2012/01/LOCKSS_Quick_Start_Reference_v1.2.pdf) (2012) (PDF)
+* [Manage subscriptions to publication titles](https://web.stanford.edu/group/lockss/documentation/Subscription_Administration_Guide.pdf) (2013) (PDF)
 * [Monitor content for collection](https://www.youtube.com/watch?v=_iicceVKKFw) (2012)
 * [User interface guide](https://www.metaarchive.org/public/resources/Lockss_UI_Guide.pdf) (2011) (PDF)
 * [User interface walkthrough](https://www.youtube.com/watch?v=aZe75OMdisM) (2012)
