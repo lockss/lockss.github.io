@@ -3,8 +3,7 @@ layout: page
 title: Developers
 ---
 
-**Welcome to the LOCKSS Developers Portal.**
+**Table of Contents**
 
-*This site is under construction.*
-
-*   [LAAWS](/developers/laaws)
+*   [LAAWS re-architecture initiative](/developers/laaws)
+*   [Release notes](release-notes.md)
