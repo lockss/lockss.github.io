@@ -1,186 +1,185 @@
 <!doctype html>
 <html>
   <head>
-    <title>LOCKSS Repository Service REST API</title>
+    <title>LAAWS Crawler Service API</title>
     <style type="text/css">
       body {
-	font-family: Trebuchet MS, sans-serif;
-	font-size: 15px;
-	color: #444;
-	margin-right: 24px;
-}
-
-h1	{
-	font-size: 25px;
-}
-h2	{
-	font-size: 20px;
-}
-h3	{
-	font-size: 16px;
-	font-weight: bold;
-}
-hr	{
-	height: 1px;
-	border: 0;
-	color: #ddd;
-	background-color: #ddd;
-}
-
-.app-desc {
-  clear: both;
-  margin-left: 20px;
-}
-.param-name {
-  width: 100%;
-}
-.license-info {
-  margin-left: 20px;
-}
-
-.license-url {
-  margin-left: 20px;
-}
-
-.model {
-  margin: 0 0 0px 20px;
-}
-
-.method {
-  margin-left: 20px;
-}
-
-.method-notes	{
-	margin: 10px 0 20px 0;
-	font-size: 90%;
-	color: #555;
-}
-
-pre {
-  padding: 10px;
-  margin-bottom: 2px;
-}
-
-.http-method {
- text-transform: uppercase;
-}
-
-pre.get {
-  background-color: #0f6ab4;
-}
-
-pre.post {
-  background-color: #10a54a;
-}
-
-pre.put {
-  background-color: #c5862b;
-}
-
-pre.delete {
-  background-color: #a41e22;
-}
-
-.huge	{
-	color: #fff;
-}
-
-pre.example {
-  background-color: #f3f3f3;
-  padding: 10px;
-  border: 1px solid #ddd;
-}
-
-code {
-  white-space: pre;
-}
-
-.nickname {
-  font-weight: bold;
-}
-
-.method-path {
-  font-size: 1.5em;
-  background-color: #0f6ab4;
-}
-
-.up {
-  float:right;
-}
-
-.parameter {
-  width: 500px;
-}
-
-.param {
-  width: 500px;
-  padding: 10px 0 0 20px;
-  font-weight: bold;
-}
-
-.param-desc {
-  width: 700px;
-  padding: 0 0 0 20px;
-  color: #777;
-}
-
-.param-type {
-  font-style: italic;
-}
-
-.param-enum-header {
-width: 700px;
-padding: 0 0 0 60px;
-color: #777;
-font-weight: bold;
-}
-
-.param-enum {
-width: 700px;
-padding: 0 0 0 80px;
-color: #777;
-font-style: italic;
-}
-
-.field-label {
-  padding: 0;
-  margin: 0;
-  clear: both;
-}
-
-.field-items	{
-	padding: 0 0 15px 0;
-	margin-bottom: 15px;
-}
-
-.return-type {
-  clear: both;
-  padding-bottom: 10px;
-}
-
-.param-header {
-  font-weight: bold;
-}
-
-.method-tags {
-  text-align: right;
-}
-
-.method-tag {
-  background: none repeat scroll 0% 0% #24A600;
-  border-radius: 3px;
-  padding: 2px 10px;
-  margin: 2px;
-  color: #FFF;
-  display: inline-block;
-  text-decoration: none;
-}
-
+      	font-family: Trebuchet MS, sans-serif;
+      	font-size: 15px;
+      	color: #444;
+      	margin-right: 24px;
+      }
+      
+      h1	{
+      	font-size: 25px;
+      }
+      h2	{
+      	font-size: 20px;
+      }
+      h3	{
+      	font-size: 16px;
+      	font-weight: bold;
+      }
+      hr	{
+      	height: 1px;
+      	border: 0;
+      	color: #ddd;
+      	background-color: #ddd;
+      }
+      
+      .app-desc {
+        clear: both;
+        margin-left: 20px;
+      }
+      .param-name {
+        width: 100%;
+      }
+      .license-info {
+        margin-left: 20px;
+      }
+      
+      .license-url {
+        margin-left: 20px;
+      }
+      
+      .model {
+        margin: 0 0 0px 20px;
+      }
+      
+      .method {
+        margin-left: 20px;
+      }
+      
+      .method-notes	{
+      	margin: 10px 0 20px 0;
+      	font-size: 90%;
+      	color: #555;
+      }
+      
+      pre {
+        padding: 10px;
+        margin-bottom: 2px;
+      }
+      
+      .http-method {
+       text-transform: uppercase;
+      }
+      
+      pre.get {
+        background-color: #0f6ab4;
+      }
+      
+      pre.post {
+        background-color: #10a54a;
+      }
+      
+      pre.put {
+        background-color: #c5862b;
+      }
+      
+      pre.delete {
+        background-color: #a41e22;
+      }
+      
+      .huge	{
+      	color: #fff;
+      }
+      
+      pre.example {
+        background-color: #f3f3f3;
+        padding: 10px;
+        border: 1px solid #ddd;
+      }
+      
+      code {
+        white-space: pre;
+      }
+      
+      .nickname {
+        font-weight: bold;
+      }
+      
+      .method-path {
+        font-size: 1.5em;
+        background-color: #0f6ab4;
+      }
+      
+      .up {
+        float:right;
+      }
+      
+      .parameter {
+        width: 500px;
+      }
+      
+      .param {
+        width: 500px;
+        padding: 10px 0 0 20px;
+        font-weight: bold;
+      }
+      
+      .param-desc {
+        width: 700px;
+        padding: 0 0 0 20px;
+        color: #777;
+      }
+      
+      .param-type {
+        font-style: italic;
+      }
+      
+      .param-enum-header {
+      width: 700px;
+      padding: 0 0 0 60px;
+      color: #777;
+      font-weight: bold;
+      }
+      
+      .param-enum {
+      width: 700px;
+      padding: 0 0 0 80px;
+      color: #777;
+      font-style: italic;
+      }
+      
+      .field-label {
+        padding: 0;
+        margin: 0;
+        clear: both;
+      }
+      
+      .field-items	{
+      	padding: 0 0 15px 0;
+      	margin-bottom: 15px;
+      }
+      
+      .return-type {
+        clear: both;
+        padding-bottom: 10px;
+      }
+      
+      .param-header {
+        font-weight: bold;
+      }
+      
+      .method-tags {
+        text-align: right;
+      }
+      
+      .method-tag {
+        background: none repeat scroll 0% 0% #24A600;
+        border-radius: 3px;
+        padding: 2px 10px;
+        margin: 2px;
+        color: #FFF;
+        display: inline-block;
+        text-decoration: none;
+      }
     </style>
   </head>
   <body>
-  <h1>LOCKSS Repository Service REST API</h1>
-    <div class="app-desc">API of the LOCKSS Repository REST Service</div>
+  <h1>LAAWS Crawler Service API</h1>
+    <div class="app-desc">An API for managing  crawler tasks</div>
     <div class="app-desc">More information: <a href="https://www.lockss.org/">https://www.lockss.org/</a></div>
     <div class="app-desc">Contact Info: <a href="lockss-support@lockss.org">lockss-support@lockss.org</a></div>
     <div class="app-desc">Version: 1.0.0</div>
@@ -188,84 +187,67 @@ font-style: italic;
     <div class="license-info">BSD-3-Clause</div>
     <div class="license-url">https://www.lockss.org/support/open-source-license/</div>
   <h2>Access</h2>
+    <ol>
+      <li>HTTP Basic Authentication</li>
+    </ol>
 
   <h2><a name="__Methods">Methods</a></h2>
   [ Jump to <a href="#__Models">Models</a> ]
 
   <h3>Table of Contents </h3>
   <div class="method-summary"></div>
-  <h4><a href="#Collections">Collections</a></h4>
+  <h4><a href="#Crawlers">Crawlers</a></h4>
   <ul>
-  <li><a href="#createArtifact"><code><span class="http-method">post</span> /collections/{collectionid}/artifacts</code></a></li>
-  <li><a href="#deleteArtifact"><code><span class="http-method">delete</span> /collections/{collectionid}/artifacts/{artifactid}</code></a></li>
-  <li><a href="#getArtifact"><code><span class="http-method">get</span> /collections/{collectionid}/artifacts/{artifactid}</code></a></li>
-  <li><a href="#getArtifactsSize"><code><span class="http-method">get</span> /collections/{collectionid}/aus/{auid}/size</code></a></li>
-  <li><a href="#getAus"><code><span class="http-method">get</span> /collections/{collectionid}/aus</code></a></li>
-  <li><a href="#getCollections"><code><span class="http-method">get</span> /collections</code></a></li>
-  <li><a href="#getCommittedArtifacts"><code><span class="http-method">get</span> /collections/{collectionid}/aus/{auid}/artifacts</code></a></li>
-  <li><a href="#updateArtifact"><code><span class="http-method">put</span> /collections/{collectionid}/artifacts/{artifactid}</code></a></li>
+  <li><a href="#getCrawlerConfig"><code><span class="http-method">get</span> /crawlers/{crawler}</code></a></li>
+  <li><a href="#getCrawlers"><code><span class="http-method">get</span> /crawlers</code></a></li>
+  </ul>
+  <h4><a href="#Crawls">Crawls</a></h4>
+  <ul>
+  <li><a href="#deleteCrawlById"><code><span class="http-method">delete</span> /crawls/{jobId}</code></a></li>
+  <li><a href="#deleteCrawls"><code><span class="http-method">delete</span> /crawls</code></a></li>
+  <li><a href="#doCrawl"><code><span class="http-method">post</span> /crawls</code></a></li>
+  <li><a href="#getCrawlById"><code><span class="http-method">get</span> /crawls/{jobId}</code></a></li>
+  <li><a href="#getCrawlByMimeType"><code><span class="http-method">get</span> /crawls/{jobId}/mimeType/{type}</code></a></li>
+  <li><a href="#getCrawlErrors"><code><span class="http-method">get</span> /crawls/{jobId}/errors</code></a></li>
+  <li><a href="#getCrawlExcluded"><code><span class="http-method">get</span> /crawls/{jobId}/excluded</code></a></li>
+  <li><a href="#getCrawlFetched"><code><span class="http-method">get</span> /crawls/{jobId}/fetched</code></a></li>
+  <li><a href="#getCrawlNotModified"><code><span class="http-method">get</span> /crawls/{jobId}/notMotified</code></a></li>
+  <li><a href="#getCrawlParsed"><code><span class="http-method">get</span> /crawls/{jobId}/parsed</code></a></li>
+  <li><a href="#getCrawlPending"><code><span class="http-method">get</span> /crawls/{jobId}/pending</code></a></li>
+  <li><a href="#getCrawls"><code><span class="http-method">get</span> /crawls</code></a></li>
   </ul>
   <h4><a href="#Status">Status</a></h4>
   <ul>
   <li><a href="#getStatus"><code><span class="http-method">get</span> /status</code></a></li>
   </ul>
 
-  <h1><a name="Collections">Collections</a></h1>
-  <div class="method"><a name="createArtifact"/>
+  <h1><a name="Crawlers">Crawlers</a></h1>
+  <div class="method"><a name="getCrawlerConfig"></a>
     <div class="method-path">
     <a class="up" href="#__Methods">Up</a>
-    <pre class="post"><code class="huge"><span class="http-method">post</span> /collections/{collectionid}/artifacts</code></pre></div>
-    <div class="method-summary">Create an artifact (<span class="nickname">createArtifact</span>)</div>
-    <div class="method-notes"></div>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /crawlers/{crawler}</code></pre></div>
+    <div class="method-summary">Return information about a crawler. (<span class="nickname">getCrawlerConfig</span>)</div>
+    <div class="method-notes">Get information related to a installed crawler.</div>
 
     <h3 class="field-label">Path parameters</h3>
     <div class="field-items">
-      <div class="param">collectionid (required)</div>
-
-      <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash; Collection containing the artifact </div>
-    </div>  <!-- field-items -->
-
-    <h3 class="field-label">Consumes</h3>
-    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
-    <ul>
-      <li><code>multipart/form-data</code></li>
-    </ul>
+      <div class="param">crawler (required)</div>
+      
+            <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash; Identifier for the crawler </div>    </div>  <!-- field-items -->
 
 
 
 
-    <h3 class="field-label">Form parameters</h3>
-    <div class="field-items">
-      <div class="param">auid (required)</div>
 
-      <div class="param-desc"><span class="param-type">Form Parameter</span> &mdash; Archival Unit ID (AUID) of new artifact </div><div class="param">uri (required)</div>
-
-      <div class="param-desc"><span class="param-type">Form Parameter</span> &mdash; URI represented by this artifact </div><div class="param">content (required)</div>
-
-      <div class="param-desc"><span class="param-type">Form Parameter</span> &mdash; Content byte stream </div><div class="param">aspectParts (optional)</div>
-
-      <div class="param-desc"><span class="param-type">Form Parameter</span> &mdash; URI aspects represented by this artifact </div>
-    </div>  <!-- field-items -->
 
     <h3 class="field-label">Return type</h3>
     <div class="return-type">
-      <a href="#artifact">artifact</a>
+      <a href="#crawlerConfig">crawlerConfig</a>
       
     </div>
 
     <!--Todo: process Response Object and its headers, schema, examples -->
 
-    <h3 class="field-label">Example data</h3>
-    <div class="example-data-content-type">Content-Type: application/json</div>
-    <pre class="example"><code>{
-  "auid" : "auid",
-  "committed" : true,
-  "id" : "id",
-  "collection" : "collection",
-  "uri" : "uri",
-  "version" : 0,
-  "storageUrl" : "storageUrl"
-}</code></pre>
 
     <h3 class="field-label">Produces</h3>
     This API call produces the following media types according to the <span class="header">Accept</span> request header;
@@ -275,117 +257,228 @@ font-style: italic;
     </ul>
 
     <h3 class="field-label">Responses</h3>
-    <h4 class="field-label">201</h4>
-    Artifact created
-        <a href="#artifact">artifact</a>
-    <h4 class="field-label">302</h4>
-    Duplicate content; artifact not created
+    <h4 class="field-label">200</h4>
+    Crawler Configuration Found
+        <a href="#crawlerConfig">crawlerConfig</a>
+    <h4 class="field-label">401</h4>
+    Access Denied.
         <a href="#"></a>
+    <h4 class="field-label">404</h4>
+    The specified resource was not found
+        <a href="#status">status</a>
+    <h4 class="field-label">500</h4>
+    An internal server error has occured.
+        <a href="#status">status</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="getCrawlers"></a>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /crawlers</code></pre></div>
+    <div class="method-summary">Get the list of supported crawlers. (<span class="nickname">getCrawlers</span>)</div>
+    <div class="method-notes">Return the list of supported crawlers.</div>
+
+
+
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#inline_response_200">inline_response_200</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The crawler list.
+        <a href="#inline_response_200">inline_response_200</a>
+    <h4 class="field-label">404</h4>
+    No Such Crawler
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <h1><a name="Crawls">Crawls</a></h1>
+  <div class="method"><a name="deleteCrawlById"></a>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="delete"><code class="huge"><span class="http-method">delete</span> /crawls/{jobId}</code></pre></div>
+    <div class="method-summary">Remove or stop a crawl (<span class="nickname">deleteCrawlById</span>)</div>
+    <div class="method-notes">Delete a crawl given the crawl identifier, stopping any current processing, if necessary.</div>
+
+    <h3 class="field-label">Path parameters</h3>
+    <div class="field-items">
+      <div class="param">jobId (required)</div>
+      
+            <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash; identifier used to identify a specific crawl. </div>    </div>  <!-- field-items -->
+
+
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#crawlStatus">crawlStatus</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The deleted crawl
+        <a href="#crawlStatus">crawlStatus</a>
+    <h4 class="field-label">401</h4>
+    Authorization is Required.
+        <a href="#status">status</a>
+    <h4 class="field-label">403</h4>
+    Forbidden
+        <a href="#"></a>
+    <h4 class="field-label">404</h4>
+    The specified resource was not found
+        <a href="#status">status</a>
+    <h4 class="field-label">500</h4>
+    An internal server error has occured.
+        <a href="#status">status</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="deleteCrawls"></a>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="delete"><code class="huge"><span class="http-method">delete</span> /crawls</code></pre></div>
+    <div class="method-summary">Delete all of the currently queued and active crawl requests (<span class="nickname">deleteCrawls</span>)</div>
+    <div class="method-notes">Halt and delete all of the currently queued and active crawls</div>
+
+
+
+
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">501</h4>
+    This feature is not implemented.
+        <a href="#status">status</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="doCrawl"></a>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /crawls</code></pre></div>
+    <div class="method-summary">Request a crawl using a descriptor (<span class="nickname">doCrawl</span>)</div>
+    <div class="method-notes">Use the information found in the request object to initiate a crawl.</div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">body <a href="#crawlRequest">crawlRequest</a> (required)</div>
+      
+            <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
+    </div>  <!-- field-items -->
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#requestCrawlResult">requestCrawlResult</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">202</h4>
+    The crawl request has been queued for operation.
+        <a href="#requestCrawlResult">requestCrawlResult</a>
     <h4 class="field-label">400</h4>
-    Invalid input
-        <a href="#"></a>
+    The request is malformed.
+        <a href="#status">status</a>
     <h4 class="field-label">401</h4>
-    Unauthorized request
-        <a href="#"></a>
+    Authorization is Required.
+        <a href="#status">status</a>
     <h4 class="field-label">403</h4>
-    Client not authorized to create artifacts
-        <a href="#"></a>
-    <h4 class="field-label">502</h4>
-    Internal error creating artifact
-        <a href="#"></a>
-  </div> <!-- method -->
-  <hr/>
-  <div class="method"><a name="deleteArtifact"/>
-    <div class="method-path">
-    <a class="up" href="#__Methods">Up</a>
-    <pre class="delete"><code class="huge"><span class="http-method">delete</span> /collections/{collectionid}/artifacts/{artifactid}</code></pre></div>
-    <div class="method-summary">Remove an artifact from the repository (<span class="nickname">deleteArtifact</span>)</div>
-    <div class="method-notes"></div>
-
-    <h3 class="field-label">Path parameters</h3>
-    <div class="field-items">
-      <div class="param">collectionid (required)</div>
-
-      <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash; Collection containing the artifact </div><div class="param">artifactid (required)</div>
-
-      <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash; Identifier of the artifact </div>
-    </div>  <!-- field-items -->
-
-    <h3 class="field-label">Consumes</h3>
-    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
-    <ul>
-      <li><code>application/json</code></li>
-    </ul>
-
-
-
-
-
-
-    <!--Todo: process Response Object and its headers, schema, examples -->
-
-
-    <h3 class="field-label">Produces</h3>
-    This API call produces the following media types according to the <span class="header">Accept</span> request header;
-    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
-    <ul>
-      <li><code>application/json</code></li>
-    </ul>
-
-    <h3 class="field-label">Responses</h3>
-    <h4 class="field-label">200</h4>
-    Successfully removed artifact
-        <a href="#"></a>
-    <h4 class="field-label">401</h4>
-    Unauthorized request
-        <a href="#"></a>
-    <h4 class="field-label">403</h4>
-    Client not authorized to delete artifact
+    Forbidden
         <a href="#"></a>
     <h4 class="field-label">404</h4>
-    Artifact not found
-        <a href="#"></a>
-    <h4 class="field-label">409</h4>
-    Cannot delete committed artifact
-        <a href="#"></a>
+    The specified resource was not found
+        <a href="#status">status</a>
+    <h4 class="field-label">500</h4>
+    An internal server error has occured.
+        <a href="#status">status</a>
   </div> <!-- method -->
   <hr/>
-  <div class="method"><a name="getArtifact"/>
+  <div class="method"><a name="getCrawlById"></a>
     <div class="method-path">
     <a class="up" href="#__Methods">Up</a>
-    <pre class="get"><code class="huge"><span class="http-method">get</span> /collections/{collectionid}/artifacts/{artifactid}</code></pre></div>
-    <div class="method-summary">Get artifact content and metadata (<span class="nickname">getArtifact</span>)</div>
-    <div class="method-notes"></div>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /crawls/{jobId}</code></pre></div>
+    <div class="method-summary">Get the crawl info for this job (<span class="nickname">getCrawlById</span>)</div>
+    <div class="method-notes">Get the job represented by this crawl id</div>
 
     <h3 class="field-label">Path parameters</h3>
     <div class="field-items">
-      <div class="param">collectionid (required)</div>
-
-      <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash; Collection containing the artifact </div><div class="param">artifactid (required)</div>
-
-      <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash; Identifier of the artifact </div>
-    </div>  <!-- field-items -->
-
-
-
-    <h3 class="field-label">Request headers</h3>
-    <div class="field-items">
+      <div class="param">jobId (required)</div>
       
-    </div>  <!-- field-items -->
+            <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash; identifier used to identify a specific crawl. </div>    </div>  <!-- field-items -->
+
+
+
 
 
 
     <h3 class="field-label">Return type</h3>
     <div class="return-type">
-      <a href="#streamingResponseBody">streamingResponseBody</a>
+      <a href="#crawlStatus">crawlStatus</a>
       
     </div>
 
     <!--Todo: process Response Object and its headers, schema, examples -->
 
-    <h3 class="field-label">Example data</h3>
-    <div class="example-data-content-type">Content-Type: application/json</div>
-    <pre class="example"><code>{ }</code></pre>
 
     <h3 class="field-label">Produces</h3>
     This API call produces the following media types according to the <span class="header">Accept</span> request header;
@@ -396,64 +489,54 @@ font-style: italic;
 
     <h3 class="field-label">Responses</h3>
     <h4 class="field-label">200</h4>
-    Artifact created
-        <a href="#streamingResponseBody">streamingResponseBody</a>
+    The crawl status of the requested crawl
+        <a href="#crawlStatus">crawlStatus</a>
     <h4 class="field-label">401</h4>
-    Unauthorized request
-        <a href="#"></a>
-    <h4 class="field-label">403</h4>
-    Client not authorized to retrieve artifact
-        <a href="#"></a>
+    Authorization is Required.
+        <a href="#status">status</a>
     <h4 class="field-label">404</h4>
-    Artifact not found
-        <a href="#"></a>
-    <h4 class="field-label">502</h4>
-    Could not read from external resource
-        <a href="#"></a>
+    The specified resource was not found
+        <a href="#status">status</a>
+    <h4 class="field-label">500</h4>
+    An internal server error has occured.
+        <a href="#status">status</a>
   </div> <!-- method -->
   <hr/>
-  <div class="method"><a name="getArtifactsSize"/>
+  <div class="method"><a name="getCrawlByMimeType"></a>
     <div class="method-path">
     <a class="up" href="#__Methods">Up</a>
-    <pre class="get"><code class="huge"><span class="http-method">get</span> /collections/{collectionid}/aus/{auid}/size</code></pre></div>
-    <div class="method-summary">Get the size of Archival Unit artifacts in a collection (<span class="nickname">getArtifactsSize</span>)</div>
-    <div class="method-notes"></div>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /crawls/{jobId}/mimeType/{type}</code></pre></div>
+    <div class="method-summary">A pagable list of urls of mimetype. (<span class="nickname">getCrawlByMimeType</span>)</div>
+    <div class="method-notes">Get a list of urls of mimetype.</div>
 
     <h3 class="field-label">Path parameters</h3>
     <div class="field-items">
-      <div class="param">collectionid (required)</div>
-
-      <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash; Identifier of the collection containing the artifacts </div><div class="param">auid (required)</div>
-
-      <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash; Identifier of the Archival Unit containing the artifacts </div>
-    </div>  <!-- field-items -->
+      <div class="param">jobId (required)</div>
+      
+            <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash;  </div>      <div class="param">type (required)</div>
+      
+            <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash;  </div>    </div>  <!-- field-items -->
 
 
 
 
     <h3 class="field-label">Query parameters</h3>
     <div class="field-items">
-      <div class="param">url (optional)</div>
-
-      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The URL contained by the artifacts </div><div class="param">urlPrefix (optional)</div>
-
-      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The prefix to be matched by the artifact URLs </div><div class="param">version (optional)</div>
-
-      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The version of the URL contained by the artifacts </div>
-    </div>  <!-- field-items -->
+      <div class="param">continuationToken (optional)</div>
+      
+            <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; &amp;quot;The continuation token of the next page of jobs to be returned.&amp;quot; </div>      <div class="param">limit (optional)</div>
+      
+            <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The number of jobs per page. format: int32</div>    </div>  <!-- field-items -->
 
 
     <h3 class="field-label">Return type</h3>
     <div class="return-type">
+      <a href="#urlPager">urlPager</a>
       
-      Long
     </div>
 
     <!--Todo: process Response Object and its headers, schema, examples -->
 
-    <h3 class="field-label">Example data</h3>
-    <div class="example-data-content-type">Content-Type: application/json</div>
-    <pre class="example"><code>0</code></pre>
 
     <h3 class="field-label">Produces</h3>
     This API call produces the following media types according to the <span class="header">Accept</span> request header;
@@ -464,174 +547,55 @@ font-style: italic;
 
     <h3 class="field-label">Responses</h3>
     <h4 class="field-label">200</h4>
-    The size of the artifacts
-        <a href="#Long">Long</a>
+    The requested urls.
+        <a href="#urlPager">urlPager</a>
+    <h4 class="field-label">400</h4>
+    The request is malformed.
+        <a href="#status">status</a>
     <h4 class="field-label">401</h4>
-    Unauthorized request
-        <a href="#"></a>
-    <h4 class="field-label">403</h4>
-    Client not authorized to retrieve data
-        <a href="#"></a>
+    Authorization is Required.
+        <a href="#status">status</a>
     <h4 class="field-label">404</h4>
-    Collection not found
-        <a href="#"></a>
-    <h4 class="field-label">502</h4>
-    Could not read from external resource
-        <a href="#"></a>
+    The specified resource was not found
+        <a href="#status">status</a>
+    <h4 class="field-label">500</h4>
+    An internal server error has occured.
+        <a href="#status">status</a>
   </div> <!-- method -->
   <hr/>
-  <div class="method"><a name="getAus"/>
+  <div class="method"><a name="getCrawlErrors"></a>
     <div class="method-path">
     <a class="up" href="#__Methods">Up</a>
-    <pre class="get"><code class="huge"><span class="http-method">get</span> /collections/{collectionid}/aus</code></pre></div>
-    <div class="method-summary">Get Archival Unit IDs (AUIDs) in a collection (<span class="nickname">getAus</span>)</div>
-    <div class="method-notes"></div>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /crawls/{jobId}/errors</code></pre></div>
+    <div class="method-summary">A pagable list of urls with errors. (<span class="nickname">getCrawlErrors</span>)</div>
+    <div class="method-notes">Get a list of urls with errors.</div>
 
     <h3 class="field-label">Path parameters</h3>
     <div class="field-items">
-      <div class="param">collectionid (required)</div>
-
-      <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash; Identifier of the collection containing the Archival Units </div>
-    </div>  <!-- field-items -->
-
-
-
-
-
-
-    <h3 class="field-label">Return type</h3>
-    <div class="return-type">
+      <div class="param">jobId (required)</div>
       
-      array[String]
-    </div>
-
-    <!--Todo: process Response Object and its headers, schema, examples -->
-
-    <h3 class="field-label">Example data</h3>
-    <div class="example-data-content-type">Content-Type: application/json</div>
-    <pre class="example"><code>[ "", "" ]</code></pre>
-
-    <h3 class="field-label">Produces</h3>
-    This API call produces the following media types according to the <span class="header">Accept</span> request header;
-    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
-    <ul>
-      <li><code>application/json</code></li>
-    </ul>
-
-    <h3 class="field-label">Responses</h3>
-    <h4 class="field-label">200</h4>
-    OK
-        
-    <h4 class="field-label">401</h4>
-    Unauthorized request
-        <a href="#"></a>
-    <h4 class="field-label">403</h4>
-    Client not authorized to retrieve data
-        <a href="#"></a>
-    <h4 class="field-label">404</h4>
-    Collection not found
-        <a href="#"></a>
-    <h4 class="field-label">502</h4>
-    Could not read from external resource
-        <a href="#"></a>
-  </div> <!-- method -->
-  <hr/>
-  <div class="method"><a name="getCollections"/>
-    <div class="method-path">
-    <a class="up" href="#__Methods">Up</a>
-    <pre class="get"><code class="huge"><span class="http-method">get</span> /collections</code></pre></div>
-    <div class="method-summary">Get collection identifiers of the committed artifacts in the repository (<span class="nickname">getCollections</span>)</div>
-    <div class="method-notes"></div>
-
-
-
-
-
-
-
-    <h3 class="field-label">Return type</h3>
-    <div class="return-type">
-      
-      array[String]
-    </div>
-
-    <!--Todo: process Response Object and its headers, schema, examples -->
-
-    <h3 class="field-label">Example data</h3>
-    <div class="example-data-content-type">Content-Type: application/json</div>
-    <pre class="example"><code>[ "", "" ]</code></pre>
-
-    <h3 class="field-label">Produces</h3>
-    This API call produces the following media types according to the <span class="header">Accept</span> request header;
-    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
-    <ul>
-      <li><code>application/json</code></li>
-    </ul>
-
-    <h3 class="field-label">Responses</h3>
-    <h4 class="field-label">200</h4>
-    Status 200
-        
-  </div> <!-- method -->
-  <hr/>
-  <div class="method"><a name="getCommittedArtifacts"/>
-    <div class="method-path">
-    <a class="up" href="#__Methods">Up</a>
-    <pre class="get"><code class="huge"><span class="http-method">get</span> /collections/{collectionid}/aus/{auid}/artifacts</code></pre></div>
-    <div class="method-summary">Get committed artifacts in a collection and Archival Unit (<span class="nickname">getCommittedArtifacts</span>)</div>
-    <div class="method-notes"></div>
-
-    <h3 class="field-label">Path parameters</h3>
-    <div class="field-items">
-      <div class="param">collectionid (required)</div>
-
-      <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash; Identifier of the collection containing the artifacts </div><div class="param">auid (required)</div>
-
-      <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash; Identifier of the Archival Unit containing the artifacts </div>
-    </div>  <!-- field-items -->
+            <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash;  </div>    </div>  <!-- field-items -->
 
 
 
 
     <h3 class="field-label">Query parameters</h3>
     <div class="field-items">
-      <div class="param">url (optional)</div>
-
-      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The URL contained by the artifacts </div><div class="param">urlPrefix (optional)</div>
-
-      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The prefix to be matched by the artifact URLs </div><div class="param">version (optional)</div>
-
-      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The version of the URL contained by the artifacts </div>
-    </div>  <!-- field-items -->
+      <div class="param">continuationToken (optional)</div>
+      
+            <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; &amp;quot;The continuation token of the next page of jobs to be returned.&amp;quot; </div>      <div class="param">limit (optional)</div>
+      
+            <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The number of jobs per page. format: int32</div>    </div>  <!-- field-items -->
 
 
     <h3 class="field-label">Return type</h3>
     <div class="return-type">
-      array[<a href="#artifact">artifact</a>]
+      <a href="#urlPager">urlPager</a>
       
     </div>
 
     <!--Todo: process Response Object and its headers, schema, examples -->
 
-    <h3 class="field-label">Example data</h3>
-    <div class="example-data-content-type">Content-Type: application/json</div>
-    <pre class="example"><code>[ {
-  "auid" : "auid",
-  "committed" : true,
-  "id" : "id",
-  "collection" : "collection",
-  "uri" : "uri",
-  "version" : 0,
-  "storageUrl" : "storageUrl"
-}, {
-  "auid" : "auid",
-  "committed" : true,
-  "id" : "id",
-  "collection" : "collection",
-  "uri" : "uri",
-  "version" : 0,
-  "storageUrl" : "storageUrl"
-} ]</code></pre>
 
     <h3 class="field-label">Produces</h3>
     This API call produces the following media types according to the <span class="header">Accept</span> request header;
@@ -642,73 +606,55 @@ font-style: italic;
 
     <h3 class="field-label">Responses</h3>
     <h4 class="field-label">200</h4>
-    The requested artifacts
-        
+    The requested urls with errors.
+        <a href="#urlPager">urlPager</a>
+    <h4 class="field-label">400</h4>
+    The request is malformed.
+        <a href="#status">status</a>
     <h4 class="field-label">401</h4>
-    Unauthorized request
-        <a href="#"></a>
-    <h4 class="field-label">403</h4>
-    Client not authorized to retrieve data
-        <a href="#"></a>
+    Authorization is Required.
+        <a href="#status">status</a>
     <h4 class="field-label">404</h4>
-    Collection not found
-        <a href="#"></a>
-    <h4 class="field-label">502</h4>
-    Could not read from external resource
-        <a href="#"></a>
+    The specified resource was not found
+        <a href="#status">status</a>
+    <h4 class="field-label">500</h4>
+    An internal server error has occured.
+        <a href="#status">status</a>
   </div> <!-- method -->
   <hr/>
-  <div class="method"><a name="updateArtifact"/>
+  <div class="method"><a name="getCrawlExcluded"></a>
     <div class="method-path">
     <a class="up" href="#__Methods">Up</a>
-    <pre class="put"><code class="huge"><span class="http-method">put</span> /collections/{collectionid}/artifacts/{artifactid}</code></pre></div>
-    <div class="method-summary">Update the committed property of an artifact (<span class="nickname">updateArtifact</span>)</div>
-    <div class="method-notes"></div>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /crawls/{jobId}/excluded</code></pre></div>
+    <div class="method-summary">A pagable list of excluded urls. (<span class="nickname">getCrawlExcluded</span>)</div>
+    <div class="method-notes">Get a list of excluded urls.</div>
 
     <h3 class="field-label">Path parameters</h3>
     <div class="field-items">
-      <div class="param">collectionid (required)</div>
-
-      <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash; Collection containing the artifact </div><div class="param">artifactid (required)</div>
-
-      <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash; Identifier of the artifact </div>
-    </div>  <!-- field-items -->
-
-    <h3 class="field-label">Consumes</h3>
-    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
-    <ul>
-      <li><code>multipart/form-data</code></li>
-    </ul>
+      <div class="param">jobId (required)</div>
+      
+            <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash; identifier used to identify a specific crawl. </div>    </div>  <!-- field-items -->
 
 
 
 
-    <h3 class="field-label">Form parameters</h3>
+    <h3 class="field-label">Query parameters</h3>
     <div class="field-items">
-      <div class="param">committed (optional)</div>
+      <div class="param">continuationToken (optional)</div>
+      
+            <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; &amp;quot;The continuation token of the next page of jobs to be returned.&amp;quot; </div>      <div class="param">limit (optional)</div>
+      
+            <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The number of jobs per page. format: int32</div>    </div>  <!-- field-items -->
 
-      <div class="param-desc"><span class="param-type">Form Parameter</span> &mdash; New commit status of artifact </div>
-    </div>  <!-- field-items -->
 
     <h3 class="field-label">Return type</h3>
     <div class="return-type">
-      <a href="#artifact">artifact</a>
+      <a href="#urlPager">urlPager</a>
       
     </div>
 
     <!--Todo: process Response Object and its headers, schema, examples -->
 
-    <h3 class="field-label">Example data</h3>
-    <div class="example-data-content-type">Content-Type: application/json</div>
-    <pre class="example"><code>{
-  "auid" : "auid",
-  "committed" : true,
-  "id" : "id",
-  "collection" : "collection",
-  "uri" : "uri",
-  "version" : 0,
-  "storageUrl" : "storageUrl"
-}</code></pre>
 
     <h3 class="field-label">Produces</h3>
     This API call produces the following media types according to the <span class="header">Accept</span> request header;
@@ -719,24 +665,311 @@ font-style: italic;
 
     <h3 class="field-label">Responses</h3>
     <h4 class="field-label">200</h4>
-    Artifact updated
-        <a href="#artifact">artifact</a>
+    The requested excluded urls.
+        <a href="#urlPager">urlPager</a>
     <h4 class="field-label">400</h4>
-    Invalid input
-        <a href="#"></a>
+    The request is malformed.
+        <a href="#status">status</a>
     <h4 class="field-label">401</h4>
-    Unauthorized request
-        <a href="#"></a>
-    <h4 class="field-label">403</h4>
-    Client not authorized to update artifact
-        <a href="#"></a>
+    Authorization is Required.
+        <a href="#status">status</a>
     <h4 class="field-label">404</h4>
-    Artifact not found
-        <a href="#"></a>
+    The specified resource was not found
+        <a href="#status">status</a>
+    <h4 class="field-label">500</h4>
+    An internal server error has occured.
+        <a href="#status">status</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="getCrawlFetched"></a>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /crawls/{jobId}/fetched</code></pre></div>
+    <div class="method-summary">A pagable list of fetched urls. (<span class="nickname">getCrawlFetched</span>)</div>
+    <div class="method-notes">Get a list of fetched urls.</div>
+
+    <h3 class="field-label">Path parameters</h3>
+    <div class="field-items">
+      <div class="param">jobId (required)</div>
+      
+            <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash;  </div>    </div>  <!-- field-items -->
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">continuationToken (optional)</div>
+      
+            <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; &amp;quot;The continuation token of the next page of jobs to be returned.&amp;quot; </div>      <div class="param">limit (optional)</div>
+      
+            <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The number of jobs per page. format: int32</div>    </div>  <!-- field-items -->
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#urlPager">urlPager</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The requested fetched urls.
+        <a href="#urlPager">urlPager</a>
+    <h4 class="field-label">400</h4>
+    The request is malformed.
+        <a href="#status">status</a>
+    <h4 class="field-label">401</h4>
+    Authorization is Required.
+        <a href="#status">status</a>
+    <h4 class="field-label">404</h4>
+    The specified resource was not found
+        <a href="#status">status</a>
+    <h4 class="field-label">500</h4>
+    An internal server error has occured.
+        <a href="#status">status</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="getCrawlNotModified"></a>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /crawls/{jobId}/notMotified</code></pre></div>
+    <div class="method-summary">A pagable list of notMotified urls. (<span class="nickname">getCrawlNotModified</span>)</div>
+    <div class="method-notes">Get a list of notMotified urls.</div>
+
+    <h3 class="field-label">Path parameters</h3>
+    <div class="field-items">
+      <div class="param">jobId (required)</div>
+      
+            <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash;  </div>    </div>  <!-- field-items -->
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">continuationToken (optional)</div>
+      
+            <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; &amp;quot;The continuation token of the next page of jobs to be returned.&amp;quot; </div>      <div class="param">limit (optional)</div>
+      
+            <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The number of jobs per page. format: int32</div>    </div>  <!-- field-items -->
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#urlPager">urlPager</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The requested notMotified urls.
+        <a href="#urlPager">urlPager</a>
+    <h4 class="field-label">400</h4>
+    The request is malformed.
+        <a href="#status">status</a>
+    <h4 class="field-label">401</h4>
+    Authorization is Required.
+        <a href="#status">status</a>
+    <h4 class="field-label">404</h4>
+    The specified resource was not found
+        <a href="#status">status</a>
+    <h4 class="field-label">500</h4>
+    An internal server error has occured.
+        <a href="#status">status</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="getCrawlParsed"></a>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /crawls/{jobId}/parsed</code></pre></div>
+    <div class="method-summary">A pagable list of parsed urls. (<span class="nickname">getCrawlParsed</span>)</div>
+    <div class="method-notes">Get a list of parsed urls.</div>
+
+    <h3 class="field-label">Path parameters</h3>
+    <div class="field-items">
+      <div class="param">jobId (required)</div>
+      
+            <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash;  </div>    </div>  <!-- field-items -->
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">continuationToken (optional)</div>
+      
+            <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; &amp;quot;The continuation token of the next page of jobs to be returned.&amp;quot; </div>      <div class="param">limit (optional)</div>
+      
+            <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The number of jobs per page. format: int32</div>    </div>  <!-- field-items -->
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#urlPager">urlPager</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The requested modified urls.
+        <a href="#urlPager">urlPager</a>
+    <h4 class="field-label">400</h4>
+    The request is malformed.
+        <a href="#status">status</a>
+    <h4 class="field-label">401</h4>
+    Authorization is Required.
+        <a href="#status">status</a>
+    <h4 class="field-label">404</h4>
+    The specified resource was not found
+        <a href="#status">status</a>
+    <h4 class="field-label">500</h4>
+    An internal server error has occured.
+        <a href="#status">status</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="getCrawlPending"></a>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /crawls/{jobId}/pending</code></pre></div>
+    <div class="method-summary">A pagable list of pending urls. (<span class="nickname">getCrawlPending</span>)</div>
+    <div class="method-notes">Get a list of pending urls.</div>
+
+    <h3 class="field-label">Path parameters</h3>
+    <div class="field-items">
+      <div class="param">jobId (required)</div>
+      
+            <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash;  </div>    </div>  <!-- field-items -->
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">continuationToken (optional)</div>
+      
+            <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; &amp;quot;The continuation token of the next page of jobs to be returned.&amp;quot; </div>      <div class="param">limit (optional)</div>
+      
+            <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The number of jobs per page. format: int32</div>    </div>  <!-- field-items -->
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#urlPager">urlPager</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The requested modified urls.
+        <a href="#urlPager">urlPager</a>
+    <h4 class="field-label">400</h4>
+    The request is malformed.
+        <a href="#status">status</a>
+    <h4 class="field-label">401</h4>
+    Authorization is Required.
+        <a href="#status">status</a>
+    <h4 class="field-label">404</h4>
+    The specified resource was not found
+        <a href="#status">status</a>
+    <h4 class="field-label">500</h4>
+    An internal server error has occured.
+        <a href="#status">status</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="getCrawls"></a>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /crawls</code></pre></div>
+    <div class="method-summary">Get a list of active crawls. (<span class="nickname">getCrawls</span>)</div>
+    <div class="method-notes">Get a list of all currently active crawls or a pageful of the list defined by the continuation token and size</div>
+
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">limit (optional)</div>
+      
+            <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The number of jobs per page format: int32</div>      <div class="param">continuationToken (optional)</div>
+      
+            <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The continuation token of the next page of jobs to be returned. </div>    </div>  <!-- field-items -->
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#jobPager">jobPager</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The requested crawls
+        <a href="#jobPager">jobPager</a>
+    <h4 class="field-label">400</h4>
+    The request is malformed.
+        <a href="#status">status</a>
+    <h4 class="field-label">401</h4>
+    Authorization is Required.
+        <a href="#status">status</a>
+    <h4 class="field-label">500</h4>
+    An internal server error has occured.
+        <a href="#status">status</a>
   </div> <!-- method -->
   <hr/>
   <h1><a name="Status">Status</a></h1>
-  <div class="method"><a name="getStatus"/>
+  <div class="method"><a name="getStatus"></a>
     <div class="method-path">
     <a class="up" href="#__Methods">Up</a>
     <pre class="get"><code class="huge"><span class="http-method">get</span> /status</code></pre></div>
@@ -757,12 +990,6 @@ font-style: italic;
 
     <!--Todo: process Response Object and its headers, schema, examples -->
 
-    <h3 class="field-label">Example data</h3>
-    <div class="example-data-content-type">Content-Type: application/json</div>
-    <pre class="example"><code>{
-  "ready" : true,
-  "version" : "version"
-}</code></pre>
 
     <h3 class="field-label">Produces</h3>
     This API call produces the following media types according to the <span class="header">Accept</span> request header;
@@ -776,11 +1003,11 @@ font-style: italic;
     The status of the service
         <a href="#apiStatus">apiStatus</a>
     <h4 class="field-label">401</h4>
-    Unauthorized
-        <a href="#"></a>
+    Authorization is Required.
+        <a href="#status">status</a>
     <h4 class="field-label">500</h4>
-    Internal Server Error
-        <a href="#"></a>
+    An internal server error has occured.
+        <a href="#status">status</a>
   </div> <!-- method -->
   <hr/>
 
@@ -789,37 +1016,180 @@ font-style: italic;
 
   <h3>Table of Contents</h3>
   <ol>
-    <li><a href="#apiStatus"><code>apiStatus</code> - </a></li>
-    <li><a href="#artifact"><code>artifact</code> - </a></li>
-    <li><a href="#streamingResponseBody"><code>streamingResponseBody</code> - </a></li>
+    <li><a href="#apiStatus"><code>apiStatus</code></a></li>
+    <li><a href="#counter"><code>counter</code></a></li>
+    <li><a href="#crawlRequest"><code>crawlRequest</code></a></li>
+    <li><a href="#crawlStatus"><code>crawlStatus</code></a></li>
+    <li><a href="#crawlerConfig"><code>crawlerConfig</code></a></li>
+    <li><a href="#crawlerStatus"><code>crawlerStatus</code></a></li>
+    <li><a href="#inline_response_200"><code>inline_response_200</code></a></li>
+    <li><a href="#jobPager"><code>jobPager</code></a></li>
+    <li><a href="#mimeCounter"><code>mimeCounter</code></a></li>
+    <li><a href="#pageInfo"><code>pageInfo</code></a></li>
+    <li><a href="#requestCrawlResult"><code>requestCrawlResult</code></a></li>
+    <li><a href="#status"><code>status</code></a></li>
+    <li><a href="#urlError"><code>urlError</code></a></li>
+    <li><a href="#urlInfo"><code>urlInfo</code></a></li>
+    <li><a href="#urlPager"><code>urlPager</code></a></li>
   </ol>
 
   <div class="model">
-    <h3><a name="apiStatus"><code>apiStatus</code> - </a> <a class="up" href="#__Models">Up</a></h3>
-    <div class='model-description'>The status information of the service</div>
+    <h3><a name="apiStatus"><code>apiStatus</code></a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>The status information of the service.</div>
     <div class="field-items">
       <div class="param">version </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The version of the service </div>
-<div class="param">ready </div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span> The indication of whether the service is available </div>
+<div class="param">ready </div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span> The indication of whether the service is available. </div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">
-    <h3><a name="artifact"><code>artifact</code> - </a> <a class="up" href="#__Models">Up</a></h3>
-    <div class='model-description'></div>
+    <h3><a name="counter"><code>counter</code></a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>A counter for urls.</div>
     <div class="field-items">
-      <div class="param">id (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
-<div class="param">collection (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
-<div class="param">auid (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
-<div class="param">uri (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
-<div class="param">version (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
-<div class="param">committed (optional)</div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span>  </div>
-<div class="param">storageUrl (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+      <div class="param">count </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> The number of elements format: int32</div>
+<div class="param">itemsLink </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> A link to the list of count items or to a pager with count items. </div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">
-    <h3><a name="streamingResponseBody"><code>streamingResponseBody</code> - </a> <a class="up" href="#__Models">Up</a></h3>
-    <div class='model-description'></div>
+    <h3><a name="crawlRequest"><code>crawlRequest</code></a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>A descriptor for a LOCKSS crawl.</div>
     <div class="field-items">
-          </div>  <!-- field-items -->
+      <div class="param">auId </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The unique au id for this crawled unit. </div>
+<div class="param">crawlKind </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The kind of crawl being performed.  For now this is either new content or repair. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">newContent</div><div class="param-enum">repair</div>
+<div class="param">crawler (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The crawler for this crawl. </div>
+<div class="param">repairList (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span> The repair urls in a repair crawl </div>
+<div class="param">forceCrawl (optional)</div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span> Force crawl even if outside crawl window. </div>
+<div class="param">refetchDepth (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> The refetch depth to use for a deep crawl. format: int32</div>
+<div class="param">priority (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> The priority for the crawl. format: int32</div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="crawlStatus"><code>crawlStatus</code></a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>The status of a single crawl.</div>
+    <div class="field-items">
+      <div class="param">key </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The id for the crawl. </div>
+<div class="param">auId </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The id for the au. </div>
+<div class="param">auName </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The name for the au. </div>
+<div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The type of crawl. </div>
+<div class="param">startUrls </div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span> The array of start urls. </div>
+<div class="param">priority </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> The priority for this crawl. format: int32</div>
+<div class="param">sources (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span> The sources to use for the crawl. </div>
+<div class="param">depth (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> The depth of the crawl. format: int32</div>
+<div class="param">refetchDepth (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> The refetch depth of the crawl. format: int32</div>
+<div class="param">proxy (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The proxy used for crawling. </div>
+<div class="param">startTime </div><div class="param-desc"><span class="param-type"><a href="#long">Long</a></span> The timestamp for the start of crawl. format: int64</div>
+<div class="param">endTime </div><div class="param-desc"><span class="param-type"><a href="#long">Long</a></span> The timestamp for the end of the crawl. format: int64</div>
+<div class="param">status </div><div class="param-desc"><span class="param-type"><a href="#status">status</a></span>  </div>
+<div class="param">isWaiting (optional)</div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span> True if the crawl wating to start. </div>
+<div class="param">isActive (optional)</div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span> True if the crawl is active. </div>
+<div class="param">isError (optional)</div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span> True if the crawl has errored. </div>
+<div class="param">bytesFetched (optional)</div><div class="param-desc"><span class="param-type"><a href="#long">Long</a></span> The number of bytes fetched. format: int64</div>
+<div class="param">fetchedItems (optional)</div><div class="param-desc"><span class="param-type"><a href="#counter">counter</a></span>  </div>
+<div class="param">excludedItems (optional)</div><div class="param-desc"><span class="param-type"><a href="#counter">counter</a></span>  </div>
+<div class="param">notModifiedItems (optional)</div><div class="param-desc"><span class="param-type"><a href="#counter">counter</a></span>  </div>
+<div class="param">parsedItems (optional)</div><div class="param-desc"><span class="param-type"><a href="#counter">counter</a></span>  </div>
+<div class="param">pendingItems (optional)</div><div class="param-desc"><span class="param-type"><a href="#counter">counter</a></span>  </div>
+<div class="param">errors (optional)</div><div class="param-desc"><span class="param-type"><a href="#counter">counter</a></span>  </div>
+<div class="param">mimeTypes (optional)</div><div class="param-desc"><span class="param-type"><a href="#mimeCounter">array[mimeCounter]</a></span> The list of urls by mimeType. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="crawlerConfig"><code>crawlerConfig</code></a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Configuration information about a specific crawler.</div>
+    <div class="field-items">
+      <div class="param">configMap </div><div class="param-desc"><span class="param-type"><a href="#string">Map</a></span> key value pairs specific providing configuration information. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="crawlerStatus"><code>crawlerStatus</code></a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Status about a specific crawler.</div>
+    <div class="field-items">
+      <div class="param">isEnabled </div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span> Is the crawler enabled </div>
+<div class="param">isRunning </div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span> Is the crawl starter running </div>
+<div class="param">errStatus (optional)</div><div class="param-desc"><span class="param-type"><a href="#status">status</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="inline_response_200"><code>inline_response_200</code></a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>A list of crawlers.</div>
+    <div class="field-items">
+      <div class="param">crawlers (optional)</div><div class="param-desc"><span class="param-type"><a href="#crawlerStatus">Map</a></span> An map of crawler status objects </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="jobPager"><code>jobPager</code></a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>A display page of jobs</div>
+    <div class="field-items">
+      <div class="param">jobs </div><div class="param-desc"><span class="param-type"><a href="#crawlStatus">array[crawlStatus]</a></span> The jobs displayed in the page </div>
+<div class="param">pageInfo </div><div class="param-desc"><span class="param-type"><a href="#pageInfo">pageInfo</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="mimeCounter"><code>mimeCounter</code></a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>A counter for mimeTypes seen during a crawl.</div>
+    <div class="field-items">
+      <div class="param">mimeType </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The mime type to count. </div>
+<div class="param">count (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> The number of elements of mime type format: int32</div>
+<div class="param">counterLink (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> A link to the list of count elements or to a pager with count elements. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="pageInfo"><code>pageInfo</code></a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>The information related to pagination of content</div>
+    <div class="field-items">
+      <div class="param">totalCount </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> The total number of elements to be paginated format: int32</div>
+<div class="param">resultsPerPage </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> The number of results per page. format: int32</div>
+<div class="param">continuationToken </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The continuation token. </div>
+<div class="param">curLink </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The link to the current page. </div>
+<div class="param">nextLink (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The link to the next page. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="requestCrawlResult"><code>requestCrawlResult</code></a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>The result from a request to perform a crawl.</div>
+    <div class="field-items">
+      <div class="param">auId </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> A String with the Archival Unit identifier. </div>
+<div class="param">accepted </div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span> True if this crawl was successfully enqueued. </div>
+<div class="param">delayReason (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The reason for any delay in performing the operation. </div>
+<div class="param">errorMessage (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Any error message as a result of the operation. </div>
+<div class="param">refetchDepth (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> The refetch depth of the crawl if one was requested. format: int32</div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="status"><code>status</code></a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>A status which include a code and message.</div>
+    <div class="field-items">
+      <div class="param">code </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> The numeric value for the current state. format: int32</div>
+<div class="param">msg </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> A text message defining the current state. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="urlError"><code>urlError</code></a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>information related to an error for a url.</div>
+    <div class="field-items">
+      <div class="param">message </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The error message </div>
+<div class="param">severity </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> the severity of the error. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">Warning</div><div class="param-enum">Error</div><div class="param-enum">Fatal</div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="urlInfo"><code>urlInfo</code></a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>information related to an url.</div>
+    <div class="field-items">
+      <div class="param">url </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The url string </div>
+<div class="param">error (optional)</div><div class="param-desc"><span class="param-type"><a href="#urlError">urlError</a></span>  </div>
+<div class="param">referrers (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span> An optional list of referrers. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="urlPager"><code>urlPager</code></a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>A Pager for urls with maps.</div>
+    <div class="field-items">
+      <div class="param">pageInfo </div><div class="param-desc"><span class="param-type"><a href="#pageInfo">pageInfo</a></span>  </div>
+<div class="param">urls </div><div class="param-desc"><span class="param-type"><a href="#urlInfo">array[urlInfo]</a></span> An list of url with related info. </div>
+    </div>  <!-- field-items -->
   </div>
   </body>
 </html>

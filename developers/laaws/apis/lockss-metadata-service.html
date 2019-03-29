@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <title>LOCKSS Repository Service REST API</title>
+    <title>LOCKSS Metadata Service REST API</title>
     <style type="text/css">
       body {
 	font-family: Trebuchet MS, sans-serif;
@@ -179,77 +179,130 @@ font-style: italic;
     </style>
   </head>
   <body>
-  <h1>LOCKSS Repository Service REST API</h1>
-    <div class="app-desc">API of the LOCKSS Repository REST Service</div>
-    <div class="app-desc">More information: <a href="https://www.lockss.org/">https://www.lockss.org/</a></div>
+  <h1>LOCKSS Metadata Service REST API</h1>
+    <div class="app-desc">API of the LOCKSS Metadata REST Service</div>
+    <div class="app-desc">More information: <a href="http://www.lockss.org/">http://www.lockss.org/</a></div>
     <div class="app-desc">Contact Info: <a href="lockss-support@lockss.org">lockss-support@lockss.org</a></div>
     <div class="app-desc">Version: 1.0.0</div>
     <div class="app-desc">BasePath:/</div>
     <div class="license-info">BSD-3-Clause</div>
     <div class="license-url">https://www.lockss.org/support/open-source-license/</div>
   <h2>Access</h2>
+    <ol>
+      <li>HTTP Basic Authentication</li>
+    </ol>
 
   <h2><a name="__Methods">Methods</a></h2>
   [ Jump to <a href="#__Models">Models</a> ]
 
   <h3>Table of Contents </h3>
   <div class="method-summary"></div>
-  <h4><a href="#Collections">Collections</a></h4>
+  <h4><a href="#Metadata">Metadata</a></h4>
   <ul>
-  <li><a href="#createArtifact"><code><span class="http-method">post</span> /collections/{collectionid}/artifacts</code></a></li>
-  <li><a href="#deleteArtifact"><code><span class="http-method">delete</span> /collections/{collectionid}/artifacts/{artifactid}</code></a></li>
-  <li><a href="#getArtifact"><code><span class="http-method">get</span> /collections/{collectionid}/artifacts/{artifactid}</code></a></li>
-  <li><a href="#getArtifactsSize"><code><span class="http-method">get</span> /collections/{collectionid}/aus/{auid}/size</code></a></li>
-  <li><a href="#getAus"><code><span class="http-method">get</span> /collections/{collectionid}/aus</code></a></li>
-  <li><a href="#getCollections"><code><span class="http-method">get</span> /collections</code></a></li>
-  <li><a href="#getCommittedArtifacts"><code><span class="http-method">get</span> /collections/{collectionid}/aus/{auid}/artifacts</code></a></li>
-  <li><a href="#updateArtifact"><code><span class="http-method">put</span> /collections/{collectionid}/artifacts/{artifactid}</code></a></li>
+  <li><a href="#deleteMetadataAusAuid"><code><span class="http-method">delete</span> /metadata/aus/{auid}</code></a></li>
+  <li><a href="#getMetadataAusAuid"><code><span class="http-method">get</span> /metadata/aus/{auid}</code></a></li>
+  <li><a href="#postMetadataAusItem"><code><span class="http-method">post</span> /metadata/aus</code></a></li>
   </ul>
   <h4><a href="#Status">Status</a></h4>
   <ul>
   <li><a href="#getStatus"><code><span class="http-method">get</span> /status</code></a></li>
   </ul>
+  <h4><a href="#Urls">Urls</a></h4>
+  <ul>
+  <li><a href="#getUrlsDoi"><code><span class="http-method">get</span> /urls/doi</code></a></li>
+  <li><a href="#getUrlsOpenUrl"><code><span class="http-method">get</span> /urls/openurl</code></a></li>
+  </ul>
 
-  <h1><a name="Collections">Collections</a></h1>
-  <div class="method"><a name="createArtifact"/>
+  <h1><a name="Metadata">Metadata</a></h1>
+  <div class="method"><a name="deleteMetadataAusAuid"/>
     <div class="method-path">
     <a class="up" href="#__Methods">Up</a>
-    <pre class="post"><code class="huge"><span class="http-method">post</span> /collections/{collectionid}/artifacts</code></pre></div>
-    <div class="method-summary">Create an artifact (<span class="nickname">createArtifact</span>)</div>
-    <div class="method-notes"></div>
+    <pre class="delete"><code class="huge"><span class="http-method">delete</span> /metadata/aus/{auid}</code></pre></div>
+    <div class="method-summary">Delete the metadata stored for an AU (<span class="nickname">deleteMetadataAusAuid</span>)</div>
+    <div class="method-notes">Delete the metadata stored for an AU given the AU identifier</div>
 
     <h3 class="field-label">Path parameters</h3>
     <div class="field-items">
-      <div class="param">collectionid (required)</div>
-
-      <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash; Collection containing the artifact </div>
-    </div>  <!-- field-items -->
-
-    <h3 class="field-label">Consumes</h3>
-    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
-    <ul>
-      <li><code>multipart/form-data</code></li>
-    </ul>
-
-
-
-
-    <h3 class="field-label">Form parameters</h3>
-    <div class="field-items">
       <div class="param">auid (required)</div>
 
-      <div class="param-desc"><span class="param-type">Form Parameter</span> &mdash; Archival Unit ID (AUID) of new artifact </div><div class="param">uri (required)</div>
-
-      <div class="param-desc"><span class="param-type">Form Parameter</span> &mdash; URI represented by this artifact </div><div class="param">content (required)</div>
-
-      <div class="param-desc"><span class="param-type">Form Parameter</span> &mdash; Content byte stream </div><div class="param">aspectParts (optional)</div>
-
-      <div class="param-desc"><span class="param-type">Form Parameter</span> &mdash; URI aspects represented by this artifact </div>
+      <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash; The identifier of the AU for which the metadata is to be deleted </div>
     </div>  <!-- field-items -->
+
+
+
+
+
 
     <h3 class="field-label">Return type</h3>
     <div class="return-type">
-      <a href="#artifact">artifact</a>
+      
+      Integer
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>0</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The number of deleted AU metadata items
+        <a href="#Integer">Integer</a>
+    <h4 class="field-label">400</h4>
+    Bad Request
+        <a href="#"></a>
+    <h4 class="field-label">401</h4>
+    Unauthorized
+        <a href="#"></a>
+    <h4 class="field-label">403</h4>
+    Forbidden
+        <a href="#"></a>
+    <h4 class="field-label">404</h4>
+    Not found
+        <a href="#"></a>
+    <h4 class="field-label">500</h4>
+    Internal Server Error
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="getMetadataAusAuid"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /metadata/aus/{auid}</code></pre></div>
+    <div class="method-summary">Get the metadata stored for an AU (<span class="nickname">getMetadataAusAuid</span>)</div>
+    <div class="method-notes">Get the full metadata stored for an AU given the AU identifier or a pageful of the metadata defined by the continuation token and size</div>
+
+    <h3 class="field-label">Path parameters</h3>
+    <div class="field-items">
+      <div class="param">auid (required)</div>
+
+      <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash; The identifier of the AU for which the metadata is requested </div>
+    </div>  <!-- field-items -->
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">limit (optional)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The number of items per page default: 50 </div><div class="param">continuationToken (optional)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The continuation token of the next page of metadata to be returned </div>
+    </div>  <!-- field-items -->
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#auMetadataPageInfo">auMetadataPageInfo</a>
       
     </div>
 
@@ -258,13 +311,44 @@ font-style: italic;
     <h3 class="field-label">Example data</h3>
     <div class="example-data-content-type">Content-Type: application/json</div>
     <pre class="example"><code>{
-  "auid" : "auid",
-  "committed" : true,
-  "id" : "id",
-  "collection" : "collection",
-  "uri" : "uri",
-  "version" : 0,
-  "storageUrl" : "storageUrl"
+  "pageInfo" : {
+    "curLink" : "curLink",
+    "resultsPerPage" : 6,
+    "totalCount" : 0,
+    "continuationToken" : "continuationToken",
+    "nextLink" : "nextLink"
+  },
+  "items" : [ {
+    "scalarMap" : {
+      "key" : "scalarMap"
+    },
+    "listMap" : {
+      "key" : [ "listMap", "listMap" ]
+    },
+    "setMap" : {
+      "key" : [ "setMap", "setMap" ]
+    },
+    "mapMap" : {
+      "key" : {
+        "key" : "mapMap"
+      }
+    }
+  }, {
+    "scalarMap" : {
+      "key" : "scalarMap"
+    },
+    "listMap" : {
+      "key" : [ "listMap", "listMap" ]
+    },
+    "setMap" : {
+      "key" : [ "setMap", "setMap" ]
+    },
+    "mapMap" : {
+      "key" : {
+        "key" : "mapMap"
+      }
+    }
+  } ]
 }</code></pre>
 
     <h3 class="field-label">Produces</h3>
@@ -275,41 +359,33 @@ font-style: italic;
     </ul>
 
     <h3 class="field-label">Responses</h3>
-    <h4 class="field-label">201</h4>
-    Artifact created
-        <a href="#artifact">artifact</a>
-    <h4 class="field-label">302</h4>
-    Duplicate content; artifact not created
-        <a href="#"></a>
+    <h4 class="field-label">200</h4>
+    The metadata of the specified AU
+        <a href="#auMetadataPageInfo">auMetadataPageInfo</a>
     <h4 class="field-label">400</h4>
-    Invalid input
+    Bad Request
         <a href="#"></a>
     <h4 class="field-label">401</h4>
-    Unauthorized request
+    Unauthorized
         <a href="#"></a>
-    <h4 class="field-label">403</h4>
-    Client not authorized to create artifacts
+    <h4 class="field-label">404</h4>
+    Not found
         <a href="#"></a>
-    <h4 class="field-label">502</h4>
-    Internal error creating artifact
+    <h4 class="field-label">409</h4>
+    Conflict
+        <a href="#"></a>
+    <h4 class="field-label">500</h4>
+    Internal Server Error
         <a href="#"></a>
   </div> <!-- method -->
   <hr/>
-  <div class="method"><a name="deleteArtifact"/>
+  <div class="method"><a name="postMetadataAusItem"/>
     <div class="method-path">
     <a class="up" href="#__Methods">Up</a>
-    <pre class="delete"><code class="huge"><span class="http-method">delete</span> /collections/{collectionid}/artifacts/{artifactid}</code></pre></div>
-    <div class="method-summary">Remove an artifact from the repository (<span class="nickname">deleteArtifact</span>)</div>
-    <div class="method-notes"></div>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /metadata/aus</code></pre></div>
+    <div class="method-summary">Store the metadata for an AU item (<span class="nickname">postMetadataAusItem</span>)</div>
+    <div class="method-notes">Store the metadata for an item belonging to an AU</div>
 
-    <h3 class="field-label">Path parameters</h3>
-    <div class="field-items">
-      <div class="param">collectionid (required)</div>
-
-      <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash; Collection containing the artifact </div><div class="param">artifactid (required)</div>
-
-      <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash; Identifier of the artifact </div>
-    </div>  <!-- field-items -->
 
     <h3 class="field-label">Consumes</h3>
     This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
@@ -317,130 +393,15 @@ font-style: italic;
       <li><code>application/json</code></li>
     </ul>
 
-
-
-
-
-
-    <!--Todo: process Response Object and its headers, schema, examples -->
-
-
-    <h3 class="field-label">Produces</h3>
-    This API call produces the following media types according to the <span class="header">Accept</span> request header;
-    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
-    <ul>
-      <li><code>application/json</code></li>
-    </ul>
-
-    <h3 class="field-label">Responses</h3>
-    <h4 class="field-label">200</h4>
-    Successfully removed artifact
-        <a href="#"></a>
-    <h4 class="field-label">401</h4>
-    Unauthorized request
-        <a href="#"></a>
-    <h4 class="field-label">403</h4>
-    Client not authorized to delete artifact
-        <a href="#"></a>
-    <h4 class="field-label">404</h4>
-    Artifact not found
-        <a href="#"></a>
-    <h4 class="field-label">409</h4>
-    Cannot delete committed artifact
-        <a href="#"></a>
-  </div> <!-- method -->
-  <hr/>
-  <div class="method"><a name="getArtifact"/>
-    <div class="method-path">
-    <a class="up" href="#__Methods">Up</a>
-    <pre class="get"><code class="huge"><span class="http-method">get</span> /collections/{collectionid}/artifacts/{artifactid}</code></pre></div>
-    <div class="method-summary">Get artifact content and metadata (<span class="nickname">getArtifact</span>)</div>
-    <div class="method-notes"></div>
-
-    <h3 class="field-label">Path parameters</h3>
+    <h3 class="field-label">Request body</h3>
     <div class="field-items">
-      <div class="param">collectionid (required)</div>
+      <div class="param">item <a href="#itemMetadata">itemMetadata</a> (required)</div>
 
-      <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash; Collection containing the artifact </div><div class="param">artifactid (required)</div>
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash; The metadata of the AU item to be stored </div>
 
-      <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash; Identifier of the artifact </div>
     </div>  <!-- field-items -->
 
 
-
-    <h3 class="field-label">Request headers</h3>
-    <div class="field-items">
-      
-    </div>  <!-- field-items -->
-
-
-
-    <h3 class="field-label">Return type</h3>
-    <div class="return-type">
-      <a href="#streamingResponseBody">streamingResponseBody</a>
-      
-    </div>
-
-    <!--Todo: process Response Object and its headers, schema, examples -->
-
-    <h3 class="field-label">Example data</h3>
-    <div class="example-data-content-type">Content-Type: application/json</div>
-    <pre class="example"><code>{ }</code></pre>
-
-    <h3 class="field-label">Produces</h3>
-    This API call produces the following media types according to the <span class="header">Accept</span> request header;
-    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
-    <ul>
-      <li><code>application/json</code></li>
-    </ul>
-
-    <h3 class="field-label">Responses</h3>
-    <h4 class="field-label">200</h4>
-    Artifact created
-        <a href="#streamingResponseBody">streamingResponseBody</a>
-    <h4 class="field-label">401</h4>
-    Unauthorized request
-        <a href="#"></a>
-    <h4 class="field-label">403</h4>
-    Client not authorized to retrieve artifact
-        <a href="#"></a>
-    <h4 class="field-label">404</h4>
-    Artifact not found
-        <a href="#"></a>
-    <h4 class="field-label">502</h4>
-    Could not read from external resource
-        <a href="#"></a>
-  </div> <!-- method -->
-  <hr/>
-  <div class="method"><a name="getArtifactsSize"/>
-    <div class="method-path">
-    <a class="up" href="#__Methods">Up</a>
-    <pre class="get"><code class="huge"><span class="http-method">get</span> /collections/{collectionid}/aus/{auid}/size</code></pre></div>
-    <div class="method-summary">Get the size of Archival Unit artifacts in a collection (<span class="nickname">getArtifactsSize</span>)</div>
-    <div class="method-notes"></div>
-
-    <h3 class="field-label">Path parameters</h3>
-    <div class="field-items">
-      <div class="param">collectionid (required)</div>
-
-      <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash; Identifier of the collection containing the artifacts </div><div class="param">auid (required)</div>
-
-      <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash; Identifier of the Archival Unit containing the artifacts </div>
-    </div>  <!-- field-items -->
-
-
-
-
-    <h3 class="field-label">Query parameters</h3>
-    <div class="field-items">
-      <div class="param">url (optional)</div>
-
-      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The URL contained by the artifacts </div><div class="param">urlPrefix (optional)</div>
-
-      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The prefix to be matched by the artifact URLs </div><div class="param">version (optional)</div>
-
-      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The version of the URL contained by the artifacts </div>
-    </div>  <!-- field-items -->
 
 
     <h3 class="field-label">Return type</h3>
@@ -464,274 +425,22 @@ font-style: italic;
 
     <h3 class="field-label">Responses</h3>
     <h4 class="field-label">200</h4>
-    The size of the artifacts
+    The key under which the metadata of the AU item has been stored
         <a href="#Long">Long</a>
-    <h4 class="field-label">401</h4>
-    Unauthorized request
-        <a href="#"></a>
-    <h4 class="field-label">403</h4>
-    Client not authorized to retrieve data
-        <a href="#"></a>
-    <h4 class="field-label">404</h4>
-    Collection not found
-        <a href="#"></a>
-    <h4 class="field-label">502</h4>
-    Could not read from external resource
-        <a href="#"></a>
-  </div> <!-- method -->
-  <hr/>
-  <div class="method"><a name="getAus"/>
-    <div class="method-path">
-    <a class="up" href="#__Methods">Up</a>
-    <pre class="get"><code class="huge"><span class="http-method">get</span> /collections/{collectionid}/aus</code></pre></div>
-    <div class="method-summary">Get Archival Unit IDs (AUIDs) in a collection (<span class="nickname">getAus</span>)</div>
-    <div class="method-notes"></div>
-
-    <h3 class="field-label">Path parameters</h3>
-    <div class="field-items">
-      <div class="param">collectionid (required)</div>
-
-      <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash; Identifier of the collection containing the Archival Units </div>
-    </div>  <!-- field-items -->
-
-
-
-
-
-
-    <h3 class="field-label">Return type</h3>
-    <div class="return-type">
-      
-      array[String]
-    </div>
-
-    <!--Todo: process Response Object and its headers, schema, examples -->
-
-    <h3 class="field-label">Example data</h3>
-    <div class="example-data-content-type">Content-Type: application/json</div>
-    <pre class="example"><code>[ "", "" ]</code></pre>
-
-    <h3 class="field-label">Produces</h3>
-    This API call produces the following media types according to the <span class="header">Accept</span> request header;
-    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
-    <ul>
-      <li><code>application/json</code></li>
-    </ul>
-
-    <h3 class="field-label">Responses</h3>
-    <h4 class="field-label">200</h4>
-    OK
-        
-    <h4 class="field-label">401</h4>
-    Unauthorized request
-        <a href="#"></a>
-    <h4 class="field-label">403</h4>
-    Client not authorized to retrieve data
-        <a href="#"></a>
-    <h4 class="field-label">404</h4>
-    Collection not found
-        <a href="#"></a>
-    <h4 class="field-label">502</h4>
-    Could not read from external resource
-        <a href="#"></a>
-  </div> <!-- method -->
-  <hr/>
-  <div class="method"><a name="getCollections"/>
-    <div class="method-path">
-    <a class="up" href="#__Methods">Up</a>
-    <pre class="get"><code class="huge"><span class="http-method">get</span> /collections</code></pre></div>
-    <div class="method-summary">Get collection identifiers of the committed artifacts in the repository (<span class="nickname">getCollections</span>)</div>
-    <div class="method-notes"></div>
-
-
-
-
-
-
-
-    <h3 class="field-label">Return type</h3>
-    <div class="return-type">
-      
-      array[String]
-    </div>
-
-    <!--Todo: process Response Object and its headers, schema, examples -->
-
-    <h3 class="field-label">Example data</h3>
-    <div class="example-data-content-type">Content-Type: application/json</div>
-    <pre class="example"><code>[ "", "" ]</code></pre>
-
-    <h3 class="field-label">Produces</h3>
-    This API call produces the following media types according to the <span class="header">Accept</span> request header;
-    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
-    <ul>
-      <li><code>application/json</code></li>
-    </ul>
-
-    <h3 class="field-label">Responses</h3>
-    <h4 class="field-label">200</h4>
-    Status 200
-        
-  </div> <!-- method -->
-  <hr/>
-  <div class="method"><a name="getCommittedArtifacts"/>
-    <div class="method-path">
-    <a class="up" href="#__Methods">Up</a>
-    <pre class="get"><code class="huge"><span class="http-method">get</span> /collections/{collectionid}/aus/{auid}/artifacts</code></pre></div>
-    <div class="method-summary">Get committed artifacts in a collection and Archival Unit (<span class="nickname">getCommittedArtifacts</span>)</div>
-    <div class="method-notes"></div>
-
-    <h3 class="field-label">Path parameters</h3>
-    <div class="field-items">
-      <div class="param">collectionid (required)</div>
-
-      <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash; Identifier of the collection containing the artifacts </div><div class="param">auid (required)</div>
-
-      <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash; Identifier of the Archival Unit containing the artifacts </div>
-    </div>  <!-- field-items -->
-
-
-
-
-    <h3 class="field-label">Query parameters</h3>
-    <div class="field-items">
-      <div class="param">url (optional)</div>
-
-      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The URL contained by the artifacts </div><div class="param">urlPrefix (optional)</div>
-
-      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The prefix to be matched by the artifact URLs </div><div class="param">version (optional)</div>
-
-      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The version of the URL contained by the artifacts </div>
-    </div>  <!-- field-items -->
-
-
-    <h3 class="field-label">Return type</h3>
-    <div class="return-type">
-      array[<a href="#artifact">artifact</a>]
-      
-    </div>
-
-    <!--Todo: process Response Object and its headers, schema, examples -->
-
-    <h3 class="field-label">Example data</h3>
-    <div class="example-data-content-type">Content-Type: application/json</div>
-    <pre class="example"><code>[ {
-  "auid" : "auid",
-  "committed" : true,
-  "id" : "id",
-  "collection" : "collection",
-  "uri" : "uri",
-  "version" : 0,
-  "storageUrl" : "storageUrl"
-}, {
-  "auid" : "auid",
-  "committed" : true,
-  "id" : "id",
-  "collection" : "collection",
-  "uri" : "uri",
-  "version" : 0,
-  "storageUrl" : "storageUrl"
-} ]</code></pre>
-
-    <h3 class="field-label">Produces</h3>
-    This API call produces the following media types according to the <span class="header">Accept</span> request header;
-    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
-    <ul>
-      <li><code>application/json</code></li>
-    </ul>
-
-    <h3 class="field-label">Responses</h3>
-    <h4 class="field-label">200</h4>
-    The requested artifacts
-        
-    <h4 class="field-label">401</h4>
-    Unauthorized request
-        <a href="#"></a>
-    <h4 class="field-label">403</h4>
-    Client not authorized to retrieve data
-        <a href="#"></a>
-    <h4 class="field-label">404</h4>
-    Collection not found
-        <a href="#"></a>
-    <h4 class="field-label">502</h4>
-    Could not read from external resource
-        <a href="#"></a>
-  </div> <!-- method -->
-  <hr/>
-  <div class="method"><a name="updateArtifact"/>
-    <div class="method-path">
-    <a class="up" href="#__Methods">Up</a>
-    <pre class="put"><code class="huge"><span class="http-method">put</span> /collections/{collectionid}/artifacts/{artifactid}</code></pre></div>
-    <div class="method-summary">Update the committed property of an artifact (<span class="nickname">updateArtifact</span>)</div>
-    <div class="method-notes"></div>
-
-    <h3 class="field-label">Path parameters</h3>
-    <div class="field-items">
-      <div class="param">collectionid (required)</div>
-
-      <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash; Collection containing the artifact </div><div class="param">artifactid (required)</div>
-
-      <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash; Identifier of the artifact </div>
-    </div>  <!-- field-items -->
-
-    <h3 class="field-label">Consumes</h3>
-    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
-    <ul>
-      <li><code>multipart/form-data</code></li>
-    </ul>
-
-
-
-
-    <h3 class="field-label">Form parameters</h3>
-    <div class="field-items">
-      <div class="param">committed (optional)</div>
-
-      <div class="param-desc"><span class="param-type">Form Parameter</span> &mdash; New commit status of artifact </div>
-    </div>  <!-- field-items -->
-
-    <h3 class="field-label">Return type</h3>
-    <div class="return-type">
-      <a href="#artifact">artifact</a>
-      
-    </div>
-
-    <!--Todo: process Response Object and its headers, schema, examples -->
-
-    <h3 class="field-label">Example data</h3>
-    <div class="example-data-content-type">Content-Type: application/json</div>
-    <pre class="example"><code>{
-  "auid" : "auid",
-  "committed" : true,
-  "id" : "id",
-  "collection" : "collection",
-  "uri" : "uri",
-  "version" : 0,
-  "storageUrl" : "storageUrl"
-}</code></pre>
-
-    <h3 class="field-label">Produces</h3>
-    This API call produces the following media types according to the <span class="header">Accept</span> request header;
-    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
-    <ul>
-      <li><code>application/json</code></li>
-    </ul>
-
-    <h3 class="field-label">Responses</h3>
-    <h4 class="field-label">200</h4>
-    Artifact updated
-        <a href="#artifact">artifact</a>
     <h4 class="field-label">400</h4>
-    Invalid input
+    Bad Request
         <a href="#"></a>
     <h4 class="field-label">401</h4>
-    Unauthorized request
+    Unauthorized
         <a href="#"></a>
     <h4 class="field-label">403</h4>
-    Client not authorized to update artifact
+    Forbidden
         <a href="#"></a>
-    <h4 class="field-label">404</h4>
-    Artifact not found
+    <h4 class="field-label">415</h4>
+    Unsupported Media Type
+        <a href="#"></a>
+    <h4 class="field-label">500</h4>
+    Internal Server Error
         <a href="#"></a>
   </div> <!-- method -->
   <hr/>
@@ -783,6 +492,123 @@ font-style: italic;
         <a href="#"></a>
   </div> <!-- method -->
   <hr/>
+  <h1><a name="Urls">Urls</a></h1>
+  <div class="method"><a name="getUrlsDoi"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /urls/doi</code></pre></div>
+    <div class="method-summary">Gets the URL for a DOI (<span class="nickname">getUrlsDoi</span>)</div>
+    <div class="method-notes">Provides the URL for a DOI given the DOI</div>
+
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">doi (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The DOI for which the URL is requested </div>
+    </div>  <!-- field-items -->
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#urlInfo">urlInfo</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "urls" : [ "urls", "urls" ],
+  "params" : {
+    "key" : "params"
+  }
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The URL for the specified DOI
+        <a href="#urlInfo">urlInfo</a>
+    <h4 class="field-label">400</h4>
+    Bad Request
+        <a href="#"></a>
+    <h4 class="field-label">401</h4>
+    Unauthorized
+        <a href="#"></a>
+    <h4 class="field-label">500</h4>
+    Internal Server Error
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="getUrlsOpenUrl"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /urls/openurl</code></pre></div>
+    <div class="method-summary">Performs an OpenURL query (<span class="nickname">getUrlsOpenUrl</span>)</div>
+    <div class="method-notes">Provides the URL that results from performing an OpenURL query. With query parameters inline</div>
+
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">params (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The OpenURL parameters </div>
+    </div>  <!-- field-items -->
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#urlInfo">urlInfo</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "urls" : [ "urls", "urls" ],
+  "params" : {
+    "key" : "params"
+  }
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The data related to the performed OpenURL query
+        <a href="#urlInfo">urlInfo</a>
+    <h4 class="field-label">400</h4>
+    Bad Request
+        <a href="#"></a>
+    <h4 class="field-label">401</h4>
+    Unauthorized
+        <a href="#"></a>
+    <h4 class="field-label">500</h4>
+    Internal Server Error
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
 
   <h2><a name="__Models">Models</a></h2>
   [ Jump to <a href="#__Methods">Methods</a> ]
@@ -790,8 +616,10 @@ font-style: italic;
   <h3>Table of Contents</h3>
   <ol>
     <li><a href="#apiStatus"><code>apiStatus</code> - </a></li>
-    <li><a href="#artifact"><code>artifact</code> - </a></li>
-    <li><a href="#streamingResponseBody"><code>streamingResponseBody</code> - </a></li>
+    <li><a href="#auMetadataPageInfo"><code>auMetadataPageInfo</code> - </a></li>
+    <li><a href="#itemMetadata"><code>itemMetadata</code> - </a></li>
+    <li><a href="#pageInfo"><code>pageInfo</code> - </a></li>
+    <li><a href="#urlInfo"><code>urlInfo</code> - </a></li>
   </ol>
 
   <div class="model">
@@ -803,23 +631,41 @@ font-style: italic;
     </div>  <!-- field-items -->
   </div>
   <div class="model">
-    <h3><a name="artifact"><code>artifact</code> - </a> <a class="up" href="#__Models">Up</a></h3>
-    <div class='model-description'></div>
+    <h3><a name="auMetadataPageInfo"><code>auMetadataPageInfo</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>The display page of AU metadata</div>
     <div class="field-items">
-      <div class="param">id (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
-<div class="param">collection (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
-<div class="param">auid (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
-<div class="param">uri (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
-<div class="param">version (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
-<div class="param">committed (optional)</div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span>  </div>
-<div class="param">storageUrl (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+      <div class="param">items </div><div class="param-desc"><span class="param-type"><a href="#itemMetadata">array[itemMetadata]</a></span> The metadata for the AU items in the page </div>
+<div class="param">pageInfo </div><div class="param-desc"><span class="param-type"><a href="#pageInfo">pageInfo</a></span>  </div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">
-    <h3><a name="streamingResponseBody"><code>streamingResponseBody</code> - </a> <a class="up" href="#__Models">Up</a></h3>
-    <div class='model-description'></div>
+    <h3><a name="itemMetadata"><code>itemMetadata</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>The metadata generated for a single item</div>
     <div class="field-items">
-          </div>  <!-- field-items -->
+      <div class="param">scalarMap (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">map[String, String]</a></span> The map of scalar metadata elements for this item </div>
+<div class="param">setMap (optional)</div><div class="param-desc"><span class="param-type"><a href="#array">map[String, array[String]]</a></span> The map of set-bound metadata elements for this item </div>
+<div class="param">listMap (optional)</div><div class="param-desc"><span class="param-type"><a href="#array">map[String, array[String]]</a></span> The map of listed metadata elements for this item </div>
+<div class="param">mapMap (optional)</div><div class="param-desc"><span class="param-type"><a href="#map">map[String, map[String, String]]</a></span> The map of mapped metadata elements for this item </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="pageInfo"><code>pageInfo</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>The information related to pagination of content</div>
+    <div class="field-items">
+      <div class="param">totalCount </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> The total number of elements to be paginated format: int32</div>
+<div class="param">resultsPerPage </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> The number of results per page format: int32</div>
+<div class="param">continuationToken </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The continuation token </div>
+<div class="param">curLink </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The link to the current page </div>
+<div class="param">nextLink (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The link to the next page </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="urlInfo"><code>urlInfo</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>The information related to a resulting list of URLs</div>
+    <div class="field-items">
+      <div class="param">params </div><div class="param-desc"><span class="param-type"><a href="#string">map[String, String]</a></span> The parameters that define the resulting URLs </div>
+<div class="param">urls </div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span> The URLs </div>
+    </div>  <!-- field-items -->
   </div>
   </body>
 </html>
