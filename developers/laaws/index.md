@@ -21,6 +21,7 @@ The following HTML pages of API documentation were generated with the
 *   [LOCKSS Metadata Extraction Service REST API](apis/lockss-metadata-extraction-service.html)
 *   [LOCKSS Metadata Service REST API](apis/lockss-metadata-service.html)
 *   [LOCKSS Poller Service REST API](apis/lockss-poller-service.html)
+*   [LOCKSS Crawler Service REST API](apis/lockss-crawlers-service.html)
 
 ## See Also
 
