@@ -5,7 +5,7 @@ title: Using the LOCKSS Crawler Service
 
 *This information does not apply to the classic LOCKSS daemon (version 1.x).*
 
-## LOCKSS Crawler Service Web User Interface
+## Accessing the Web User Interface
 
 In the LOCKSS 2.0 Alpha release, the main crawler runs as part of the [LOCKSS Poller Service](using-poller.md).
 

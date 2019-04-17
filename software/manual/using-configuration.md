@@ -5,7 +5,7 @@ title: Using the LOCKSS Configuration Service
 
 *This information does not apply to the classic LOCKSS daemon (version 1.x).*
 
-## LOCKSS Configuration Service Web User Interface
+## Accessing the Web User Interface
 
 If you are already connected to the Web user interface (UI) of another component of the LOCKSS System, click *Config Service* in the top-left menu.
 
@@ -14,16 +14,6 @@ Alternatively, if your primary hostname is `${HOST}`, you can use your browser t
     http://${HOST}:24621
 
 Enter your Web UI username and password to login if prompted.
-
-## Concepts
-
-### Archival Units
-
-Content in the LOCKSS System is preserved in archival units (AUs) -- user-defined slices of data or Web crawls that represent a meaningful subdivision of preservable content. For serial content, for example scholarly journals, an AU might be a volume or a year of content.
-
-### Title Database
-
-The list of AUs available to be preserved, as well as their characteristics like cataloging/bibliographic information, which LOCKSS plugin is needed to process them, and the value of plugin-dependent parameters, is made available from the preservation network's title database. The title database is not really a database but rather a knowledge base.
 
 ## Adding Archival Units
 
