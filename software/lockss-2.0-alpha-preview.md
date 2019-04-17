@@ -3,24 +3,33 @@ layout: page
 title: LOCKSS 2.0-alpha Technology Preview
 ---
 
+*Last updated: 2019-04-17*
+
 At the [2019 LOCKSS Alliance Meeting](https://www.lockss.org/events/2019-lockss-alliance-meeting), the LOCKSS engineering team presented a Technology Preview of the upcoming LOCKSS 2.0-alpha release. **The LOCKSS 2.0-alpha Technology Preview and the upcoming LOCKSS 2.0-alpha release are for evaluation and testing purposes.**
 
 The LOCKSS 2.0-alpha release will be the first public release of the next generation of LOCKSS software. It represents a major evolution of the classic [LOCKSS daemon](https://github.com/lockss/lockss-daemon) (1.x) into a suite of specialized software components. These components will interoperate via REST APIs and run as Docker components as part of a Docker stack.
 
 Unlike the production LOCKSS 2.0 release, the LOCKSS 2.0-alpha Technology Preview consists of a fixed set of LOCKSS components, and the supporting components are provided and managed by the LOCKSS system:
-*   FIXME
+
+*   Provided Postgres database container
+*   Provided Solr database container
+*   Provided HDFS (Hadoop File System) container
+*   LOCKSS Repository Service
+*   LOCKSS Configuration Service
+*   LOCKSS Metadata Extraction Service
+*   LOCKSS Metadata Service
+*   LOCKSS Poller Service
+*   Provided Pywb container
 
 ## Overview and Quick Start
 
-To run the LOCKSS 2.0-alpha Technology Preview, you will:
+To run the LOCKSS 2.0-alpha Technology Preview, you will need a Linux host with Docker running in Swarm mode with the Local-Persist Docker volume plugin installed.
 
-*   Use a Linux host with Docker and some free disk space
-*   Install a Docker plugin and a Python module
-*   Download a small project from GitHub and run some scripts
+You will also need to install a couple of Python modules and download a small project from GitHub.
 
-Namely:
+Quick Start:
 
-1.  Install [Docker CE](https://docs.docker.com/install/) (18.09 or better), [Local-Persist](https://github.com/CWSpear/local-persist) Docker plugin, [Pystache](http://defunkt.io/pystache/) Python module, [Git](https://www.git-scm.com/)
+1.  Install [Docker CE](https://docs.docker.com/install/) (18.09 or better), the [Local-Persist](https://github.com/CWSpear/local-persist) Docker volume plugin, the `setuptools` and `pystache` Python modules, and Git.
 1.  `docker swarm init`
 1.  `git clone --branch develop https://github.com/lockss/lockss-installer`
 1.  `cd lockss-installer`
@@ -181,6 +190,10 @@ Run the following script from `${INSTALLER_HOME}`:
 ```script/deploy```
 
 This has the effect of creating a Docker stack (an orchestrated group of Docker services) by calling `docker stack create ... lockss-stack` with a generated Docker Compose file parameterized appropriately and flanked by necessary infrastructure (Docker configs, Docker secrets, Docker volumes, etc.)
+
+## Using the System
+
+See [Using the System](manual/using.md).
 
 ## Shutting Down the System
 
