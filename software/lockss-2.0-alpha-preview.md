@@ -33,11 +33,11 @@ Quick Start:
 1.  `docker swarm init`
 1.  `git clone --branch develop https://github.com/lockss/lockss-installer`
 1.  `cd lockss-installer`
-1.  `scripts/configure`
-1.  `scripts/install`
-1.  `scripts/deploy`
+1.  `scripts/configure-lockss`
+1.  `scripts/assemble-lockss`
+1.  `scripts/deploy-lockss`
 1.  Use the system
-1.  Shut down the system with `script/remove-stack`
+1.  Shut down the system with `script/shutdown-lockss`
 
 ## System Pre-Requisites
 
@@ -141,12 +141,13 @@ In this document, this directory is referred to as `${INSTALLER_HOME}`.
 
 To configure the system in `${INSTALLER_HOME}`, run:
 
-```scripts/configure```
+```scripts/configure-lockss```
 
 The gist of this script will be familiar to users of the classic LOCKSS daemon (1.x) installation script `hostconfig`.
 
 The questions asked by the script often come with a suggested value, displayed in square brackets; hit Enter to accept the suggested value, or type the correct value and hit Enter. Questions include:
 
+1.  `Number of stacks to configure?`: *This question is only here temporarily. Unless you are doing development work, you will not be running more than one LOCKSS instance and you should hit Enter to accept the default answer `1`*
 1.  `Fully qualified hostname (FQDN) of this machine`: enter the machine's hostname (e.g. `locksstest.myuniversity.edu`)
 1.  `IP address of this machine`: the publicly routable IP address of the machine, or if it is not publicly routable but will be accessible via network address translation (NAT), its IP address on the internal network
 1.  `Is this machine behind NAT?` Enter `Y` if the machine is not publicly routable but will be accessible via network address translation (NAT), or `N` otherwise
@@ -173,13 +174,13 @@ The questions asked by the script often come with a suggested value, displayed i
 1.  `Password for database (again)`: re-enter the password for the embedded Postgres database (if the two passwords do not match, the password will be asked again)
 1.  `OK to store this configuration`: confirm with `Y` that the summarized configuration data is correct and that you are ready to write it to a file
 
-The configuration process writes a file to `${INSTALLER_HOME}/config/config.info` and invokes `${INSTALLER_HOME}/update-config`, which uses the collected values to generate configuration files and other configuration data.
+If prompted to generate files, accept (or run `scripts/generate-lockss` immediately after).
 
 ## Preparing to Run the System
 
 Run the following script from `${INSTALLER_HOME}`:
 
-```scripts/install```
+```scripts/assemble-lockss```
 
 This script sets up Docker-related infrastructure, configuration files and configuration data.
 
@@ -187,9 +188,9 @@ This script sets up Docker-related infrastructure, configuration files and confi
 
 Run the following script from `${INSTALLER_HOME}`:
 
-```script/deploy```
+```script/deploy-lockss```
 
-This has the effect of creating a Docker stack (an orchestrated group of Docker services) by calling `docker stack create ... lockss-stack` with a generated Docker Compose file parameterized appropriately and flanked by necessary infrastructure (Docker configs, Docker secrets, Docker volumes, etc.)
+This has the effect of creating a Docker stack (an orchestrated group of Docker services) by calling `docker stack create ... lockss-stack1` with a generated Docker Compose file parameterized appropriately and flanked by necessary infrastructure (Docker configs, Docker secrets, Docker volumes, etc.)
 
 ## Using the System
 
@@ -199,6 +200,6 @@ See [Using the System](manual/using.md).
 
 Run the following script from `${INSTALLER_HOME}`:
 
-```script/remove-stack```
+```script/shutdown-lockss```
 
 This has the effect of calling `docker stack rm lockss-stack`. Note that it takes a moment for all service containers to properly shut down.
