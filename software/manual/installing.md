@@ -3,11 +3,10 @@ layout: page
 title: Installing the LOCKSS System
 ---
 
-*This information does not apply to the classic LOCKSS daemon (version 1.x).*
+*This page is uner construction. This information does not apply to the classic LOCKSS daemon (version 1.x).*
 
-*   [System-Pre-Requisites](system-pre-requisites.md)
-*   [Installing Docker](installing-docker.md)
-*   [Installing Local-Persist](installing-local-persist.md)
-*   [Installing Setuptools](installing-setuptools.md)
-*   [Installing Pystache](installing-pystache.md)
-*   [Installing Git](installing-git.md)
+1.  [System-Pre-Requisites](system-pre-requisites)
+1.  [Installing Docker](installing-docker)
+1.  [Installing Local-Persist](installing-local-persist)
+1.  [Installing Pystache](installing-pystache)
+1.  [Installing Git](installing-git)

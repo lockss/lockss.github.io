@@ -3,7 +3,7 @@ layout: page
 title: Using the LOCKSS Configuration Service
 ---
 
-*This information does not apply to the classic LOCKSS daemon (version 1.x).*
+*This page is uner construction. This information does not apply to the classic LOCKSS daemon (version 1.x).*
 
 ## Accessing the Web User Interface
 
@@ -35,3 +35,9 @@ If Web crawls must be routed through a Web proxy:
 1.  Select the *Proxy crawls* checkbox.
 1.  Enter the hostname and port of the Web proxy in the *HTTP Proxy host* and *Port* text areas, respectively.
 1.  Click the *Update Proxy Client* button.
+
+## Managing Access to the Web User Interfaces
+
+*This section is under construction.*
+
+

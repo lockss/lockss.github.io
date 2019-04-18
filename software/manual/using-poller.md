@@ -3,9 +3,9 @@ layout: page
 title: Using the LOCKSS Poller Service
 ---
 
-*This information does not apply to the classic LOCKSS daemon (version 1.x).*
+*This page is uner construction. This information does not apply to the classic LOCKSS daemon (version 1.x).*
 
-## LOCKSS Poller Service Web User Interface
+## Accessing the Web User Interface
 
 If you are already connected to the Web user interface (UI) of another component of the LOCKSS System, click *Poller Service* in the top-left menu.
 
@@ -15,4 +15,10 @@ Alternatively, if your primary hostname is `${HOST}`, you can use your browser t
 
 Enter your Web UI username and password to login if prompted.
 
-*This page is under construction.*
+## Requesting Polls
+
+*This section is under construction.*
+
+## Monitoring Polling and Voting
+
+*This section is under construction.*
