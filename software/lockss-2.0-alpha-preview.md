@@ -202,4 +202,4 @@ Run the following script from `${INSTALLER_HOME}`:
 
 ```script/shutdown-lockss```
 
-This has the effect of calling `docker stack rm lockss-stack`. Note that it takes a moment for all service containers to properly shut down.
+This has the effect of calling `docker stack rm lockss-stack1`. Note that it takes a moment for all service containers to properly shut down.
