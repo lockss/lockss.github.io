@@ -3,7 +3,7 @@ layout: page
 title: Installing the LOCKSS System
 ---
 
-*This page is uner construction. This information does not apply to the classic LOCKSS daemon (version 1.x).*
+*This page is under construction. This information does not apply to the classic LOCKSS daemon (version 1.x).*
 
 1.  [System-Pre-Requisites](system-pre-requisites)
 1.  [Installing Docker](installing-docker)

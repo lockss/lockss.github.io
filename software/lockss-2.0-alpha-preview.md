@@ -3,7 +3,7 @@ layout: page
 title: LOCKSS 2.0-alpha Technology Preview
 ---
 
-*Last updated: 2019-04-17*
+*Last updated: 2019-04-19*
 
 At the [2019 LOCKSS Alliance Meeting](https://www.lockss.org/events/2019-lockss-alliance-meeting), the LOCKSS engineering team presented a Technology Preview of the upcoming LOCKSS 2.0-alpha release. **The LOCKSS 2.0-alpha Technology Preview and the upcoming LOCKSS 2.0-alpha release are for evaluation and testing purposes.**
 
@@ -29,14 +29,13 @@ You will also need to install a couple of Python modules and download a small pr
 
 Quick Start:
 
-1.  Install [Docker CE](https://docs.docker.com/install/) (18.09 or better), the [Local-Persist](https://github.com/CWSpear/local-persist) Docker volume plugin, the `setuptools` and `pystache` Python modules, and Git.
-1.  `docker swarm init`
+1.  [Install Docker](manual/installing/docker) (18.09 or better, in Swarm mode), the [Local-Persist](#local-persist) Docker volume plugin, the `setuptools` and [`pystache`](#pystache) Python modules, and [Git](#git).
 1.  `git clone --branch develop https://github.com/lockss/lockss-installer`
 1.  `cd lockss-installer`
 1.  `scripts/configure-lockss`
 1.  `scripts/assemble-lockss`
 1.  `scripts/deploy-lockss`
-1.  Use the system
+1.  [Use the system](manual/using)
 1.  Shut down the system with `script/shutdown-lockss`
 
 ## System Pre-Requisites
@@ -56,38 +55,10 @@ Disk space:
 
 The software pre-requisites are:
 
-1.  [Docker CE](https://docs.docker.com/install/) (18.09 or better)
-1.  [Local-Persist](https://github.com/CWSpear/local-persist)
-1.  [Pystache](http://defunkt.io/pystache/)
-1.  [Git](https://www.git-scm.com/)
-
-See the sections below for detail.
-
-### Docker CE
-
-Docker CE is a container runtime and orchestration system.
-
-*   Arch Linux: `sudo pacman -S docker`
-*   CentOS 7
-    *   Docker software repositories: https://docs.docker.com/install/linux/docker-ce/centos/
-    *   Apt: *The version available via standard CentOS software repositories is not suitable*
-*   Debian 9 (Stretch) or better:
-    *   Docker software repositories: https://docs.docker.com/install/linux/docker-ce/debian/
-    *   Yum: *The `docker` package available via standard Debian software repositories is an unrelated desktop system tray*
-*   Fedora 28 or better:
-    *   Docker software repositories: https://docs.docker.com/install/linux/docker-ce/fedora/
-    *   Yum: *The version available via standard Fedora software repositories is not suitable*
-*   Ubuntu 16.04 LTS (Xenial) or better:
-    *   Docker software repositories: https://docs.docker.com/install/linux/docker-ce/ubuntu/
-    *   Apt: `sudo apt-get install docker.io` from the Ubuntu Universe Updates software repository. *The `docker` package available via the Ubuntu Universe software repository is an unrelated desktop system tray.*
-
-After installing Docker:
-
-*   The user running the LOCKSS system must be a member of the same group (usually `docker`) as the Docker system user (usually `docker`).
-*   Enable Docker: `sudo systemctl enable docker`
-*   Start Docker: `sudo systemctl start docker`
-*   Check that Docker is running: `docker info` (returns system data if Docker is running, or an error message otherwise)
-*   Docker must be run in Swarm mode: `docker swarm init`
+1.  [**Install Docker**](manual/installing/docker) (18.09 or better)
+1.  [Local-Persist](#local-persist) (see below)
+1.  [Pystache](#pystache) (see below)
+1.  [Git](#git) (see below)
 
 ### Local-Persist
 
@@ -147,7 +118,6 @@ The gist of this script will be familiar to users of the classic LOCKSS daemon (
 
 The questions asked by the script often come with a suggested value, displayed in square brackets; hit Enter to accept the suggested value, or type the correct value and hit Enter. Questions include:
 
-1.  `Number of stacks to configure?`: *This question is only here temporarily. Unless you are doing development work, you will not be running more than one LOCKSS instance and you should hit Enter to accept the default answer `1`*
 1.  `Fully qualified hostname (FQDN) of this machine`: enter the machine's hostname (e.g. `locksstest.myuniversity.edu`)
 1.  `IP address of this machine`: the publicly routable IP address of the machine, or if it is not publicly routable but will be accessible via network address translation (NAT), its IP address on the internal network
 1.  `Is this machine behind NAT?` Enter `Y` if the machine is not publicly routable but will be accessible via network address translation (NAT), or `N` otherwise
