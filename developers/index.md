@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Developers
+title: LOCKSS Pages for Developers
 ---
 
-Welcome to the LOCKSS developer pages.
+Welcome to the LOCKSS pages for developers.
 
-*   [Contributing](contributing.md): contributor guidelines (code of conduct, Git layout, style guide...)
+*   [Contributing to LOCKSS Projects](contributing)
 *   [LAAWS re-architecture initiative](laaws): information about the LAAWS re-architecture initiative
 *   [Release notes](release-notes.md): release notes from the classic LOCKSS daemon (version 1.x)
