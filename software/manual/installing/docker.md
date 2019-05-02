@@ -5,75 +5,77 @@ title: Installing Docker
 
 *This page is under construction. This information does not apply to the classic LOCKSS daemon (version 1.x).*
 
-Docker is a container runtime and orchestration engine.
-
 ## Overview
+
+Docker is a containerization and orchestration engine.
 
 To install Docker for the purposes of running the LOCKSS system:
 
-*   [Install the Docker Engine](#install-the-docker-engine)
-*   [Check the System Group](#check-the-system-group)
-*   [Start Docker](#start-docker)
-*   [Verify the Docker Configuration](#verify-the-docker-configuration)
-*   [Initialize Swarm Mode](#initialize-swarm-mode)
-*   [Enable Docker at Startup](#enable-docker-at-startup)
-*   [Reconfiguring Docker](#reconfiguring-docker) (if other sections require it)
+1.  [Install Docker](#install-docker)
+    *   [Docker on Arch Linux](#docker-on-arch-linux)
+    *   [Docker on CentOS](#docker-on-centos)
+    *   [Docker on Debian](#docker-on-debian)
+    *   [Docker on Fedora](#docker-on-fedora)
+    *   [Docker on Oracle inux](#docker-on-oracle-linux)
+    *   [Docker on Ubuntu](#docker-on-ubuntu)
+2.  [Check the System Group](#check-the-system-group)
+3.  [Start Docker](#start-docker)
+4.  [Check the Storage Driver](#check-the-storage-driver)
+5.  [Initialize Swarm Mode](#initialize-swarm-mode)
+6.  [Enable Docker at Startup](#enable-docker-at-startup)
+7.  [Reconfiguring Docker](#reconfiguring-docker) (if other sections require it)
 
 ## Install the Docker Engine
 
 The LOCKSS system requires Docker version 18.09 or better.
 
-### Arch Linux
+### Docker on Arch Linux
 
-Use Pacman to install Docker:
+Simply use Arch's official software repositories to install Docker with Pacman:
 
     sudo pacman -S docker
 
-### CentOS
+### Docker on CentOS
 
 *CentOS 7 or better*
 
-The version of Docker available through the standard CentOS software repositories is not suitably recent.
+Use Docker's official software repositories to install Docker with Yum: [https://docs.docker.com/install/linux/docker-ce/centos/](https://docs.docker.com/install/linux/docker-ce/centos/) (the version of Docker available through the standard CentOS software repositories is not suitably recent).
 
-Use Docker's own software repositories to install Docker with Yum: [https://docs.docker.com/install/linux/docker-ce/centos/](https://docs.docker.com/install/linux/docker-ce/centos/)
-
-### Debian
+### Docker on Debian
 
 *Debian 9 (Stretch) or better*
 
-The `docker` package available through the standard Debian software repositories is for an unrelated system tray.
+Use Docker's official software repositories to install Docker with Apt: [https://docs.docker.com/install/linux/docker-ce/debian/](https://docs.docker.com/install/linux/docker-ce/debian/) (the `docker` package available through the standard Debian software repositories is for an unrelated system tray application).
 
-Use Docker's own software repositories to install Docker with Apt: [https://docs.docker.com/install/linux/docker-ce/debian/](https://docs.docker.com/install/linux/docker-ce/debian/)
-
-### Fedora
+### Docker on Fedora
 
 *Fedora 28 or better*
 
-The version of Docker available through the standard Fedora software repositories is not suitably recent.
+Use Docker's official software repositories to install Docker with Yum: [https://docs.docker.com/install/linux/docker-ce/fedora/](https://docs.docker.com/install/linux/docker-ce/fedora/) (the version of Docker available through the standard Fedora software repositories is not suitably recent).
 
-Use Docker's own software repositories to install Docker with Yum: [https://docs.docker.com/install/linux/docker-ce/fedora/](https://docs.docker.com/install/linux/docker-ce/fedora/)
+### Docker on Oracle Linux
 
-### Oracle Linux
+*Oracle Linux 7 or better*
 
-*This section is under construction.*
+Use Oracle's official software repositories to install Docker with Yum: [https://docs.oracle.com/cd/E52668_01/E87205/html/section_install_upgrade_yum_docker.html](https://docs.oracle.com/cd/E52668_01/E87205/html/section_install_upgrade_yum_docker.html).
 
-### Ubuntu
+### Docker on Ubuntu
 
 *Ubuntu 16.04 LTS (Xenial) or better*
 
-The `docker` package available via the Ubuntu Universe software repository is for an unrelated desktop system tray.
-
-*(Recommended)* Use Docker's own software repositories to install Docker with Apt: [https://docs.docker.com/install/linux/docker-ce/ubuntu/](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
-
-*(Alternative)* Or you can use Apt to install Docker from the Ubuntu Universe Updates software repository:
-
-    sudo apt-get install docker.io
+Use Docker's official software repositories to install Docker with Apt: [https://docs.docker.com/install/linux/docker-ce/ubuntu/](https://docs.docker.com/install/linux/docker-ce/ubuntu/) (the `docker` package available via the Ubuntu Universe software repository is for an unrelated desktop system tray application).
 
 ## Check the System Group
 
-The user running the LOCKSS system must be a member of the same group (usually `docker`) as the Docker system user (usually `docker`).
+Installing Docker creates a new system group typically named `docker`. The command:
 
-*This section is under construction.*
+    groups lockss
+
+will display the list of groups the `lockss` user is a member of. If the list does not include `docker`, add the `lockss` user to the `docker` group with the following command:
+
+    sudo usermod -G docker -a lockss
+
+or a similar user management command or tool.
 
 ## Start Docker
 
@@ -87,41 +89,59 @@ Verify that Docker is running:
 
 The output should say `active`.
 
-*This section is under construction.*
+## Check the Storage Driver
 
-## Verify the Docker Configuration
+The LOCKSS system works with the Docker OverlayFS (`overlay2`) storage driver.
 
-### Storage Driver
+Verify that Docker is using the OverlayFS driver:
 
-The LOCKSS system works with the Docker OverlayFS (`overlay2`) storage driver. In the output of:
+    sudo -u lockss docker info | grep 'Storage Driver:'
 
-    docker info
-
-look for the line:
+If the output is:
 
     Storage Driver: overlay2
 
-If another value than `overlay2` is listed, add the key-value pair `"storage-driver":"overlay2"` to `/etc/docker/daemon.json` and restart the Docker daemon; see the instructions from the [Reconfiguring Docker](#reconfiguring-docker) section below for details.
-
-### Iptables Management
-
-Some Linux systems (e.g. Oracle Linux) seem to deliver Docker with `iptables` management turned off. If this is the case, add the key-value pair `"iptables":true` to `/etc/docker/daemon.json` and restart the Docker daemon; see the instructions from the [Reconfiguring Docker](#reconfiguring-docker) section below for details.
+then Docker is running with the OverlayFS driver and you can move on to the next section. If the output lists another storage driver than `overlay2`, see the [Reconfiguring Docker](#reconfiguring-docker) section below to add the key-value pair `"storage-driver":"overlay2"` to `/etc/docker/daemon.json` and restart the Docker daemon.
 
 ## Initialize Swarm Mode
 
-The LOCKSS system works with Docker in Swarm mode. In the output of:
+The LOCKSS system works with Docker in Swarm mode.
 
-    docker info
+Verify that Docker is using Swarm mode:
 
-look for the line:
+    sudo -u lockss docker info | grep 'Swarm:'
+
+If the output is:
 
     Swarm: active
 
-If the line is missing or if the Swarm is not listed as active, initialize Swarm mode with this command:
+then Docker is running in Swarm mode and you can move on to the next section. If the output is empty or if the Swarm is not listed as active, initialize Swarm mode with this command:
 
-    docker swarm init
+    sudo -u lockss docker swarm init
 
-and verify that Swarm mode is active via `docker info`.
+If the output looks like this:
+
+    Swarm initialized: current node (bvz81updecsj6wjz393c09vti) is now a manager.
+
+    To add a worker to this swarm, run the following command:
+
+        docker swarm join \
+        --token SWMTKN-1-3pu6hszjas19xyp7ghgosyx9k8atbfcr8p2is99znpy26u2lkl-1awxwuwd3z9j1z3puu7rcgdbx \
+        xx.xx.xx.xx:2377
+
+    To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
+
+where `xx.xx.xx.xx` is the IP address of the machine, then the Swarm initialization was successful and you can move on to the next section. If the output contains an error message that looks like this:
+
+    Error response from daemon: could not choose an IP address to advertise since this system has multiple addresses on interface eth0 (xx.xx.xx.xx and yy.yy.yy.yy) - specify one with --advertise-addr
+
+or:
+
+    Error response from daemon: could not choose an IP address to advertise since this system has multiple addresses on different interfaces (xx.xx.xx.xx on eth0 and yy.yy.yy.yy on eth1) - specify one with --advertise-addr
+
+then Docker was not able to automatically select an IP address among the several it discovered. Identify the desired IP address of the machine, for example `xx.xx.xx.xx`, and enter the modified command:
+
+    sudo -u lockss docker swarm init --advertise-addr xx.xx.xx.xx
 
 ## Enable Docker at Startup
 

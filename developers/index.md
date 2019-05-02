@@ -1,9 +1,7 @@
 ---
 layout: page
-title: LOCKSS Pages for Developers
+title: Developers
 ---
-
-Welcome to the LOCKSS pages for developers.
 
 *   [Contributing to LOCKSS Projects](contributing)
 *   [LAAWS re-architecture initiative](laaws): information about the LAAWS re-architecture initiative
