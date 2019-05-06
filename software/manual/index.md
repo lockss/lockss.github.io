@@ -3,7 +3,7 @@ layout: page
 title: LOCKSS System Manual
 ---
 
-*This page is under construction. This information does not apply to the classic LOCKSS daemon (version 1.x).*
+*This information does not apply to the classic LOCKSS daemon (version 1.x).*
 
 1.  [**Installing the LOCKSS System**](installing)
     1.  [**System-Pre-Requisites**](installing/system-pre-requisites)

@@ -3,7 +3,7 @@ layout: page
 title: Installing Docker
 ---
 
-*This page is under construction. This information does not apply to the classic LOCKSS daemon (version 1.x).*
+*This information does not apply to the classic LOCKSS daemon (version 1.x).*
 
 ## Overview
 
@@ -16,18 +16,18 @@ To install Docker for the purposes of running the LOCKSS system:
     *   [Docker on CentOS](#docker-on-centos)
     *   [Docker on Debian](#docker-on-debian)
     *   [Docker on Fedora](#docker-on-fedora)
-    *   [Docker on Oracle inux](#docker-on-oracle-linux)
+    *   [Docker on Oracle Linux](#docker-on-oracle-linux)
     *   [Docker on Ubuntu](#docker-on-ubuntu)
-2.  [Check the System Group](#check-the-system-group)
-3.  [Start Docker](#start-docker)
-4.  [Check the Storage Driver](#check-the-storage-driver)
-5.  [Initialize Swarm Mode](#initialize-swarm-mode)
-6.  [Enable Docker at Startup](#enable-docker-at-startup)
-7.  [Reconfiguring Docker](#reconfiguring-docker) (if other sections require it)
+1.  [Check the System Group](#check-the-system-group)
+1.  [Start Docker](#start-docker)
+1.  [Check the Storage Driver](#check-the-storage-driver)
+1.  [Initialize Swarm Mode](#initialize-swarm-mode)
+1.  [Enable Docker at Startup](#enable-docker-at-startup)
+1.  [Reconfiguring Docker](#reconfiguring-docker) (if required along the way)
 
 ## Install the Docker Engine
 
-The LOCKSS system requires Docker version 18.09 or better.
+The LOCKSS system requires **Docker 18.09 or better**.
 
 ### Docker on Arch Linux
 
@@ -37,31 +37,31 @@ Simply use Arch's official software repositories to install Docker with Pacman:
 
 ### Docker on CentOS
 
-*CentOS 7 or better*
+*CentOS 7 or better required*
 
 Use Docker's official software repositories to install Docker with Yum: [https://docs.docker.com/install/linux/docker-ce/centos/](https://docs.docker.com/install/linux/docker-ce/centos/) (the version of Docker available through the standard CentOS software repositories is not suitably recent).
 
 ### Docker on Debian
 
-*Debian 9 (Stretch) or better*
+*Debian 9 (Stretch) or better required*
 
 Use Docker's official software repositories to install Docker with Apt: [https://docs.docker.com/install/linux/docker-ce/debian/](https://docs.docker.com/install/linux/docker-ce/debian/) (the `docker` package available through the standard Debian software repositories is for an unrelated system tray application).
 
 ### Docker on Fedora
 
-*Fedora 28 or better*
+*Fedora 28 or better required*
 
 Use Docker's official software repositories to install Docker with Yum: [https://docs.docker.com/install/linux/docker-ce/fedora/](https://docs.docker.com/install/linux/docker-ce/fedora/) (the version of Docker available through the standard Fedora software repositories is not suitably recent).
 
 ### Docker on Oracle Linux
 
-*Oracle Linux 7 or better*
+*Oracle Linux 7 or better required*
 
 Use Oracle's official software repositories to install Docker with Yum: [https://docs.oracle.com/cd/E52668_01/E87205/html/section_install_upgrade_yum_docker.html](https://docs.oracle.com/cd/E52668_01/E87205/html/section_install_upgrade_yum_docker.html).
 
 ### Docker on Ubuntu
 
-*Ubuntu 16.04 LTS (Xenial) or better*
+*Ubuntu 16.04 LTS (Xenial) or better required*
 
 Use Docker's official software repositories to install Docker with Apt: [https://docs.docker.com/install/linux/docker-ce/ubuntu/](https://docs.docker.com/install/linux/docker-ce/ubuntu/) (the `docker` package available via the Ubuntu Universe software repository is for an unrelated desktop system tray application).
 
@@ -71,15 +71,15 @@ Installing Docker creates a new system group typically named `docker`. The comma
 
     groups lockss
 
-will display the list of groups the `lockss` user is a member of. If the list does not include `docker`, add the `lockss` user to the `docker` group with the following command:
+will display the list of groups the `lockss` user is a member of, which should already include the `lockss` group. If the list of groups does not include the `docker` group, add the `lockss` user to the `docker` group with the following command:
 
     sudo usermod -G docker -a lockss
 
-or a similar user management command or tool.
+or with a similar user management command or tool.
 
 ## Start Docker
 
-Start Docker with Systemd:
+Start Docker with systemd:
 
     sudo systemctl start docker
 
@@ -91,9 +91,7 @@ The output should say `active`.
 
 ## Check the Storage Driver
 
-The LOCKSS system works with the Docker OverlayFS (`overlay2`) storage driver.
-
-Verify that Docker is using the OverlayFS driver:
+Verify that Docker is using the OverlayFS (`overlay2`) driver:
 
     sudo -u lockss docker info | grep 'Storage Driver:'
 
@@ -104,8 +102,6 @@ If the output is:
 then Docker is running with the OverlayFS driver and you can move on to the next section. If the output lists another storage driver than `overlay2`, see the [Reconfiguring Docker](#reconfiguring-docker) section below to add the key-value pair `"storage-driver":"overlay2"` to `/etc/docker/daemon.json` and restart the Docker daemon.
 
 ## Initialize Swarm Mode
-
-The LOCKSS system works with Docker in Swarm mode.
 
 Verify that Docker is using Swarm mode:
 
@@ -145,7 +141,7 @@ then Docker was not able to automatically select an IP address among the several
 
 ## Enable Docker at Startup
 
-Unless you are only trying out the LOCKSS system on a machine that will not be running it or Docker routinely, enable Docker to launch at startup with Systemd:
+Unless you are only trying out the LOCKSS system on a machine that will not be running it or Docker routinely, enable Docker to launch at startup with systemd:
 
     sudo systemctl enable docker
 
@@ -157,7 +153,7 @@ The output should say `enabled`.
 
 ## Reconfiguring Docker
 
-This section describes what to do when Docker needs to be reconfigured according to one of the sections above.
+This section describes what to do when Docker needs to be reconfigured. **You do not need to do anything unless one of the sections above sends you here.**
 
 Edit or create the `/etc/docker/daemon.json` file and input the required key-value pairs in a JSON object, separated by commas, typically one per line for clarity. Example:
 
