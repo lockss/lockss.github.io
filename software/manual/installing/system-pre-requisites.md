@@ -15,15 +15,17 @@ The LOCKSS system requires a **64-bit Linux** host running [**systemd**](https:/
 
 Many Linux distributions have systemd and can run Docker 18.09 or better. To name a few that are commonly used with the LOCKSS system:
 
+<!-- #osversion -->
 *   [Arch Linux](https://www.archlinux.org/)
 *   [CentOS](https://www.centos.org/) 7
-*   [Debian](https://www.debian.org/) 9 (Stretch) or better
+*   [Debian](https://www.debian.org/) 9 (Stretch)
 *   [Fedora](https://getfedora.org/) 28 or better
-*   [Oracle Linux](https://www.oracle.com/linux/) 7 or better
+*   [Oracle Linux](https://www.oracle.com/linux/) 7
 *   [Ubuntu](https://www.ubuntu.com/) 16.04 LTS (Xenial) or better
 
 ## User
 
 The LOCKSS system runs under a system user named `lockss` under a group named `lockss`, which you will need to create.
 
+<!-- FIXME -->
 *This section is under construction.*
