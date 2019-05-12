@@ -21,10 +21,14 @@ To add AUs to the system for preservation:
 
 1.  In the top-right menu, click *Journal Configuration*.
 1.  In the center menu, click *Add AUs*.
-1.  Select one or more title sets.
+1.  Select one or more collections of AUs by selecting the checkbox next to the appropriate collection.
 1.  Click the *Select AUs* button.
-1.  Select one or more AUs.
+    * It may take a bit of time (60+ seconds) for the next screen to appear, while the list of AUs is built.
+1.  Select one or more AUs from the AU list. You may click *Select All* if you'd like to select all AUs.
+    * If you choose to use *Select All* then please note that the next step may take some time.
 1.  Click the *Add Selected AUs* button.
+    * The time it takes for the page to refresh depends on the number of AUs added. Give the LOCKSS Daemon some time to load the AUs and reload the page before moving on.
+1. A screen will show a list of added AUs. Crawling of these new AUs will start automatically - no further action is necessary.
 
 ## Configuring a Crawl Proxy
 
