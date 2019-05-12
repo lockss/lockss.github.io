@@ -17,6 +17,19 @@ Alternatively, if your primary hostname is `${HOST}`, you can use your browser t
 
 Enter your Web UI username and password to login if prompted.
 
+## Monitoring Crawl Status in the Archive
+
+The Crawl Status of all configured AUs is available in the Archival Unit table
+
+1.  In the top-right menu, click *Daemon Status*.
+1.  Open the control in the middle of the screen that says *Overview* and select *Archival Units* from the drop down menu.
+    * If prompted, enter your Username and Password again.
+    * It will take a bit of time for the next screen to appear while the AU list is being built.
+1.  The Archival Units screen lists statistics for each configured AU
+    * the *Last Successful Crawl* column provides a timestamp of the most recent sucessful crawl.
+    * the *Last Crawl Start* column provides a timestamp of the last attempted crawl.
+    * the *Last Crawl Result* column provides the exit status of the last attempted crawl.
+
 ## Causing an Archival Unit to Crawl
 
 Archival units (AUs) that have been added to the system for preservation crawl periodically, but you can cause an AU to crawl on demand:
