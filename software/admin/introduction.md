@@ -45,5 +45,3 @@ The network configuration file, plugin files and title database files are merely
 a title database file server.
 
 In most cases, all these Web servers are one and the same, referred to as a **LOCKSS props server**.
-
-You will find information about setting up a props server in the [Setting Up a Props Server](setting-up/props-server) section.
