@@ -5,9 +5,14 @@ title: Releases
 
 ## Upcoming
 
-*   LOCKSS 2.0-alpha
+*   LOCKSS 2.0-beta
 
-## Latest
+## Development
+
+*   [LOCKSS 2.0-alpha](2.0-alpha) (2019-05-13)
+*   [LOCKSS 2.0-alpha technology preview](2.0-alpha-preview)
+
+## Stable
 
 *   [LOCKSS Daemon 1.74.7](https://github.com/lockss/lockss-daemon/releases/tag/release-candidate_1-74-b7) (2019-02-06)
 
