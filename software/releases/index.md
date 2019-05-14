@@ -10,7 +10,7 @@ title: Releases
 ## Development
 
 *   [LOCKSS 2.0-alpha](2.0-alpha) (2019-05-13)
-*   [LOCKSS 2.0-alpha technology preview](2.0-alpha-preview)
+*   [LOCKSS 2.0-alpha technology preview](2.0-alpha-preview) (2019-04-05)
 
 ## Stable
 
