@@ -17,7 +17,7 @@ Alternatively, if your primary hostname is `${HOST}`, you can use your browser t
 
 Enter your Web UI username and password to login if prompted.
 
-## Monitoring Crawl Status in the Archive
+## Monitoring Crawl Status in the System
 
 The Crawl Status of all configured AUs is available in the Archival Unit table
 

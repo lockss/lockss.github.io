@@ -5,7 +5,7 @@ title: Installing Pystache
 
 *This information does not apply to the classic LOCKSS daemon (version 1.x).*
 
-[Pystache](http://defunkt.io/pystache/) is the reference implementation of the [Mustache](https://mustache.github.io/) templating language in Python. This page will walk you through the simple process of installing Pystache. The Pystache python module also depends on the Setuptools Python module.
+[Pystache](http://defunkt.io/pystache/) is the reference implementation of the [Mustache](https://mustache.github.io/) templating language in Python. This page will walk you through the simple process of installing Pystache. The Pystache Python module depends on the Setuptools Python module.
 
 You can install Pystache from [PyPI](https://pypi.org/) using Pip:
 
