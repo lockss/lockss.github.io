@@ -6,7 +6,7 @@ title: LOCKSS System Manual
 *This information does not apply to the classic LOCKSS daemon (version 1.x).*
 
 1.  [**Installing the LOCKSS System**](installing)
-    1.  [**System-Pre-Requisites**](installing/system-pre-requisites)
+    1.  [**System Pre-Requisites**](installing/system-pre-requisites)
     1.  [**Installing Docker**](installing/docker)
     1.  [**Installing Pystache**](installing/pystache)
     1.  [**Installing Git**](installing/git)
@@ -20,3 +20,5 @@ title: LOCKSS System Manual
     1.  [**Using the LOCKSS Poller Service**](using/poller)
     1.  [**Using the LOCKSS Crawler Service**](using/crawler)
     1.  [**Replaying Web Content with Pywb**](using/pywb)
+1.  [**Appendix**](appendix)
+    1.  [**Network Ports**](appendix/ports)

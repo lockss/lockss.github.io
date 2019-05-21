@@ -5,7 +5,7 @@ title: Releases
 
 ## Upcoming
 
-*   LOCKSS 2.0-beta
+*   LOCKSS 2.0-beta1
 
 ## Development
 
