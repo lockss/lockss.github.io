@@ -78,8 +78,8 @@ Definitional Parameters - which are items required by a plugin, and which are in
 `param[journal_id]` from the title block
 
 The implicit definition line: `implicit < status ; year ; name ; param[volume_name] >`
-indicates what each field in the semi-colon separated AU definition means
-the last undefined parameter required by this particular plugin is one of the items in the AU definition line.
+indicates what each field in the semi-colon separated AU definition means.
+The last undefined parameter required by this particular plugin is one of the items in the AU definition line.
 `param[volume_name]`
 
 This makes sense because for a given publisher journal that is being harvested by the same plugin mechanism from the same origin, the only item that will change from one AU to the next is the scope of the content to be collected - in this case the volume. 
@@ -113,7 +113,7 @@ For a file-transfer plugin which might be used to preserve an opaque set of arbi
 }
 ```
 Again, the AU is inheriting a specific publisher definition and title definition, but in this case, the title is just a designation of what the opaque collection of content represents.
-The plugin in this case requires ony two parameters - a start_url and a “dir” which designates the unique aspect of this batch of content -  in this case is a  subdirectory below the start_url to narrow the ingest.
+The plugin in this case requires ony two parameters - a start_url and a “dir” which designates the unique batch of content -  in this case is a  subdirectory below the start_url to narrow the ingest.
 
 Another new item in this example is the use of any arbitrary information key value protected with the `info[]` syntax.  In the example it represents a unique identifier that the people managing the network might find useful to keep track of publishers programmatically. 
 
