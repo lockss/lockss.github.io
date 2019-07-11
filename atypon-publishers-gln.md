@@ -7,7 +7,7 @@ The Atypon publishing platform requires librarians to register the Global LOCKSS
 
 ### Atypon publishers include (as of July 2019):
 
-[comment]: # (tdbout -R -t publisher -Q 'plugin ~ "typon"' tdb/prod/*.tdb | sort -u #add TnF + Edinburgh)
+<!--tdbout -R -t publisher -Q 'plugin ~ "typon"' tdb/prod/*.tdb | sort -u #add TnF + Edinburgh)-->
 
 * Accreditation Council for Graduate Medical Education
 * American Academy of Implant Dentistry
@@ -40,7 +40,7 @@ The Atypon publishing platform requires librarians to register the Global LOCKSS
 
 ### Past publishers included (before July 2019):
 
-[comment]: # (tdbout -D -t plugin -Q 'plugin ~ "typon"' tdb/prod/*.tdb | sort -u)
+<!--tdbout -D -t plugin -Q 'plugin ~ "typon"' tdb/prod/*.tdb | sort -u-->
 
 * Allen Press
 * American Roentgen Ray Society
