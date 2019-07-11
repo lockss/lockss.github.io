@@ -41,7 +41,6 @@ title: Home
 * [Annotated ADPN plugin](http://www.adpn.org/docs/pdf/ADPNAnnotation.pdf) (2012) (PDF)
 * [Annotated plugin](https://plnwiki.lockss.org/index.php?title=Plugins/Plugin_XML_Format) (2013)
 * [Facilitate content ingest by web harvest](web-harvest-guidelines.md) (2018)
-* [Register IP address to preserve Atypon content in Global LOCKSS Network node](https://web.stanford.edu/group/lockss/documentation/Publisher_IP_Address_Registration_Contacts_for_Global_LOCKSS_Network.pdf) (2014) (PDF)
 * [Register IP address to preserve Atypon content in Global LOCKSS Network node](atypon-publishers-gln.md) (2019)
 * [Setup file transfer content stream](file-transfer-guidelines.md) (2018)
 * [Setup file transfer content stream for CLOCKSS](https://www.clockss.org/clocksswiki/files/File_Transfer_Guidelines_-_CLOCKSS.pdf) (2016) (PDF)
