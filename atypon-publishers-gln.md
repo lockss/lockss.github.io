@@ -1,4 +1,3 @@
-
 ---
 layout: page
 title: Atypon requires IP Address Registration for Global LOCKSS Network
