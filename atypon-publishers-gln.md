@@ -6,6 +6,7 @@ title: Atypon requires IP Address Registration for Global LOCKSS Network
 The Atypon publishing platform requires librarians to register the Global LOCKSS Network IP addresses. Failure to comply with this publisher requirement may trigger crawler traps on these platforms and your LOCKSS box or your institution may be temporarily banned from accessing the site. Please contact your publisher representative at Atypon to register your IP addresses.
 
 ### Atypon publishers include (as of July 2019):
+
 [//]: # (tdbout -R -t publisher -Q 'plugin ~ "typon"' tdb/prod/*.tdb | sort -u #add TnF + Edinburgh)
 
 * Accreditation Council for Graduate Medical Education
@@ -38,6 +39,7 @@ The Atypon publishing platform requires librarians to register the Global LOCKSS
 * Wageningen Academic Publishers
 
 ### Past publishers included (before July 2019):
+
 [//]: # (tdbout -D -t plugin -Q 'plugin ~ "typon"' tdb/prod/*.tdb | sort -u)
 
 * Allen Press
