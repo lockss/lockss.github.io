@@ -17,7 +17,7 @@ title: Home
 
 ## Network setup<a id="network_setup"></a>
 * [Network setup overview](https://web.stanford.edu/group/lockss/documentation/How_to_set_up_a_Private_LOCKSS_Network_(PLN).pdf) (2016) (PDF)
-* [Network setup overview and node setup configuration](https://plnwiki.lockss.org/index.php?title=LOCKSS_Technical_Manual) (2016)
+* [Network setup overview and node setup configuration](https://web.archive.org/web/20181214210425/https://plnwiki.lockss.org/index.php?title=LOCKSS_Technical_Manual) (2016)
 
 ## Node management<a id="node_management"></a>
 * [Add journal titles to be preserved](https://web.stanford.edu/group/lockss/documentation/Adding_Titles.pdf) (2012) (PDF)
@@ -39,9 +39,9 @@ title: Home
 
 ## Ingest content<a id="ingest_content"></a>
 * [Annotated ADPN plugin](http://www.adpn.org/docs/pdf/ADPNAnnotation.pdf) (2012) (PDF)
-* [Annotated plugin](https://plnwiki.lockss.org/index.php?title=Plugins/Plugin_XML_Format) (2013)
+* [Annotated plugin](https://web.archive.org/web/20181214212756/https://plnwiki.lockss.org/index.php?title=Plugins/Plugin_XML_Format) (2013)
 * [Facilitate content ingest by web harvest](web-harvest-guidelines.md) (2018)
-* [Register IP address to preserve Atypon content in Global LOCKSS Network node](https://web.stanford.edu/group/lockss/documentation/Publisher_IP_Address_Registration_Contacts_for_Global_LOCKSS_Network.pdf) (2014) (PDF)
+* [Register IP address to preserve Atypon content in Global LOCKSS Network node](atypon-publishers-gln.md) (2019)
 * [Setup file transfer content stream](file-transfer-guidelines.md) (2018)
 * [Setup file transfer content stream for CLOCKSS](https://www.clockss.org/clocksswiki/files/File_Transfer_Guidelines_-_CLOCKSS.pdf) (2016) (PDF)
 * [Stage content and develop plugin for ingest](http://www.adpn.org/docs/pdf/LOCKSS_Step_By_Step_Guide.pdf) (2013) (PDF)
@@ -51,7 +51,7 @@ title: Home
 * [LOCKSS basic concepts](https://documents.clockss.org/index.php?title=LOCKSS:_Basic_Concepts) (2018)
 * [LOCKSS conformance with OAIS](https://web.stanford.edu/group/lockss/documentation/Formal_statement_Of_Conformance_to_ISO_14721-2001.pdf) (2011) (PDF)
 * [LOCKSS format migration](https://documents.clockss.org/index.php?title=LOCKSS:_Format_Migration) (2018)
-* [LOCKSS Content Audit Protocol](https://documents.clockss.org/index.php?title=LOCKSS:_Polling_and_Repair_Protocol) (2018)
+* [LOCKSS Content Audit Protocol](https://web.archive.org/web/20171228172913/https://documents.clockss.org/index.php?title=LOCKSS:_Polling_and_Repair_Protocol) (2018)
 * [LOCKSS Metadata Database](https://documents.clockss.org/index.php?title=LOCKSS:_Metadata_Database) (2018)
 * [LOCKSS metadata extraction](https://documents.clockss.org/index.php?title=LOCKSS:_Extracting_Bibliographic_Metadata) (2018)
 * [LOCKSS Property Server](https://documents.clockss.org/index.php?title=LOCKSS:_Property_Server_Operations) (2018)
