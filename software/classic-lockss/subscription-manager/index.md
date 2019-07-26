@@ -16,9 +16,7 @@ _Please note that the terms **Configuration Management** and **Configuration Man
 
 The first thing you must do is navigate to the **Journal Configuration** page. You can access this page through a link on the main menu and a link on the sidebar menu: Both of those links can be seen in the picture of the _homepage_ below
 
-<kbd>
-  <img src="../images/lockssHomepage.png" />
-</kbd>
+<img src="../images/lockssHomepage.png" border="1" />
 
 Once inside of the Journal Configuration page, you will find three links related to Subscription Management.
 - **Add Titles to Subscription Management** – It allows the user to add new serial publication subscriptions.
