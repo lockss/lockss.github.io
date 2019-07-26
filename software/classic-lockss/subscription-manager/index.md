@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Software
+title: Configuring Subscription Management 
 ---
 
 ## [Overview](overview)

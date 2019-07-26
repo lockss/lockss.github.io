@@ -1,19 +1,11 @@
 ---
 layout: page
-title: Software
+title: Configuring a Classic LOCKSS System
 ---
-
-## [Overview](overview)
-
-## [Releases](releases)
-
-## [LOCKSS System Manual](manual)
-
-## [LOCKSS Network Admin Guide](admin)
 
 ## Overview
 
-This document explains how to configure the LOCKSS daemon on a LOCKSS box.
+This document explains how to configure the Classic LOCKSS daemon on an "rpm" based Linux installation. For specific details about how to setup your Linux installation and install the LOCKSS Daemon please see [Recommended Linux Setup and Installing Classic LOCKSS](../installation)
 
 ### Linux:
 
