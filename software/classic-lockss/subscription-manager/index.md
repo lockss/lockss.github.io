@@ -103,7 +103,7 @@ _After clicking "Update" to "Unsubscribe All" from Big Bridge we are faced with 
 
 <kbd><img src="../images/noOperationSpecified.png" /></kbd>
 
-If you edit the subscription period for a specifid subscription (in our case _Aliso: A Journal of Systematic and Evolutionary Botany_) and click update, you will be shown the publication and the "Subscription Status". If there are additional AUs (Archival Units) being added as a result of your update then that column will contain the various AUs and an "Added" **Status**. In our case no additional AUs are added so we only see the following
+If you edit the subscription period for a specified subscription (in our case _Aliso: A Journal of Systematic and Evolutionary Botany_) and click update, you will be shown the publication and the "Subscription Status". If there are additional AUs (Archival Units) being added as a result of your update then that column will contain the various AUs and an "Added" **Status**. In our case no additional AUs are added so we only see the following
 
 <kbd><img src="../images/updateSubscript.png" /></kbd>
 

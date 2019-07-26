@@ -48,7 +48,7 @@ If you are re-running the LOCKSS Configuration to update an existing value, you 
 | Fully Qualified Hostname                           |       |
 | IP address                                         |       |
 | **_LOCKSS box advanced network information_**      |       |
-| External NAT IP Address (optional, if applicatble) |       |
+| External NAT IP Address (optional, if applicable) |       |
 | Proxy Server IP Address (optional, seldom used)    |       |
 | Proxy Port for Configuration URL (optional, seldom used) | |
 | **_LOCKSS box email information_**                 |       |

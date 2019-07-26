@@ -11,6 +11,7 @@ title: Software
 
 ## [LOCKSS Network Admin Guide](admin)
 
+## [Classic LOCKSS System Manual](classic-lockss)
 
 ## News
 
