@@ -3,13 +3,7 @@ layout: page
 title: Configuring Subscription Management 
 ---
 
-## [Overview](overview)
-
-## [Releases](releases)
-
-## [LOCKSS System Manual](manual)
-
-## [LOCKSS Network Admin Guide](admin)
+ [Classic LOCKSS Manual](../index.md)  |   [Installing LOCKSS](../installation/)  |   [Enabling Subscription Management](../basic-config/subscription-manager.md)
 
 ### Overview
 
