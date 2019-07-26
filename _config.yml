@@ -31,7 +31,12 @@ header_pages:
   - index.md
   - software/index.md
   - developers/index.md
-
+  # Entries added below by Richard for classic LOCKSS
+  - software/classic-lockss/subscription-manager/index.md
+  - software/classic-lockss/installation/index.md
+  - software/classic-lockss/index.md
+  - software/classic-lockss/expert-config/index.md
+  - software/classic-lockss/basic-config/index.md
 
 plugins:
   # Start https://help.github.com/articles/configuring-jekyll-plugins/#default-plugins
