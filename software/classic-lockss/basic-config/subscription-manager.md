@@ -1,21 +1,15 @@
 ---
 layout: page
-title: Software
+title: Enabling Subscription Management 
 ---
 
-## [Overview](overview)
-
-## [Releases](releases)
-
-## [LOCKSS System Manual](manual)
-
-## [LOCKSS Network Admin Guide](admin)
+ [Classic LOCKSS Manual](../index.md)  |   [Installing LOCKSS](../installation/)  |   [Enabling Subscription Management](../basic-config/subscription-manager.md)
 
 ## Overview
 
-This document explains how to enable Subscription Manager to simplify the process of adding Archival Units of serial publications.
+This document explains how to enable Subscription Management to simplify the process of adding Archival Units of serial publications. Please note that the terms _Subscription Management_ and _Subscription Manager_ will be used interchangeably through out this document.
 
-## Why Subscription Manager is Important
+## Why Subscription Management is Important
 
 When New Archival Units become available for preservation, an administrator needs to manually add them to the list of Archival Units to be preserved by a LOCKSS system. This is accomplished by going to the "**Add AUs**" link in the "**Journal Configuration**" page of the LOCKSS Administration web interface. Each new version of Archival Units also needs to be added to the machine manually.
 

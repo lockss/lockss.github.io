@@ -1,15 +1,9 @@
 ---
 layout: page
-title: Software
+title: Installing The Classic LOCKSS System 
 ---
 
-## [Overview](overview)
-
-## [Releases](releases)
-
-## [LOCKSS System Manual](manual)
-
-## [LOCKSS Network Admin Guide](admin)
+ [Classic LOCKSS Manual](../index.md)  |   [Installing LOCKSS](../installation/)  |   [Enabling Subscription Management](../basic-config/subscription-manager.md)
 
 ## News
 

@@ -3,6 +3,8 @@ layout: page
 title: Configuring a Classic LOCKSS System
 ---
 
+ [Classic LOCKSS Manual](../index.md)  |   [Installing LOCKSS](../installation/index.md)  |   [Enabling Subscription Management](../basic-config/subscription-manager.md)
+
 ## Overview
 
 This document explains how to configure the Classic LOCKSS daemon on an "rpm" based Linux installation. For specific details about how to setup your Linux installation and install the LOCKSS Daemon please see [Recommended Linux Setup and Installing Classic LOCKSS](../installation)
