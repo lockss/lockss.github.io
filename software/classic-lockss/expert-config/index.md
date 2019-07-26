@@ -3,7 +3,7 @@ layout: page
 title: Using Expert Config to Change Settings and Enable Additional Features.
 ---
 
- [Classic LOCKSS Manual](../index.md)  |   [Installing LOCKSS](../installation/)  |   [Enabling Subscription Management](../basic-config/subscription-manager.md)
+To get back to the Classic LOCKSS Homepage use [this link](../index.md)
 
 ## News
 

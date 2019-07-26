@@ -3,7 +3,7 @@ layout: page
 title: Configuring a Classic LOCKSS System
 ---
 
- [Classic LOCKSS Manual](../index.md)  |   [Installing LOCKSS](../installation/index.md)  |   [Enabling Subscription Management](../basic-config/subscription-manager.md)
+To get back to the Classic LOCKSS Homepage use [this link](../index.md) 
 
 ## Overview
 
