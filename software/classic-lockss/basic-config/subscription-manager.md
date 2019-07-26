@@ -7,7 +7,9 @@ title: Enabling Subscription Management
 
 ## Overview
 
-This document explains how to enable Subscription Management to simplify the process of adding Archival Units of serial publications. Please note that the terms _Subscription Management_ and _Subscription Manager_ will be used interchangeably through out this document.
+This document explains how to enable Subscription Management to simplify the process of adding Archival Units of serial publications. 
+
+_Please note that the terms **Subscription Management** and **Subscription Manager** will be used interchangeably through out this document._
 
 ## Why Subscription Management is Important
 
