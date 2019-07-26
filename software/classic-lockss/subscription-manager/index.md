@@ -25,7 +25,7 @@ Once inside of the Journal Configuration page, you will find three links related
 
 _The links can be seen in the image below_
 
-<kbd><img src="../images/JournalConfigSM.png" /></kbd>
+<img src="../images/JournalConfigSM.png" border="1" />
 
 The next three sections will explain the links related to Subscription Management in the order they are listed
 
@@ -33,7 +33,7 @@ The next three sections will explain the links related to Subscription Managemen
 
 After clicking on the **Add Titles to Subscription Management** link you will be taken to page like the one below.
 
-<kbd><img src="../images/addingSubscriptions.png" /></kbd>
+<img src="../images/addingSubscriptions.png" border="1" />
 
 This page uses a tabbed interface in which the publishers are listed alphabetically based on the first letter of the publisher name.
 
@@ -55,13 +55,13 @@ In the image below we have chosen to "Subscribe All" to everything from the publ
 
 _Please see the section **Subscription Specification Details** for detailed instructions on how to use the check boxes and text boxes_
 
-<kbd><img src="../images/subscribeAllAndAddRange.png" /></kbd>
+<img src="../images/subscribeAllAndAddRange.png" border="1" />
 
 Once you click the "Add" button at the bottom of the screen you will be taken to a page that displays the results of what is being added to your LOCKSS system.
 
 _Please Note: You will notice that the next image does not contain any information about us choosing to "Subscribe All" to the publisher Big Bridge. This is a known bug that we are working on but it is important to note that the Subscribe All function does work, it just doesn't show any results on the next page. There will be more information on known bugs and limitations of Subscription Management at the end._
 
-<kbd><img src="../images/addingSubscriptionsResults.png" /></kbd>
+<img src="../images/addingSubscriptionsResults.png" border="1" />
 
 The table shows each serial publication for which a subscription was added and the following information about them:
 - The publication name.
@@ -89,7 +89,7 @@ For each publication, the row will display, from left to right, the following:
     • A text box labeled Subscribed Ranges with the ranges of years, volumes and/or issues of subscribed publication content that the Library owns and thus should be preserved.
     • A text box labeled Unsubscribed Ranges with the ranges of years, volumes and/or issues of subscribed publication content that the Library does not own and thus cannot be preserved.
 
-<kbd><img src="../images/unsubscribeBigBridge.png" /></kbd>
+<img src="../images/unsubscribeBigBridge.png" border="1" />
 
 In the picture above we have expanded the Claremont College Library publisher and we can see the range that we subscribed to for the publication _Aliso: A Journal of Systematic and Evolutionary Botany (13 AU)_
 
@@ -101,11 +101,11 @@ See the section titled Subscription Specification Details below for instructions
 
 _After clicking "Update" to "Unsubscribe All" from Big Bridge we are faced with an error message stating that "No operation was specified". This is directly related to the bug we seen earlier when trying to "Subscribe All" to a publisher. The important thing to note is that your changes will be made in the system and we hope to have this error fixed soon._
 
-<kbd><img src="../images/noOperationSpecified.png" /></kbd>
+<img src="../images/noOperationSpecified.png" border="1" />
 
 If you edit the subscription period for a specified subscription (in our case _Aliso: A Journal of Systematic and Evolutionary Botany_) and click update, you will be shown the publication and the "Subscription Status". If there are additional AUs (Archival Units) being added as a result of your update then that column will contain the various AUs and an "Added" **Status**. In our case no additional AUs are added so we only see the following
 
-<kbd><img src="../images/updateSubscript.png" /></kbd>
+<img src="../images/updateSubscript.png" border="1" />
 
 Just to reiterate, the table above shows each serial publication for which a subscription was updated and presents the following information:
 - The publication name.
@@ -124,7 +124,7 @@ To get he LOCKSS software to create subscriptions based on the Archival Units al
 (_note that I manually added AUs for **The Bonefolder**, **CLCWeb: Comparitive...**, and **Blackbird** just before clicking Synchronize Subscription. The rest of the subscriptions shown were added through Subscription Manager in previous examples_).
 
 
-<kbd><img src="../images/synchronizeAfterManuallyAddingAU.png" /></kbd>
+<img src="../images/synchronizeAfterManuallyAddingAU.png" border="1" />
 
 
 Listed are all the serial publications for which a subscription has been added. If no subscription for a publication existed, then it is added, and if a subscription for that publication already existed then it is simply updated.
@@ -132,7 +132,7 @@ As a result of this operation, no Archival Units are configured immediately, onl
 
 After recording the subscription specifications the LOCKSS system will configure any Archival Unit that becomes available for preservation later if they are directly related to currently configured Archival Units. In other words, the **Synchronize Subscriptions** link takes note of the current subscriptions and their specifications, creates new subscriptions as needed, and _**most importantly to understand,**_ subscribes you to all _**new**_ Archival Units that are created for each of the newly created subscriptions and existing subscriptions with one click. How this is done can be seen in the image below.
 
-<kbd><img src="../images/manuallyAddedAUsSyncronizeSubscript.png" /></kbd>
+<img src="../images/manuallyAddedAUsSyncronizeSubscript.png" border="1" />
 
 We can see in the image above that each of the publications that we have subscribed to have a **Publication Range** that ends with a "-". The dash means that all new AUs created after the specified dates will be added and archived.
 

@@ -23,7 +23,7 @@ Instead, it refers to Archival Units in the LOCKSS system and addresses the ques
 
 Subscription manager is disabled by default in all new LOCKSS systems. In order to enable it you must first navigate to "**Expert Config**" and add the parameter ```org.lockss.subscription.enabled=true```. Click on the "Update" button to make the change take effect. 
 
-<kbd><img src="../images/ExpertConfigSM.png" /></kbd>
+<img src="../images/ExpertConfigSM.png" border="1" />
 
 After entering the org.lockss.subscription.enabled=true parameter and clicking "update", it is necessary that we restart the LOCKSS Daemon. 
 
@@ -39,7 +39,7 @@ Now that we have restarted the LOCKSS Daemon, navigate to the "**Journal Configu
 - _Synchronize Subscriptions_
 
 
-<kbd><img src="../images/JournalConfigSM.png" /></kbd>
+<img src="../images/JournalConfigSM.png" border="1" />
 
 ## Using Subscription Management
 
