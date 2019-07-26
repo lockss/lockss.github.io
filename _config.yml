@@ -31,7 +31,6 @@ header_pages:
   - index.md
   - software/index.md
   - developers/index.md
-  # Entries added below by Richard for classic LOCKSS
   - software/classic-lockss/subscription-manager/index.md
   - software/classic-lockss/installation/index.md
   - software/classic-lockss/index.md
