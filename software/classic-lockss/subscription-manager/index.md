@@ -10,7 +10,7 @@ To get back to the Classic LOCKSS system manual use [this link](../index.md)
 This document takes a look at various ways to configure the Subscription Manager in order to efficiently
 subscribe to serial publications.
 
-_Please note that the terms **Configuration Management** and **Configuration Manager** will be used interchangeably throught this document_
+_Please note that the terms **Configuration Management** and **Configuration Manager** will be used interchangeably throughout this document_
 
 ### Getting Started
 
@@ -59,8 +59,6 @@ _Please see the section **Subscription Specification Details** for detailed inst
 
 Once you click the "Add" button at the bottom of the screen you will be taken to a page that displays the results of what is being added to your LOCKSS system.
 
-_Please Note: You will notice that the next image does not contain any information about us choosing to "Subscribe All" to the publisher Big Bridge. This is a known bug that we are working on but it is important to note that the Subscribe All function does work, it just doesn't show any results on the next page. There will be more information on known bugs and limitations of Subscription Management at the end._
-
 <img src="../images/addingSubscriptionsResults.png" border="1" />
 
 The table shows each serial publication for which a subscription was added and the following information about them:
@@ -98,8 +96,6 @@ _**Important things to note about the picture above**_
 - "Not Set" means that "Subscribe All" is not set. It does **not** mean we do not have a subscription set.
 
 See the section titled Subscription Specification Details below for instructions on how to use the above check boxes and text boxes.
-
-_After clicking "Update" to "Unsubscribe All" from Big Bridge we are faced with an error message stating that "No operation was specified". This is directly related to the bug we seen earlier when trying to "Subscribe All" to a publisher. The important thing to note is that your changes will be made in the system and we hope to have this error fixed soon._
 
 <img src="../images/noOperationSpecified.png" border="1" />
 
