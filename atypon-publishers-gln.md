@@ -19,7 +19,6 @@ The Atypon publishing platform requires librarians to register the Global LOCKSS
 * American Psychiatric Publishing Inc.
 * American Public Health Association
 * American Society of Clinical Oncology
-* American Thoracic Society
 * British Institute of Radiology
 * Edinburgh University Press
 * Endocrine Society
