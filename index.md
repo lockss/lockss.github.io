@@ -48,11 +48,11 @@ title: Home
 
 ## Technical architecture<a id="technical_architecture"></a>
 * [Basic LOCKSS network architecture diagram](https://web.stanford.edu/group/lockss/documentation/generic_PLN_architecture.pdf) (2016) (PDF)
-* [LOCKSS basic concepts](https://documents.clockss.org/index.php?title=LOCKSS:_Basic_Concepts) (2018)
+* [LOCKSS basic concepts](http://documents.clockss.org/index.php?title=LOCKSS:_Basic_Concepts) (2018)
 * [LOCKSS conformance with OAIS](https://web.stanford.edu/group/lockss/documentation/Formal_statement_Of_Conformance_to_ISO_14721-2001.pdf) (2011) (PDF)
-* [LOCKSS format migration](https://documents.clockss.org/index.php?title=LOCKSS:_Format_Migration) (2018)
-* [LOCKSS Content Audit Protocol](https://web.archive.org/web/20171228172913/https://documents.clockss.org/index.php?title=LOCKSS:_Polling_and_Repair_Protocol) (2018)
-* [LOCKSS Metadata Database](https://documents.clockss.org/index.php?title=LOCKSS:_Metadata_Database) (2018)
-* [LOCKSS metadata extraction](https://documents.clockss.org/index.php?title=LOCKSS:_Extracting_Bibliographic_Metadata) (2018)
-* [LOCKSS Property Server](https://documents.clockss.org/index.php?title=LOCKSS:_Property_Server_Operations) (2018)
-* [LOCKSS software development process](https://documents.clockss.org/index.php?title=LOCKSS:_Software_Development_Process) (2018)
+* [LOCKSS format migration](http://documents.clockss.org/index.php?title=LOCKSS:_Format_Migration) (2018)
+* [LOCKSS Content Audit Protocol](http://documents.clockss.org/index.php?title=LOCKSS:_Polling_and_Repair_Protocol) (2018)
+* [LOCKSS Metadata Database](http://documents.clockss.org/index.php?title=LOCKSS:_Metadata_Database) (2018)
+* [LOCKSS metadata extraction](http://documents.clockss.org/index.php?title=LOCKSS:_Extracting_Bibliographic_Metadata) (2018)
+* [LOCKSS Property Server](http://documents.clockss.org/index.php?title=LOCKSS:_Property_Server_Operations) (2018)
+* [LOCKSS software development process](http://documents.clockss.org/index.php?title=LOCKSS:_Software_Development_Process) (2018)
