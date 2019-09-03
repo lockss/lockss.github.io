@@ -1,4 +1,6 @@
-# Classic LOCKSS Documentation
+# LOCKSS Documentation
+
+## Classic LOCKSS Documentation
  1. Setup
    - Node Setup
  2. Basic Usage
@@ -8,7 +10,7 @@
  4. Advanced Usave - Searching for Content
    - Discovery System Integration
 
-# LAAWS 2.0 Documention
+## LAAWS 2.0 Documention
  1. Setup
    - Node Setup and System PreRequisites
    - Installing Git
@@ -27,7 +29,7 @@
  4. Advanced Usage - Searching for Content
    - Discovery System Integration
 
-# LOCKSS Network Documention
+## LOCKSS Network Documention
  1. Setup
    - Network Setup
  2. Advanced topic - Preserving Content
