@@ -1,6 +1,6 @@
-##Security Practices for LOCKSS
+## Security Practices for LOCKSS
 
-###SOURCE CONTENT:
+### SOURCE CONTENT:
 
 Encrypting the content at the source is the best way to protect information.  Even if someone gets access to encrypted content, it is useless to them without the means to decrypt it.  For PII information it’s a standard practice.
 
@@ -8,7 +8,7 @@ The problem with putting encrypted data in an archive is that the encryption key
 
 
 
-###CONTENT PRESENTATION FOR CRAWLING:
+### CONTENT PRESENTATION FOR CRAWLING:
 
 There are two ways to secure the presentation of content (presumably from a website)
 
@@ -22,7 +22,7 @@ Over time, requirements change, and it’s possible that an ACL set up for some 
 
 
 
-###CONTENT STORAGE ON A LOCKSS BOX:
+### CONTENT STORAGE ON A LOCKSS BOX:
 
 1) LOCKSS Application User (password) - by default, a single application user with full admin rights is defined in /etc/lockss/config.dat by someone who has root privilege on the LOCKSS box.  Early LOCKSS implementations stored passwords in a SHA1 hash, more recent LOCKSS implementations will store the password in a much stronger SHA256 hash.  If a SHA1 hash is currently in use, consider updating that to a SHA256 has by re-running /etc/lockss/hostconfig.
 
