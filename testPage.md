@@ -1,4 +1,7 @@
-# LOCKSS Documentation
+---
+layout: page
+title: LOCKSS Documentation
+---
 
 ## Classic LOCKSS Documentation
  1. Setup
