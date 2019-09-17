@@ -1,4 +1,7 @@
-## Security Practices for LOCKSS
+---
+layout: page
+title: Security Practices for LOCKSS
+---
 
 ### SOURCE CONTENT:
 
