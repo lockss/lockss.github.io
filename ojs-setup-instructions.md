@@ -32,13 +32,13 @@ which should appear towards the bottom of the page.
 
 Configuring OJS v3.X.X content for LOCKSS/CLOCKSS preservation:
 
-If your version of OJS v3.x.x is before 3.1.2 you will need to either:
+If your version of OJS v3.X.X is before 3.1.2 you will need to either:
 
-A. upgrade to 3.1.2 or higher; or
-B. apply a patch before you can successfully enable CLOCKSS &/or LOCKSS preservation.
+* upgrade to 3.1.2 or higher; or
+* apply a patch before you can successfully enable CLOCKSS &/or LOCKSS preservation.
 
-The information we have is that the most recent commit of the fix can be found here: 
-https://github.com/pkp/ojs/pull/2215/commits/22f1d220.And the 3.1.2 GitHub milestone and its progress here: 
+The information we have is that the most recent commit of the fix can be found at 
+https://github.com/pkp/ojs/pull/2215/commits/22f1d220. The 3.1.2 GitHub milestone and its progress is at 
 https://github.com/pkp/pkp-lib/milestone/32.
 
 To enable preservation:
