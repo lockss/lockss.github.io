@@ -7,7 +7,7 @@ Once an agreement is reached with LOCKSS reguarding preservation, settings withi
 interface make it possible for collection and preservation through the 
 LOCKSS Global Network or the CLOCKSS Network.
 
-For more information see: https://www.lockss.org/contact
+For more information contact us at: <a href="https://www.lockss.org/contact">https://www.lockss.org/contact</a>
 
 ### OJS 2.X.X
 
@@ -35,7 +35,6 @@ Configuring OJS v3.X.X content for LOCKSS/CLOCKSS preservation:
 If your version of OJS v3.x.x is before 3.1.2 you will need to either:
 
 A. upgrade to 3.1.2 or higher; or
-
 B. apply a patch before you can successfully enable CLOCKSS &/or LOCKSS preservation.
 
 The information we have is that the most recent commit of the fix can be found here: 
