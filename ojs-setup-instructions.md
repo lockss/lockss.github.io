@@ -13,18 +13,18 @@ For more information contact us at: <a href="https://www.lockss.org/contact">htt
 
 Configuring OJS v2.X.X content for CLOCKSS/LOCKSS preservation:
 
-* Go to the Journal Management screen for each journal and click "Journal Setup".
-* Select the second item, "Policies".
-* Scroll down to section 2.6, "Journal Archiving".
-* Check the box "Enable LOCKSS..." to turn on the LOCKSS feature.
-* In text box beneath, type in the following sentence exactly as written: CLOCKSS system has permission to 
+1. Go to the Journal Management screen for each journal and click "Journal Setup".
+2. Select the second item, "Policies".
+3. Scroll down to section 2.6, "Journal Archiving".
+4. Check the box "Enable LOCKSS..." to turn on the LOCKSS feature.
+5. In text box beneath, type in the following sentence exactly as written: CLOCKSS system has permission to 
 ingest, preserve, and serve this Archival Unit
-* Save your changes.
-* Verify changes by going to front page of your journal(s) in your browser:
-* Edit the URL in your browser URL bar (if applicable, delete the word 'index' from the very end of the 
+6. Save your changes.
+7. Verify changes by going to front page of your journal(s) in your browser:
+8. Edit the URL in your browser URL bar (if applicable, delete the word 'index' from the very end of the 
 URL) so that it ends with /gateway/lockss. (If you are redirected back to the front page, the configuration changes 
 were not saved properly. Otherwise, you will see a LOCKSS-related page with the LOCKSS logo.)
-* Verify CLOCKSS by going to About and to Editorial Policies. Search for the CLOCKSS permission statement, 
+9. Verify CLOCKSS by going to About and to Editorial Policies. Search for the CLOCKSS permission statement, 
 which should appear towards the bottom of the page.
 
 
