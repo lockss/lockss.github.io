@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: LOCKSS Documentation Portal
-email: lockss-support@lockss.org
+email: lockss-support (at) lockss (dot) org
 description: >- # this means to ignore newlines until "baseurl:"
   More at https://www.lockss.org/
 baseurl: "" # the subpath of your site, e.g. /blog
