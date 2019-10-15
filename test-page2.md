@@ -1,6 +1,6 @@
 ---
 layout: page
-title: LOCKSS Documentation
+title: LOCKSS Documentation Portal
 ---
 
 ## Classic LOCKSS Documentation
