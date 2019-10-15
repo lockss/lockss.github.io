@@ -45,6 +45,7 @@ title: Home
 * [Setup file transfer content stream](file-transfer-guidelines.md) (2018)
 * [Setup file transfer content stream for CLOCKSS](https://www.clockss.org/clocksswiki/files/File_Transfer_Guidelines_-_CLOCKSS.pdf) (2016) (PDF)
 * [Stage content and develop plugin for ingest](http://www.adpn.org/docs/pdf/LOCKSS_Step_By_Step_Guide.pdf) (2013) (PDF)
+* [Enable LOCKSS/CLOCKSS preservation for OJS](ojs-setup-instructions.md) (2019)
 
 ## Technical architecture<a id="technical_architecture"></a>
 * [Basic LOCKSS network architecture diagram](https://web.stanford.edu/group/lockss/documentation/generic_PLN_architecture.pdf) (2016) (PDF)
