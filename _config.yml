@@ -19,7 +19,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   More at https://www.lockss.org/
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  lockss
+github_username: lockss
 timezone: America/Los_Angeles
 
 # Build settings
