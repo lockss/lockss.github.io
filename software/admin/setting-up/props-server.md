@@ -195,7 +195,7 @@ next step.
         Allow from all
 
 1.  Place the following HTML fragment in `${NETROOT}/plugins/HEADER.html`:
-
+```html
         <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
         <HTML>
           <HEAD>
@@ -203,9 +203,9 @@ next step.
           </HEAD>
           <BODY>
             <H1>${NETNAME} Plugin Registry</H1>
-
+```
     Substitute the formal name of your network in the `<title>` and `<h1>` tags. With the example given in the [checklist](#checklist), this would be:
-
+```html
         <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
         <HTML>
           <HEAD>
@@ -213,14 +213,14 @@ next step.
           </HEAD>
           <BODY>
             <H1>My Big LOCKSS Network Plugin Registry</H1>
-
+```
 1.  Place the following HTML fragment in `${NETROOT}/plugins/FOOTER.html`:
-
+```html
             <P>
               LOCKSS system has permission to collect, preserve, and serve this Archival Unit
           </BODY>
         </HTML>
-
+```
     The sentence `LOCKSS system has permission to collect, preserve, and serve this Archival Unit` must be verbatim, as it is the permission statement the LOCKSS crawler looks for to determine that it has permission to harvest the plugins contained in the plugin registry.
 
 1.  *(optional)* If the firewall on your operating system only allows traffic to typical ports, it may not include

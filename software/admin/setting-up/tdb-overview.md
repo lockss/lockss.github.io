@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Title Database" (TDB) files: Use and Syntax
+title: '"Title Database" (TDB) files: Use and Syntax'
 ---
 
 As mentioned in the [introduction](../introduction), a **LOCKSS Title Database** file describes lists of archival units (AUs) that can be preserved in the network, including information linking AUs to plugins and parameters needed by the plugins, and essential identifying or bibliographic data.
