@@ -29,7 +29,7 @@ theme: minima
 header_pages:
   # See https://github.com/jekyll/minima
   - index.md
-  - software/index.md
+  - administrators/index.md
   - developers/index.md
 
 plugins:

@@ -115,7 +115,7 @@ To go to the Journal Configuration page (two levels back), click on the Back to 
 
 When using the LOCKSS Subscription Management for the first time, it may be useful to ask the LOCKSS software to create subscriptions based on the Archival Units already configured in the LOCKSS system. This is great for the AUs that may have been manually added before enabling the Subscription Manager.
 
-To get he LOCKSS software to create subscriptions based on the Archival Units already configured, navigate to the **Journal Configuration** page and click on the **Synchronize Subscriptions** link. 
+To get the LOCKSS software to create subscriptions based on the Archival Units already configured, navigate to the **Journal Configuration** page and click on the **Synchronize Subscriptions** link. 
 
 (_note that I manually added AUs for **The Bonefolder**, **CLCWeb: Comparitive...**, and **Blackbird** just before clicking Synchronize Subscription. The rest of the subscriptions shown were added through Subscription Manager in previous examples_).
 

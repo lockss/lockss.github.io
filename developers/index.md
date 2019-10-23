@@ -5,4 +5,4 @@ title: Developers
 
 *   [Contributing to LOCKSS Projects](contributing)
 *   [LAAWS re-architecture initiative](laaws): information about the LAAWS re-architecture initiative
-*   [Release notes](../software/releases)
+*   [Release notes](../administrators/releases)

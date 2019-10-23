@@ -1,17 +1,18 @@
 ---
 layout: page
-title: Software
+title: Administrators 
 ---
-
-## [Overview](overview)
 
 ## [Releases](releases)
 
-## [LOCKSS System Manual](manual)
+## [Classic LOCKSS System Manual](classic-lockss)
+
+## [LOCKSS 2.0 Overview](overview)
+
+## [LOCKSS 2.0 System Manual](manual)
 
 ## [LOCKSS Network Admin Guide](admin)
 
-## [Classic LOCKSS System Manual](classic-lockss)
 
 ## News
 
