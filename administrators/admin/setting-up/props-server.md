@@ -106,7 +106,7 @@ Configure your Web server to serve `${NETROOT}` over port `${PROPSPORT}`, and re
 
 Please refer to <http://httpd.apache.org/docs/> for Apache configuration information. The instructions in this section are given as examples of what it looks like to set up Apache to serve the props server.
 
-1.  Edit `${WEBCONF}/conf/httpd.conf` as root.
+1. Edit `${WEBCONF}/conf/httpd.conf` as root.
 
    1.  Make sure there is a Listen directive for `${PROPSPORT}`:
    ```apache
@@ -202,7 +202,7 @@ next step.
 
  Add one `Allow` directive per IP address of a LOCKSS preservation node in your network (and additional staff and develop IP addresses). We recommend adding comments (beginning with the character `#` and extending to the end of the line) to annotate the list of IP addresses with location names and host names, for reference. Example:
 
-```
+```apache
      Allow from 10.1.2.3        # lockss.auniversity.edu (A University)
      Allow from 1.2.3.4         # lockss1.buniversity.edu (B University)
      Allow from 192.168.2.3     # mybiglockssnet.cuniversity.edu (C University)
@@ -215,7 +215,7 @@ next step.
 
  Tip: In the event your LOCKSS network is open-ended rather than private, you would simply have this version of the Allow directive instead:
 
-```
+```apache
  Allow from all
 ```
 
