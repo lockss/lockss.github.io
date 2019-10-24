@@ -39,6 +39,7 @@ Publisher, Title and AU definitions exist as semi-colon separated definitions wi
 The values required for an AU definition are defined by an “implicit” statement.
 
 In it’s simplest form, for a journal, a valid TDB file could look like this:
+
 ```text
 {
   publisher <…publisher definition goes here>
@@ -49,7 +50,9 @@ In it’s simplest form, for a journal, a valid TDB file could look like this:
   }
 }
 ```
+
 To show a more complete definition from our example above:
+
 ```text
 {
   publisher <
@@ -72,6 +75,7 @@ To show a more complete definition from our example above:
   }
 }
 ```
+
 The hierarchy for this TDB file means that the "Publisher X” is the publisher for all nested {} blocks and the “Journal of Something” is the journal title for all the AUs in its nested {} block.
 Definitional Parameters - which are items required by a plugin, and which are indicated using the format `param[key_name]` are also inherited so the AU shown would inherit the 
 `plugin` and `param[base_url]` from the publisher block
@@ -87,6 +91,7 @@ This makes sense because for a given publisher journal that is being harvested b
 In this example, because the AU represents a scholarly publication, the TDB file also contains bibliographic metadata (issn, eissn) but this information is optional.  It does provide metadata to the system that can be used to resolve queries and also provides a human-readable source of information about what is being preserved. 
 
 For a file-transfer plugin which might be used to preserve an opaque set of arbitrary content without bibliographic information, a simple TDB file might look like this:
+
 ```text
 {
 
@@ -112,6 +117,7 @@ For a file-transfer plugin which might be used to preserve an opaque set of arbi
 
 }
 ```
+
 Again, the AU is inheriting a specific publisher definition and title definition, but in this case, the title is just a designation of what the opaque collection of content represents.
 The plugin in this case requires ony two parameters - a start_url and a “dir” which designates the unique batch of content -  in this case is a  subdirectory below the start_url to narrow the ingest.
 
@@ -134,6 +140,7 @@ Additionally, it might also contain optional further key-values that, while not 
 The ordering of the keys in the implicit statement are arbitrary. By custom, the status value comes first.   The string values given in an AU definition <> must match the ordering of the implicit statement.
 
 **Status Values**
+
 ```text
 expected+---->|exists+---->|manifest+---->|testing+---->|ready+---->|released+---->|down+---->|superseded+
 ```
@@ -164,6 +171,7 @@ Hierarchical inheritence only applies within one TDB file.
 
 This might be a useful feature for the following reasons:
 1) You might choose to have multiple plugins in one file:
+
 ```text
 {
 <publisher>
@@ -187,6 +195,7 @@ plugin.for.filetransfer.of.special.content
 }
 ```
 2. You might choose to change a parameter within a title block to adapt for a change
+
 ```text
 {
 <publisher>
