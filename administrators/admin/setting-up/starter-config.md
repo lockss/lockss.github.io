@@ -3,9 +3,9 @@ layout: page
 title: Starter Network Configuration File
 ---
 
-You can use the following file as a starter network configuration file. Using the placeholders from the [checklist](props-server#cecklist), this file is located at `${NETROOT}/lockss.xml`.
+You can use the following file as a starter network configuration file. Using the placeholders from the [checklist](props-server#checklist), this file is located at `${NETROOT}/lockss.xml`.
 
-Please note that the `org.lockss.plugin.registries` (search for `plugin.registries`) configuration value needs to be replaced with the correct URL for your network's plugin registry; the example below contains placeholders from the [checklist](props-server#cecklist), which would correspond to `http://props.mybiglockssnet.org:8001/mybiglockssnet/plugins/`.
+Please note that the `org.lockss.plugin.registries` (search for `plugin.registries`) configuration value needs to be replaced with the correct URL for your network's plugin registry; the example below contains placeholders from the [checklist](props-server#checklist), which would correspond to `http://props.mybiglockssnet.org:8001/mybiglockssnet/plugins/`.
 
 Please also note the `org.lockss.id.initialV3PeerList` (search for `id.initialV3PeerList`) configuration value, which is a list of **participant identifiers** of the LOCKSS preservation nodes in the network. A participant identifier contains the publicly routable IP address of the preservation node, and the polling and repair port of the preservation node (usually 9729, configured by each node). An example participant identifier is `TCP:[10.1.2.3]:9729`.
 ```xml
