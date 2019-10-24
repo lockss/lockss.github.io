@@ -108,35 +108,38 @@ Please refer to <http://httpd.apache.org/docs/> for Apache configuration informa
 
 1.  Edit `${WEBCONF}/conf/httpd.conf` as root.
 
- 1.  Make sure there is a Listen directive for `${PROPSPORT}`:
-
-  ```Listen ${PROPSPORT}```
+   1.  Make sure there is a Listen directive for `${PROPSPORT}`:
+   ```apache
+   Listen ${PROPSPORT}
+   ```
 
    Using the recommended value in the [checklist](#checklist), this would be:
 
-  ```Listen 8001```
+   ```apache
+   Listen 8001
+   ```
 
-  Note: The Listen directive can also bind to specific IP addresses, including a syntax for IPv6 addresses. See <https://httpd.apache.org/docs/2.4/mod/mpm_common.html#listen> for details.
+   Note: The Listen directive can also bind to specific IP addresses, including a syntax for IPv6 addresses. See <https://httpd.apache.org/docs/2.4/mod/mpm_common.html#listen> for details.
 
-  **Important: Please note that this is a global setting.**
+   **Important: Please note that this is a global setting.**
 
- 1.  Set the server name to `${PROPSHOST}` and the administrator e-mail address to `${WEBMASTERADDR}` in the `ServerName` and `ServerAdmin` directives, respectively:
-  ```apache
+   1.  Set the server name to `${PROPSHOST}` and the administrator e-mail address to `${WEBMASTERADDR}` in the `ServerName` and `ServerAdmin` directives, respectively:
+   ```apache
             ServerName ${PROPSHOST}
             ServerAdmin ${WEBMASTERADDR}
-  ```
-  Using the example values in the [checklist](#checklist), this is:
-  ```apache
+   ```
+   Using the example values in the [checklist](#checklist), this is:
+   ```apache
             ServerName props.mybiglockssnet.org
             ServerAdmin webmaster@mybiglockssnet.org
-  ```
- 1.  Verify that the file ends (or contains) an `IncludeOptional` (or perhaps `Include`) directive for files matching `conf.d/*.conf`, and add one if needed:
-  ```apache
+   ```
+   1.  Verify that the file ends (or contains) an `IncludeOptional` (or perhaps `Include`) directive for files matching `conf.d/*.conf`, and add one if needed:
+   ```apache
             IncludeOptional conf.d/*.conf
-  ```
-  This pattern is relative to the path known as `ServerRoot` in the configuration file. For example on CentOS, `ServerRoot` is `/etc/httpd`. Adjust as needed depending on the actual value of `ServerRoot`, so that the files in question are `${WEBCONF}/conf.d/*.conf`.
+   ```
+   This pattern is relative to the path known as `ServerRoot` in the configuration file. For example on CentOS, `ServerRoot` is `/etc/httpd`. Adjust as needed depending on the actual value of `ServerRoot`, so that the files in question are `${WEBCONF}/conf.d/*.conf`.
 
- 1.  *(optional)* Check the file for other configuration parameters you might like to adjust.
+   1.  *(optional)* Check the file for other configuration parameters you might like to adjust.
 
 1.  Create the file `${WEBCONF}/conf.d/${NETCODE}.conf` as root in a text editor.
 
