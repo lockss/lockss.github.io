@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Portal Home 
+title: Home 
 ---
 
 ## Overview
