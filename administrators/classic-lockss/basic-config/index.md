@@ -5,22 +5,6 @@ title: Configuring a Classic LOCKSS System
 
 To get back to the Classic LOCKSS Homepage use [this link](../index.md) 
 
-## Overview
-
-This document explains how to configure the Classic LOCKSS daemon on an "rpm" based Linux installation. For specific details about how to setup your Linux installation and install the LOCKSS Daemon please see [Recommended Linux Setup and Installing Classic LOCKSS](../installation)
-
-### Linux:
-
-The deployment of LOCKSS box normally starts with the installation of an RHEL7 Linux Variant (minimal install group or better) and the attachment of one or more dedicated data storage filesystems. The amount of RAM and disk space needed depends on the LOCKSS network that the LOCKSS box is deployed into.
-
-### Network:
-
-For network planning purposes, it’s important to know that the LOCKSS application is a peer-to-peer application which needs to accept inbound network connections from the internet.  A dedicated IP address should be assigned to the LOCKSS box and all inbound and outbound traffic should use the dedicated IP address.  Use of NAT is supported as long as the dedicated external IP address is used for both inbound and outbound network traffic.
-
-### LOCKSS Integration:
-
-The LOCKSS team provides a LOCKSS integration script to run to enable your Linux deployment to run the LOCKSS software.  Integration scripts are available for both RHEL6 and RHEL7 variants.
-
 ### LOCKSS Configuration:
 
 Each LOCKSS Network has it’s own Configuration URL and Preservation Group(s) setting.  This document covers the “default” LOCKSS Network (GLN, the Global LOCKSS Network).  If you are configuring a LOCKSS box for something other than the GLN,  you’ll need to obtain the Configuration URL and Preservation Group(s) that are appropriate for your LOCKSS Network.

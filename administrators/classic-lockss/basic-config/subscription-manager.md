@@ -13,7 +13,7 @@ _Please note that the terms **Subscription Management** and **Subscription Manag
 
 ## Why Subscription Management is Important
 
-When New Archival Units become available for preservation, an administrator needs to manually add them to the list of Archival Units to be preserved by a LOCKSS system. This is accomplished by going to the "**Add AUs**" link in the "**Journal Configuration**" page of the LOCKSS Administration web interface. Each new version of Archival Units also needs to be added to the machine manually.
+When New Archival Units become available for preservation, an administrator needs to manually add them to the list of Archival Units to be preserved by a LOCKSS system. This is accomplished by going to the "**Add AUs**" link in the "**Journal Configuration**" page of the LOCKSS Administration web interface. The Archival Unit for future volumes of a title must be added manually as well.
 
 Subscription Manager allows for serial publications to be more efficiently added to a LOCKSS system in bulk by allowing administrators to specify a subscription period when the Library is subscribed to the publications and then the LOCKSS software configures the associated Archival Units automatically. 
 - _**Please Note**_ in the context of the LOCKSS software the term “**subscription**” does not directly refer to the agreement between the Library and the serial publication publisher regarding the purchase of content published in the serial publication.

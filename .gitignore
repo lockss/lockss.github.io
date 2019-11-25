@@ -2,3 +2,5 @@ _site
 .sass-cache
 .jekyll-metadata
 /.project
+to-be-sorted.md
+assets/readme
