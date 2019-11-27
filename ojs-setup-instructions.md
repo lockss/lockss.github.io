@@ -1,0 +1,1 @@
+administrators/admin/setting-up/ojs-setup-instructions.md
