@@ -1,0 +1,1 @@
+administrators/admin/setting-up/file-transfer-guidelines.md

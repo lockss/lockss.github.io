@@ -1,0 +1,1 @@
+administrators/admin/setting-up/web-harvest-guidelines.md
