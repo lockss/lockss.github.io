@@ -36,11 +36,3 @@ Before your LOCKSS box can collect content for preservation, a publisher must gi
 If you administer your LOCKSS Box by “adding all available content” you will receive many ‘No permission from publisher’ crawl results but no harm will be done. Establishing the lack of permission will inevitably take time that could be better used in collecting the content to which you do have access. Once you can identify the titles failing to collect, you may find it helpful to clean up your interface by removing them.
 
 IMPORTANT NOTE: Some publishing platforms require librarians to register their Global LOCKSS Network LOCKSS box IP address. A list of impacted publishers and contacts is here.
-
-
-## News
-
-*   **2019-05-13** - **LOCKSS 2.0-Alpha Available for Testing** - The LOCKSS Program is pleased to announce that LOCKSS 2.0-alpha is now available for testing. [**Read more...**](releases/2.0-alpha)
-
-*   **2019-04-05** - **LOCKSS 2.0-Alpha Technology Preview** - At the 2019 LOCKSS Alliance Meeting, the LOCKSS engineering team presented a Technology Preview of the upcoming LOCKSS 2.0-alpha release. [**Read more...**](releases/2.0-alpha-preview)
-

@@ -158,11 +158,3 @@ Whether adding a new subscription or modifying an existing one, the usage of the
     - -2000(10) : Volume 10 of the year 2000 and everything published earlier.
 - The Unsubscribed Ranges text box – It lists the individual ranges of years, volumes and/or issues of subscribed publication content that the Library does not own. It is used most effectively as a list of exceptions to the content specified through the Subscribe All check box or the Subscribed Ranges text box.
 The ranges are specified in the same format as described for the Subscribed Ranges text box.
-
-
-
-## News
-
-*   **2019-05-13** - **LOCKSS 2.0-Alpha Available for Testing** - The LOCKSS Program is pleased to announce that LOCKSS 2.0-alpha is now available for testing. [**Read more...**](releases/2.0-alpha)
-
-*   **2019-04-05** - **LOCKSS 2.0-Alpha Technology Preview** - At the 2019 LOCKSS Alliance Meeting, the LOCKSS engineering team presented a Technology Preview of the upcoming LOCKSS 2.0-alpha release. [**Read more...**](releases/2.0-alpha-preview)
