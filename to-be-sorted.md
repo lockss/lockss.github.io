@@ -31,7 +31,7 @@ title: Home
 
 ## Node setup (classic manual)<a id="node_setup"></a>
 <!-- * [ADPN recommended node hardware specifications](http://www.adpn.org/docs/pdf/ADPNet_Technical_Specifications.pdf) (2015) (PDF) -->
-* [Configure LCAP to use SSL](https://web.stanford.edu/group/lockss/documentation/LCAP_over_SSL.docx) (2012) (DOCX) (Downloaded and moved to assets/)
+* (Done) [Configure LCAP to use SSL](https://web.stanford.edu/group/lockss/documentation/LCAP_over_SSL.docx) (2012) (DOCX) (Downloaded and moved to assets/)
 
 <!-- * [Configure a node to join the LOCKSS-USDocs network](https://web.stanford.edu/group/lockss/documentation/U.S._Documents_Private_LOCKSS_Network_Configuration.docx) (2012) (DOCX)
 * [MetaArchive node hardware, software, staffing specifications](https://metaarchive.org/wp-content/uploads/2017/03/ma_technicalspecifications.pdf) (2015)

@@ -37,7 +37,7 @@ A LOCKSS network consists of the following components:
 
 *   A number of **LOCKSS preservation nodes** running the LOCKSS software, configured to use the network configuration file.
 
-    See the [LOCKSS System Manual](../manual) for an installation and administration guide.
+    See the [LOCKSS 2.0 System Manual](../manual) or the [Classic LOCKSS Manual](../classic-lockss) for installation and administration guides.
 
 ## Props Server
 
