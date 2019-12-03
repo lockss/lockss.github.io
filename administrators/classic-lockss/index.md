@@ -18,15 +18,15 @@ title: Classic LOCKSS System Manual
 
 1. ### System Setup
    1. [Linux](installation)
-   2. [Network (Local Area Network)]()
-   3. [Integration Script]()
+   2. [Network (Local Area Network)](page-under-construction)
+   3. [Integration Script](page-under-construction)
    4. [Configuring LOCKSS Software](basic-config/)
 
 1. ### Initial LOCKSS Setup
    1. [User Interface Guide (PDF)](/assets/Lockss_UI_Guide.pdf)
-   2. [Admin Access Control]()
-   3. [Expert Config]()
-   4. [User Accounts]()
+   2. [Admin Access Control](page-under-construction)
+   3. [Expert Config](page-under-construction)
+   4. [User Accounts](page-under-construction)
    5. [Registering LOCKSS Box with Atypon Publisher](atypon-publishers-gln)
 
 1. ### Managing Content
@@ -35,8 +35,8 @@ title: Classic LOCKSS System Manual
    3. [Adding Content with Subscription Manager](subscription-manager)
 
 1. ### Viewing Content
-   1. [Content Access Admin]()
-   2. [Content Access Options]()
+   1. [Content Access Admin](page-under-construction)
+   2. [Content Access Options](page-under-construction)
    3. Discovery System Integration
      - [Integrate with 360 Link (PDF)](/assets/LOCKSS_and_360_Link_Integration_Guide.pdf)
      - [Integrate with SFX (PDF)](/assets/SFX_Integration_Guide.pdf)
