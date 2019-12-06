@@ -178,15 +178,6 @@ Verify that Local-Persist is running and enabled at startup:
 *   `sudo systemctl is-active docker-volume-local-persist` should say `active`
 *   `sudo systemctl is-enabled docker-volume-local-persist` should say `enabled`
 
-Also verify that Local-Persist is registered with Docker:
-
-*   `sudo -u lockss docker info` should have a `Plugins` section with lists of volume, network and log plugins. The `Volume` list under the `Plugins` section should contain `local-persist`. Here is an excerpt of `docker info` output showing that Local-Persist is correctly registered as a Docker volume plugin:
-
-        Plugins:
-         Volume: local local-persist
-         Network: bridge host macvlan null overlay
-         Log: awslogs fluentd gcplogs gelf journald json-file local logentries splunk syslog
-
 ## Reconfiguring Docker
 
 This section describes what to do when Docker needs to be reconfigured. **You do not need to do anything unless one of the sections above sends you here.**
