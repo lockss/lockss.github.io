@@ -5,7 +5,7 @@ title: LOCKSS Plugin XML Format
 
 *This page is under construction.*
 
-**This page is part of the [LOCKSS Plugin Developer Manual](/developers/plugin).**
+**This page is part of the [LOCKSS Plugin Developer Manual](/developers/plugin/).**
 
 Conceptually, a LOCKSS plugin is a mapping from keys to values. In practice, this mapping is expressed in an XML file.
 

@@ -41,6 +41,6 @@ title: LOCKSS Plugin Developer Manual
 1.  Metadata Extraction
     1.  [Article Iterator](article-iterator)
     1.  [Article Metadata Extractor](article-metadata-extractor)
-    1.  [File Metadata Extractors](file-metadta-extractors)
+    1.  [File Metadata Extractors](file-metadata-extractors)
 1.  Web Replay
     1.  [Link Rewriters](link-rewriters)
