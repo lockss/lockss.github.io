@@ -3,10 +3,4 @@ layout: page
 title: Installing the LOCKSS System
 ---
 
-*This information does not apply to the classic LOCKSS daemon (version 1.x).*
-
-1.  [**System-Pre-Requisites**](system-pre-requisites)
-1.  [**Installing Docker**](docker)
-1.  [**Installing Pystache**](pystache)
-1.  [**Installing Git**](git)
-1.  [**Downloading the LOCKSS Installer**](lockss-installer)
+**This page has moved [here](../2.0-alpha1/installing/).**
