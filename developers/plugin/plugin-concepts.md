@@ -7,23 +7,42 @@ title: LOCKSS Plugin Concepts
 
 **This page is part of the [LOCKSS Plugin Developer Manual](/developers/plugin/).**
 
-This page describes some of the concepts associated with LOCKSS plugins.
-
 ## Introduction
+
+### Definition
 
 A **LOCKSS plugin** is a bundle of descriptors, rules and code loaded into the LOCKSS software, describing how to harvest and process a preservation target.
 
 A preservation target might be an individual Web site, or a family of related Web sites (for instance all Web sites powered by the same content publishing platform), or a corpus of Web-accessible resources discovered through some interface (for example an OAI-PMH server, or a service with an API).
 
-In almost all cases, the preservation target is preserved in plugin-defined slices called **archival units** (or **AUs** for short). What these slices are depends on the situation, but generally the goal is to split the preservation target into slices of manageable size that are expected to become unchanging eventually, for instance time-bound slices. For example, in a LOCKSS plugin for a preservation target that consists of serial publications, an AU could be equated with one volume or one year of one publication.
+### Archival Units (AUs)
 
-A LOCKSS plugin leaves placeholders in rules and code called **plugin configuration parameters**. An AU is identified by which plugin it uses, and by values for each of the parameters the plugin defines. When the parameter values for an AU are substituted for the placeholders in the plugin's rules and code, the result is rules and code suited for that specific AU.
+In almost all cases, the preservation target is preserved in plugin-defined slices called **archival units** (or **AUs** for short).
 
-Typical plugin parameters include a URL prefix or URL fragment (e.g. base URL, directory name, publication code...), a year or a date range, an identifier (e.g. ISSN of a journal, ISBN of a book, database identifier of an object...), a part number (e.g. volume number, numbered subdivision...), and more.
+What these slices are depends on the situation, but generally the goal is to split the preservation target into slices of manageable size that are expected to become unchanging eventually, for instance time-bound slices. For example, in a LOCKSS plugin for a preservation target that consists of serial publications, an AU could be equated with one volume or one year of one publication.
 
-A LOCKSS plugin is expressed as a mapping from keys to values. Except for rare exceptions that are built into the LOCKSS software, LOCKSS plugins consist of an XML file and optional Java class files (compiled Java code), bundled together in a JAR file (a Zip file of Java class files and associated files).
+### Plugin Configuration Parameters
 
-### Plugin Complexity
+A LOCKSS plugin leaves placeholders in rules and code called **plugin configuration parameters**. An AU is identified by a combination of a plugin and values for each of the plugin's parameters. When the parameter values for an AU are substituted for the placeholders in the plugin's rules and code, the result is rules and code suited for that specific AU.
+
+Typical plugin parameters include a URL prefix or URL fragment (e.g. base URL, directory name, publication code...), an identifier (e.g. ISSN of a journal, ISBN of a book, database identifier of an object...), a year or a date range, a part number (e.g. volume number, numbered subdivision...), and more.
+
+### Plugin Format
+
+A LOCKSS plugin is expressed as a mapping from keys to values. Except for rare exceptions that are built into the LOCKSS software, LOCKSS plugins consist of an XML file containing these key-value pairs, accompanied by optional Java class files (compiled Java code), bundled together in a JAR file (a Zip file of Java class files and associated metadata).
+
+### Plugin Component Categories
+
+This manual groups plugin components into conceptual categories:
+
+*   **[Identifying elements](#identifying-elements)**: elements related to the identification, versioning and parameterization of the plugin.
+*   **[Crawl control](#crawl-control)**: components related to the definition and behavior of content crawls.
+*   **[Crawl validation](#crawl-validation)**: components related to content validation in the context of a crawl.
+*   **[Content filters](#content-filters)**: components related to content canonicalization for inter-node comparison purposes.
+*   **[Metadata extraction](#metadata-extraction)**: components related to the extraction and interpretation of metadata from preserved content.
+*   **[Web replay](#web-replay): components related to supporting the replay of Web content.
+
+### Minimalistic Plugin
 
 A simplistic plugin will likely have at minimum:
 
@@ -31,17 +50,17 @@ A simplistic plugin will likely have at minimum:
 *   Start URLs, an optionally, additional permission URLs.
 *   Crawl rules.
 
+If extracting metadata from the preserved content into the LOCKSS metadata database is desired, the plugin will also need:
+
+*   Metadata extraction elements, including an article iterator.
+
 If the preserved content contains variable or personalized HTML Web pages, it will likely need:
 
 *   HTML filters
 
-If extracting metadata from the preserved content into the LOCKSS metadata database is desired, the plugin will likely also need:
+Use of other components is situation-dependent, varying in need based on characteristics and behavior of the preservation target. This manual gives some guidance about when certain components are needed and to what purpose.
 
-*   Metadata extraction elements, including an article iterator.
-
-All other components are optional. Their use arises from either a preservation obstacle or a need specific to the preservation target. This manual gives some guidance about when certain components are needed and to what purpose.
-
-### Plugins in the Classic LOCKSS System and in the Rearchitected LOCKSS System
+### Plugin Compatibility Between the Classic LOCKSS System and the Rearchitected LOCKSS System
 
 Conceptually, LOCKSS plugins are the same in the classic LOCKSS system (LOCKSS 1.x) and in the rearchitected LOCKSS system (LOCKSS 2.x), although future features will only be developed for the rearchitected LOCKSS system without being backported to the classic LOCKSS system.
 

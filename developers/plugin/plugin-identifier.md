@@ -13,13 +13,13 @@ Key: `plugin_identifier`
 
 ## Value Type
 
-Value type: string
+Value type: string (`<string>`)
 
 ## Description
 
 The plugin identifier uniquely identifies the plugin. It is used as part of AUIDs (the unique identifier of each AU) and to name a Java package where the plugin's Java code lives. As such, the plugin identifier is really a **fully-qualified Java class name**, which consists of a Java package name and a Java class name.
 
-Just like a file path such as `/home/jsmith/documents/myfile.txt` is a hierarchical path from more general directories (`home`) to more specific directories (`documents`) and ending with a file name (`myfile.txt`), a fully-qualified Java class name is a hierarchical path starting with the reversed domain name of the entity responsible for the plugin (for example `edu.stanford.library` for library.stanford.edu), followed by more levels (typically the next one `plugin`, and then another to identify the plugin family or individual plugin), and finally ending with a "file name". The separators are periods.
+Just like a file path such as `/home/jsmith/documents/myfile.txt` is a hierarchical path from more general directories (`home`) to more specific directories (`jsmith`, then `documents`) and ending with a file name (`myfile.txt`), a fully-qualified Java class name is a hierarchical path starting with the institution responsible for the plugin (conventionally by reversed Internet domain name), for example `edu.stanford.library` for library.stanford.edu), followed by more levels (typically the next one `plugin`, and then another to identify the plugin family or individual plugin), and finally ending with a "file name". The separators are periods.
 
 ## Example
 
@@ -42,6 +42,6 @@ In the Global LOCKSS Network (GLN), the plugin to process volumes of journals by
 
 ## Note
 
-The plugin identifier should translate into a file path like so:
+The plugin identifier translates into a file path like so:
 
 `org.lockss.plugin.silverchair.oup.OupSilverchairPlugin` -> `org/lockss/plugin/silverchair/oup/OupSilverchairPlugin.xml`

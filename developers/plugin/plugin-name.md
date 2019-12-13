@@ -13,7 +13,7 @@ Key: `plugin_name`
 
 ## Value Type
 
-Value type: string
+Value type: string (`<string>`)
 
 ## Description
 
