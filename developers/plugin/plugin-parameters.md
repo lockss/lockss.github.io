@@ -19,9 +19,9 @@ Value type: list (`<list>`) of `<org.lockss.daemon.ConfigParamDescr>` stanzas
 
 A plugin's rules and code (start and permission URLs, crawl rules, substance patterns...) are made general by identifying placeholders for AU-specific values and substituting them later. These placeholders for variable values are called plugin configuration parameters.
 
-Defining the necessary configuration parameters for a given plugin comes mostly from studying the URL structure of the preservation target and identifying patterns.
+Defining the necessary configuration parameters for a given plugin comes mostly from studying the URL structure of the preservation target, finding patterns, and identifying the parts of those patterns that differ between Archival Units.
 
-Each plugin configuration parameter is represented by a `<org.lockss.daemon.ConfigParamDescr>` stanza that looks like this:
+Each plugin configuration parameter is represented by a `<org.lockss.daemon.ConfigParamDescr>` stanza that looks like this.  Only `<key>` and `<type>` are required.
 
 ```xml
       <org.lockss.daemon.ConfigParamDescr>
@@ -30,8 +30,8 @@ Each plugin configuration parameter is represented by a `<org.lockss.daemon.Conf
         <displayName>...</displayName>
         <description>...</description>
         <size>...</size>
-        <definitional>...</definitional>
-        <defaultOnly>...</defaultOnly>
+        <definitional>...</definitional>    <!-- default: true -->
+        <defaultOnly>...</defaultOnly>      <!-- default: false -->
       </org.lockss.daemon.ConfigParamDescr>
 ```
 
@@ -126,7 +126,7 @@ The range is specified with two integers separated by a dash (`-`). If there is 
 
 *   Type code: `9`
 
-Specified as a comma-separated list of strings, with empty strings between commas discarded, and whitespace between the commas and the beginnings and ends of strings trimmed. <!-- TODO: set macros -->
+Specified as a comma-separated list of strings, with whitespace surrounding strings trimmed, and empty strings discarded. The string `{`*n*`,`*m*`}`, where *n* and *m* are integers, will be replaced by all the integers between *n* and *m*, inclusive.  *Eg*, the set `{2002-2005}, 2003Supp, 2004Supp` is equivalent to `2002, 2003, 2003Supp, 2004, 2004Supp, 2005`.
 
 #### Boolean
 
