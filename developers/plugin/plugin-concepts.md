@@ -74,6 +74,9 @@ All plugins define a number of identifying elements:
 *   **Plugin configuration parameters**: a list of configuration parameter descriptors, defining the placeholders in use in the plugin's rules and code.
 *   **AU name**: a rule to generate a default name for each AU, based on the plugin name and the plugin parameters.
 
+<!-- Optional - how to indicate? -->
+*   **Minimum Daemon Version**: the release number of the earliest version of the LOCKSS software that supports all the features required by the plugin.
+
 ## Crawl Control
 
 The following plugin elements are involved in controlling how content is crawled:
@@ -81,6 +84,7 @@ The following plugin elements are involved in controlling how content is crawled
 *   **Start URLs**: one or more URLs from which the crawl of an AU begins.
 *   **Crawl seed**: in lieu of a list of start URLs, a piece of code called a crawl seed can compute the starting points of the crawl of an AU, for instance by interacting with an API.
 *   **Permission URLs**: one or more URLs giving the LOCKSS software permission to crawl an AU, if permission is not given on the start URLs.
+*   **Permitted Host Pattern**: pattern rules to allow collection from hosts that cannot explicitly grant permission, such as CDN hosts used to distribute standard components used by web sites, such as javascript libraries.
 *   **Crawl rules**: sequential rules determining if a URL discovered during the crawl of an AU should in turn be fetched as part of the AU or not.
 *   **Crawl window**: a crawl window controls what times of day or days of the week crawls against the preservation target are allowed; by default an AU is eligible to crawl at any time.
 *   **Recrawl interval**: the amount of time before an AU that has previously been crawled successfully is eligible to attempt crawling again.
@@ -88,14 +92,15 @@ The following plugin elements are involved in controlling how content is crawled
 *   **Crawl rate limiters**: crawl rate limiters define, at a finer grain than with the pause time alone, how fast a preservation target can be crawled.
 *   **Response handlers**: custom actions taken if fetching a URL results in certain error conditions or HTTP response codes.
 *   **URL normalizer**: a piece of code that normalizes URL variants into canonical URLs.
-*   **Link extractors**: pieces of code that extract or extrapolate URLs from the processed content, other than those that would be extracted through standard means for a given media type.
+*   **Link extractors**: pieces of code that extract or extrapolate URLs from the collected content, to allow the crawler to follow links.  Link extractors are built in for most standard media types that contain links (html, css, pdf, etc.); plugins may supply link extractors for additional media types or extend the built in extractors to handle additional constructs.
 
 ## Crawl Validation
 
 A plugin can optionally define elements that help verify that the crawl is obtaining the content it is supposed to:
 
+*   **Redirect to login URL pattern**: determines whether an HTTP redirect returned by the site is actually a redirect to a login page.
 *   **Login page checker**: determines if a URL fetched successfully (HTTP 200) is in fact a login page or some other undesirable substitute for the intended content.
-*   **Content validators**: pieces of code that determines if certain URLs pass a validation test, most often a media type check or format validation test.
+*   **Content validators**: pieces of code that determine if certain URLs pass a validation test, most often a media type check or format validation test.
 *   **Substance patterns**: pattern rules to check that at least one URL processed during the crawl of an AU is substantive (non-trivial), for example to verify that at least one substantive object was processed rather than just tables of contents.
 
 ## Content Filters
@@ -128,7 +133,19 @@ The LOCKSS plugin framework enables the extraction of metadata from ingested con
 
 A plugin can define optional elements that are applied by the embedded ServeContent Web replay engine:
 
-*   **Link rewriter**: a piece of code that intercepts certain links at ServeContent replay time and applies transformations to them, to improve the usability of some replayed Web-native content.
+*   **Link rewriter**: a piece of code that intercepts certain links at ServeContent replay time and applies transformations to them, to improve the usability of some replayed Web-native content.  <!-- This is wrong. -->
+
+## Plugin Inheritence
+
+Commonalities among a set of similar plugins may be abstracted out in to a parent plugin, to reduce duplication.  Each child plugin inherits all the elements of the parent plugin.
+
+*   **Parent Plugin**: names the parent plugin from which this plugin should inherit elements.
+*   **Parent Plugin Version**: the version number of the parent plugin, to guard against changed to a parent inadvertently changing the behavior of a child plugin.
+
+## Misc
+
+* **Feature Version Map**: associates version strings with several of the plugin elements.  For polling-related elements such as hash filters, the version is used to determine which other peers a peer may invite into polls - the plugin's polling version must be the same acorss all peers participating in a poll.  For metadata extractors and substance checker patterns, the version is used to detect when a change in the plugin may require content to be reprocessed.
+
 
 ## References
 
