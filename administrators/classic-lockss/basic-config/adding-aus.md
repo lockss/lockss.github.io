@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Adding Titles
+title: Adding AUs
 ---
 
 Your LOCKSS Box will collect and preserve open access content and materials to which your institution subscribes.

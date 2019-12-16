@@ -5,17 +5,6 @@ title: Classic LOCKSS System Manual
 
 *This information applies to the classic LOCKSS daemon (version 1.x).*
 
-<!-- 1.  [**Installing the LOCKSS System**](installation)
-1.  [**Configuring the LOCKSS System**](basic-config)
-1.  [**Enabling Subscription Management**](basic-config/subscription-manager)
-1.  [**Using Subscription Management to Add Content**](subscription-manager)
-1.  **Using LOCKSS System Features**
-    -  [**Replaying Web Content with Serve Content**](using/serve-content)
-    -  [**Integrating LOCKSS with Discovery Systems**](using/integration)
-    -  [**Advanced Configuration with Expert Config**](expert-config)
-1.  [**Network Ports**](using/ports)
--->
-
 1. ### System Setup
    1. [Linux](installation)
    2. [Network (Local Area Network)](page-under-construction)
@@ -27,12 +16,12 @@ title: Classic LOCKSS System Manual
    2. [Admin Access Control](page-under-construction)
    3. [Expert Config](page-under-construction)
    4. [User Accounts](page-under-construction)
-   5. [Registering LOCKSS Box with Atypon Publisher](atypon-publishers-gln)
 
 1. ### Managing Content
-   1. [Adding AUs](basic-config/adding-titles)
-   2. [Enabling Subscription Manager](basic-config/subscription-manager)
-   3. [Adding Content with Subscription Manager](subscription-manager)
+   1. [Adding AUs](basic-config/adding-aus)
+   2. [Registering LOCKSS Box with Atypon Publisher](atypon-publishers-gln)
+   3. [Enabling Subscription Manager](basic-config/subscription-manager)
+   4. [Adding Content with Subscription Manager](subscription-manager)
 
 1. ### Viewing Content
    1. [Content Access Admin](page-under-construction)
