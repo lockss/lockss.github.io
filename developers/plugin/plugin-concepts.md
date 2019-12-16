@@ -75,7 +75,8 @@ All plugins define a number of identifying elements:
 *   **AU name**: a rule to generate a default name for each AU, based on the plugin name and the plugin parameters.
 
 <!-- Optional - how to indicate? -->
-*   **Minimum Daemon Version**: the release number of the earliest version of the LOCKSS software that supports all the features required by the plugin.
+*   **Required Daemon Version**: the release number of the earliest version of the LOCKSS software that supports all the features required by the plugin.
+*   **Bulk content**: declares that the AUs managed by the plugin are not organized semantically (e.g, they may span publications). Affects metadata extraction.
 
 ## Crawl Control
 
@@ -88,11 +89,15 @@ The following plugin elements are involved in controlling how content is crawled
 *   **Crawl rules**: sequential rules determining if a URL discovered during the crawl of an AU should in turn be fetched as part of the AU or not.
 *   **Crawl window**: a crawl window controls what times of day or days of the week crawls against the preservation target are allowed; by default an AU is eligible to crawl at any time.
 *   **Recrawl interval**: the amount of time before an AU that has previously been crawled successfully is eligible to attempt crawling again.
+*   **Refetch depth**: number of links away from the start URL(s) that will be fetched by normal crawls. Deep crawls may be used to cause all URLs in an AU to be refetched (subject to If-Modified-Since).
 *   **Fetch pause time**: the minimum amount of time between two fetches of consecutive URLs in the crawl of an AU.
-*   **Crawl rate limiter**: determines the maximum rate at which URLs of a specific media type or pattern will be fetched.
+*   **Crawl rate limiter**: fine grained control of the maximum rate at which URLs may be fetched, based on media type, URL pattern, day of week or time of day.
 *   **Response handler**: custom action taken when fetching a URL results in certain error condition or HTTP response code.
 *   **URL normalizer**: code that normalizes URL variants into canonical URLs.
 *   **Link extractor**: media-type specific code that extracts or extrapolates URLs from the collected content, to allow the crawler to follow links. Link extractors are built in for most standard media types that contain links (html, css, pdf, etc.); plugins may supply link extractors for additional media types or extend the built in extractors to handle additional constructs.
+*   **Content filter**: code that filters content before a link extractor is run. Supplements the crawl rules in cases where more context it needed to determine whether a link should be followed.
+*   **URL fetcher**: custom code to fetch URLs, for cases that require a more elaborate interaction than a single GET.
+*   **URL consumer**: custom code to store collected URLs in the repository.  E.g., for sites that redirect permanent URLs to one-time URLs, to store the content at the permanent URL, or to adapt to sites undergoing HTTP to HTTPS transitions
 
 ## Crawl Validation
 
@@ -144,8 +149,8 @@ Commonalities among a set of similar plugins may be abstracted out in to a paren
 
 ## Misc
 
-* **Feature Version Map**: associates version strings with several of the plugin elements. For polling-related elements such as hash filters, the version is used to determine which other peers a peer may invite into polls - the plugin's polling version must be the same acorss all peers participating in a poll. For metadata extractors and substance checker patterns, the version is used to detect when a change in the plugin may require content to be reprocessed.
-
+* **Feature Version Map**: associates version strings with several of the plugin elements. For polling-related elements such as hash filters, the version is used to determine which other peers a peer may invite into polls - the plugin's polling version must be the same across all peers participating in a poll. For metadata extractors and substance checker patterns, the version is used to detect when a change in the plugin may require content to be reprocessed.
+* **Feature URLs**: Provides information to allow the Open URL resolver to locate articles, issue ToCs, etc.
 
 ## References
 
