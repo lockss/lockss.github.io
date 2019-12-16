@@ -15,11 +15,11 @@ A **LOCKSS plugin** is a bundle of descriptors, rules and code loaded into the L
 
 A preservation target might be an individual Web site, or a family of related Web sites (for instance all Web sites powered by the same content publishing platform), or a corpus of Web-accessible resources discovered through some interface (for example an OAI-PMH server, or a service with an API).
 
-### Archival Units (AUs)
+### Archival Unit (AU)
 
-In almost all cases, the preservation target is preserved in plugin-defined slices called **archival units** (or **AUs** for short).
+In almost all cases, the preservation target is preserved in plugin-defined chunks called **archival units** (or **AUs** for short).
 
-What these slices are depends on the situation, but generally the goal is to split the preservation target into slices of manageable size that are expected to become unchanging eventually, for instance time-bound slices. For example, in a LOCKSS plugin for a preservation target that consists of serial publications, an AU could be equated with one volume or one year of one publication.
+What these chunks are depends on the situation, but generally the goal is to split the preservation target into chunks of manageable size that are expected to become unchanging eventually, for instance time-bound chunks. For example, in a LOCKSS plugin for a preservation target that consists of serial publications, an AU could be equated with one volume or one year of one publication.
 
 ### Plugin Configuration Parameters
 
@@ -44,7 +44,7 @@ This manual groups plugin components into conceptual categories:
 
 ### Minimalistic Plugin
 
-A simplistic plugin will likely have at minimum:
+A simple plugin will likely have at minimum:
 
 *   Identifying elements, including configuration parameters.
 *   Start URLs, an optionally, additional permission URLs.
@@ -56,7 +56,7 @@ If extracting metadata from the preserved content into the LOCKSS metadata datab
 
 If the preserved content contains variable or personalized HTML Web pages, it will likely need:
 
-*   HTML filters
+*   Hash filters
 
 Use of other components is situation-dependent, varying in need based on characteristics and behavior of the preservation target. This manual gives some guidance about when certain components are needed and to what purpose.
 
@@ -82,17 +82,17 @@ All plugins define a number of identifying elements:
 The following plugin elements are involved in controlling how content is crawled:
 
 *   **Start URLs**: one or more URLs from which the crawl of an AU begins.
-*   **Crawl seed**: in lieu of a list of start URLs, a piece of code called a crawl seed can compute the starting points of the crawl of an AU, for instance by interacting with an API.
+*   **Crawl seed**: in lieu of a list of start URLs, code called a crawl seed can compute the starting points of the crawl of an AU, for instance by interacting with an API.
 *   **Permission URLs**: one or more URLs giving the LOCKSS software permission to crawl an AU, if permission is not given on the start URLs.
 *   **Permitted Host Pattern**: pattern rules to allow collection from hosts that cannot explicitly grant permission, such as CDN hosts used to distribute standard components used by web sites, such as javascript libraries.
 *   **Crawl rules**: sequential rules determining if a URL discovered during the crawl of an AU should in turn be fetched as part of the AU or not.
 *   **Crawl window**: a crawl window controls what times of day or days of the week crawls against the preservation target are allowed; by default an AU is eligible to crawl at any time.
 *   **Recrawl interval**: the amount of time before an AU that has previously been crawled successfully is eligible to attempt crawling again.
 *   **Fetch pause time**: the minimum amount of time between two fetches of consecutive URLs in the crawl of an AU.
-*   **Crawl rate limiters**: crawl rate limiters define, at a finer grain than with the pause time alone, how fast a preservation target can be crawled.
-*   **Response handlers**: custom actions taken if fetching a URL results in certain error conditions or HTTP response codes.
-*   **URL normalizer**: a piece of code that normalizes URL variants into canonical URLs.
-*   **Link extractors**: pieces of code that extract or extrapolate URLs from the collected content, to allow the crawler to follow links.  Link extractors are built in for most standard media types that contain links (html, css, pdf, etc.); plugins may supply link extractors for additional media types or extend the built in extractors to handle additional constructs.
+*   **Crawl rate limiter**: determines the maximum rate at which URLs of a specific media type or pattern will be fetched.
+*   **Response handler**: custom action taken when fetching a URL results in certain error condition or HTTP response code.
+*   **URL normalizer**: code that normalizes URL variants into canonical URLs.
+*   **Link extractor**: media-type specific code that extracts or extrapolates URLs from the collected content, to allow the crawler to follow links. Link extractors are built in for most standard media types that contain links (html, css, pdf, etc.); plugins may supply link extractors for additional media types or extend the built in extractors to handle additional constructs.
 
 ## Crawl Validation
 
@@ -100,12 +100,12 @@ A plugin can optionally define elements that help verify that the crawl is obtai
 
 *   **Redirect to login URL pattern**: determines whether an HTTP redirect returned by the site is actually a redirect to a login page.
 *   **Login page checker**: determines if a URL fetched successfully (HTTP 200) is in fact a login page or some other undesirable substitute for the intended content.
-*   **Content validators**: pieces of code that determine if certain URLs pass a validation test, most often a media type check or format validation test.
+*   **Content validator**: code that determines if certain URLs pass a validation test, most often a media type check or format validation test.
 *   **Substance patterns**: pattern rules to check that at least one URL processed during the crawl of an AU is substantive (non-trivial), for example to verify that at least one substantive object was processed rather than just tables of contents.
 
-## Content Filters
+## Hash Filters
 
-Many plugins designed to harvest and preserve Web-native content need to go to some lengths to enable the nodes in a LOCKSS network preserving the same AU to compare the URLs they have apples to apples. This is because fetching a given URL is likely to result in non-identical results from node to node, or from fetch to fetch on the same node, due to a raft of causes:
+Many plugins designed to harvest and preserve Web-native content need to go to some lengths to enable comparison of (hashes of) content between the nodes in a LOCKSS network. This is because fetching a given URL is likely to result in non-identical results from node to node, or from fetch to fetch on the same node, due to a raft of causes:
 
 *   Advertising banners.
 *   Personalization: "You are logged in as...", "Downloaded by..."
@@ -119,32 +119,32 @@ Many plugins designed to harvest and preserve Web-native content need to go to s
 
 and more. Some of these variations now appear outside HTML in media types like PDF or Microsoft PowerPoint files.
 
-To canonicalize content before comparison between nodes in the LOCKSS audit and repair protocol, a plugin can define pieces of code called **content filters** for each affected media type. The LOCKSS plugin framework offers a variety of utility classes specifically for **HTML** and **PDF** filtering, as part of its general content filtering framework.
+To canonicalize content before comparison between nodes in the LOCKSS audit and repair protocol, a plugin can define a **hash filter** for each affected media type. The LOCKSS plugin framework offers a variety of utility classes specifically for **HTML** and **PDF** filtering, as part of its general content filtering framework.
 
 ## Metadata Extraction
 
 The LOCKSS plugin framework enables the extraction of metadata from ingested content, through an extensible metadata extraction framework; a plugin can optionally define:
 
-*   **Article iterator**: a piece of code that traverses the AU and enumerates all the logical items (journal articles, electronic books, electronic theses and dissertations, repository objects...) found in it, as bundles of related URLs.
-*   **Article metadata extractor**: a piece of code that extracts metadata from the logical items enumerated by the article iterator using file metadata extractors, and that post-processes and stores the extracted metadata in the LOCKSS metadata database.
-*   **File metadata extractors**: pieces of code that extract metadata from a given file type.
+*   **Article iterator**: code that traverses the AU and enumerates all the logical items (journal articles, electronic books, electronic theses and dissertations, repository objects...) found in it, as bundles of related URLs.
+*   **Article metadata extractor**: code that extracts metadata from the logical items enumerated by the article iterator using file metadata extractors, and that post-processes and stores the extracted metadata in the LOCKSS metadata database.
+*   **File metadata extractors**: code that extracts metadata from files with a given media type.
 
 ## Web Replay
 
 A plugin can define optional elements that are applied by the embedded ServeContent Web replay engine:
 
-*   **Link rewriter**: a piece of code that intercepts certain links at ServeContent replay time and applies transformations to them, to improve the usability of some replayed Web-native content.  <!-- This is wrong. -->
+*   **Link rewriter**: code used by the built-in ServeContent replay engine that changes intra-site links or other URLs to point back to the ServeContent host. Link rewriters are built in for most standard media types that contain links (html, css, javascript, etc.); plugins may supply link rewriters for additional media types or extend the built in rewriters to handle additional constructs.
 
 ## Plugin Inheritence
 
-Commonalities among a set of similar plugins may be abstracted out in to a parent plugin, to reduce duplication.  Each child plugin inherits all the elements of the parent plugin.
+Commonalities among a set of similar plugins may be abstracted out in to a parent plugin, to reduce duplication. Each child plugin inherits all the elements of the parent plugin.
 
 *   **Parent Plugin**: names the parent plugin from which this plugin should inherit elements.
 *   **Parent Plugin Version**: the version number of the parent plugin, to guard against changed to a parent inadvertently changing the behavior of a child plugin.
 
 ## Misc
 
-* **Feature Version Map**: associates version strings with several of the plugin elements.  For polling-related elements such as hash filters, the version is used to determine which other peers a peer may invite into polls - the plugin's polling version must be the same acorss all peers participating in a poll.  For metadata extractors and substance checker patterns, the version is used to detect when a change in the plugin may require content to be reprocessed.
+* **Feature Version Map**: associates version strings with several of the plugin elements. For polling-related elements such as hash filters, the version is used to determine which other peers a peer may invite into polls - the plugin's polling version must be the same acorss all peers participating in a poll. For metadata extractors and substance checker patterns, the version is used to detect when a change in the plugin may require content to be reprocessed.
 
 
 ## References
