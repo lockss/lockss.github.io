@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Link Extractors
+title: Link Extractor
 ---
 
 *This page is under construction.*

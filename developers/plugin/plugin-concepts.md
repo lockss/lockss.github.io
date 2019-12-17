@@ -88,7 +88,7 @@ The following plugin elements are involved in controlling how content is crawled
 *   **Crawl seed**: in lieu of a list of start URLs, code called a crawl seed can compute the starting points of the crawl of an AU, for instance by interacting with an API.
 *   **Permission URLs**: one or more URLs giving the LOCKSS software permission to crawl an AU, if permission is not given on the start URLs.
 *   **Per-host permission path**: path where permission statement may be found on hosts not listed in start URLs or Permission URLs. Useful for sites such as Internet Archive that have banks of similar hosts with unpredictable names. 
-*   **Permitted Host Pattern**: pattern rules to allow collection from hosts that cannot explicitly grant permission, such as CDN hosts used to distribute standard components used by web sites, such as javascript libraries.
+*   **Permitted host pattern**: pattern rules to allow collection from hosts that cannot explicitly grant permission, such as CDN hosts used to distribute standard components used by web sites, such as javascript libraries.
 *   **Crawl rules**: sequential rules determining if a URL discovered during the crawl of an AU should in turn be fetched as part of the AU or not.
 *   **Crawl window**: a crawl window controls what times of day or days of the week crawls against the preservation target are allowed; by default an AU is eligible to crawl at any time.
 *   **Recrawl interval**: the amount of time before an AU that has previously been crawled successfully is eligible to attempt crawling again.
@@ -146,7 +146,7 @@ The LOCKSS plugin framework enables the extraction of metadata from ingested con
 
 *   **Article iterator**: code that traverses the AU and enumerates all the logical items (journal articles, electronic books, electronic theses and dissertations, repository objects...) found in it, as bundles of related URLs.
 *   **Article metadata extractor**: code that extracts metadata from the logical items enumerated by the article iterator using file metadata extractors, and that post-processes and stores the extracted metadata in the LOCKSS metadata database.
-*   **File metadata extractors**: code that extracts metadata from files with a given media type.
+*   **File metadata extractor**: code that extracts metadata from files with a given media type.
 
 ## Web Replay
 

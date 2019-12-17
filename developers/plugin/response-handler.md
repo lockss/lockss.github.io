@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Link Rewriters
+title: Response Handler
 ---
 
 *This page is under construction.*

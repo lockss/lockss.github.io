@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Crawl Rate Limiters
+title: Introduction to Hash Filters
 ---
 
 *This page is under construction.*

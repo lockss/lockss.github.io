@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Introduction to Content Filters
+title: Link Rewriter
 ---
 
 *This page is under construction.*
