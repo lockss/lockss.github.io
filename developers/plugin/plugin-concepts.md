@@ -38,9 +38,12 @@ This manual groups plugin components into conceptual categories:
 *   **[Identifying elements](#identifying-elements)**: elements related to the identification, versioning and parameterization of the plugin.
 *   **[Crawl control](#crawl-control)**: components related to the definition and behavior of content crawls.
 *   **[Crawl validation](#crawl-validation)**: components related to content validation in the context of a crawl.
-*   **[Content filters](#content-filters)**: components related to content canonicalization for inter-node comparison purposes.
+*   **[Poll control](#poll-control)**: components related to the definition and behavior of content crawls.
+*   **[Hash filters](#hash-filters)**: components related to content canonicalization for inter-node comparison purposes.
 *   **[Metadata extraction](#metadata-extraction)**: components related to the extraction and interpretation of metadata from preserved content.
-*   **[Web replay](#web-replay): components related to supporting the replay of Web content.
+*   **[Web replay](#web-replay)**: components related to supporting the replay of Web content.
+*   **[Plugin inheritence](#plugin-inheritence)**: elements related to sharing similar behavior among a set of plugins.
+*   **[Miscellaneous](#miscellaneous)**
 
 ### Minimalistic Plugin
 
@@ -160,7 +163,7 @@ Commonalities among a set of similar plugins may be abstracted out in to a paren
 *   **Parent plugin**: names the parent plugin from which this plugin should inherit elements.
 *   **Parent plugin version**: the version number of the parent plugin, to guard against changed to a parent inadvertently changing the behavior of a child plugin.
 
-## Misc
+## Miscellaneous
 
 *   **Feature version map**: associates version strings with several of the plugin elements. For polling-related elements such as hash filters, the version is used to determine which other peers a peer may invite into polls - the plugin's polling version must be the same across all peers participating in a poll. For metadata extractors and substance checker patterns, the version is used to detect when a change in the plugin may require content to be reprocessed.
 *   **Feature URLs**: provides information to allow the Open URL resolver to locate articles, issue ToCs, etc.
