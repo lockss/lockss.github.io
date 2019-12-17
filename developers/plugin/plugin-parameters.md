@@ -134,16 +134,18 @@ Specified as a comma-separated list of strings, with whitespace surrounding stri
 
 The canonical values are `true` or `false`, although `yes`, `on` and `1` are recognized as `true` and `no`, `off` and `0` are recognized as `false`. All these value strings are case-insensitive.
 
-## Built-In Plugin Configuration Parameters
+## Built-In Definitional Parameters
 
-The LOCKSS software defines a number of built-in plugin configuration parameters.
+The LOCKSS software defines a number of built-in definitional plugin configuration parameters.
+
+Definitional parameters give an AU its identity -- change the value for a definitional parameter and you will be describing a different slice of content (different year, different directory, etc.).
 
 ### Commonly Used
 
 #### Base URL
 
-*   Key: `base_url`
-*   Type: URL (`3`)
+*   Parameter key: `base_url`
+*   Parameter type: URL (`3`)
 
 ```xml
       <org.lockss.daemon.ConfigParamDescr>
@@ -159,8 +161,8 @@ The LOCKSS software defines a number of built-in plugin configuration parameters
 
 #### Second Base URL
 
-*   Key: `base_url2`
-*   Type: URL (`3`)
+*   Parameter key: `base_url2`
+*   Parameter type: URL (`3`)
 
 ```xml
       <org.lockss.daemon.ConfigParamDescr>
@@ -176,8 +178,8 @@ The LOCKSS software defines a number of built-in plugin configuration parameters
 
 #### Year
 
-*   Key: `year`
-*   Type: year (`4`)
+*   Parameter key: `year`
+*   Parameter type: year (`4`)
 
 ```xml
       <org.lockss.daemon.ConfigParamDescr>
@@ -195,8 +197,8 @@ The LOCKSS software defines a number of built-in plugin configuration parameters
 
 #### Volume Number
 
-*   Key: `volume`
-*   Type: non-negative integer (`6`)
+*   Parameter key: `volume`
+*   Parameter type: non-negative integer (`6`)
 
 ```xml
       <org.lockss.daemon.ConfigParamDescr>
@@ -229,8 +231,8 @@ The LOCKSS software defines a number of built-in plugin configuration parameters
 
 #### Issue Range
 
-*   Key: `issue_range`
-*   Type: string range (`7`)
+*   Parameter key: `issue_range`
+*   Parameter type: string range (`7`)
 
 ```xml
       <org.lockss.daemon.ConfigParamDescr>
@@ -246,8 +248,8 @@ The LOCKSS software defines a number of built-in plugin configuration parameters
 
 #### Numeric Issue Range
 
-*   Key: `num_issue_range`
-*   Type: numeric range (`7`)
+*   Parameter key: `num_issue_range`
+*   Parameter type: numeric range (`7`)
 
 ```xml
       <org.lockss.daemon.ConfigParamDescr>
@@ -263,8 +265,8 @@ The LOCKSS software defines a number of built-in plugin configuration parameters
 
 #### Issue Set
 
-*   Key: `issue_set`
-*   Type: set (`9`)
+*   Parameter key: `issue_set`
+*   Parameter type: set (`9`)
 
 ```xml
       <org.lockss.daemon.ConfigParamDescr>
@@ -280,8 +282,8 @@ The LOCKSS software defines a number of built-in plugin configuration parameters
 
 #### Journal Directory
 
-*   Key: `journal_dir`
-*   Type: string (`1`)
+*   Parameter key: `journal_dir`
+*   Parameter type: string (`1`)
 
 ```xml
       <org.lockss.daemon.ConfigParamDescr>
@@ -297,8 +299,8 @@ The LOCKSS software defines a number of built-in plugin configuration parameters
 
 #### Journal Abbreviation
 
-*   Key: `journal_abbr`
-*   Type: string (`1`)
+*   Parameter key: `journal_abbr`
+*   Parameter type: string (`1`)
 
 ```xml
       <org.lockss.daemon.ConfigParamDescr>
@@ -314,8 +316,8 @@ The LOCKSS software defines a number of built-in plugin configuration parameters
 
 #### Journal Identifier
 
-*   Key: `journal_id`
-*   Type: string (`1`)
+*   Parameter key: `journal_id`
+*   Parameter type: string (`1`)
 
 ```xml
       <org.lockss.daemon.ConfigParamDescr>
@@ -331,8 +333,8 @@ The LOCKSS software defines a number of built-in plugin configuration parameters
 
 #### Journal ISSN
 
-*   Key: `journal_issn`
-*   Type: string (`1`)
+*   Parameter key: `journal_issn`
+*   Parameter type: string (`1`)
 
 ```xml
       <org.lockss.daemon.ConfigParamDescr>
@@ -348,8 +350,10 @@ The LOCKSS software defines a number of built-in plugin configuration parameters
 
 #### Publisher Name
 
-*   Key: `publisher_name`
-*   Type: string (`1`)
+*   Parameter key: `publisher_name`
+*   Parameter type: string (`1`)
+
+**Deprecated.** Use of this parameter is not recommended. It is unlikely the publisher name will appear in URLs, as opposed to a publisher abbreviation or code.
 
 ```xml
       <org.lockss.daemon.ConfigParamDescr>
@@ -367,8 +371,8 @@ The LOCKSS software defines a number of built-in plugin configuration parameters
 
 #### OAI Request URL
 
-*   Key: `oai_request_url`
-*   Type: URL (`3`)
+*   Parameter key: `oai_request_url`
+*   Parameter type: URL (`3`)
 
 ```xml
       <org.lockss.daemon.ConfigParamDescr>
@@ -384,8 +388,8 @@ The LOCKSS software defines a number of built-in plugin configuration parameters
 
 #### OAI Spec
 
-*   Key: `oai_spec`
-*   Type: string (`1`)
+*   Parameter key: `oai_spec`
+*   Parameter type: string (`1`)
 
 ```xml
       <org.lockss.daemon.ConfigParamDescr>
@@ -396,5 +400,175 @@ The LOCKSS software defines a number of built-in plugin configuration parameters
         <size>40</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+```
+
+### Built-In Non-Definitional Parameters
+
+The LOCKSS software also defines a number of non-definitional plugin configuration parameters.
+
+Non-definitional parameters are necessary as placeholders in plugin rules and code, but they do not contribute to the AU's identity -- you may need to change the value of a non-definitional parameter but it will not change which slice of content the AU corresponds to.
+
+Some non-definitional parameters might be listed in the plugin itself, like the `user_pass` parameter for user credentials, if all AUs are expected to supply a value for the parameter, but most others are involved in the lifecycle of any AU and need not be listed in the plugin, like the `pub_down` parameter for AUs that are not currently allowed to crawl.
+
+#### Username and Password
+
+*   Parameter key: `user_pass`
+*   Parameter type: user credentials (`10`)
+*   Definitional: false
+
+Some harvesting processes may require user credentials (username and password). A non-definitional parameter is needed because the username and password might be different for different harvesting nodes, or may change over time, without changing the identity of the AU (for instance its year).
+
+```xml
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>user_pass</key>
+        <type>10</type>
+        <displayName>Username:Password</displayName>
+        <description>Colon-separated username and password string, e.g. myuser:mypass</description>
+        <size>30</size>
+        <definitional>false</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+```
+
+#### AU Down
+
+*   Parameter key: `pub_down`
+*   Parameter type: boolean (`5`)
+*   Definitional: false
+*   Default-only: true
+
+This non-definitional parameter is used routinely in the title database files of LOCKSS networks, but does not need to appear explicitly in plugins.
+
+When this parameter value is supplied as `true` for an AU, the AU is considered to be "down", meaning that it is currently unavailable from its source and should not attempt to crawl or recrawl.
+
+The name `pub_down`, for "publisher down", reflects the idea that the entire publisher site (content provider) might be unavailable, but this parameter is used routinely to mark individual AUs as being down outside the context of an entire content provider being unavailable.
+
+```xml
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>pub_down</key>
+        <type>5</type>
+        <displayName>Pub Down</displayName>
+        <description>If true, AU is no longer available from the publisher</description>
+        <size>4</size>
+        <definitional>false</definitional>
+        <defaultOnly>true</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+```
+
+#### AU Off-Limits
+
+*   Parameter key: `pub_never`
+*   Parameter type: boolean (`5`)
+*   Definitional: false
+*   Default-only: true
+
+This non-definitional parameter is used routinely in the title database files of LOCKSS networks, but does not need to appear explicitly in plugins.
+
+When this parameter value is supplied as `true` for an AU, the AU is considered to be "off-limits", meaning that the LOCKSS software will not satisfy a proxy request for a URL it determines to be in this AU from the original Web site.
+
+<!-- TODO but does this also have the effect of pub_down in terms of crawls? -->
+
+```xml
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>pub_never</key>
+        <type>5</type>
+        <displayName>Pub Never</displayName>
+        <description>If true, don't try to access any content from publisher</description>
+        <size>4</size>
+        <definitional>false</definitional>
+        <defaultOnly>true</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+```
+
+#### AU Closed
+
+*   Parameter key: `au_closed`
+*   Parameter type: boolean (`5`)
+*   Definitional: false
+*   Default-only: true
+
+This non-definitional parameter is used routinely in the title database files of LOCKSS networks, but does not need to appear explicitly in plugins.
+
+When this parameter value is supplied as `true` for an AU, the AU is marked as "closed", meaning it is considered that no more content will be added to it in the future.
+
+```xml
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>au_closed</key>
+        <type>5</type>
+        <displayName>AU Closed</displayName>
+        <description>If true, AU is complete, no more content will be added</description>
+        <size>4</size>
+        <definitional>false</definitional>
+        <defaultOnly>true</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+```
+
+<!-- TODO does this have a  concrete effect? -->
+
+#### Crawl Proxy
+
+*   Parameter key: `crawl_proxy`
+*   Parameter type: string (`1`)
+*   Definitional: false
+*   Default-only: true
+
+This non-definitional parameter is used routinely in the title database files of LOCKSS networks, but does not need to appear explicitly in plugins.
+
+When this parameter value is supplied as a host:port pair (for example `proxy.myuniversity.edu:8080`) for an AU, crawls of the AU will be proxied through the given proxy. When this parameter value is supplied as the special value `DIRECT` for an AU, crawls of the AU will not be proxied, even if the LOCKSS node is configured to routinely use a crawl proxy.
+
+```xml
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>crawl_proxy</key>
+        <type>1</type>
+        <displayName>Crawl Proxy</displayName>
+        <description>If set to host:port, crawls of this AU will be proxied. If set to DIRECT, crawls will not be proxied, even if the LOCKSS node has been configured with a default crawl proxy.</description>
+        <size>40</size>
+        <definitional>false</definitional>
+        <defaultOnly>true</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+```
+
+#### New Content Crawl Interval
+
+*   Parameter key: `nc_interval`
+*   Parameter type: time interval (`12`)
+*   Definitional: false
+*   Default-only: true
+
+This non-definitional parameter is used routinely in the title database files of LOCKSS networks, but does not need to appear explicitly in plugins.
+
+When this parameter value is supplied as a time interval for an AU, crawls of the AU will be attempted with the given requested interval rather than the LOCKSS node's default new content crawl interval.
+
+```xml
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>nc_interval</key>
+        <type>12</type>
+        <displayName>Crawl Interval</displayName>
+        <description>The interval at which the AU should crawl the publisher site.</description>
+        <size>10</size>
+        <definitional>false</definitional>
+        <defaultOnly>true</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+```
+
+#### Crawl Test Substance Threshold
+
+*   Parameter key: `crawl_test_substance_threshold`
+*   Parameter type: string (`1`)
+*   Definitional: false
+*   Default-only: true
+
+This non-definitional parameter is used in special circumstances, for networks set up to perform abbreviated test crawls.
+
+```xml
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>crawl_test_substance_threshold</key>
+        <type>1</type>
+        <displayName>Crawl Test Substance Threshold</displayName>
+        <description>Minimum number of substance URLs necessary for successful abbreviated crawl test.</description>
+        <size>20</size>
+        <definitional>false</definitional>
+        <defaultOnly>true</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
 ```

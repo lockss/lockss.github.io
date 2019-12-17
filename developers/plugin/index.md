@@ -44,3 +44,6 @@ title: LOCKSS Plugin Developer Manual
     1.  [File Metadata Extractors](file-metadata-extractors)
 1.  Web Replay
     1.  [Link Rewriters](link-rewriters)
+1.  Appendix: Related Concepts
+    1.  [printf Format Strings](printf-format-strings)
+    1.  [Regular Expressions](regular-expressions)
