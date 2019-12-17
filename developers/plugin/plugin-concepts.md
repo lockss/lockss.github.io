@@ -42,7 +42,7 @@ This manual groups plugin components into conceptual categories:
 *   **[Hash filters](#hash-filters)**: components related to content canonicalization for inter-node comparison purposes.
 *   **[Metadata extraction](#metadata-extraction)**: components related to the extraction and interpretation of metadata from preserved content.
 *   **[Web replay](#web-replay)**: components related to supporting the replay of Web content.
-*   **[Plugin inheritence](#plugin-inheritence)**: elements related to sharing similar behavior among a set of plugins.
+*   **[Plugin inheritance](#plugin-inheritance)**: elements related to sharing similar behavior among a set of plugins.
 *   **[Miscellaneous](#miscellaneous)**
 
 ### Minimalistic Plugin
@@ -156,7 +156,7 @@ A plugin can define optional elements that are applied by the embedded ServeCont
 *   **Rewrite HTML meta tags**: pattern that determines which HTML meta tags have values that should be rewritten during web replay.  Some tags (e.g., citation URLs) should not be rewritten to point back to the ServeContent host.
 
 
-## Plugin Inheritence
+## Plugin Inheritance
 
 Commonalities among a set of similar plugins may be abstracted out in to a parent plugin, to reduce duplication. Each child plugin inherits all the elements of the parent plugin.
 
