@@ -13,9 +13,13 @@ Key: `plugin_config_props`
 
 ## Value Type
 
-Value type: list (`<list>`) of `<org.lockss.daemon.ConfigParamDescr>` stanzas
+Value type: list (`<list>`)
+
+The value is a list of `<org.lockss.daemon.ConfigParamDescr>` stanzas.
 
 ## Description
+
+A list of configuration parameter descriptors, defining the placeholders in use in the plugin's rules and code.
 
 A plugin's rules and code (start and permission URLs, crawl rules, substance patterns...) are made general by identifying placeholders for AU-specific values and substituting them later. These placeholders for variable values are called plugin configuration parameters.
 

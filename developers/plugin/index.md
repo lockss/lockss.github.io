@@ -28,6 +28,7 @@ title: LOCKSS Plugin Developer Manual
     1.  [Crawl Rules](crawl-rules)
     1.  [Crawl Window](crawl-window)
     1.  [Recrawl Interval](recrawl-interval)
+    1.  [Refetch Depth](refetch-depth)
     1.  [Fetch Pause Time](fetch-pause-time)
     1.  [Crawl Rate Limiter](crawl-rate-limiter)
     1.  [Crawl Pool](crawl-pool)

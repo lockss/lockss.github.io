@@ -17,7 +17,7 @@ Value type: string (`<string>`)
 
 ## Description
 
-A user-friendly string of text naming the plugin.
+A user-friendly name for the plugin.
 
 ## Example
 

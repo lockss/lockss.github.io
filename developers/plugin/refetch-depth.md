@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Crawl Rate Limiter
+title: Refetch Depth
 ---
 
 *This page is under construction.*
@@ -9,15 +9,15 @@ title: Crawl Rate Limiter
 
 ## Key
 
-Key: ``
+Key: `au_refetch_depth`
 
 ## Value Type
 
-Value type: 
+Value type: integer (`<int>`)
 
 ## Description
 
-Fine grained control of the maximum rate at which URLs may be fetched, based on media type, URL pattern, day of week or time of day.
+Number of links away from a start URL that will be fetched by normal crawls. Deep crawls may be used to cause all URLs in an AU to be refetched (subject to `If-Modified-Since`).
 
 ## Example
 

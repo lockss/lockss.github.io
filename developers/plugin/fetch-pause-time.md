@@ -9,13 +9,17 @@ title: Fetch Pause Time
 
 ## Key
 
-Key: ``
+Key: `au_def_pause_time`
 
 ## Value Type
 
-Value type: 
+Value type: long integer (`<long>`)
 
 ## Description
+
+The minimum amount of time between two fetches of consecutive URLs in the crawl of an AU, in milliseconds.
+
+The most common value in the Global LOCKSS Network is `3000` for no more frequently than every 3 seconds.
 
 ## Example
 
