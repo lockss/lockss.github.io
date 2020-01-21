@@ -49,8 +49,8 @@ title: LOCKSS Plugin Developer Manual
     1.  [Poll Result Weight](poll-result-weight)
     1.  [Repair From Publisher When Too Close](repair-from-publisher-when-too-close)
     1.  [Repair From Peer If Missing](repair-from-peer-if-missing)
-1.  Hash Filters
-    1.  [Introduction](hash-filters)
+1.  Hash Filtering
+    1.  [Hash Filters](hash-filters)
     1.  [HTML Filters](html-filters)
     1.  [PDF Filters](pdf-filters)
 1.  Metadata Extraction
