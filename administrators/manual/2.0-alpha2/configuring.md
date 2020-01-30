@@ -38,32 +38,32 @@ When run the first time the questions asked by the script often come with a sugg
 1.  `Password for web UI administration user <uiuser>`: enter the password for the given administrative user in the LOCKSS system's Web user interfaces
 1.  `Password for web UI administration (again)`: re-enter the password for the given administrative user in the LOCKSS system's Web user interfaces (if the two passwords do not match, the password will be asked again)
     You will see output indicating that this has been store as docker secret lockss-postgres-pass
-    
+
 The next set of questions will gather information about which of the LOCKSS service you will be using and how to access any service you've already configured for use.:
-1. `Use LOCKSS Metadata Service?`: Enter `Y` to use the metadata service `N` and no metadata service will be run.
+1. `Use LOCKSS Metadata Service?`: Enter `Y` to use the embedded metadata service or `N` and no metadata service will be run.
 1. `Use LOCKSS Metadata Extractor Service?`: Enter `Y` to use the metadata extraction service or `N` and no metadata extraction service will be run.
-1. `Use LOCKSS Postgres DB Service?`: 
+1. `Use LOCKSS Postgres DB Service?`:
     1 Enter `Y` to use the LOCKSS postgres database.
-        1.  `Password for database:` Enter the password for the embedded Postgres database included in LOCKSS 2.0-alpha. *Future versions will allow you to use an existing Postgres database and enter credentials accordingly.*
+        1.  `Password for database:` Enter the password for the embedded Postgres database included in LOCKSS 2.0-alpha2.
         1.  `Password for database (again):` Re-enter the password for the embedded Postgres database (if the two passwords do not match, the password will be asked again)
         You will see output indicating that this has been store as docker secrets lockss_ui_pass and lockss-auth
-    1. Enter `N` if you wish to use your own postgres install. You will be queried for the details of your Postgres database.
+    1. Enter `N` if you wish to use your own Postgres service. You will be queried for the details of your Postgres service.
         1. `Fully qualified hostname (FQDN) of Postgres host:` Enter the hostname (e.g. `mysql.myuniversity.edu`)
         1. `Port used by Postgres host:` Enter the port your running postgres sql can be reached at.
         1. `Login name for Postgres service: [LOCKSS]` Enter name used to login to the postgres service, the default is LOCKSS.
         1. `Schema for Postgres service: [LOCKSS]` Enter the schema to be used by LOCKSS, the default is LOCKSS.
         1. `Database name prefix for Postgres service: [Lockss]` Prefix to use for any LOCKSS databases.
-        1. `Password for database:` enter the password for the embedded Postgres database included in LOCKSS 2.0-alpha. *Future versions will allow you to use an existing Postgres database and enter credentials accordingly.*
-        1. `Password for database (again):` re-enter the password for the embedded Postgres database (if the two passwords do not match, the password will be asked again)
-1.  `Use LOCKSS SOLR Service?:` 
-     1. Answer `Y` if you wish to use the default LOCKSS solr install.
-     1. Answer `N` if you wish to use your solr install.
+        1. `Password for database:` enter the password for your Postgres database.
+        1. `Password for database (again):` re-enter the password for your Postgres database (if the two passwords do not match, the password will be asked again)
+1.  `Use LOCKSS SOLR Service?:`
+     1. Answer `Y` if you wish to use the embedded LOCKSS solr install.
+     1. Answer `N` if you wish to use your own SOLR service.
         1. `Fully qualified hostname (FQDN) of SOLR host:` Enter the hostname (e.g. `mysql.myuniversity.edu`)
         1. `Port used by SOLR host:` Enter the port your running postgres sql can be reached at.
         1. `SOLR core repo name: [lockss-repo]` Enter name for the SOLR core repo, the default is `lockss-repo`.
-1.  `Use LOCKSS PyWb Service?:`Answer `Y` to use PyWb, answer `N` and you will be offered the option to use OpenWayback.  
+1.  `Use LOCKSS PyWb Service?:`Answer `Y` to use PyWb, answer `N` and you will be offered the option to use OpenWayback.
 1.  `Use LOCKSS OpenWayback Service?:`Answer 'Y' to use OpenWayback answer `N` and OpenWayback will not be used.
 1.  **OK to store this configuration**: confirm with `Y` that the summarized configuration data is correct and that you are ready to write it to a file
 
-You will prompted to run ./start-lockss when you wish to start the configured system.
+You will prompted to run ./start-lockss to start the configured system.
 
