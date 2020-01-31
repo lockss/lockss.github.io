@@ -9,7 +9,7 @@ title: Replaying Web Content with OpenWayback
 
 Given that your primary hostname is `${HOST}`, you can use your browser to connect to the LOCKSS OpenWayback user interface (UI) at:
 
-    http://${HOST}:8080
+    http://${HOST}:8080/wayback
 
 ## Replaying a URL from the OpenWayback Interface
 

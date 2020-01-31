@@ -13,7 +13,6 @@ All ports in the 24600-24699 range should be considered reserved. The LCAP (LOCK
 
 *   5432: Postgres
 *   8080: Pywb replay engine
-*   8080: OpenWayback replay engine
 *   8983: Solr
 *   9729: LCAP (LOCKSS polling and repair)
 *   24600: *reserved* (currently LOCKSS Configuration Service UI)

@@ -31,5 +31,4 @@ Many Linux distributions have systemd and can run Docker 18.09 or better. To nam
 
 The LOCKSS system runs under a system user named `lockss` under a group named `lockss`, which you will need to create.
 
-<!-- FIXME -->
-*This section is under construction.*
+To check installed prerequisites use the script [systems/check-sys](check-sys) which will attempt to find and install missing elements.
