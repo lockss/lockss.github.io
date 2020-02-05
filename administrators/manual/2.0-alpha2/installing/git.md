@@ -11,11 +11,15 @@ The LOCKSS Installer is available from [GitHub](https://github.com), and you wil
 
 Your operating system may already be equipped with a Git client. Type:
 
+```bash
     git --version
+```
 
 If the output is a version number, for example:
 
+```text
     git version 2.21.0
+```
 
 then Git is already installed and you do not need to take any further action.
 
@@ -25,7 +29,9 @@ Otherwise, Git can be installed from your operating system's software repositori
 
 Use Pacman to install Git on Arch Linux:
 
+```bash
     sudo pacman -S git
+```
 
 ## Git on CentOS
 
@@ -34,7 +40,9 @@ Use Pacman to install Git on Arch Linux:
 
 Use Yum to install Git on CentOS:
 
+```bash
     sudo yum install git
+```
 
 ## Git on Debian
 
@@ -43,7 +51,9 @@ Use Yum to install Git on CentOS:
 
 Use Apt to install Git on Debian:
 
+```bash
     sudo apt-get install git
+```
 
 ## Git on Fedora
 
@@ -52,7 +62,9 @@ Use Apt to install Git on Debian:
 
 Use DNF to install Git on Fedora:
 
+```bash
     sudo dnf install git
+```
 
 ## Git on Oracle Linux
 
@@ -61,7 +73,9 @@ Use DNF to install Git on Fedora:
 
 Use Yum to install Git on Oracle Linux:
 
+```bash
     sudo yum install git
+```
 
 ## Git on Ubuntu
 
@@ -70,4 +84,6 @@ Use Yum to install Git on Oracle Linux:
 
 Use Apt to install Git on Ubuntu:
 
+```bash
     sudo apt-get install git
+```

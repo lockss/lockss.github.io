@@ -12,7 +12,7 @@ title: LOCKSS 2.0-alpha2 System Manual
     1.  [**Installing Docker**](installing/docker)
     1.  [**Installing Git**](installing/git)
     1.  [**Downloading the LOCKSS Installer**](installing/lockss-installer)
-    1.  [**Using System Checker**](installing/check-sys)
+    1.  [**Checking the System**](installing/check-sys)
 1.  [**Upgrading from the LOCKSS 2.0 alpha1 System**](upgrading)
 1.  [**Configuring the LOCKSS System**](configuring)
 1.  [**Running the LOCKSS System**](running)

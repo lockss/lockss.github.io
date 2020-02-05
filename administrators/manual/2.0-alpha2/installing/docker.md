@@ -5,7 +5,7 @@ title: Installing Docker
 
 *This information applies to version 2.0-alpha2 of the LOCKSS system.*
 
-Docker is a container runtime and orchestration engine. This page will walk you through the initial installation of the [Docker](https://www.docker.com/) engine and the [Local-Persist](https://github.com/MatchbookLab/local-persist) Docker volume plugin.
+[Docker](https://www.docker.com/) is a container runtime and orchestration engine. This page will walk you through the initial installation of the Docker engine and the [Local-Persist](https://github.com/MatchbookLab/local-persist) Docker volume plugin.
 
 ## Overview
 
@@ -34,7 +34,9 @@ The LOCKSS system requires **Docker 18.09 or better**.
 
 Simply use Arch's official software repositories to install Docker with Pacman:
 
+```bash
     sudo pacman -S docker
+```
 
 ### Docker on CentOS
 
@@ -75,11 +77,15 @@ Use Docker's official software repositories to install Docker with Apt: <https:/
 
 Installing Docker creates a new system group typically named `docker`. The command:
 
+```bash
     groups lockss
+```
 
 will display the list of groups the `lockss` user is a member of, which should already include the `lockss` group. If the list of groups does not include the `docker` group, add the `lockss` user to the `docker` group with the following command:
 
+```bash
     sudo usermod -G docker -a lockss
+```
 
 or with a similar user management command or tool.
 
@@ -87,11 +93,15 @@ or with a similar user management command or tool.
 
 Start Docker with systemd:
 
+```bash
     sudo systemctl start docker
+```
 
 Verify that Docker is running:
 
+```bash
     sudo systemctl is-active docker
+```
 
 The output should say `active`.
 
@@ -99,11 +109,15 @@ The output should say `active`.
 
 Unless you are only trying out the LOCKSS system on a machine that will not be running it or Docker routinely, enable Docker to launch at startup with systemd:
 
+```bash
     sudo systemctl enable docker
+```
 
 Verify that the operation succeeded with:
 
+```bash
     sudo systemctl is-enabled docker
+```
 
 The output should say `enabled`.
 
@@ -111,11 +125,15 @@ The output should say `enabled`.
 
 Verify that Docker is using the OverlayFS (`overlay2`) storage driver:
 
+```bash
     sudo -u lockss docker info | grep 'Storage Driver:'
+```
 
 If the output is:
 
+```text
     Storage Driver: overlay2
+```
 
 then Docker is running with the OverlayFS storage driver and you can move on to the next section.
 
@@ -125,27 +143,37 @@ If the output lists another storage driver than `overlay2` (for example `devicem
 
 Verify that Docker is using Swarm mode:
 
+```bash
     sudo -u lockss docker info | grep 'Swarm:'
+```
 
 If the output is:
 
+```text
     Swarm: active
+```
 
 then Docker is running in Swarm mode correctly and you can move on to the next section.
 
 If the output is empty or if the Swarm is not listed as active, initialize Swarm mode with this command:
 
+```bash
     sudo -u lockss docker swarm init
+```
 
 If the output looks like this:
 
+```text
     Swarm initialized: current node (bvz81updecsj6wjz393c09vti) is now a manager.
+```
 
     To add a worker to this swarm, run the following command:
 
+```bash
         docker swarm join \
         --token SWMTKN-1-3pu6hszjas19xyp7ghgosyx9k8atbfcr8p2is99znpy26u2lkl-1awxwuwd3z9j1z3puu7rcgdbx \
         xx.xx.xx.xx:2377
+```
 
     To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
 
@@ -153,15 +181,21 @@ where `xx.xx.xx.xx` is the IP address of the machine, then the Swarm initializat
 
 If the output contains an error message that looks like this:
 
+```text
     Error response from daemon: could not choose an IP address to advertise since this system has multiple addresses on interface eth0 (xx.xx.xx.xx and yy.yy.yy.yy) - specify one with --advertise-addr
+```
 
 or like this:
 
+```text
     Error response from daemon: could not choose an IP address to advertise since this system has multiple addresses on different interfaces (xx.xx.xx.xx on eth0 and yy.yy.yy.yy on eth1) - specify one with --advertise-addr
+```
 
 then Docker was not able to automatically select an IP address among the several IP addresses it discovered. Identify the desired IP address of the machine, for example `xx.xx.xx.xx`, and enter the modified command:
 
+```bash
     sudo -u lockss docker swarm init --advertise-addr xx.xx.xx.xx
+```
 
 ## Install Local-Persist
 
@@ -169,7 +203,9 @@ The LOCKSS system uses the [Local-Persist](https://github.com/MatchbookLab/local
 
 Run the [Local-Persist installation script](https://github.com/MatchbookLab/local-persist#quick-way) which will download and install the necessary files and set up the necessary systemd infrastructure:
 
+```bash
     curl -fsSL https://raw.githubusercontent.com/MatchbookLab/local-persist/master/scripts/install.sh | sudo bash
+```
 
 If you prefer, you can follow the [Local-Persist manual installation instructions](https://github.com/MatchbookLab/local-persist#manual-way).
 
@@ -182,10 +218,12 @@ Also verify that Local-Persist is registered with Docker:
 
 *   `sudo -u lockss docker info` should have a `Plugins` section with lists of volume, network and log plugins. The `Volume` list under the `Plugins` section should contain `local-persist`. Here is an excerpt of `docker info` output showing that Local-Persist is correctly registered as a Docker volume plugin:
 
+```text
         Plugins:
          Volume: local local-persist
          Network: bridge host macvlan null overlay
          Log: awslogs fluentd gcplogs gelf journald json-file local logentries splunk syslog
+```
 
 ## Reconfiguring Docker
 
@@ -193,11 +231,15 @@ This section describes what to do when Docker needs to be reconfigured. **You do
 
 Edit or create the `/etc/docker/daemon.json` configuration file and input the required key-value pairs in a JSON object, separated by commas, typically one per line for clarity. Example:
 
+```text
     {
         "storage-driver": "overlay2",
         "iptables": true
     }
+```
 
 After editing and saving the configuration file, restart the Docker daemon with systemd:
 
+```bash
     sudo systemctl restart docker
+```
