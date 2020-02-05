@@ -44,7 +44,7 @@ The next set of questions will gather information about which of the LOCKSS serv
 1.  `Use LOCKSS Metadata Extractor Service?`: Enter `Y` to use the metadata extraction service or `N` and no metadata extraction service will be run.
 1.  `Use LOCKSS PostgreSQL DB Service?`:
     *   Enter `Y` to use the included PostgreSQL database.
-        1.  `Password for database:` Enter the password for the PostgreSQL database included in LOCKSS 2.0-alpha2.<sup id="a1">[1](#n1)</sup>
+        1.  `Password for database:` Enter the password for the PostgreSQL database included in LOCKSS 2.0-alpha2.[<sup>1</sup>](#n1)
         1.  `Password for database (again):` Re-enter the password for the PostgreSQL database (if the two passwords do not match, the password will be asked again)
     *   Enter `N` if you wish to use your own PostgreSQL database. You will be queried for the details of your PostgreSQL service.
         1.  `Fully qualified hostname (FQDN) of PostgreSQL host:` Enter the hostname (e.g. `mysql.myuniversity.edu`)
@@ -52,7 +52,7 @@ The next set of questions will gather information about which of the LOCKSS serv
         1.  `Login name for PostgreSQL database: [LOCKSS]` Enter name used to login to the postgres service, the default is LOCKSS.
         1.  `Schema for PostgreSQL service: [LOCKSS]` Enter the schema to be used by LOCKSS, the default is LOCKSS.
         1.  `Database name prefix for PostgreSQL database: [Lockss]` Prefix to use for any LOCKSS databases.
-        1.  `Password for database:` enter the password for your PostgreSQL database.<sup id="a1">[1](#n1)</sup>
+        1.  `Password for database:` enter the password for your PostgreSQL database.[<sup>1</sup>](#n1)
         1.  `Password for database (again):` re-enter the password for your PostgreSQL database (if the two passwords do not match, the password will be asked again)
 1.  `Use LOCKSS Solr Service?:`
     *   Answer `Y` if you wish to use the included Solr install.
@@ -66,8 +66,7 @@ The next set of questions will gather information about which of the LOCKSS serv
 You will prompted to run `scripts/start-lockss` to start the configured system.
 
 
-##### Footnotes
 
-=========
+#### Footnotes
 
-<b id="n1">1</b> Passwords are not stored unencrypted by LOCKSS.  You should store them in a safe place as you will need them each time you run scripts/configure-lockss. If you need to change your passwords, rerun scripts/configure-lockss.
+<a id="n1">[1]</a>: Passwords are not stored unencrypted by LOCKSS.  You should store them in a safe place as you will need them each time you run scripts/configure-lockss. If you need to change your passwords, rerun scripts/configure-lockss.

@@ -11,7 +11,7 @@ Unless otherwise noted, all ports are **TCP**.
 
 All ports in the 24600-24699 range should be considered reserved. The LCAP (LOCKSS polling and repair) port retains its historical value of 9729.
 
-*   5432: PostgresSQL
+*   5432: PostgreSQL
 *   8080: Pywb replay engine
 *   8983: Solr
 *   9729: LCAP (LOCKSS polling and repair)
