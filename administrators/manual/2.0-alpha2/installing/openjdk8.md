@@ -5,25 +5,20 @@ title: Installing OpenJDK 8
 
 *This information applies to version 2.0-alpha2 of the LOCKSS system.*
 
+Temporarily in LOCKSS 2.0-alpha2, Java 8 is needed on the host machine to run the Solr upgrade tool. (In the future, this process will be packaged in a way that does not require Java to be installed.)
 
-## Installing OpenJDK 8 Runtime
-
-### <a name="jdk8_ubuntu" id="jdk8_ubuntu"></a>Debian, Ubuntu, _etc._
-
-On the command line, type:
-
-> **$** sudo apt-get install openjdk-8-jre
-
-### <a name="jdk8_fedora" id="jdk8_fedora"></a>Fedora, Oracle Linux, Red Hat Enterprise Linux, _etc._
+## Debian, Ubuntu, etc.
 
 On the command line, type:
 
-> **$** su -c "yum install java-1.8.0-openjdk"
+```bash
+    sudo apt-get install openjdk-8-jre
+````
 
-### <a name="jdk8_macos" id="jdk8_macos"></a>MacOS using Homebrew
+## Fedora, Oracle Linux, Red Hat Enterprise Linux, etc.
 
 On the command line, type:
 
-> **$** brew cask install adoptopenjdk8
-
-Set JAVAHOME to /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk
+```bash
+    sudo yum install java-1.8.0-openjdk
+```

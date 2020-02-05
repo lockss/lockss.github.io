@@ -1,40 +1,43 @@
 ---
 layout: page
-title: Upgrading a LOCKSS 2.0-alpha1 System
+title: Upgrading From LOCKSS 2.0-alpha1
 ---
 
 *This information applies to version 2.0-alpha2 of the LOCKSS system.*
 
-If you have been using version 2.0-alpha1 of the LOCKSS system an upgrade path
+If you have been using version 2.0-alpha1 of the LOCKSS system, an upgrade path
 has been provided to version 2.0-alpha2.
 
-### Prerequisites
+## Pre-Requisites
+
 See [installing the LOCKSS system](installing). Additionally you will need to
-[install OpenJDK8](installing/openjdk8)
+[install OpenJDK8](installing/openjdk8). *(This dependency on Java is temporary for 2.0-alpha2. It is necessary to run the Solr upgrader tool. In 2.0-alpha3, the process will be packaged in such a way that it does not depend on Java on the host machine.)*
 
-### Download the latest release from the master branch of lockss-installer
-On the command line in your lockss-installer directory, type:
+## Update `lockss-installer`
 
-> **$** git checkout master
+On the command line in the `lockss-installer` directory, type:
 
-> **$** git pull
+```bash
+    git checkout master
 
-### Run the upgrade command
-On the command line, type:
+    git pull
+```
 
-> **$** sudo ./scripts/upgrade-alpha1-to-alpha2
+to update to the latest version of `lockss-installer` from GitHub.
 
-#### The script will perform a number of system level changes and must be made as root.
-1. Load the existing config.info and rewrite with new properties system.cfg
-2. Shutdown any running stack(s)
-3. Rename the old persistent data storage directories.
-4. Update the sql database with new database names.
-5. Remove any old installed docker configurations, volumes or networks.  This will
-not remove any docker secrets and will not remove the persistent data store.
-6. Update alpha1 SOLR to alpha2 SOLR.  This is a long running process that needs to update the schema and reindex. Please be patient.
-7. Restore file ownership.
+## Run the Upgrade Command
 
-#### Upon successful completion
+On the command line in the `lockss-installer` directory, type:
 
-You will prompted to run [./configure-lockss](configuring) to check and if necessary update configuration values.
+```bash
+    sudo scripts/upgrade-alpha1-to-alpha2
+```
+
+The script will perform a number of system-level changes and need to be root.
+
+These adjustments include renaming `config.info` to `system.cfg`, shutting down a running system stack, renaming storage directories, updating database names, run the Solr upgrader tool from 2.0-alpha1 to 2.0-alpha2 (which is a long running process; please be patient), and change file ownerships, all of which to align the system with the 2.0-alpha2 environment.
+
+## Re-Configure the System
+
+Upon successful completion, you will prompted to run [`scripts/configure-lockss`](configuring). **Be advised that the configuration process will prompt you for the Postgres database password.**
 
