@@ -47,20 +47,20 @@ The next set of questions will gather information about which of the LOCKSS serv
         1.  `Password for database:` Enter the password for the PostgreSQL database included in LOCKSS 2.0-alpha2.[<sup>1</sup>](#n1)
         1.  `Password for database (again):` Re-enter the password for the PostgreSQL database (if the two passwords do not match, the password will be asked again)
     *   Enter `N` if you wish to use your own PostgreSQL database. You will be queried for the details of your PostgreSQL service.
-        1.  `Fully qualified hostname (FQDN) of PostgreSQL host:` Enter the hostname (e.g. `mysql.myuniversity.edu`)
-        1.  `Port used by PostgreSQL host:` Enter the port your running postgres sql can be reached at.
-        1.  `Login name for PostgreSQL database: [LOCKSS]` Enter name used to login to the postgres service, the default is LOCKSS.
-        1.  `Schema for PostgreSQL service: [LOCKSS]` Enter the schema to be used by LOCKSS, the default is LOCKSS.
-        1.  `Database name prefix for PostgreSQL database: [Lockss]` Prefix to use for any LOCKSS databases.
+        1.  `Fully qualified hostname (FQDN) of PostgreSQL host:` Enter the hostname of your PostgreSQL database (e.g. `mysql.myuniversity.edu`)
+        1.  `Port used by PostgreSQL host:` Enter the port where your running PostgreSQL database can be reached.
+        1.  `Login name for PostgreSQL database: [LOCKSS]` Enter the user name for your PostgreSQL database. The default is `LOCKSS`.
+        1.  `Schema for PostgreSQL service: [LOCKSS]` Enter the schema name to be used by the LOCKSS system. The default is `LOCKSS`.
+        1.  `Database name prefix for PostgreSQL database: [Lockss]` Prefix to use for any LOCKSS databases. The default is `Lockss` (not the upercase/lowercase).
         1.  `Password for database:` enter the password for your PostgreSQL database.[<sup>1</sup>](#n1)
         1.  `Password for database (again):` re-enter the password for your PostgreSQL database (if the two passwords do not match, the password will be asked again)
 1.  `Use LOCKSS Solr Service?:`
     *   Answer `Y` if you wish to use the included Solr install.
-    *   Answer `N` if you wish to use your own Solr service.
-        1.  `Fully qualified hostname (FQDN) of Solr host:` Enter the hostname (e.g. `mysql.myuniversity.edu`)
-        1.  `Port used by Solr host:` Enter the port your running postgres sql can be reached at.
-        1.  `Solr core repo name: [lockss-repo]` Enter name for the Solr core repo, the default is `lockss-repo`.
-1.  `Use LOCKSS PyWb Service?:`Answer `Y` to use PyWb, answer `N` and you will be offered the option to use OpenWayback.
+    *   Answer `N` if you wish to use your own Solr database.
+        1.  `Fully qualified hostname (FQDN) of Solr host:` Enter the hostname of your Solr database (e.g. `mysql.myuniversity.edu`)
+        1.  `Port used by Solr host:` Enter the port where your running Solr database can be reached.
+        1.  `Solr core repo name: [lockss-repo]` Enter name for the Solr core for the LOCKSS repository. The default is `lockss-repo`.
+1.  `Use LOCKSS PyWb Service?:` Answer `Y` to use PyWb, answer `N` and you will be offered the option to use OpenWayback.
 1.  **OK to store this configuration**: confirm with `Y` that the summarized configuration data is correct and that you are ready to write it to a file
 
 You will prompted to run `scripts/start-lockss` to start the configured system.
@@ -69,4 +69,4 @@ You will prompted to run `scripts/start-lockss` to start the configured system.
 
 #### Footnotes
 
-<a id="n1">[1]</a>: Passwords are not stored unencrypted by LOCKSS.  You should store them in a safe place as you will need them each time you run scripts/configure-lockss. If you need to change your passwords, rerun scripts/configure-lockss.
+<a id="n1">[1]</a>: Passwords are encrypted in the Docker Secret vault.  You should also keep your passwords in a safe place for yourself, as you will need them each time you run `scripts/configure-lockss`. If you change your password in PostgreSQL, you will need to re-run `scripts/configure-lockss` to give the new password to the system.
