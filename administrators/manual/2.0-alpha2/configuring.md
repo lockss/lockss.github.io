@@ -65,8 +65,8 @@ The next set of questions will gather information about which of the LOCKSS serv
 
 You will prompted to run `scripts/start-lockss` to start the configured system.
 
-
+----
 
 #### Footnotes
 
-<a id="n1">[1]</a>: Passwords are encrypted in the Docker Secret vault.  You should also keep your passwords in a safe place for yourself, as you will need them each time you run `scripts/configure-lockss`. If you change your password in PostgreSQL, you will need to re-run `scripts/configure-lockss` to give the new password to the system.
+<a name="n1" id="n1">[1]</a>: Passwords are encrypted in the Docker Secret vault.  You should also keep your passwords in a safe place for yourself, as you will need them each time you run `scripts/configure-lockss`. If you change your password in PostgreSQL, you will need to re-run `scripts/configure-lockss` to give the new password to the system.
