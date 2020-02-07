@@ -5,10 +5,11 @@ title: Releases
 
 ## Upcoming
 
-*   [LOCKSS 2.0-alpha2](2.0-alpha2) **(not yet released)**
+*   LOCKSS 2.0-alpha3
 
 ## Development
 
+*   [LOCKSS 2.0-alpha2](2.0-alpha2) (2020-02-06)
 *   [LOCKSS 2.0-alpha1](2.0-alpha1) (2019-05-13)
 *   [LOCKSS 2.0-alpha technology preview](2.0-alpha-preview) (2019-04-05)
 
