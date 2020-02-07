@@ -17,7 +17,7 @@ Our current stable release of the LOCKSS daemon is 1.74.7.
 
 ## LOCKSS 2.0 Documentation
 
-LOCKSS 2.0-alpha2 was released on 2019-02-06.
+LOCKSS 2.0-alpha2 was released on 2020-02-06.
 
 *   For release notes and information about LOCKSS 2.0-alpha2, please see [LOCKSS 2.0-alpha2](administrators/releases/2.0-alpha2)
 *   For installation and configuration information, please see the [LOCKSS 2.0 System manual](administrators/manual/)
