@@ -10,7 +10,7 @@ If you have been using version 2.0-alpha1 of the LOCKSS system, an upgrade path 
 ## Pre-Requisites
 
 See [installing the LOCKSS system](installing). Additionally you will need to
-[install OpenJDK8](installing/openjdk8) on the host machine[<sup>1</sup>](#n1)</sup>.
+[install OpenJDK8](installing/openjdk8) on the host machine[<sup>1</sup>](#n1).
 
 ## Update `lockss-installer`
 
