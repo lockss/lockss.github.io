@@ -1,3 +1,7 @@
+---
+layout: page
+title: CLOCKSS File Transfer Summary
+---
 
 
 ## Overview
