@@ -4,3 +4,4 @@ _site
 /.project
 to-be-sorted.md
 assets/readme
+*.bak
