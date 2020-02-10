@@ -1,6 +1,4 @@
 
-# File Transfer Summary
-
 
 ## Overview
 
@@ -15,7 +13,7 @@ Metadata must deliver enough information to uniquely identify the items. We can 
 
 
 
-*   Deliveries should include:
+Deliveries should include:
     *   both content and related metadata; 
     *   consistent metadata to content relationships;
     *   non-proprietary formats only (e.g., PDF, HTML); 
