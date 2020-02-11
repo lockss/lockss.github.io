@@ -16,8 +16,8 @@ This document provides guidelines to enable content providers to support file tr
 
 
 
-[ ] deliveries should include both content and related metadata
-[ ] content and metadata may be delivered as discrete file data: 
+-[ ] deliveries should include both content and related metadata
+-[ ] content and metadata may be delivered as discrete file data: 
     [ ] in a single directory, or
     [ ] in a directory tree, or
     [ ] packaged in a non-proprietary package format (e.g., tar, zip). 
