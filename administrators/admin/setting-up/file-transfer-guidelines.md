@@ -16,35 +16,35 @@ This document provides guidelines to enable content providers to support file tr
 
 
 
-- [ ] deliveries should include both content and related metadata
-- [ ] content and metadata may be delivered as discrete file data: 
-    - [ ] in a single directory, or
-    - [ ] in a directory tree, or
-    - [ ] packaged in a non-proprietary package format (e.g., tar, zip). 
-- [ ] consistent metadata to content relationships
-    - [ ] one metadata file per content file (1:1) or 
-    - [ ] one metadata file per multiple content files (1:M), with metadata file names that include a timestamp or other unique identifier.
+[ ] deliveries should include both content and related metadata
+[ ] content and metadata may be delivered as discrete file data: 
+    [ ] in a single directory, or
+    [ ] in a directory tree, or
+    [ ] packaged in a non-proprietary package format (e.g., tar, zip). 
+[ ] consistent metadata to content relationships
+    [ ] one metadata file per content file (1:1) or 
+    [ ] one metadata file per multiple content files (1:M), with metadata file names that include a timestamp or other unique identifier.
 
 
 #### Content
 
 
 
-*   final content, no pre-publication content
-*   non-proprietary formats only (e.g., PDF, HTML)
-*   a maximum of one non-text format for each item, (e.g., PDF, EPUB, MOBI)
+[ ] final content, no pre-publication content
+[ ] non-proprietary formats only (e.g., PDF, HTML)
+[ ] a maximum of one non-text format for each item, (e.g., PDF, EPUB, MOBI)
 
 
 #### Metadata
 
 
 
-*   text formats (e.g., XML, RIS)
-*   standard metadata schemas preferred (e.g., JATS, ONIX, PubMed, Crossref)
+[ ] text formats (e.g., XML, RIS)
+[ ] standard metadata schemas preferred (e.g., JATS, ONIX, PubMed, Crossref)
 
-_Scholarly content: _metadata must include the DOI, publication name, publication date, access URL, and ISSN or ISBN as appropriate. Additional metadata could include: item title, series title, volume, issue, author, and page range. 
+*Scholarly content:* metadata must include the DOI, publication name, publication date, access URL, and ISSN or ISBN as appropriate. Additional metadata could include: item title, series title, volume, issue, author, and page range. 
 
-_Content other than scholarly books & journals: _metadata must deliver enough information to uniquely identify the item, for example, the DOI or other identifier, provider, publication date, and access URL.
+*Content other than scholarly books & journals:* metadata must deliver enough information to uniquely identify the item, for example, the DOI or other identifier, provider, publication date, and access URL.
 
 
 #### File Names
@@ -55,17 +55,17 @@ Metadata files map to content file(s) consistently. For example:
 
 
 
-*   for a 1:1 relationship, options include: 
-    *   using the same base filename for each file pair, or
-    *   using the same base filename for each file pair, with codified differences.
-*   for a 1:Many relationship, content filenames may:
-    *   be contained in the XML file along with the related metadata,  \
+*  for a 1:1 relationship, options include: 
+    *  using the same base filename for each file pair, or
+    *  using the same base filename for each file pair, with codified differences.
+*  for a 1:Many relationship, content filenames may:
+    *  be contained in the XML file along with the related metadata,  \
 e.g., <content_filename>fred_smith_2002.pdf</content_filename>
-    *   be built up from metadata elements identified in the XML, for example, journal_id + volume + start_page, e.g., foo_17_101.pdf
-    *   correspond to the doi of the article in question with underbars in place of "/", e.g. “10.1111/foo/xxx2018.1" would be "10.1111_foo_xxx2018.1.pdf"
-    *   use a publisher specific identifier for the content, e.g., xxx2019.1.pdf
+    *  be built up from metadata elements identified in the XML, for example, journal_id + volume + start_page, e.g., foo_17_101.pdf
+    *  correspond to the doi of the article in question with underbars in place of "/", e.g. “10.1111/foo/xxx2018.1" would be "10.1111_foo_xxx2018.1.pdf"
+    *  use a publisher specific identifier for the content, e.g., xxx2019.1.pdf
 
-Note: For a 1:Many relationship, metadata filenames must contain a date stamp or other unique identifier (e.g. Atypon extracts).
+Note: For a 1:Many relationship, metadata filenames must contain a date stamp or other unique identifier (e.g., Atypon extracts).
 
 
 #### Transmission
@@ -76,15 +76,15 @@ We accept data:
 
 
 
-*   pushed to our CLOCKSS FTP server (CLOCKSS SFTP coming soon); or 
-*   which we can pull from FTP or SFTP servers. We have some ability to pull from an AWS bucket, rsync target, or other custom source.
+[ ] pushed to our CLOCKSS FTP server (CLOCKSS SFTP coming soon); or 
+[ ] which we can pull from FTP or SFTP servers. We have some ability to pull from an AWS bucket, rsync target, or other custom source.
 
 Establish and implement standards for: 
 
 
 
-*   uniquely-named deliveries; and 
-*   a defined schedule: annually, monthly, or continually.
+[ ] uniquely-named deliveries; and 
+[ ] a defined schedule: annually, monthly, or continually.
 
 Note: if a standard part of your delivery process is email delivery notifications, we will provide an email alias.
 
@@ -100,18 +100,18 @@ For an accurate evaluation, please deliver the following:
 
 
 
-*   a description of the file structure: flat directory? directory tree? zip or tar file? How many levels deep is the file structure?
-*   a description of the relationship between the metadata files and the content files: Is there one metadata file for each content file (1:1) or is there one metadata file for multiple content files (1:M)? Are metadata and content files in the same directory or seperated?
-*   the schema of valid XML files (if used): JATS 2, JATS 3, Crossref 2, Crossref 3, ONIX 2, ONIX 3, NLM, or custom schema?
+[ ] a description of the file structure: flat directory? directory tree? zip or tar file? How many levels deep is the file structure?
+[ ] a description of the relationship between the metadata files and the content files: Is there one metadata file for each content file (1:1) or is there one metadata file for multiple content files (1:M)? Are metadata and content files in the same directory or seperated?
+[ ] the schema of valid XML files (if used): JATS 2, JATS 3, Crossref 2, Crossref 3, ONIX 2, ONIX 3, NLM, or custom schema?
 
 
 #### Sample content
 
 
 
-*   at least one example of each file type to be preserved with any relevant metadata.
-*   for a 1:1 relationship a minimum of 4 files: 2 metadata and 2 content files. The naming convention of the files should demonstrate the relationship between the metadata file and the content file.
-*   for a 1:M relationship a minimum of 3 files: 1 metadata and 2 content files. The metadata file should contain at least two sections, one for each content file, each with a reference to the relative content file. 
+[ ] at least one example of each file type to be preserved with any relevant metadata.
+[ ] for a 1:1 relationship a minimum of 4 files: 2 metadata and 2 content files. The naming convention of the files should demonstrate the relationship between the metadata file and the content file.
+[ ] for a 1:M relationship a minimum of 3 files: 1 metadata and 2 content files. The metadata file should contain at least two sections, one for each content file, each with a reference to the relative content file. 
 
 
 ## Setup Phase
