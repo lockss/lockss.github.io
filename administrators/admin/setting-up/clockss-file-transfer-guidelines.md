@@ -3,6 +3,7 @@ layout: page
 title: CLOCKSS File Transfer Guidelines
 ---
 
+![CLOCKSS Logo](/images/clockss-logo.png)
 
 ## Overview
 
@@ -55,8 +56,8 @@ Metadata files map to content file(s) consistently. For example:
 
 
 
-*  for a 1:1 relationship, options include: 
-    *  using the same base filename for each file pair, or
+>  for a 1:1 relationship, options include: 
+    > &#9744; using the same base filename for each file pair, or
     *  using the same base filename for each file pair, with codified differences.
 *  for a 1:Many relationship, content filenames may:
     *  be contained in the XML file along with the related metadata,  \
