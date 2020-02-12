@@ -1,9 +1,9 @@
+![CLOCKSS Logo](/images/clockss-logo.png)
+
 ---
 layout: page
 title: CLOCKSS File Transfer Guidelines
 ---
-
-![CLOCKSS Logo](/images/clockss-logo.png)
 
 ## Overview
 
