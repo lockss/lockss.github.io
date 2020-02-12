@@ -16,16 +16,16 @@ This document provides guidelines to enable content providers to support file tr
 
 
 
-: [ ] deliveries should include both content and related metadata
- : [ ] content and metadata may be delivered as discrete file data: 
+ : [ ] deliveries should include both content and related metadata
+    : [ ] content and metadata may be delivered as discrete file data: 
     + [ ] in a single directory, or
     + [ ] in a directory tree, or
     + [ ] packaged in a non-proprietary package format (e.g., tar, zip). 
 
 :  &#9744; consistent metadata to content relationships
 
-:    &#9744; one metadata file per content file (1:1) or 
-:    &#9744; one metadata file per multiple content files (1:M), with metadata file names that include a timestamp or other unique identifier.
+  :    &#9744; one metadata file per content file (1:1) or 
+    :    &#9744; one metadata file per multiple content files (1:M), with metadata file names that include a timestamp or other unique identifier.
 
 
 #### Content
