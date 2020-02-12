@@ -134,4 +134,3 @@ When a file must be revised, upload the updated file using the same file name. W
 Once the production phase starts, follow the delivery standards agreed upon in the evaluation and setup phases, otherwise additional setup costs may be incurred.
 
 
-*Version: 2/10/2020*
