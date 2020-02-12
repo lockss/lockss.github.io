@@ -1,0 +1,1 @@
+administrators/admin/setting-up/clockss-file-transfer-summary.md
