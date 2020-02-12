@@ -1,9 +1,10 @@
-![CLOCKSS Logo](/images/clockss-logo.png)
-
 ---
 layout: page
 title: CLOCKSS File Transfer Guidelines
+subtitle: *2/10/2020*
 ---
+
+<!--![CLOCKSS Logo](/images/clockss-logo.png)-->
 
 ## Overview
 
@@ -80,7 +81,7 @@ We accept data:
  - [ ] pushed to our CLOCKSS FTP server (CLOCKSS SFTP coming soon); or 
  - [ ] which we can pull from FTP or SFTP servers. We have some ability to pull from an AWS bucket, rsync target, or other custom source.
 
-Establish and implement standards for: 
+Please establish and implement standards for: 
 
 
 
