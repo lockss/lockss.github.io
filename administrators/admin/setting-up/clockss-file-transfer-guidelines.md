@@ -56,17 +56,17 @@ Metadata files map to content file(s) consistently. For example:
 
 
 
->  for a 1:1 relationship, options include: 
-    > &#9744; using the same base filename for each file pair, or
+*  for a 1:1 relationship, options include: 
+    *  using the same base filename for each file pair, or
     *  using the same base filename for each file pair, with codified differences.
-*  for a 1:Many relationship, content filenames may:
+* for a 1:Many relationship, content filenames may:
     *  be contained in the XML file along with the related metadata,  \
 e.g., <content_filename>fred_smith_2002.pdf</content_filename>
     *  be built up from metadata elements identified in the XML, for example, journal_id + volume + start_page, e.g., foo_17_101.pdf
     *  correspond to the doi of the article in question with underbars in place of "/", e.g. “10.1111/foo/xxx2018.1" would be "10.1111_foo_xxx2018.1.pdf"
     *  use a publisher specific identifier for the content, e.g., xxx2019.1.pdf
 
-Note: For a 1:Many relationship, metadata filenames must contain a date stamp or other unique identifier (e.g., Atypon extracts).
+> Note: For a 1:Many relationship, metadata filenames must contain a date stamp or other unique identifier (e.g., Atypon extracts).
 
 
 #### Transmission
@@ -87,7 +87,7 @@ Establish and implement standards for:
  - [ ] uniquely-named deliveries; and 
  - [ ] a defined schedule: annually, monthly, or continually.
 
-Note: if a standard part of your delivery process is email delivery notifications, we will provide an email alias.
+> Note: if a standard part of your delivery process is email delivery notifications, we will provide an email alias.
 
 
 ## Evaluation
