@@ -50,10 +50,11 @@ title: LOCKSS Plugin Developer Manual
     1.  [Repair From Publisher When Too Close](repair-from-publisher-when-too-close)
     1.  [Repair From Peer If Missing](repair-from-peer-if-missing)
 1.  Hash Filtering
-    1.  [Hash Filters](hash-filters)
+    1.  [Introduction to Hash Filters](hash-filters)
     1.  [HTML Filters](html-filters)
     1.  [PDF Filters](pdf-filters)
 1.  Metadata Extraction
+    1.  [Introduction to Metadata Extraction](metadata-extraction)
     1.  [Article Iterator](article-iterator)
     1.  [Article Metadata Extractor](article-metadata-extractor)
     1.  [File Metadata Extractor](file-metadata-extractor)
