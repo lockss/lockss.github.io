@@ -3,7 +3,8 @@ layout: page
 title: Clockss Web Harvest Guidelines
 ---
 
-
+*Version: May 2019*
+<!--![CLOCKSS Logo](/images/clockss-logo.png)-->
 
 ## Overview
 
