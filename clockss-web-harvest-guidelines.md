@@ -1,61 +1,100 @@
 ---
 layout: page
-title: Web Harvest Guidelines
+title: Clockss Web Harvest Guidelines
 ---
 
-Following these guidelines will make your web content both more amenable to preservation and more discoverable by search engines.
 
-## Content requirements
 
-### Website navigability
-Ideal:
-* Build your website with a consistent link structure. Every object should be reachable from at least one static hyperlink. Objects with single-use web addresses are not easily preserved.
-* Alternatively provide access to a defined set of articles (by volume or year of publication) through an OAI-PMH interface.
-* Content served from content delivery networks should have stable web addresses.
-* Use a text browser, such as Lynx, to examine your website. Ensure that dynamic web elements do not adversely affect discoverability of any content in a text browser.
-* Every article or book and all accompanying material must be reachable by following a text link. List all articles in a volume or year with links to all elements essential to the article, including supplemental materials, from a single start url. This can be a table of contents or some other time-based index that eventually ceases updating.
-* Have the ability to turn off PDF watermarking when accessed for preservation.
-Limiting factors:
-* If features such as AJAX, JavaScript, cookies, session IDs, frames, or other dynamic elements adversely affect presentation of all content in a text browser, the completeness or fidelity of preservation may also be adversely affected or limited to just the discoverable content.
-* Content without discoverable links or which is added after the year of volume publication may not be collected.
-* Access through a proprietary API may allow for preservation of content.
+## Overview
 
-### Web server responses
-* Use HTTP 5XX codes to indicate temporary errors that may resolve on subsequent retries, such as a fleeting shortage of back-end capacity.
-* Use HTTP 4XX codes to indicate permanent errors that may not soon resolve on subsequent retries, such as missing files.
-* If you need to move your articles or books to new web addresses, configure HTTP 301 redirects from the old locations of each object to their new locations.
-* Use If-Modified-Since and HTTP 304 codes to better signal content updates.
+CLOCKSS can use web harvesters to programmatically discover and collect content from your website. In order to support this method of preservation, the following general conditions must be met:
 
-### Metadata
-* Supply metadata for each article or book, including DOI, publisher, publication date, ISSN or ISBN and, as appropriate, publication title, article/book title, series title, volume, issue, and page number.
-* Metadata should be machine-readable using HTML <meta> tags or standard formats, such as RIS.
 
-## Access requirements
 
-### Permissions statement
-LOCKSS nodes participating in the CLOCKSS Archive or Global LOCKSS Network require a permission statement to be posted in order to harvest web content. Publishers typically post the permission statement on each journal volume or book. Please contact us (link to “Contact Us”) if you would like guidance on placement. The permission statement need not be visible but must be in the page html.
+1. Programmatically-discoverable permission statements for each base host used for substantive content.
+2. Programatically discoverable finite sets of content. Preservation is based on collecting a unit of content with components that cease to grow at some point. This could be a volume or year of articles for one journal, or a single book with all its chapters, or all the datasets deposited over a certain period of time.
+3. A website that enables a preservation crawler to discover and collect all the items in the defined set of content at static URIs. This could be through a browsable website that uses a logical consistent link structure and in which every item to be preserved can be reached through at least one static text link even if site behavior is enhanced with dynamic elements. Alternatively, this could be through the use of an access API, such as OAI-PMH, that allows the crawler to generate a list of access points for all the items to be preserved.
+4. Programmatically-discoverable metadata for each preserved item that can be used to identify the preserved contents.
 
-The LOCKSS permission statement may be one of the following, as appropriate:
-* *LOCKSS system has permission to collect, preserve, and serve this Archival Unit.*
-* *LOCKSS system has permission to collect, preserve, and serve this open access Archival Unit.*
-* Or simply apply a recognized [Creative Commons license](https://creativecommons.org/licenses/).
 
-For subscription material, only display the LOCKSS permission statement when the requesting IP address otherwise has permission to access the resource.
+## Details
 
-### Manifest pages
-Manifest pages list enough top-level web addresses for the LOCKSS harvesters to discover the entirety of content to be preserved for a given journal, book, etc. For example, the manifest can contain a link to a journal volume table of contents, which then links to issue tables of contents, which in turn lead to individual articles. The manifest pages must reside at a web address that can be derived predictably, for example from a pattern combining a journal identifier (e.g., ISSN, short journal code, etc.) and the volume name.
 
-### Usage statistics
-The [COUNTER Code of Practice](http://beta.projectcounter.org/r3/Release3D9.pdf#page=34) (PDF) states, "Activity generated by LOCKSS or a similar cache system during the process of loading, refreshing, or otherwise maintaining the cache must be excluded from all COUNTER reports." The LOCKSS harvester identifies itself with the User-Agent string, "LOCKSS cache"; publishers should exclude hits from this User-Agent from COUNTER usage statistics.
+### Permission statements
 
-Readers' requests for web resources proxied through a LOCKSS system do not include this User-Agent header; these requests instead contain a [Via header](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.45) identifying the particular LOCKSS system.
+There must be a permission statement for each domain serving substantive content. It is not required for CDN support for auxiliary files.
 
-Under the proxy access configuration, the LOCKSS system forwards all reader requests to the publisher website. If the LOCKSS box has the content (i.e., because it has previously harvested it), it adds an If-Modified-Since header to the HTTP request. If the publisher server either returns a [304 Not Modified](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.5) response or does not promptly respond, the LOCKSS system instead serves the content from its cache. If the publisher website returns content, that content is always served to the user.
+For open access content, the permission statement could be a legal Creative Commons license including the ‘rel=“license”’ attribute.
 
-## Other resources
-Other resources are available to help improve the ability of LOCKSS to harvest your web content and provide many other ancillary benefits.
-* [Google Scholar Crawl Guidelines](https://scholar.google.com/intl/en/scholar/inclusion.html#crawl)
-* [Google Webmaster Guidelines](https://support.google.com/webmasters/answer/35769?hl=en)
-* [Google Steps to a Google-friendly site](https://support.google.com/webmasters/answer/40349?hl=en)
-* [Google Content guidelines](https://support.google.com/webmasters/topic/4598733?hl=en)
-* [Stanford Libraries Web Archivability Guidance](https://library.stanford.edu/projects/web-archiving/archivability)
+Alternatively, and for subscription content, the permission statement needs to be:
+
+
+
+*   CLOCKSS system has permission to ingest, preserve, and serve this Archival Unit
+
+This does not need to be visible and could be a comment in the html of a web page.
+
+When all the content at the site is open access, it is sufficient to have one permission statement somewhere under the domain.
+
+If all content is available for preservation, it is sufficient to have one permission statement somewhere under the domain instead of at the starting point for each set of content.
+
+
+### Defined content sets and starting points for collection
+
+For harvest, the crawler needs to be able to collect content and have a point in time at which that collection is complete with a repeatable, defined set of components. The crawler needs to be able to determine a start URI or URIs for this content based on information unique to the content. This might be a URI defined by the domain, the journal identifier, and a particular volume or year, such as:
+
+
+
+*   [https://www.publisher.com/journals/xyz/12](https://www.publisher.com/journals/xyz/12)
+*   [https://www.publisher.journalid.com/content?year=2017](https://www.publisher.journalid.com/content?year=2017)
+*   [https://www.publisher.com/ebooks/isbn/97811111111](https://www.publisher.com/ebooks/isbn/97811111111)
+*   [https://www.publisher.com/ebooks?search&year=2017&order=newest_first](https://www.publisher.com/ebooks?search&year=2017&order=newest_first)
+
+In some cases, such as when the website does not normally provide content in defined units, the start page might be an artificial manifest page provided for the purposes of preservation, such as:
+
+
+
+*   [https://www.publisher.com/xyz/lockss_manifest?volume=27](https://www.publisher.com/xyz/lockss_manifest?volume=27)
+
+Or, if the website supports an API, the crawler can generate a request that returns and XML response that can be parsed for a list of all the article URIs associated with a given set of content, such as:
+
+
+
+*   [https://www.publisher.com/api/search?type=data_sets&publication_start=2019-03-01&publication_end=2019-04-01](https://www.publisher.com/api/search?type=data_sets&publication_start=2019-03-01&publication_end=2019-04-01)
+
+
+### Site behavior
+
+
+
+*   Make your content discoverable by a crawler by building your site with a logical link structure. Every page should be reachable from at least one static text link or have consistent identifiable tags in the html from which links can be generated. You can use a text browser, such as Lynx, to examine your site. If dynamic web features or server side processing keep you from accessing your entire site in a text browser, then preservation is likely to be impaired.
+*   Use unchanging canonical links for content even if the content is served through single-use redirection. Preservation requires that the same URI will serve equivalent content in the future.
+*   Use HTTP codes as expected: 5xx codes to indicate temporary errors that should be retried soon, 4xx codes to indicate permanent errors that should not be retried for some time, and 3xx redirects for each URI to its new location in the event that you need to move content.
+*   Use if-modified-since headers so new content is identified and preserved.
+*   Content from CDNs should have a stable URI.
+
+
+### Required metadata
+
+
+
+*   For scholarly publication content, such as articles or books, you need to provide basic bibliographic metadata in a non-proprietary machine-readable format, such as the HTML metadata tags, RIS, or XML files.
+*   The metadata for scholarly content should include: DOI, publication, publication date, ISSN or ISBN and as appropriate: publication title, item title, series title, volume, issue and page number.
+*   For items other scholarly published content, the metadata should provide enough information to uniquely identify the item - DOI if applicable or proprietary identifier, provider and so forth.
+
+
+### IP Addresses
+
+Enable IP address access to all content you wish preserved:
+
+
+
+*   171.66.236.0/24 (171.66.236.0 through 171.66.236.255) located at Stanford University
+*   128.42.174.11 located at Rice University
+*   128.42.174.12 located at Rice University
+*   156.56.241.164 located at Indiana University
+*   156.56.241.166 located at Indiana University
+
+Note that you may need to separate these IP addresses from the Rice, Indiana, and Stanford subscription records and set up a new CLOCKSS subscription. These IP addresses are used for all development and testing as well as preservation for the CLOCKSS Archive.
+
+
