@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Hash Filters
+title: Introduction to Hash Filters
 ---
 
 *This page is under construction.*

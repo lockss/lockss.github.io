@@ -207,22 +207,44 @@ Run the [Local-Persist installation script](https://github.com/MatchbookLab/loca
     curl -fsSL https://raw.githubusercontent.com/MatchbookLab/local-persist/master/scripts/install.sh | sudo bash
 ```
 
-If you prefer, you can follow the [Local-Persist manual installation instructions](https://github.com/MatchbookLab/local-persist#manual-way).
+If you need to use Upstart instead of Systemd:
+
+```bash
+    curl -fsSL https://raw.githubusercontent.com/MatchbookLab/local-persist/master/scripts/install.sh | sudo bash -s -- --upstart
+```
 
 Verify that Local-Persist is running and enabled at startup:
 
 *   `sudo systemctl is-active docker-volume-local-persist` should say `active`
 *   `sudo systemctl is-enabled docker-volume-local-persist` should say `enabled`
 
-Also verify that Local-Persist is registered with Docker:
+Finally verify that Local-Persist is ready for use by creating a temporary volume. To create a volume named 'foo' which stores files in the directory '/tmp/foo':
 
-*   `sudo -u lockss docker info` should have a `Plugins` section with lists of volume, network and log plugins. The `Volume` list under the `Plugins` section should contain `local-persist`. Here is an excerpt of `docker info` output showing that Local-Persist is correctly registered as a Docker volume plugin:
+```bash
+docker volume create --name=foo -d local-persist -o mountpoint=/tmp/foo
+docker volume inspect foo
+```
 
+The output should look something like this:
 ```text
-        Plugins:
-         Volume: local local-persist
-         Network: bridge host macvlan null overlay
-         Log: awslogs fluentd gcplogs gelf journald json-file local logentries splunk syslog
+[
+    {
+        "CreatedAt": "0001-01-01T00:00:00Z",
+        "Driver": "local-persist",
+        "Labels": {},
+        "Mountpoint": "/tmp/foo",
+        "Name": "foo",
+        "Options": {
+            "mountpoint": "/tmp/foo"
+        },
+        "Scope": "local"
+    }
+]
+```
+Once you verify the mountpoint, you can delete it:
+```bash
+docker volume rm foo
+rm -rf /tmp/foo
 ```
 
 ## Reconfiguring Docker
