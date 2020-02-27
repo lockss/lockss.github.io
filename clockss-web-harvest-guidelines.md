@@ -3,8 +3,12 @@ layout: page
 title: Clockss Web Harvest Guidelines
 ---
 
-*Version: May 2019*
+
+_Version: May 2019_
+
+_Archived: [https://lockss.github.io/clockss-web-harvest-guidelines](https://lockss.github.io/clockss-web-harvest-guidelines)_
 <!--![CLOCKSS Logo](/images/clockss-logo.png)-->
+
 
 ## Overview
 

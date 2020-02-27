@@ -3,7 +3,9 @@ layout: page
 title: CLOCKSS File Transfer Guidelines
 ---
 
-*Version: 2/10/2020*
+_Version: 2/10/2020_
+
+_Archived: [https://lockss.github.io/clockss-file-transfer-guidelines](https://lockss.github.io/clockss-file-transfer-guidelines)_
 <!--![CLOCKSS Logo](/images/clockss-logo.png)-->
 
 ## Overview
