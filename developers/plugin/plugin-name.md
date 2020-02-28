@@ -3,8 +3,6 @@ layout: page
 title: Plugin Name
 ---
 
-*This page is under construction.*
-
 **This page is part of the [LOCKSS Plugin Developer Manual](/developers/plugin/).**
 
 ## Key
@@ -15,11 +13,19 @@ Key: `plugin_name`
 
 Value type: string (`<string>`)
 
+## Example
+
+```xml
+  <entry>
+    <string>plugin_name</string>
+    <string>Publisher X Journals Plugin</string>
+  </entry>
+```
 ## Description
 
 A user-friendly name for the plugin.
 
-## Example
+**Example**
 
 In the Global LOCKSS Netowrk (GLN), the plugin to process volumes of journals by Oxford University Press (OUP) hosted on the Silverchair platform has the name `Oxford University Press Plugin`.
 

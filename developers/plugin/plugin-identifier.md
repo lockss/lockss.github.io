@@ -3,8 +3,6 @@ layout: page
 title: Plugin Identifier
 ---
 
-*This page is under construction.*
-
 **This page is part of the [LOCKSS Plugin Developer Manual](/developers/plugin/).**
 
 ## Key
@@ -15,6 +13,15 @@ Key: `plugin_identifier`
 
 Value type: string (`<string>`)
 
+## Example
+
+```xml
+  <entry>
+    <string>plugin_identifier</string>
+    <string>edu.example.plugin.publisherx.PublisherXPlugin</string>
+  </entry>
+```
+
 ## Description
 
 A unique identifier for the plugin.
@@ -23,7 +30,7 @@ The plugin identifier uniquely identifies the plugin. It is used as part of AUID
 
 Just like a file path such as `/home/jsmith/documents/myfile.txt` is a hierarchical path from more general directories (`home`) to more specific directories (`jsmith`, then `documents`) and ending with a file name (`myfile.txt`), a fully-qualified Java class name is a hierarchical path starting with the institution responsible for the plugin (conventionally by reversed Internet domain name), for example `edu.stanford.library` for library.stanford.edu), followed by more levels (typically the next one `plugin`, and then another to identify the plugin family or individual plugin), and finally ending with a "file name". The separators are periods.
 
-## Example
+**Example**
 
 In the Global LOCKSS Network (GLN), the plugin to process volumes of journals by Oxford University Press (OUP) hosted on the Silverchair platform has the identifier `org.lockss.plugin.silverchair.oup.OupSilverchairPlugin`.
 
@@ -42,7 +49,7 @@ In the Global LOCKSS Network (GLN), the plugin to process volumes of journals by
 
 *Find this plugin's source code at [https://github.com/lockss/lockss-daemon/blob/master/plugins/src/org/lockss/plugin/silverchair/oup/OupSilverchairPlugin.xml](https://github.com/lockss/lockss-daemon/blob/master/plugins/src/org/lockss/plugin/silverchair/oup/OupSilverchairPlugin.xml)*
 
-## Note
+### Note
 
 The plugin identifier translates into a file path like so:
 

@@ -3,8 +3,6 @@ layout: page
 title: Plugin Configuration Parameters
 ---
 
-*This page is under construction.*
-
 **This page is part of the [LOCKSS Plugin Developer Manual](/developers/plugin/).**
 
 ## Key
@@ -16,6 +14,42 @@ Key: `plugin_config_props`
 Value type: list (`<list>`)
 
 The value is a list of `<org.lockss.daemon.ConfigParamDescr>` stanzas.
+
+## Example
+
+```xml
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_id</key>
+        <displayName>Journal Identifier</displayName>
+        <description>Identifier for journal (often used as part of file names)</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume_name</key>
+        <displayName>Volume Name</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+```
 
 ## Description
 
