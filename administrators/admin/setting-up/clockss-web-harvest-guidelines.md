@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Clockss Web Harvest Guidelines
+title: CLOCKSS Web Harvest Guidelines
 ---
 
 
