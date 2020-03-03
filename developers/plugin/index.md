@@ -3,8 +3,6 @@ layout: page
 title: LOCKSS Plugin Developer Manual
 ---
 
-*This page is under construction.*
-
 **Welcome to the LOCKSS Plugin Developer Manual.**
 
 ## Table of Contents

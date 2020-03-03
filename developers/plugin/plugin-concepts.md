@@ -3,8 +3,6 @@ layout: page
 title: LOCKSS Plugin Concepts
 ---
 
-*This page is under construction.*
-
 **This page is part of the [LOCKSS Plugin Developer Manual](/developers/plugin/).**
 
 ## Introduction
@@ -88,7 +86,7 @@ The following plugin elements are involved in controlling how content is crawled
 *   **Crawl seed**: in lieu of a list of start URLs, code called a crawl seed can compute the starting points of the crawl of an AU, for instance by interacting with an API.
 *   **Permission URLs**: one or more URLs giving the LOCKSS software permission to crawl an AU, if permission is not given on the start URLs.
 *   **Per-host permission path**: path where permission statement may be found on hosts not listed in start URLs or Permission URLs. Useful for sites such as Internet Archive that have banks of similar hosts with unpredictable names. 
-*   **Permitted host pattern**: pattern rules to allow collection from hosts that cannot explicitly grant permission, such as CDN hosts used to distribute standard components used by web sites, such as javascript libraries.
+*   **Permitted host pattern**: pattern rules to allow collection from hosts that cannot explicitly grant permission, such as CDN hosts used to distribute standard components used by web sites, such as Javascript libraries.
 *   **Crawl rules**: sequential rules determining if a URL discovered during the crawl of an AU should in turn be fetched as part of the AU or not.
 *   **Crawl window**: a crawl window controls what times of day or days of the week crawls against the preservation target are allowed; by default an AU is eligible to crawl at any time.
 *   **Recrawl interval**: the amount of time before an AU that has previously been crawled successfully is eligible to attempt crawling again.

@@ -3,8 +3,6 @@ layout: page
 title: Article Iterator
 ---
 
-*This page is under construction.*
-
 **This page is part of the [LOCKSS Plugin Developer Manual](/developers/plugin/).**
 
 ## Key
@@ -15,9 +13,11 @@ Key: `plugin_article_iterator_factory`
 
 Value type: string (`<string>`)
 
-The string is the fully-qualified name of a Java class implementing the **`org.lockss.plugin.ArticleIteratorFactory`** interface.
+The string is the fully-qualified name of a Java class implementing the `org.lockss.plugin.ArticleIteratorFactory` interface.
 
-Example:
+## Example
+
+Plugin XML file:
 
 ```xml
   <entry>
@@ -26,9 +26,23 @@ Example:
   </entry>
 ```
 
+Corresponding Java class:
+
+```java
+package edu.example.plugin.publisherx;
+
+import org.lockss.plugin.ArticleIteratorFactory;
+
+public class PublisherXArticleIteratorFactory implements ArticleIteratorFactory {
+  // ...
+}
+```
+
 ## Description
 
-At its core, the `ArticleIteratorFactory` is simple:
+The article iterator is part of the [metadata extraction](metadata-extraction) pipeline. Its function is enumerate the articles (where "article" is meant as "item" or "object") in the archival unit (AU). Each article is represented by an `ArticleFiles` instance.
+
+The **`org.lockss.plugin.ArticleIteratorFactory`** interface is as follows:
 
 ```java
 public interface ArticleIteratorFactory {
@@ -40,13 +54,11 @@ public interface ArticleIteratorFactory {
 }
 ```
 
-Its goal is to enumerate the articles (where "article" is meant as "item" or "object") in the archival unit (AU). Each article is represented by an `ArticleFiles` instance.
+Rather than traversing the AU's URLs manually through the `ArchivalUnit` interface and implementing typical inner workings of a Java `Iterator`, many article iterators make use of utility classes available in the LOCKSS software, such as `SubTreeArticleIterator` and `SubTreeArticleIteratorBuilder`.
 
-However, rather than traversing the AU's URLs manually through the `ArchivalUnit` interface and implementing typical inner workings of a Java `Iterator`, many article iterators make use of utility classes available in the LOCKSS software, such as `SubTreeArticleIterator` and `SubTreeArticleIteratorBuilder`.
+### ArticleFiles
 
-## `ArticleFiles`
-
-An `ArticleFiles` instance groups the main URLs of an article (item) together and labels them. It is a mapping from **roles** to URLs (which are internally represented as objects implementing `org.lockss.plugin.CachedUrl`). (Technically, it is a mapping from roles to arbitrary Java objects.)
+An **`org.lockss.plugin.ArticleFiles`** instance groups the main URLs of an article (item) together and labels them. It is a mapping from **roles** to URLs (which are internally represented as objects implementing `org.lockss.plugin.CachedUrl`). (Technically, it is a mapping from roles to arbitrary Java objects.)
 
 ![ArticleFiles mapping](images/articlefiles-mapping.png)
 
@@ -84,9 +96,9 @@ Roles are arbitrary strings, but many typical role strings are defined as consta
 
 *   `ArticleFiles.ARTICLE_METADATA`: a URL from which metadata for the work can be found
 
-In addition to the mapping from roles to URL, one URL has a special status in the `ArticleFiles` instance as the designated, "best" full text URL for the work. It is set via the `setFullTextCu(...)` method. In plugins written by the LOCKSS Program, for articles with multiple full text representations, typically HTML is favored above all, then PDF, then EPUB, and lastly XML (in subjective order of richness of rendering experience in a browser).
+In addition to the mapping from roles to URL, one URL has a special status in the `ArticleFiles` instance as the designated, "best" full text URL for the work. It is referred to as the **full text URL** or **full text CU** (for `CachedUrl`) of the article, and is set via the `setFullTextCu(...)` method. In plugins written by the LOCKSS Program, for articles with multiple full text representations, typically HTML is favored above all, then PDF, then EPUB, and lastly XML (in subjective order of richness of rendering experience in a Web browser).
 
-## `SubTreeArticleIterator`
+### SubTreeArticleIterator
 
 The **`org.lockss.plugin.SubTreeArticleIterator`** class implements `Iterator<ArticleFiles>` and can be returned by an article iterator factory. It traverses an AU's URLs, restricting them in various ways according to a specification. These restrictions include considering only certain subdirectory trees (hence the name), applying regular expressions, selecting a media type, or applying a custom condition.
 
@@ -104,6 +116,28 @@ The logic for which URLs are enumerated is found in the `isArticleCu(...)` metho
 
 By default, for each successful URL, this iterator makes one `ArticleFiles` instance that has its designated full text URL set, and no roles set. This behavior can be customized in `visitArticleCu(...)` and `createArticleFiles(...)` in a subclass.
 
-## `SubTreeArticleIteratorBuilder`
+### SubTreeArticleIteratorBuilder
 
-*This section is under construction*
+The **`org.lockss.plugin.SubTreeArticleIteratorBuilder`** class assists in the creation of a `SubTreeArticleIterator` instance under circumstances where the URLs of various aspects of an article (e.g. its abstract URL, its full text HTML URL, its full text PDF URL, etc.) can all be derived from one another through **mutually compatible regular expressions** and replacement strings.
+
+An example of such mutual compatibility would be a journal where articles have full text HTML URLs that look like this: `http://www.example.com/vol12/iss3/art45` and full text PDF URLs that look like this: `http://www.example.com/pdf/article_12_3_45.pdf` (assuming these URLs represent volume 12, issue 3, page 45 for example). A regular expression for the full text HTML URLs (expressed as a Java string) could be `"/vol(\\d+)/iss(\\d+)/art(\\d+)$"`, and the replacement string `"/pdf/article_$1_$2_$3.pdf"` would yield the corresponding full text PDF URL; likewise a regular expressin for the full text PDF URL could be `"/pdf/article_(\\d+)_(\\d+)_(\\d+)\\.pdf$"`, and the replacement string `"/vol$1/iss$2/art$3"` would yield the corresponding full text HTML URL.
+
+The `SubTreeArticleIteratorBuilder` class has convenient methods to:
+
+*   Create a `SubTreeArticleIterator.Spec` specification. See `setSpec(...)`, or use `newSpec()` to manipulate an empty `Spec` from scratch.
+
+*   Define **major aspects** with one or more regular expressions matching the aspect's URLs, one or more replacement strings yielding the aspect's URLs from matchers for URLs of other major aspects, and one or more roles for the aspect.
+
+*   Define **minor aspects** with one or more replacement strings yielding the aspect's URLs from matchers for URLs of major aspects, and one or more roles for the aspect.
+
+The key differences between major and minor aspects are:
+
+*   URLs enumerated by the `SubTreeArticleIterator` are tried against the regular expressions of the major aspects only.
+
+*   The earliest URL for a major aspect to match for a given article is also designated as the article's full text CU.
+
+All aspects are defined with the variants of the `addAspect(...)` method and associated methods.
+
+When an `ArticleFiles` is complete, methods like `setRoleFromOtherRoles(...)` and `setFullTextFromRoles(...)` can be used to designate additional roles or the full text CU from the value associated with an ordered list of possibilities from other roles.
+
+The `getSubTreeArticleIterator()` method can finally be used to obtain a `SubTreeArticleIterator` behaving in the specified manner.
