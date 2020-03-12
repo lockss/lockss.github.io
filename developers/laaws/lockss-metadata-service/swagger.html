@@ -1,0 +1,545 @@
+<!doctype html>
+<html>
+  <head>
+    <title>LOCKSS Metadata Service REST API</title>
+    <style type="text/css">
+      body {
+	font-family: Trebuchet MS, sans-serif;
+	font-size: 15px;
+	color: #444;
+	margin-right: 24px;
+}
+
+h1	{
+	font-size: 25px;
+}
+h2	{
+	font-size: 20px;
+}
+h3	{
+	font-size: 16px;
+	font-weight: bold;
+}
+hr	{
+	height: 1px;
+	border: 0;
+	color: #ddd;
+	background-color: #ddd;
+}
+
+.app-desc {
+  clear: both;
+  margin-left: 20px;
+}
+.param-name {
+  width: 100%;
+}
+.license-info {
+  margin-left: 20px;
+}
+
+.license-url {
+  margin-left: 20px;
+}
+
+.model {
+  margin: 0 0 0px 20px;
+}
+
+.method {
+  margin-left: 20px;
+}
+
+.method-notes	{
+	margin: 10px 0 20px 0;
+	font-size: 90%;
+	color: #555;
+}
+
+pre {
+  padding: 10px;
+  margin-bottom: 2px;
+}
+
+.http-method {
+ text-transform: uppercase;
+}
+
+pre.get {
+  background-color: #0f6ab4;
+}
+
+pre.post {
+  background-color: #10a54a;
+}
+
+pre.put {
+  background-color: #c5862b;
+}
+
+pre.delete {
+  background-color: #a41e22;
+}
+
+.huge	{
+	color: #fff;
+}
+
+pre.example {
+  background-color: #f3f3f3;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+code {
+  white-space: pre;
+}
+
+.nickname {
+  font-weight: bold;
+}
+
+.method-path {
+  font-size: 1.5em;
+  background-color: #0f6ab4;
+}
+
+.up {
+  float:right;
+}
+
+.parameter {
+  width: 500px;
+}
+
+.param {
+  width: 500px;
+  padding: 10px 0 0 20px;
+  font-weight: bold;
+}
+
+.param-desc {
+  width: 700px;
+  padding: 0 0 0 20px;
+  color: #777;
+}
+
+.param-type {
+  font-style: italic;
+}
+
+.param-enum-header {
+width: 700px;
+padding: 0 0 0 60px;
+color: #777;
+font-weight: bold;
+}
+
+.param-enum {
+width: 700px;
+padding: 0 0 0 80px;
+color: #777;
+font-style: italic;
+}
+
+.field-label {
+  padding: 0;
+  margin: 0;
+  clear: both;
+}
+
+.field-items	{
+	padding: 0 0 15px 0;
+	margin-bottom: 15px;
+}
+
+.return-type {
+  clear: both;
+  padding-bottom: 10px;
+}
+
+.param-header {
+  font-weight: bold;
+}
+
+.method-tags {
+  text-align: right;
+}
+
+.method-tag {
+  background: none repeat scroll 0% 0% #24A600;
+  border-radius: 3px;
+  padding: 2px 10px;
+  margin: 2px;
+  color: #FFF;
+  display: inline-block;
+  text-decoration: none;
+}
+
+    </style>
+  </head>
+  <body>
+  <h1>LOCKSS Metadata Service REST API</h1>
+    <div class="app-desc">REST API of the LOCKSS Metadata Service</div>
+    <div class="app-desc">More information: <a href="http://www.lockss.org/">http://www.lockss.org/</a></div>
+    <div class="app-desc">Contact Info: <a href="lockss-support@lockss.org">lockss-support@lockss.org</a></div>
+    <div class="app-desc">Version: 2.0.0</div>
+    <div class="app-desc">BasePath:/</div>
+    <div class="license-info">BSD-3-Clause</div>
+    <div class="license-url">https://opensource.org/licenses/BSD-3-Clause</div>
+  <h2>Access</h2>
+    <ol>
+      <li>HTTP Basic Authentication</li>
+    </ol>
+
+  <h2><a name="__Methods">Methods</a></h2>
+  [ Jump to <a href="#__Models">Models</a> ]
+
+  <h3>Table of Contents </h3>
+  <div class="method-summary"></div>
+  <h4><a href="#Metadata">Metadata</a></h4>
+  <ul>
+  <li><a href="#getMetadataAusAuid"><code><span class="http-method">get</span> /metadata/aus/{auid}</code></a></li>
+  </ul>
+  <h4><a href="#Status">Status</a></h4>
+  <ul>
+  <li><a href="#getStatus"><code><span class="http-method">get</span> /status</code></a></li>
+  </ul>
+  <h4><a href="#Urls">Urls</a></h4>
+  <ul>
+  <li><a href="#getUrlsDoi"><code><span class="http-method">get</span> /urls/doi</code></a></li>
+  <li><a href="#getUrlsOpenUrl"><code><span class="http-method">get</span> /urls/openurl</code></a></li>
+  </ul>
+
+  <h1><a name="Metadata">Metadata</a></h1>
+  <div class="method"><a name="getMetadataAusAuid"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /metadata/aus/{auid}</code></pre></div>
+    <div class="method-summary">Get the metadata stored for an AU (<span class="nickname">getMetadataAusAuid</span>)</div>
+    <div class="method-notes">Get the full metadata stored for an AU given the AU identifier or a pageful of the metadata defined by the continuation token and size</div>
+
+    <h3 class="field-label">Path parameters</h3>
+    <div class="field-items">
+      <div class="param">auid (required)</div>
+
+      <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash; The identifier of the AU for which the metadata is requested </div>
+    </div>  <!-- field-items -->
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">limit (optional)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The number of items per page default: 50 </div><div class="param">continuationToken (optional)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The continuation token of the next page of metadata to be returned </div>
+    </div>  <!-- field-items -->
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#auMetadataPageInfo">auMetadataPageInfo</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "pageInfo" : {
+    "curLink" : "curLink",
+    "resultsPerPage" : 6,
+    "totalCount" : 0,
+    "continuationToken" : "continuationToken",
+    "nextLink" : "nextLink"
+  },
+  "items" : [ {
+    "scalarMap" : {
+      "key" : "scalarMap"
+    },
+    "listMap" : {
+      "key" : [ "listMap", "listMap" ]
+    },
+    "setMap" : {
+      "key" : [ "setMap", "setMap" ]
+    },
+    "mapMap" : {
+      "key" : {
+        "key" : "mapMap"
+      }
+    }
+  }, {
+    "scalarMap" : {
+      "key" : "scalarMap"
+    },
+    "listMap" : {
+      "key" : [ "listMap", "listMap" ]
+    },
+    "setMap" : {
+      "key" : [ "setMap", "setMap" ]
+    },
+    "mapMap" : {
+      "key" : {
+        "key" : "mapMap"
+      }
+    }
+  } ]
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The metadata of the specified AU
+        <a href="#auMetadataPageInfo">auMetadataPageInfo</a>
+    <h4 class="field-label">400</h4>
+    Bad Request
+        <a href="#"></a>
+    <h4 class="field-label">401</h4>
+    Unauthorized
+        <a href="#"></a>
+    <h4 class="field-label">404</h4>
+    Not found
+        <a href="#"></a>
+    <h4 class="field-label">409</h4>
+    Conflict
+        <a href="#"></a>
+    <h4 class="field-label">500</h4>
+    Internal Server Error
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <h1><a name="Status">Status</a></h1>
+  <div class="method"><a name="getStatus"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /status</code></pre></div>
+    <div class="method-summary">Get the status of the service (<span class="nickname">getStatus</span>)</div>
+    <div class="method-notes">Get the status of the service</div>
+
+
+
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#apiStatus">apiStatus</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "ready" : true,
+  "version" : "version"
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The status of the service
+        <a href="#apiStatus">apiStatus</a>
+    <h4 class="field-label">401</h4>
+    Unauthorized
+        <a href="#"></a>
+    <h4 class="field-label">500</h4>
+    Internal Server Error
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <h1><a name="Urls">Urls</a></h1>
+  <div class="method"><a name="getUrlsDoi"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /urls/doi</code></pre></div>
+    <div class="method-summary">Gets the URL for a DOI (<span class="nickname">getUrlsDoi</span>)</div>
+    <div class="method-notes">Provides the URL for a DOI given the DOI</div>
+
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">doi (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The DOI for which the URL is requested </div>
+    </div>  <!-- field-items -->
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#urlInfo">urlInfo</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "urls" : [ "urls", "urls" ],
+  "params" : {
+    "key" : "params"
+  }
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The URL for the specified DOI
+        <a href="#urlInfo">urlInfo</a>
+    <h4 class="field-label">400</h4>
+    Bad Request
+        <a href="#"></a>
+    <h4 class="field-label">401</h4>
+    Unauthorized
+        <a href="#"></a>
+    <h4 class="field-label">500</h4>
+    Internal Server Error
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="getUrlsOpenUrl"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /urls/openurl</code></pre></div>
+    <div class="method-summary">Performs an OpenURL query (<span class="nickname">getUrlsOpenUrl</span>)</div>
+    <div class="method-notes">Provides the URL that results from performing an OpenURL query. With query parameters inline</div>
+
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">params (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The OpenURL parameters </div>
+    </div>  <!-- field-items -->
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#urlInfo">urlInfo</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "urls" : [ "urls", "urls" ],
+  "params" : {
+    "key" : "params"
+  }
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The data related to the performed OpenURL query
+        <a href="#urlInfo">urlInfo</a>
+    <h4 class="field-label">400</h4>
+    Bad Request
+        <a href="#"></a>
+    <h4 class="field-label">401</h4>
+    Unauthorized
+        <a href="#"></a>
+    <h4 class="field-label">500</h4>
+    Internal Server Error
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+
+  <h2><a name="__Models">Models</a></h2>
+  [ Jump to <a href="#__Methods">Methods</a> ]
+
+  <h3>Table of Contents</h3>
+  <ol>
+    <li><a href="#apiStatus"><code>apiStatus</code> - </a></li>
+    <li><a href="#auMetadataPageInfo"><code>auMetadataPageInfo</code> - </a></li>
+    <li><a href="#itemMetadata"><code>itemMetadata</code> - </a></li>
+    <li><a href="#pageInfo"><code>pageInfo</code> - </a></li>
+    <li><a href="#urlInfo"><code>urlInfo</code> - </a></li>
+  </ol>
+
+  <div class="model">
+    <h3><a name="apiStatus"><code>apiStatus</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>The status information of the service</div>
+    <div class="field-items">
+      <div class="param">version </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The version of the service </div>
+<div class="param">ready </div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span> The indication of whether the service is available </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="auMetadataPageInfo"><code>auMetadataPageInfo</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>The display page of AU metadata</div>
+    <div class="field-items">
+      <div class="param">items </div><div class="param-desc"><span class="param-type"><a href="#itemMetadata">array[itemMetadata]</a></span> The metadata for the AU items in the page </div>
+<div class="param">pageInfo </div><div class="param-desc"><span class="param-type"><a href="#pageInfo">pageInfo</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="itemMetadata"><code>itemMetadata</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>The metadata generated for a single item</div>
+    <div class="field-items">
+      <div class="param">scalarMap (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">map[String, String]</a></span> The map of scalar metadata elements for this item </div>
+<div class="param">setMap (optional)</div><div class="param-desc"><span class="param-type"><a href="#array">map[String, array[String]]</a></span> The map of set-bound metadata elements for this item </div>
+<div class="param">listMap (optional)</div><div class="param-desc"><span class="param-type"><a href="#array">map[String, array[String]]</a></span> The map of listed metadata elements for this item </div>
+<div class="param">mapMap (optional)</div><div class="param-desc"><span class="param-type"><a href="#map">map[String, map[String, String]]</a></span> The map of mapped metadata elements for this item </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="pageInfo"><code>pageInfo</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>The information related to pagination of content</div>
+    <div class="field-items">
+      <div class="param">totalCount </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> The total number of elements to be paginated format: int32</div>
+<div class="param">resultsPerPage </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> The number of results per page format: int32</div>
+<div class="param">continuationToken </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The continuation token </div>
+<div class="param">curLink </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The link to the current page </div>
+<div class="param">nextLink (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The link to the next page </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="urlInfo"><code>urlInfo</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>The information related to a resulting list of URLs</div>
+    <div class="field-items">
+      <div class="param">params </div><div class="param-desc"><span class="param-type"><a href="#string">map[String, String]</a></span> The parameters that define the resulting URLs </div>
+<div class="param">urls </div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span> The URLs </div>
+    </div>  <!-- field-items -->
+  </div>
+  </body>
+</html>
