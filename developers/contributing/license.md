@@ -5,7 +5,7 @@ title: Software License
 
 **The LOCKSS Program's software is released under a [3-Clause BSD License](https://opensource.org/licenses/BSD-3-Clause).**
 
-Copyright (c) 2000-2019, Board of Trustees of Leland Stanford Jr. University    
+Copyright (c) 2000-20202, Board of Trustees of Leland Stanford Jr. University    
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:

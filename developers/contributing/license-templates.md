@@ -16,7 +16,7 @@ title: Software License
 
     /*
 
-    Copyright (c) 2000-2019, Board of Trustees of Leland Stanford Jr. University
+    Copyright (c) 2000-2020, Board of Trustees of Leland Stanford Jr. University
     All rights reserved.
 
     Redistribution and use in source and binary forms, with or without
@@ -54,7 +54,7 @@ For Python 2, replace `#!/usr/bin/env python3` with `#!/usr/bin/env python3`
     #!/usr/bin/env python3
 
     __copyright__ = '''\
-    Copyright (c) 2000-2019, Board of Trustees of Leland Stanford Jr. University
+    Copyright (c) 2000-2020, Board of Trustees of Leland Stanford Jr. University
     All rights reserved.
     '''
 
@@ -92,7 +92,7 @@ This can also be used for Bash.
 
     #!/bin/sh
 
-    # Copyright (c) 2000-2019, Board of Trustees of Leland Stanford Jr. University
+    # Copyright (c) 2000-2020, Board of Trustees of Leland Stanford Jr. University
     # All rights reserved.
     #
     # Redistribution and use in source and binary forms, with or without
@@ -123,7 +123,7 @@ This can also be used for Bash.
 
 ## Text
 
-    Copyright (c) 2000-2019, Board of Trustees of Leland Stanford Jr. University
+    Copyright (c) 2000-2020, Board of Trustees of Leland Stanford Jr. University
     All rights reserved.
 
     Redistribution and use in source and binary forms, with or without
@@ -158,7 +158,7 @@ This can also be used for Bash.
 
     <!--
 
-    Copyright (c) 2000-2019, Board of Trustees of Leland Stanford Jr. University
+    Copyright (c) 2000-2020, Board of Trustees of Leland Stanford Jr. University
     All rights reserved.
 
     Redistribution and use in source and binary forms, with or without
@@ -193,7 +193,7 @@ This can also be used for Bash.
 
 This can be used anywhere `#` marks the beginning of a comment until the end of the line: Dockerfile, YAML, etc.
 
-    # Copyright (c) 2000-2019, Board of Trustees of Leland Stanford Jr. University
+    # Copyright (c) 2000-2020, Board of Trustees of Leland Stanford Jr. University
     # All rights reserved.
     #
     # Redistribution and use in source and binary forms, with or without
