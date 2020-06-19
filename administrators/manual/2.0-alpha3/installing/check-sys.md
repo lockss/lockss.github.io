@@ -8,7 +8,7 @@ title: Checking the LOCKSS system
 After [installing the LOCKSS system](index) and [downloading the LOCKSS Installer](installing/lockss-installer), prepare  the system for running by typing:
 
 ```bash
-    scripts/check_sys
+    sudo scripts/check-sys
 ```
 
 in the `lockss-installer` directory.
