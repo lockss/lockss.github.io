@@ -51,13 +51,22 @@ To view running services:
 ```bash
      microk8s kubectl get services
 ```
-
+## Turn on the feature-gate ExternalPolicyForExternalIP 
+```bash
+  echo '--feature-gates="ExternalPolicyForExternalIP=true"' | sudo tee -a /var/snap/microk8s/current/args/kube-proxy   
+  sudo systemctl restart snap.microk8s.daemon-proxy.service
+```
+## Setup users kubectl config
+If you don’t have an existing install or ~/.kube directory
+```
+    mkdir ~/.kube
+    microk8s config > ~/.kube/config
+```
 ## Setup Alias
 MicroK8s uses a namespaced kubectl command to prevent conflicts with any existing installs of kubectl. If you don’t have an existing install, it is easier to add an alias (append to ~/.bash_aliases) like this:
-
 ```
     alias kubectl='microk8s kubectl'
-```
+``` 
 ## Starting and Stopping
 MicroK8s will continue running until you decide to stop it. You can stop top MicroK8s and its services by typing the command:
 ```bash

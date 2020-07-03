@@ -9,7 +9,6 @@ title: LOCKSS 2.0-alpha3 System Manual
 
 1.  [**Installing the LOCKSS System**](installing)
     1.  [**System Pre-Requisites**](installing/system-pre-requisites)
-    1.  [**Installing Docker**](installing/docker)
     1.  [**Installing Microk8s**](installing/microk8s)
     1.  [**Installing Git**](installing/git)
     1.  [**Downloading the LOCKSS Installer**](installing/lockss-installer)
