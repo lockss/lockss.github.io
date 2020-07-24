@@ -51,10 +51,12 @@ To view running services:
 ```bash
      microk8s kubectl get services
 ```
-## Turn on the feature-gate ExternalPolicyForExternalIP 
+* use `--all-namespaces` for all running services
+* use `-n lockss` for lockss specific services
+
+To view all lockss specific objects:
 ```bash
-  echo '--feature-gates="ExternalPolicyForExternalIP=true"' | sudo tee -a /var/snap/microk8s/current/args/kube-proxy   
-  sudo systemctl restart snap.microk8s.daemon-proxy.service
+    microk8s kubectl get all -n lockss
 ```
 ## Setup users kubectl config
 If you don’t have an existing install or ~/.kube directory
