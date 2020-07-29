@@ -5,3 +5,4 @@ _site
 to-be-sorted.md
 assets/readme
 *.bak
+!/.idea/

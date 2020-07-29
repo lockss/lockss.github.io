@@ -16,5 +16,5 @@ in the `lockss-installer` directory.
 The script will do its best to install any missing elements needed to run the LOCKSS cluster on the host machine. See the  [System Pre-Requisites](system-pre-requisites) document for required system elements.
 
 1.  Check for snap.d and warn if missing.
-1.  Check for microk8s and install if missing
+1.  Check for microk8s and warn if missing
 1.  Check for a user `lockss` and create the `lockss` user and group if missing.
