@@ -7,7 +7,7 @@ title: System Pre-Requisites
 
 ## Machine
 
-The LOCKSS system runs on a **64-bit Linux** host (physical or virtual), with **4 cores** (8 or more preferable) and **8 GB of memory** (16 GB or more preferable).
+The LOCKSS system runs on a **64-bit Linux** host (physical or virtual), with **4 cores** (8 or more preferable) and **8 GB of memory** (16 GB or more preferable) and **20GB of diskspace**.
 
 ## Operating System
 
@@ -30,5 +30,3 @@ Many Linux distributions have systemd and can run Docker 18.09 or better. To nam
 ## User
 
 The LOCKSS system runs under a system user named `lockss` under a group named `lockss`, which you will need to create.
-## Snap
-To install the microk8s kubernetes cluster you will need to install snapd. Most Ubuntu flavours of linux come with snap preinstalled.  However, for other systems you will need to follow the instructions for installing snap for that system found at [Snapd Install](https://snapcraft.io/docs/installing-snapd)

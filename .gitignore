@@ -6,3 +6,4 @@ to-be-sorted.md
 assets/readme
 *.bak
 !/.idea/
+/.idea/
