@@ -76,6 +76,79 @@ During installation, you can use the --wait-ready flag  on the status command to
 
 ## Configure Firewall
 
+### Clean up existing iptables.
+
+On a dedicated host machine it is best to flush your iptables to make certain that their are no blocking entries. While microk8s has no requirement for docker, if you do have docker installed make sure you stop it while flushing iptables.
+
+```bash
+sudo systemctl stop docker
+sudo microk8s stop
+sudo iptables --flush
+sudo iptables -tnat --flush
+sudo systemctl start docker
+sudo microk8s start
+
+sudo iptables -P INPUT ACCEPT
+sudo iptables -P FORWARD ACCEPT
+sudo iptables -P OUTPUT ACCEPT
+```
+Your iptables won't persist after reboots. 
+
+To save the rules in Debian-based systems, enter:
+
+```bash
+sudo /sbin/iptables–save
+```
+
+To save the rules in RHEL systems, enter:
+
+```bash
+sudo /sbin/service iptables save
+```  
+ 
+### Modify any existing firewall rules to open the correct ports.
+
+Ubuntu, Debian
+
+The service ufw is enabled by default in Ubuntu.  If you are running ufw make sure to open the following ports by entering the listed commands:
+
+```bash
+sudo ufw allow 6443/tcp
+sudo ufw allow 2379/tcp
+sudo ufw allow 2380/tcp
+sudo ufw allow 10250/tcp
+sudo ufw allow 10251/tcp
+sudo ufw allow 10252/tcp
+sudo ufw allow 10255/tcp
+sudo ufw allow in on cni0
+sudo ufw allow out on cni0
+sudo ufw default allow routed
+sudo ufw reload
+```
+
+Centos, RHEL
+
+Firewalld is enabled in CentOS 7+ by default on the front-end. You need to open the following ports by entering the listed commands.
+
+```bash
+sudo firewall-cmd --permanent --add-port=6443/tcp
+sudo firewall-cmd --permanent --add-port=2379-2380/tcp
+sudo firewall-cmd --permanent --add-port=10250/tcp
+sudo firewall-cmd --permanent --add-port=10251/tcp
+sudo firewall-cmd --permanent --add-port=10252/tcp
+sudo firewall-cmd --permanent --add-port=10255/tcp
+sudo firewall-cmd --zone=trusted --add-masquerade --permanent
+sudo firewall-cmd --zone=trusted --add-interface=cni0 --permanent
+sudo firewall-cmd --reload
+```
+
+The containers need to access the host filesystem. SELinux needs to be set to permissive mode, which effectively disables its security functions.
+
+```bash
+sudo setenforce 0
+sudo sed -i ‘s/^SELINUX=enforcing$/SELINUX=permissive/’ /etc/selinux/config
+```
+
 ## Enable DNS
 To be as lightweight as possible, MicroK8s only installs the basics of a usable Kubernetes install:
 
@@ -116,7 +189,7 @@ If you have a ~/.kube directory which has a config file you can either backup th
 ## Setup Alias
 MicroK8s uses a namespaced kubectl command to prevent conflicts with any existing installs of kubectl. If you don’t have an existing kubernetes install, it is easier to add an alias to your shells aliases file like this:
 
-```bash
+```text
     alias kubectl='microk8s kubectl'
 ``` 
 
