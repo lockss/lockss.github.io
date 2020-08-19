@@ -34,7 +34,7 @@ MicroK8s creates a group to enable usage of commands which require admin privile
     sudo chown -f -R $USER ~/.kube
 ```
 
-You  need to re-enter the session for the group update to take place:
+### You need to log off and log back in or re-enter the session for the group update to take place:
 
 ```bash
     su - $USER
