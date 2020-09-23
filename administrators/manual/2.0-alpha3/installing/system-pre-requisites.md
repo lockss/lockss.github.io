@@ -13,7 +13,7 @@ The LOCKSS system runs on a **64-bit Linux** host (physical or virtual), with **
 
 The LOCKSS system requires a **64-bit Linux** host running [**systemd**](https://www.freedesktop.org/wiki/Software/systemd/), an operating system which supports [**snapd**](https://snapcraft.io/docs/installing-snapd), and the lightweight kubernetes runtime [**microk8s**](https://microk8s.io/).
 
-Many Linux distributions have systemd and can run Docker 18.09 or better. To name a few commonly used with the LOCKSS system:
+Many Linux distributions have systemd and can run Snapd. To name a few commonly used with the LOCKSS system:
 
 *   [Arch Linux](https://www.archlinux.org/)
 <!-- #osversion -->
@@ -30,3 +30,53 @@ Many Linux distributions have systemd and can run Docker 18.09 or better. To nam
 ## User
 
 The LOCKSS system runs under a system user named `lockss` under a group named `lockss`, which you will need to create.
+
+<!-- #osversion -->
+*Ubuntu/Debian*
+
+Add the user lockss, as root or using sudo. You will be prompted for a password.
+
+```bash
+sudo adduser lockss
+```
+
+Add user lockss to sudo group.
+
+```bash
+sudo usermod -aG sudo lockss
+```
+
+<!-- #osversion -->
+*RHEL/Oracle/Centos*
+
+Add the user lockss, as root or using sudo.
+
+```bash
+sudo adduser lockss
+sudo passwd lockss
+```
+
+Add superuser privileges by assigning lockss to wheel:
+
+```bash
+visudo
+```
+
+Scroll through the configuration file until you see the following entry:
+
+```text
+## Allows people in group wheel to run all commands
+
+# %wheel        ALL=(ALL)       ALL
+```
+If the second line begins with the # sign, it has been disabled and marked as a comment. Just delete the # sign at the beginning of the second line so it looks like the following:
+
+```text
+%wheel        ALL=(ALL)       ALL
+```
+
+Now add lockss to the group wheel
+
+```bash
+sudo usermod –aG wheel lockss
+```
