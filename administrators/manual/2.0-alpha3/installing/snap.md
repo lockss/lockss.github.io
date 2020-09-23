@@ -7,7 +7,19 @@ title: Installing Snap Package Manager
 
 [Snap](https://snapcraft.io/) are app packages for desktop, cloud and IoT that are easy to install, secure, cross-platform and dependency-free.
 
+## Overview
+
 To install the microk8s kubernetes cluster you will need to install snap. Most Ubuntu flavours of linux come with snap preinstalled.  However, for other systems you will need to follow the instructions for installing snap for your system below. More complete instructions can be found at [Snapd Install](https://snapcraft.io/docs/installing-snapd).
+
+1. [Checking for Snap](#checking-for-snap)
+1. [Snap on Arch Linux](#snap-on-arch-linux)
+1. [Snap on CentOS](#snap-on-centos)
+1. [Snap on Debian](#snap-on-debian)
+1. [Snap on Fedora](#snap-on-fedora)
+1. [Snap on RHEL/Oracle Linux](#snap-on-rhel/oracle-linux)
+1. [Configuring Updates](#configuring-updates)
+
+## Checking for Snap
 
 To determine if your operating system is already be equipped with a Snap client. Type:
 
@@ -191,3 +203,52 @@ Enable classic snap support, by creating a symbolic link between /var/lib/snapd/
 ```
 
 Either log out and back in again, or restart your system, to ensure snap’s paths are updated correctly
+
+## Configuring Updates
+The snap daemon will automatically update any installed snaps and by default it will check every four hours for updates.  For stability, you should consider adjusting the frequency in which snap checks and updates your snaps. To modify update schedules there are four system-wide options:
+
+#### refresh.timer: 
+Defines the refresh frequency and schedule
+
+```bash
+  sudo snap set system refresh.timer=<refresh-schedule>
+```
+
+where <refresh-schedule> is for example:
+	
+**mon,wed**: monday and wednesday at midnight
+	
+**fri5,23:00-01:00**: last friday of the month, between 11 pm and 1 am.
+	
+For a more complete list of formats see the snap documents:
+
+[Snap Documentation: Managing updates](https://snapcraft.io/docs/keeping-snaps-up-to-date)
+	
+#### refresh.hold: 
+Delays the next refresh until the defined time and date
+ 
+```bash
+  sudo snap set system refresh.hold="$(date --date=<somedate> +%Y-%m-%dT%H:%M:%S%:z)"
+  sudo snap get system refresh.hold
+```
+where <somedate> is the date for which to hold updates
+	
+#### refresh.metered: 
+Pauses refresh updates when network connection is metered, such as an LTE link with a limited data plan.
+
+```bash
+sudo snap set system refresh.metered=hold
+```
+To restore:
+
+```bash
+sudo snap set system refresh.metered=null
+```
+	
+#### refresh.retain: 
+Sets how many revisions of a snap are stored on the system
+
+```bash
+  sudo snap set system refresh.retain=3
+```
+This will limit older snaps to 3.

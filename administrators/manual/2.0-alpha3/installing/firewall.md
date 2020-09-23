@@ -9,7 +9,7 @@ Not all systems have an active firewall.  All unix systems have some support for
 
 ## Overview
 
-This document will aide in modifying existing firewalls to permit microk8s to function.
+This document will aide in modifying existing firewalls to permit Microk8s to function.
 
 1.  [Cleaning Up Iptables](#cleaning-up-iptables)
 1.  [Modify Firewall Rules](#modify-firewall-rules)
@@ -17,15 +17,13 @@ This document will aide in modifying existing firewalls to permit microk8s to fu
 
 ## Cleaning Up Iptables
 
-On a dedicated host machine, it is best to flush your iptables to make certain that their are no blocking entries. While microk8s has no requirement for docker, if you do have docker installed make sure you stop it while flushing iptables.
+On a dedicated host machine, it is best to flush your iptables to make certain  there are no blocking entries. While Microk8s has no requirement for docker, if you do have docker installed make sure you stop it while flushing iptables.  If you are using a different firewall you should look at the instructions below to configure it. 
 
 ```bash
 sudo systemctl stop docker
-sudo microk8s stop
 sudo iptables --flush
 sudo iptables -tnat --flush
 sudo systemctl start docker
-sudo microk8s start
 
 sudo iptables -P INPUT ACCEPT
 sudo iptables -P FORWARD ACCEPT
@@ -54,6 +52,8 @@ sudo /sbin/service iptables save
 The service ufw is enabled by default in Ubuntu.  If you are running ufw make sure to open the following ports by entering the listed commands:
 
 ```bash
+sudo ufw default allow incoming
+sudo ufw default allow outgoing
 sudo ufw allow 6443/tcp
 sudo ufw allow 2379/tcp
 sudo ufw allow 2380/tcp
@@ -92,6 +92,6 @@ sudo sed -i ‘s/^SELINUX=enforcing$/SELINUX=permissive/’ /etc/selinux/config
 
 ## Additional documentation:
 	
-A complete listing of all ports and the services used by microk8s can be found in the microk8s documentation:
+A complete listing of all ports, and the services used by Microk8s can be found in the Microk8s ports documentation:
 
 https://microk8s.io/docs/ports.  

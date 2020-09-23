@@ -14,9 +14,8 @@ To install Microk8s for the purposes of running the LOCKSS system:
 1.  [Install Microk8s](#install-microk8s)
 1.  [Join the Group](#join-the-group)
 1.  [Check the Status](#check-the-status)
-1. 	 [Enable DNS](#enable-dns)
+1. 	[Enable DNS](#enable-dns)
 1.  [Setup Users Kubectl Config](#setup-users-kubectl-config)
-1.  [Setup Alias](#setup-alias)
 
 The LOCKSS system requires **Microk8s 1.18 or better**.
 
@@ -30,14 +29,13 @@ The LOCKSS system requires **Microk8s 1.18 or better**.
 MicroK8s creates a group to enable usage of commands which require admin privilege. To add your current user to the group and gain access to the .kube caching directory, run the following two commands:
 
 ```bash
-    sudo usermod -a -G microk8s $USER
-    sudo chown -f -R $USER ~/.kube
+    sudo usermod -a -G microk8s lockss
 ```
 
 ### You need to log off and log back in or re-enter the session for the group update to take place:
 
 ```bash
-    su - $USER
+    su - lockss
 ```
 
 ## Check the Status
@@ -110,13 +108,6 @@ If you don’t have an existing install or ~/.kube directory
 
 If you have a ~/.kube directory which has a config file you can either backup the existing config file or append the microk8s config onto it.
 
-
-## Setup Alias
-MicroK8s uses a namespaced kubectl command to prevent conflicts with any existing installs of kubectl. If you don’t have an existing kubernetes install, it is easier to add an alias to your shells aliases file like this:
-
-```text
-    alias kubectl='microk8s kubectl'
-``` 
 
 ## Additional documentation:
 * [Configuring Firewalls](firewall)

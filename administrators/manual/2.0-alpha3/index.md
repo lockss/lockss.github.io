@@ -12,6 +12,7 @@ title: LOCKSS 2.0-alpha3 System Manual
     1.  [**Installing Snap Package Manager**](installing/snap)
     1.  [**Configuring Firewall and Access to Network**](installing/firewall)
     1.  [**Installing Microk8s**](installing/microk8s)
+    1.  [**Using Microk8s**](installing/using-microk8s)
     1.  [**Installing Git**](installing/git)
     1.  [**Downloading the LOCKSS Installer**](installing/lockss-installer)
     1.  [**Checking the System**](installing/check-sys)
