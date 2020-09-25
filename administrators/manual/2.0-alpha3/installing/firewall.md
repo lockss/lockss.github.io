@@ -21,9 +21,11 @@ On a dedicated host machine, it is best to flush your iptables to make certain  
 
 ```bash
 sudo systemctl stop docker
+sudo microk8s stop
 sudo iptables --flush
 sudo iptables -tnat --flush
 sudo systemctl start docker
+sudo microk8s start
 
 sudo iptables -P INPUT ACCEPT
 sudo iptables -P FORWARD ACCEPT

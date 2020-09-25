@@ -14,6 +14,7 @@ To install Microk8s for the purposes of running the LOCKSS system:
 1.  [Install Microk8s](#install-microk8s)
 1.  [Join the Group](#join-the-group)
 1.  [Check the Status](#check-the-status)
+1.  [Adjust the Firewall](#adjust-the-firewall)
 1. 	[Enable DNS](#enable-dns)
 1.  [Setup Users Kubectl Config](#setup-users-kubectl-config)
 
@@ -71,6 +72,10 @@ During installation, you can use the --wait-ready flag  on the status command to
 	storage: disabled
 ```
 If your system is using a firewall you will need to open the necessary ports for your systems firewall.  See the firewall documentation for help in configuring your system for access:
+
+## Adjust the Firewall
+The containers will need to speak to each other and to both send and receive messages.
+If you are using a firewall or iptables you will need to insure it.  See the firewall document to make necessary adjustments:  [Configuring Firewalls](firewall)
 
 ## Enable DNS
 To be as lightweight as possible, MicroK8s only installs the basics of a usable Kubernetes install:

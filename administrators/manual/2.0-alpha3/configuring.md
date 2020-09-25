@@ -20,6 +20,7 @@ When run the first time the questions asked by the script often come with a sugg
 1.  `Is this machine behind NAT?` Enter `Y` if the machine is not publicly routable but will be accessible via network address translation (NAT), or `N` otherwise
     1.  `External IP address for NAT`: if you answered `Y` in the previous question, enter the publicly routable IP address of the machine.
 1.  `Initial subnet for admin UI access`: enter a semicolon-separated list of subnets in CIDR notation that should have access to the Web user interfaces of the system
+1.  `LOCKSS subnet for container access`: this is calculated from the microk8s node and should not need to be modified in standard installation,
 1.  `LCAP V3 protocol port`: enter the port on the publicly routable IP address that will be used to receive LCAP (LOCKSS polling and repair) traffic. Historically, most LOCKSS nodes use 9729.
 1.  `PROXY port`: not yet re-enabled in 2.0-alpha; ignore
 1.  `Mail relay for this machine`: hostname for this machine's outgoing mail server
@@ -33,11 +34,11 @@ When run the first time the questions asked by the script often come with a sugg
 1.  `Preservation group(s)`: enter a semicolon-separated list of preservation network identifiers. If you are not joining an existing network or running your own, enter `demo`, the network identifier for the demo network set up for LOCKSS 2.0 pre-release testing.
 1.  `Content data storage directory`: enter the path of a directory that is the root of the main storage area of the LOCKSS system. *If you are used to the classic LOCKSS daemon (1.x), this would be the equivalent of `/cache0`.*
 1.  `Service logs directory`: enter the path of a directory that is the root of the storage area for LOCKSS-related log files (historically `/var/log/lockss`)
-1.  `Temporary storage directory`: not actively used in LOCKSS 2.0-alpha ignore
+1.  `Temporary storage directory`: This directory defaults to the content directory.  If you are using remote storage for content, performance is improved by using local storage with sufficient disk space.
 1.  `User name for web UI administration`: enter the username for an administrative user in the LOCKSS system's Web user interfaces
 1.  `Password for web UI administration user <uiuser>`: enter the password for the given administrative user in the LOCKSS system's Web user interfaces[<sup>1</sup>](#n1)
 1.  `Password for web UI administration (again)`: re-enter the password for the given administrative user in the LOCKSS system's Web user interfaces (if the two passwords do not match, the password will be asked again)
-    
+    ro
 The next set of questions will gather information about which of the LOCKSS services you will be using and how to access any service you have already configured for use:
 
 1.  `Use LOCKSS Metadata Query Service?`: Enter `Y` to use the included metadata service or `N` and no metadata service will be run.
