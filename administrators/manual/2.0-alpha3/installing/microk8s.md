@@ -14,7 +14,7 @@ The LOCKSS system requires **MicroK8s 1.18**.
 ## Installing Microk8s
 
 ```bash
-    sudo snap install microk8s --classic --channel=1.18/stable
+sudo snap install microk8s --classic --channel=1.18/stable
 ```
 
 ## Joining the `microk8s` Group
@@ -56,25 +56,9 @@ mkdir -p ~/.kube
 microk8s config > ~/.kube/config
 ```
 
-## Starting MicroK8s
-
-Once installed, start MicroK8s with the following command:
-
-```bash
-microk8s start
-```
-
-The output changes as MicroK8s starts up. If the startup is successful, the final output will look similar to the following:
-
-```text
-Started.
-Enabling pod scheduling
-node already uncordoned
-```
-
 ## Checking the Status of MicroK8s
 
-MicroK8s startup is not instant; type the following command which will wait until MicroK8s is fully ready, and will then display the status of various MicroK8s subsystems:
+Type the following command which will start MicroK8s and wait until it is fully ready. It will then display the status of various MicroK8s subsystems:
 
 ```bash
 microk8s status --wait-ready

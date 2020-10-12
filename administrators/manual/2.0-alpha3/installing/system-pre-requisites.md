@@ -23,7 +23,7 @@ The LOCKSS system runs under a system user named `lockss`, who is under a group 
 ### How to Do It on CentOS or RHEL
 
 ```bash
-sudo adduser --system --user-group --create-home --shell=/bin/false --groups=wheel lockss
+sudo useradd --system --user-group --create-home --shell=/bin/false --groups=wheel lockss
 ```
 
 This will create the system user `lockss`, the group `lockss`, and the home directory `/home/lockss`; ensure nobody can log in as `lockss` except `root` and `sudo` users; and give the `lockss` user `sudo` access which by default on this OS is equated with membership in the `wheel` group.
