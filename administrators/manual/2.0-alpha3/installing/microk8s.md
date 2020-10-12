@@ -5,41 +5,32 @@ title: Installing Kubernetes with Microk8s
 
 *This information applies to version 2.0-alpha3 of the LOCKSS system.*
 
-[Microk8s](https://microk8s.io/) is the smallest, fastest, fully-conformant Kubernetes that tracks upstream releases and makes clustering trivial. This page will walk you through the initial installation of Microk8s.
-
 ## Overview
 
-To install Microk8s for the purposes of running the LOCKSS system:
-
-1.  [Install Microk8s](#install-microk8s)
-1.  [Join the Group](#join-the-group)
-1.  [Check the Status](#check-the-status)
-1.  [Adjust the Firewall](#adjust-the-firewall)
-1. 	[Enable DNS](#enable-dns)
-1.  [Setup Users Kubectl Config](#setup-users-kubectl-config)
+[Microk8s](https://microk8s.io/) is a lightweight Kubernetes environment. ([Kubernetes](https://kubernetes.io/) is a system for managing and deploying containerized applications.) This page will walk you through the initial installation of Microk8s.
 
 The LOCKSS system requires **Microk8s 1.18 or better**.
 
-## Install Microk8s
+## Installing Microk8s
 
 ```bash
     sudo snap install microk8s --classic --channel=1.18/stable
 ```
 
-## Join the Group
+## Joining the `microk8s` Group
+
 MicroK8s creates a group to enable usage of commands which require admin privilege. To add your current user to the group and gain access to the .kube caching directory, run the following two commands:
 
 ```bash
-    sudo usermod -a -G microk8s lockss
+sudo usermod -a -G microk8s lockss
 ```
 
-### You need to log off and log back in or re-enter the session for the group update to take place:
+## Logging Out and Back In
 
-```bash
-    su - lockss
-```
+Log out and back in again (or restart your system) for the group update to take place.
 
 ## Check the Status
+
 During installation, you can use the --wait-ready flag  on the status command to wait for the Kubernetes services to initialise:
 
 ```bash
