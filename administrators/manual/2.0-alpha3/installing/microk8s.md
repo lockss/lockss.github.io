@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Installing Kubernetes with Microk8s
+title: Installing Microk8s
 ---
 
 *This information applies to version 2.0-alpha3 of the LOCKSS system.*
 
 ## Overview
 
-[Microk8s](https://microk8s.io/) is a lightweight Kubernetes environment. ([Kubernetes](https://kubernetes.io/) is a system for managing and deploying containerized applications.) This page will walk you through the initial installation of Microk8s.
+[Microk8s](https://microk8s.io/) is a lightweight Kubernetes environment. ([Kubernetes](https://kubernetes.io/) is a system for managing and deploying containerized applications like the LOCKSS system.) This page will walk you through the initial installation of Microk8s.
 
 The LOCKSS system requires **MicroK8s 1.18**.
 
@@ -71,36 +71,23 @@ microk8s is running
 addons:
 dashboard: disabled
 dns: disabled
-metrics-server: disabled
-ambassador: disabled
-cilium: disabled
-fluentd: disabled
-gpu: disabled
-helm: disabled
-helm3: disabled
-host-access: disabled
-ingress: disabled
-istio: disabled
-jaeger: disabled
-knative: disabled
-kubeflow: disabled
-linkerd: disabled
-metallb: disabled
-multus: disabled
-prometheus: disabled
-rbac: disabled
-registry: disabled
-storage: disabled
+...
 ```
 
-## Adjust the Firewall
+## Adjusting the Firewall
 
 If your system is using a firewall you will need to open the necessary ports for your systems firewall.  See the firewall documentation for help in configuring your system for access.
 
 The containers will need to speak to each other and to both send and receive messages.
 If you are using a firewall or iptables you will need to insure it.  See the firewall document to make necessary adjustments:  [Configuring Firewalls](firewall)
 
-## Enable DNS
+## Enabling DNS
+
+
+
+
+
+
 To be as lightweight as possible, MicroK8s only installs the basics of a usable Kubernetes install:
 
     * api-server

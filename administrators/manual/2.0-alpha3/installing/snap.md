@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Installing the Snap Package Manager
+title: Installing Snap
 ---
 
 *This information applies to version 2.0-alpha3 of the LOCKSS system.*
@@ -9,7 +9,7 @@ title: Installing the Snap Package Manager
 
 [Snap](https://snapcraft.io/) is a Linux package manager maintained by [Canonical](https://canonical.com/), makers of [Ubuntu](https://ubuntu.com/).
 
-Snap is needed to install MicroK8s, the lightweight Kubernetes environment used by the LOCKSS system, which is also maintained by Canonical (and therefore easiest to install via Snap).
+Snap is needed to install [Microk8s](https://microk8s.io/) (a lightweight [Kubernetes](https://kubernetes.io/) environment used by the LOCKSS system), which is also maintained by Canonical (and therefore easiest to install via Snap).
 
 More complete instructions can be found at "[Installing `snapd`](https://snapcraft.io/docs/installing-snapd)" on [Snapcraft](https://snapcraft.io/), Snap's home Web site, but we also provide some high level installation instructions below.
 
