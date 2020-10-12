@@ -9,7 +9,7 @@ title: Installing Kubernetes with Microk8s
 
 [Microk8s](https://microk8s.io/) is a lightweight Kubernetes environment. ([Kubernetes](https://kubernetes.io/) is a system for managing and deploying containerized applications.) This page will walk you through the initial installation of Microk8s.
 
-The LOCKSS system requires **Microk8s 1.18 or better**.
+The LOCKSS system requires **MicroK8s 1.18**.
 
 ## Installing Microk8s
 
@@ -29,42 +29,90 @@ sudo usermod -a -G microk8s lockss
 
 Log out and back in again (or restart your system) for the group update to take place.
 
-## Check the Status
-
-During installation, you can use the --wait-ready flag  on the status command to wait for the Kubernetes services to initialise:
+After you log back in as `lockss`, try:
 
 ```bash
-     microk8s status --wait-ready
+microk8s --help
 ```
+
+to check that MicroK8s is on your `PATH`. You should see a help message similar to the following:
+
 ```text
-	microk8s is running
-	addons:
-	dashboard: disabled
-	dns: disabled
-	metrics-server: disabled
-	ambassador: disabled
-	cilium: disabled
-	fluentd: disabled
-	gpu: disabled
-	helm: disabled
-	helm3: disabled
-	host-access: disabled
-	ingress: disabled
-	istio: disabled
-	jaeger: disabled
-	knative: disabled
-	kubeflow: disabled
-	linkerd: disabled
-	metallb: disabled
-	multus: disabled
-	prometheus: disabled
-	rbac: disabled
-	registry: disabled
-	storage: disabled
+Available subcommands are:
+	add-node
+	cilium
+	config
+...
 ```
-If your system is using a firewall you will need to open the necessary ports for your systems firewall.  See the firewall documentation for help in configuring your system for access:
+
+If you see an error message instead (such as `bash: microk8s: command not found`), you need to ensure `/var/lib/snapd/snap/bin` is on the `PATH`.
+
+## Generating the Kubernetes Configuration
+
+Generate the Kubernetes configuration file from MicroK8s using these commands:
+
+```bash
+mkdir -p ~/.kube
+microk8s config > ~/.kube/config
+```
+
+## Starting MicroK8s
+
+Once installed, start MicroK8s with the following command:
+
+```bash
+microk8s start
+```
+
+The output changes as MicroK8s starts up. If the startup is successful, the final output will look similar to the following:
+
+```text
+Started.
+Enabling pod scheduling
+node already uncordoned
+```
+
+## Checking the Status of MicroK8s
+
+MicroK8s startup is not instant; type the following command which will wait until MicroK8s is fully ready, and will then display the status of various MicroK8s subsystems:
+
+```bash
+microk8s status --wait-ready
+```
+
+Output will look something like the following:
+
+```text
+microk8s is running
+addons:
+dashboard: disabled
+dns: disabled
+metrics-server: disabled
+ambassador: disabled
+cilium: disabled
+fluentd: disabled
+gpu: disabled
+helm: disabled
+helm3: disabled
+host-access: disabled
+ingress: disabled
+istio: disabled
+jaeger: disabled
+knative: disabled
+kubeflow: disabled
+linkerd: disabled
+metallb: disabled
+multus: disabled
+prometheus: disabled
+rbac: disabled
+registry: disabled
+storage: disabled
+```
 
 ## Adjust the Firewall
+
+If your system is using a firewall you will need to open the necessary ports for your systems firewall.  See the firewall documentation for help in configuring your system for access.
+
 The containers will need to speak to each other and to both send and receive messages.
 If you are using a firewall or iptables you will need to insure it.  See the firewall document to make necessary adjustments:  [Configuring Firewalls](firewall)
 
@@ -92,18 +140,6 @@ addresses. This can be changed by running the command:
 ```
 
 This will invoke the vim editor so that you can alter the configuration.
-
-## Setup Users Kubectl Config
-
-If you don’t have an existing install or ~/.kube directory
-
-```bash
-  mkdir -p ~/.kube
-  microk8s config > ~/.kube/config
-```
-
-If you have a ~/.kube directory which has a config file you can either backup the existing config file or append the microk8s config onto it.
-
 
 ## Additional documentation:
 * [Configuring Firewalls](firewall)
