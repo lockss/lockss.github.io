@@ -26,11 +26,12 @@ clusterrole.rbac.authorization.k8s.io/coredns created
 clusterrolebinding.rbac.authorization.k8s.io/coredns created
 Restarting kubelet
 DNS is enabled
-[2020-10-12T15:48:55-0700]: configure-dns:Updating  CoreDNS ConfigMap to use /etc/resolv.conf...
+Updating CoreDNS ConfigMap to use /etc/resolv.conf...
 configmap/coredns configured
-[2020-10-12T15:48:56-0700]: --------------------------------------------------------------------
-[2020-10-12T15:48:56-0700]: configure-dns:  Successfully changed CoreDNS ConfigMap
-[2020-10-12T15:48:56-0700]: --------------------------------------------------------------------
+--------------------------------------------------------------------
+Successfully changed CoreDNS ConfigMap
+    forward . /etc/resolv.conf
+--------------------------------------------------------------------
 ```
 
 ## Frequently Asked Questions
