@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Downloading the LOCKSS Installer
+title: Configuring DNS
 ---
 
 *This information applies to version 2.0-alpha3 of the LOCKSS system.*
@@ -38,4 +38,4 @@ Successfully changed CoreDNS ConfigMap
 
 **Under what circumstances will IP addresses of upstream DNS servers be needed?**
 
-If your system is such that DNS resolution includes a loopback address, `configure-dns` will need to prompt you for a semicolon-separated list of IP addresses of upstream DNS servers. This can happen if `/etc/resolv.conf` or `/run/systemd/resolve/resolv.conf` (if your system uses `systemd-resolved`) contain `nameserver` lines for `localhost`, `::1`, `127.0.0.1`, or other loopback addresses.
+On your host system, if `/etc/resolv.conf` (and `/run/systemd/resolve/resolv.conf` if your system uses `systemd-resolved`) contains `nameserver` lines for `localhost`, `::1`, `127.0.0.1`, or other loopback addresses, then `configure-dns` will prompt you for a semicolon-separated list of IP addresses of upstream DNS servers.
