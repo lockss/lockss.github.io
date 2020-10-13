@@ -56,7 +56,7 @@ Generate the Kubernetes configuration file from MicroK8s using these commands:
 ```bash
 mkdir -p ~/.kube
 
-sudo chown -f -R $USER ~/.kube
+sudo chown -f -R lockss ~/.kube
 
 microk8s config > ~/.kube/config
 ```

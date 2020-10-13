@@ -40,32 +40,38 @@ then you need to install Snap.
 
 ## Installing Snap
 
-### How to Do It on CentOS
+### How to Do It on CentOS 7
 
 <!-- #osversion -->
-***For CentOS 7, CentOS 7.6 or better is required**, because Snap is not available on CentOS 7.5 or earlier.*
+**CentOS 7.6 or better is required**, because Snap is not available on CentOS 7.5 or earlier.*
 
-See "[Installing `snap` on CentOS](https://snapcraft.io/docs/installing-snap-on-centos)" on Snapcraft for more details. An overview is provided below.
-
-Add the [EPEL repositories](https://fedoraproject.org/wiki/EPEL) to your system. For CentOS 7, use this Yum command:
+Use these Yum commands:
 
 ```bash
 sudo yum install epel-release
+
+sudo yum install snapd
 ```
 
-For CentOS 8, use these Dnf commands:
+**Additional documentation:**
+
+*   "[Installing `snap` on CentOS](https://snapcraft.io/docs/installing-snap-on-centos)" on Snapcraft
+
+### How to Do It on CentOS 8
+
+Use these Dnf commands:
 
 ```bash
 sudo dnf install epel-release
 
 sudo dnf upgrade
+
+sudo dnf install snapd
 ```
 
-Once the EPEL repositories are added to your system, install `snapd` with this Yum command:
+**Additional documentation:**
 
-```bash
-sudo yum install snapd
-```
+*   "[Installing `snap` on CentOS](https://snapcraft.io/docs/installing-snap-on-centos)" on Snapcraft
 
 ## Snap on Debian
 

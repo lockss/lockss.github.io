@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Creating the `lockss` User
+title: Creating the lockss User
 ---
 
 *This information applies to version 2.0-alpha3 of the LOCKSS system.*
