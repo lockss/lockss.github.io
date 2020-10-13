@@ -83,7 +83,6 @@ dns: disabled
 
 #### Additional documentation:
 
-*   [Configuring Firewalls](firewall)
 *   [Using Microk8s](../appendix/using-microk8s)
 
 ##### Microk8s References
