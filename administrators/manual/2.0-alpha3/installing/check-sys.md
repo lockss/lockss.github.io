@@ -5,6 +5,8 @@ title: Checking the LOCKSS system
 
 *This information applies to version 2.0-alpha3 of the LOCKSS system.*
 
+*FIXME*
+
 After [installing the LOCKSS system](index) and [downloading the LOCKSS Installer](installing/lockss-installer), prepare  the system for running by typing:
 
 ```bash

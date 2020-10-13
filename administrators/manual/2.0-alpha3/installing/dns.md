@@ -5,13 +5,19 @@ title: Configuring DNS
 
 *This information applies to version 2.0-alpha3 of the LOCKSS system.*
 
-After MicroK8s is up and running, adjustments need to be made to DNS processing in MicroK8s, which is handled by a MicroK8s component named CoreDNS. In this section, you will first make use of the LOCKSS Installer you downloaded from GitHub a few sections ago. From the `lockss-installer` directory and as the `lockss` user, run the following script:
+After MicroK8s is up and running, adjustments need to be made to DNS processing in MicroK8s, which is handled by a MicroK8s component named CoreDNS. In this section, you will first make use of the LOCKSS Installer you downloaded from GitHub a few sections ago.
+
+## Configuring DNS
+
+From the `lockss-installer` directory and as the `lockss` user, run the following script:
 
 ```bash
 scripts/configure-dns
 ```
 
 You may be prompted for the `lockss` password for `sudo`, and under some circumstances, you may be prompted for a semicolon-separated list of IP addresses of upstream DNS servers your host machine should use.
+
+## Example 1
 
 Successful output from a run not requiring IP addresses of upstream DNS servers will look something like the following:
 
@@ -33,6 +39,8 @@ Successfully changed CoreDNS ConfigMap
     forward . /etc/resolv.conf
 --------------------------------------------------------------------
 ```
+
+## Example 2
 
 Successful output from a run requiring IP addresses of upstream DNS servers (where the proposed default is simply accepted with the Enter key) will look something like the following:
 
@@ -61,7 +69,30 @@ Successfully changed CoreDNS ConfigMap
 
 ## Verifying CoreDNS
 
-*TODO*
+If you type:
+
+```bash
+microk8s kubectl get all --all-namespaces
+```
+
+you will see output similar to the following:
+
+```text
+NAMESPACE     NAME                           READY   STATUS    RESTARTS   AGE
+kube-system   pod/coredns-588fd544bf-xq8ck   1/1     Running   0          5h51m
+
+NAMESPACE     NAME                 TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)                  AGE
+default       service/kubernetes   ClusterIP   10.152.183.1    <none>        443/TCP                  23h
+kube-system   service/kube-dns     ClusterIP   10.152.183.10   <none>        53/UDP,53/TCP,9153/TCP   5h51m
+
+NAMESPACE     NAME                      READY   UP-TO-DATE   AVAILABLE   AGE
+kube-system   deployment.apps/coredns   1/1     1            1           5h51m
+
+NAMESPACE     NAME                                 DESIRED   CURRENT   READY   AGE
+kube-system   replicaset.apps/coredns-588fd544bf   1         1         1       5h51m
+```
+
+consisting of sections for different kinds of resources: pods, services, deployments, replica sets, etc. The pod containing `coredns` in the name (here `pod/coredns-588fd544bf-xq8ck`) should be in `Running` status and display `1/1` (one of one) ready.
 
 ## Frequently Asked Questions
 

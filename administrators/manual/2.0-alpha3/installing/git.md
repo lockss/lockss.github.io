@@ -25,7 +25,7 @@ If the output is a version number, for example:
 git version 2.28.0
 ```
 
-then Git is already installed and you do not need to take any further action.
+then Git is already installed and you do not need to take further action.
 
 If you see an error message similar to the following:
 
@@ -33,7 +33,7 @@ If you see an error message similar to the following:
 bash: git: command not found
 ```
 
-then you need to install Snap.
+then you need to install Git.
 
 ## Installing Git
 

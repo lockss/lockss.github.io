@@ -11,6 +11,8 @@ title: Installing Microk8s
 
 The LOCKSS system requires **MicroK8s 1.18**.
 
+All the commands on this page should be run as the `lockss` user.
+
 ## Installing Microk8s
 
 ```bash
@@ -22,7 +24,7 @@ sudo snap install microk8s --classic --channel=1.18/stable
 MicroK8s creates a group to enable usage of commands which require admin privilege. To add your current user to the group and gain access to the .kube caching directory, run the following two commands:
 
 ```bash
-sudo usermod -a -G microk8s lockss
+sudo usermod -G microk8s -a lockss
 ```
 
 ## Logging Out and Back In
@@ -53,18 +55,21 @@ Generate the Kubernetes configuration file from MicroK8s using these commands:
 
 ```bash
 mkdir -p ~/.kube
+
+sudo chown -f -R $USER ~/.kube
+
 microk8s config > ~/.kube/config
 ```
 
-## Checking the Status of MicroK8s
+## Starting MicroK8s
 
-Type the following command which will start MicroK8s and wait until it is fully ready. It will then display the status of various MicroK8s subsystems:
+Type the following command which will start MicroK8s and wait until it is fully ready.
 
 ```bash
 microk8s status --wait-ready
 ```
 
-Output will look something like the following:
+It will then display the status of various MicroK8s subsystems:
 
 ```text
 microk8s is running
@@ -74,53 +79,20 @@ dns: disabled
 ...
 ```
 
-## Adjusting the Firewall
+----
 
-If your system is using a firewall you will need to open the necessary ports for your systems firewall.  See the firewall documentation for help in configuring your system for access.
+#### Additional documentation:
 
-The containers will need to speak to each other and to both send and receive messages.
-If you are using a firewall or iptables you will need to insure it.  See the firewall document to make necessary adjustments:  [Configuring Firewalls](firewall)
+*   [Configuring Firewalls](firewall)
+*   [Using Microk8s](../appendix/using-microk8s)
 
-## Enabling DNS
+##### Microk8s References
 
+*   [Complete MicroK8s Documentation](https://microk8s.io/docs)
+*   [Microk8s Commands](https://microk8s.io/docs/commands) 
+*   [Troubleshooting Guide](https://microk8s.io/docs/troubleshooting)
 
+#### Kubectl References
 
-
-
-
-To be as lightweight as possible, MicroK8s only installs the basics of a usable Kubernetes install:
-
-    * api-server
-    * controller-manager
-    * scheduler
-    * kubelet
-    * cni
-    * kube-proxy
-
-To run LOCKSS you will need to enable dns.  If you machine is behind a firewall you will first need to allow access through the firewall. See the firewall documentation for instructions.
-
-```bash
-  sudo microk8s enable dns    
-```
-
-By default it points to Google’s 8.8.8.8 and 8.8.4.4 servers for resolving
-addresses. This can be changed by running the command:
-
-```bash
-  microk8s kubectl -n kube-system edit configmap/coredns
-```
-
-This will invoke the vim editor so that you can alter the configuration.
-
-## Additional documentation:
-* [Configuring Firewalls](firewall)
-* [Using Microk8s](using-microk8s)
-
-### Microk8s References
-* [Complete MicroK8s Documentation](https://microk8s.io/docs)
-* [Microk8s Commands](https://microk8s.io/docs/commands) 
-* [Troubleshooting Guide](https://microk8s.io/docs/troubleshooting)
-
-### Kubectl References
-* [Kubectl commands](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands)
-* [Kubectl Cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+*   [Kubectl commands](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands)
+*   [Kubectl Cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)

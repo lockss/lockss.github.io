@@ -16,3 +16,20 @@ You can then enter the `lockss-installer` directory:
 ```bash
 cd lockss-installer
 ```
+## Frequently Asked Questions
+
+**How do I become the `lockss` user to type this command?**
+
+We recommend this command:
+
+```bash
+sudo -u lockss /bin/bash
+```
+
+Also, we recommend issuing this command:
+
+```bash
+cd
+```
+
+before any others, to change to the `lockss` user's home directory, which is likely to be where the LOCKSS Installer is located.

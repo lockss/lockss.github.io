@@ -5,8 +5,6 @@ title: Installing Snap
 
 *This information applies to version 2.0-alpha3 of the LOCKSS system.*
 
-## Overview
-
 [Snap](https://snapcraft.io/) is a Linux package manager maintained by [Canonical](https://canonical.com/), makers of [Ubuntu](https://ubuntu.com/).
 
 Snap is needed to install [Microk8s](https://microk8s.io/) (a lightweight [Kubernetes](https://kubernetes.io/) environment used by the LOCKSS system), which is also maintained by Canonical (and therefore easiest to install via Snap).
@@ -30,7 +28,7 @@ series  16
 kernel  5.8.13
 ```
 
-then Snap is already installed (in this example, version 2.46.1) and you do not need to take further action.
+then Snap is already installed and you do not need to take further action.
 
 If you see an error message similar to the following:
 
@@ -59,6 +57,7 @@ For CentOS 8, use these Dnf commands:
 
 ```bash
 sudo dnf install epel-release
+
 sudo dnf upgrade
 ```
 
