@@ -1,131 +1,71 @@
 ---
 layout: page
-title: Installing Snap Package Manager
+title: Installing Snap
 ---
 
 *This information applies to version 2.0-alpha3 of the LOCKSS system.*
 
-[Snap](https://snapcraft.io/) are app packages for desktop, cloud and IoT that are easy to install, secure, cross-platform and dependency-free.
+[Snap](https://snapcraft.io/) is a Linux package manager maintained by [Canonical](https://canonical.com/), makers of [Ubuntu](https://ubuntu.com/).
 
-## Overview
+Snap is needed to install [Microk8s](https://microk8s.io/) (a lightweight [Kubernetes](https://kubernetes.io/) environment used by the LOCKSS system), which is also maintained by Canonical (and therefore easiest to install via Snap).
 
-To install the microk8s kubernetes cluster you will need to install snap. Most Ubuntu flavours of linux come with snap preinstalled.  However, for other systems you will need to follow the instructions for installing snap for your system below. More complete instructions can be found at [Snapd Install](https://snapcraft.io/docs/installing-snapd).
-
-1. [Checking for Snap](#checking-for-snap)
-1. [Snap on Arch Linux](#snap-on-arch-linux)
-1. [Snap on CentOS](#snap-on-centos)
-1. [Snap on Debian](#snap-on-debian)
-1. [Snap on Fedora](#snap-on-fedora)
-1. [Snap on RHEL/Oracle Linux](#snap-on-rhel/oracle-linux)
-1. [Configuring Updates](#configuring-updates)
+More complete instructions can be found at "[Installing `snapd`](https://snapcraft.io/docs/installing-snapd)" on [Snapcraft](https://snapcraft.io/), Snap's home Web site, but we also provide some high level installation instructions below.
 
 ## Checking for Snap
 
-To determine if your operating system is already be equipped with a Snap client. Type:
+Some Linux flavors come with Snap pre-installed. To determine if your operating system is already be equipped with Snap, type:
 
 ```bash
-    snap
+snap version
 ```
 
-You should see the snap help screen:
+If you see something similar to the following:
 
 ```text
-The snap command lets you install, configure, refresh and remove snaps.
-Snaps are packages that work across many different Linux distributions,
-enabling secure delivery and operation of the latest apps and utilities.
-
-Usage: snap <command> [<options>...]
-
-Commands can be classified as follows:
-
-         Basics: find, info, install, list, remove
-        ...more: refresh, revert, switch, disable, enable
-        History: changes, tasks, abort, watch
-        Daemons: services, start, stop, restart, logs
-       Commands: alias, aliases, unalias, prefer
-  Configuration: get, set, unset, wait
-        Account: login, logout, whoami
-    Permissions: connections, interface, connect, disconnect
-      Snapshots: saved, save, check-snapshot, restore, forget
-          Other: version, warnings, okay, ack, known, model, create-cohort
-    Development: run, pack, try, download, prepare-image
-
-For more information about a command, run 'snap help <command>'.
-For a short summary of all commands, run 'snap help --all'.
+snap    2.46.1-1
+snapd   2.46.1-1
+series  16
+kernel  5.8.13
 ```
 
-If Snap is already installed, you do not need to take any further action.
+then Snap is already installed and you do not need to take further action.
 
-Otherwise, Snap can be installed from your operating system's software repositories.
+If you see an error message similar to the following:
 
-## Snap on Arch Linux
-
-The manual build process is the Arch-supported install method for AUR packages, and you’ll need the prerequisites installed before you can install any AUR package. You can then install snap with the following:
-
-```bash
-	git clone https://aur.archlinux.org/snapd.git
-	cd snapd
-	makepkg -si
+```text
+bash: snap: command not found
 ```
 
-Once installed, enable the systemd unit that manages the main snap communication socket:
+then you need to install Snap.
 
-```bash
-    sudo systemctl enable --now snapd.socket
-```
+## Installing Snap
 
-Enable classic snap support, by creating a symbolic link between /var/lib/snapd/snap and /snap:
-
-```bash
-	sudo ln -s /var/lib/snapd/snap /snap
-```
-
-Either log out and back in again, or restart your system, to ensure snap’s paths are updated correctly
-
-
-## Snap on CentOS
+### How to Do It on CentOS
 
 <!-- #osversion -->
-*CentOS 7 or better required*
+***For CentOS 7, CentOS 7.6 or better is required**, because Snap is not available on CentOS 7.5 or earlier.*
 
-Determine your centos release
+See "[Installing `snap` on CentOS](https://snapcraft.io/docs/installing-snap-on-centos)" on Snapcraft for more details. An overview is provided below.
 
-```bash
-    cat /etc/centos-release
-```
-
-Add the EPEL packages to your CentOS 7 distribution
+Add the [EPEL repositories](https://fedoraproject.org/wiki/EPEL) to your system. For CentOS 7, use this Yum command:
 
 ```bash
-	sudo yum install epel-release
+sudo yum install epel-release
 ```
 
-Add the EPEL packages to your CentOS 8 distribution
+For CentOS 8, use these Dnf commands:
 
 ```bash
-	sudo dnf install epel-release
-	sudo dnf upgrade
+sudo dnf install epel-release
+
+sudo dnf upgrade
 ```
 
-Use Yum to install Snap on CentOS:
+Once the EPEL repositories are added to your system, install `snapd` with this Yum command:
 
 ```bash
-    sudo yum install snapd
+sudo yum install snapd
 ```
-
-Once installed, enable the systemd unit that manages the main snap communication socket:
-
-```bash
-    sudo systemctl enable --now snapd.socket
-```
-
-Enable classic snap support, by creating a symbolic link between /var/lib/snapd/snap and /snap:
-
-```bash
-	sudo ln -s /var/lib/snapd/snap /snap
-```
-
-Either log out and back in again, or restart your system, to ensure snap’s paths are updated correctly
 
 ## Snap on Debian
 
@@ -138,7 +78,9 @@ Use Apt to install Snap on Debian:
     sudo apt update
     sudo apt install snapd
 ```
-Either log out and back in again, or restart your system, to ensure snap’s paths are updated correctly. After this, install the core snap in order to get the latest snapd.
+
+After this, install the core snap in order to get the latest snapd.
+
 
 ```bash
 	snap install core
@@ -155,14 +97,6 @@ Use DNF to install Snap on Fedora:
 ```bash
     sudo dnf install snapd
 ```
-
-Enable classic snap support, by creating a symbolic link between /var/lib/snapd/snap and /snap:
-
-```bash
-	sudo ln -s /var/lib/snapd/snap /snap
-```
-
-Either log out and back in again, or restart your system, to ensure snap’s paths are updated correctly
 
 ## Snap on RHEL/Oracle Linux
 
@@ -190,21 +124,28 @@ Use Yum to install Snap on CentOS:
     sudo yum install snapd
 ```
 
-Once installed, enable the systemd unit that manages the main snap communication socket:
+## Enabling Classic Support
+
+MicroK8s uses the so-called classic Snap format, which expects a top-level directory named `/snap` on your system. Nowadays this directory is located at `/var/lib/snapd/snap`. In order for Snap to install MicroK8s correctly, you need to create a symbolic link from `/snap` to `/var/lib/snapd/snap` with this command:
 
 ```bash
-    sudo systemctl enable --now snapd.socket
+sudo ln -s /var/lib/snapd/snap /snap
 ```
 
-Enable classic snap support, by creating a symbolic link between /var/lib/snapd/snap and /snap:
+## Enabling Snap
+
+You can then enable Snap on your system with the following command:
 
 ```bash
-	sudo ln -s /var/lib/snapd/snap /snap
+sudo systemctl enable --now snapd.socket
 ```
 
-Either log out and back in again, or restart your system, to ensure snap’s paths are updated correctly
+## Logging Out and Back In
 
-## Configuring Updates
+Log out and back in again (or restart your system) to ensure Snap's paths are updated correctly.
+
+## Configuring Snap Updates
+
 The snap daemon will automatically update any installed snaps and by default it will check every four hours for updates.  For stability, you should consider adjusting the frequency in which snap checks and updates your snaps. To modify update schedules there are four system-wide options:
 
 #### refresh.timer: 
