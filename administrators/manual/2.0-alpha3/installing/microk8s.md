@@ -47,7 +47,7 @@ Available subcommands are:
 ...
 ```
 
-If you see an error message instead (such as `bash: microk8s: command not found`), you need to ensure `/var/lib/snapd/snap/bin` is on the `PATH`.
+If you see an error message instead (such as `bash: microk8s: command not found`), you need to ensure `/snap/bin` is on the `PATH`.
 
 ## Generating the Kubernetes Configuration
 

@@ -18,9 +18,9 @@ sudo useradd --system --user-group --create-home --shell=/bin/false --groups=whe
 sudo passwd lockss
 ```
 
-By default on CentOS, `sudo` privileges and membership in the `wheel` group are equated. Adjust the above commands accordingly if your CentOS system has `sudo` configured differently.
+By default on **CentOS**, `sudo` privileges and membership in the `wheel` group are equated. Adjust the above commands accordingly if your CentOS system has `sudo` configured differently.
 
-## How to Do It on Ubuntu
+## How to Do It on Debian and Ubuntu
 
 Type these commands:
 
@@ -30,4 +30,4 @@ sudo useradd --system --user-group --create-home --shell=/bin/false --groups=sud
 sudo passwd lockss
 ```
 
-By default on Ubuntu, `sudo` privileges and membership in the `sudo` group are equated. Adjust the above commands accordingly if your CentOS system has `sudo` configured differently.
+By default on **Debian** and **Ubuntu**, `sudo` privileges and membership in the `sudo` group are equated. Adjust the above commands accordingly if your CentOS system has `sudo` configured differently.

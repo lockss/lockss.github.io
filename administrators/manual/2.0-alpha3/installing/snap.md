@@ -40,26 +40,33 @@ then you need to install Snap.
 
 ## Installing Snap
 
-### How to Do It on CentOS 7
+On many flavors of Linux, you can install Git with the built-in package manager:
 
-<!-- #osversion -->
-**CentOS 7.6 or better is required**, because Snap is not available on CentOS 7.5 or earlier.*
+*   CentOS 7: Yum
+*   CentOS 8: Dnf
+*   Debian: Apt
+*   Ubuntu: Apt
+<!-- #packagemanagers -->
 
-Use these Yum commands:
+### Installing Git with Apt
+
+<!-- #packagemanagers -->
+Apt is the package manager on **Debian** and **Ubuntu**.
+
+Use these Apt commands to install Snap:
 
 ```bash
-sudo yum install epel-release
+sudo apt update
 
-sudo yum install snapd
+sudo apt install snapd
 ```
 
-**Additional documentation:**
+### Installing Git with Dnf
 
-*   "[Installing `snap` on CentOS](https://snapcraft.io/docs/installing-snap-on-centos)" on Snapcraft
+<!-- #packagemanagers -->
+Dnf is the package manager on **CentOS 8**.
 
-### How to Do It on CentOS 8
-
-Use these Dnf commands:
+Use this Dnf command to install Git:
 
 ```bash
 sudo dnf install epel-release
@@ -69,73 +76,19 @@ sudo dnf upgrade
 sudo dnf install snapd
 ```
 
-**Additional documentation:**
+### Installing Git with Yum
 
-*   "[Installing `snap` on CentOS](https://snapcraft.io/docs/installing-snap-on-centos)" on Snapcraft
+Yum is the package manager on **CentOS 7**.
 
-### Snap on Debian
-
-<!-- #osversion -->
-*Debian 9 (Stretch) required*
-
-Use Apt to install Snap on Debian:
+<!-- #packagemanagers -->
+Use these Yum commands to install Git:
 
 ```bash
-    sudo apt update
-    sudo apt install snapd
-```
+sudo yum update
 
-After this, install the core snap in order to get the latest snapd.
+sudo yum install epel-release
 
-
-```bash
-	snap install core
-	snap refresh core
-```
-
-### Snap on Fedora
-
-<!-- #osversion -->
-*Fedora 28 or better required*
-
-Use DNF to install Snap on Fedora:
-
-```bash
-    sudo dnf install snapd
-```
-
-### Snap on RHEL/Oracle Linux
-
-<!-- #osversion -->
-*RHEL/Oracle Linux 7 required*
-
-
-Add the EPEL packages to your RHEL 7 distribution
-
-```bash
-	sudo rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-	sudo yum update
-```
-
-Add the EPEL packages to your RHEL 8 distribution
-
-```bash
-	sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
-	sudo dnf upgrade
-```
-
-Use Yum to install Snap on CentOS:
-
-```bash
-    sudo yum install snapd
-```
-
-### How to Do It on Ubuntu
-
-In the event Snap is not installed on your Ubuntu system, use these Yum commands:
-
-```bash
-sudo apt-get install snapd
+sudo yum install snapd
 ```
 
 ## Enabling Classic Support
@@ -145,6 +98,8 @@ MicroK8s uses the so-called classic Snap format, which expects a top-level direc
 ```bash
 sudo ln -s /var/lib/snapd/snap /snap
 ```
+
+(On some systems like Debian, `/snap` may already exist.)
 
 ## Enabling Snap
 

@@ -7,7 +7,7 @@ title: Disabling Packet Filters
 
 Version 2.0-alpha3 of the LOCKSS system requires, in the short term, disabling the host operating system's `iptables`, `firewalld` or `ufw` packet filters. *See the [Security Considerations](../introduction/security) section for more about this short-term requirement.*
 
-## How to Do It for `firewalld`
+## Disabling `firewalld`
 
 By default, **CentOS** comes with `firewalld`. To stop and disable it, type these commands:
 
@@ -31,7 +31,7 @@ sudo systemctl enable firewalld
 sudo systemctl start firewalld
 ```
 
-## How to Do It for `ufw`
+## Disabling `ufw`
 
 By default, **Ubuntu** comes with `firewalld`. To stop and disable it, type these commands:
 

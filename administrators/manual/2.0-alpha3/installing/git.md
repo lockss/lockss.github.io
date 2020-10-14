@@ -37,52 +37,47 @@ then you need to install Git.
 
 ## Installing Git
 
-On most flavors of Linux, you can install Git from official package repositories.
+On many flavors of Linux, you can install Git with the built-in package manager:
 
-### How to Do It on CentOS 7
+*   CentOS 7: Yum
+*   CentOS 8: Dnf
+*   Debian: Apt
+*   Ubuntu: Apt
+<!-- #packagemanagers -->
 
-<!-- #osversion -->
-Use Yum to install Git on CentOS 7:
+### Installing Git with Apt
+
+<!-- #packagemanagers -->
+Apt is the package manager on **Debian** and **Ubuntu**.
+
+Use these Apt commands to install Git:
 
 ```bash
-sudo yum install git
+sudo apt update
+
+sudo apt install git
 ```
 
-### How to Do It on CentOS 8
+### Installing Git with Dnf
 
-<!-- #osversion -->
-Use Dnf to install Git on CentOS 8:
+<!-- #packagemanagers -->
+Dnf is the package manager on **CentOS 8**.
+
+Use this Dnf command to install Git:
 
 ```bash
 sudo dnf install git
 ```
 
-### Git on Debian
+### Installing Git with Yum
 
-<!-- #osversion -->
-*Debian 9 (Stretch) required*
+Yum is the package manager on **CentOS 7**.
 
-Use Apt to install Git on Debian:
-
-```bash
-    sudo apt-get install git
-```
-
-### Git on Fedora
-
-<!-- #osversion -->
-*Fedora 28 or better required*
-
-Use Dnf to install Git on Fedora:
+<!-- #packagemanagers -->
+Use these Yum commands to install Git:
 
 ```bash
-    sudo dnf install git
-```
+sudo yum update
 
-### How to Do It on Ubuntu
-
-Use Apt to install Git on Ubuntu:
-
-```bash
-sudo apt-get install git
+sudo yum install git
 ```
