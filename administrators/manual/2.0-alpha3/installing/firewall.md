@@ -33,7 +33,7 @@ sudo systemctl start firewalld
 
 ## Disabling `ufw`
 
-By default, **Ubuntu** comes with `firewalld`. To stop and disable it, type these commands:
+By default, **Ubuntu** comes with `ufw`. To stop and disable it, type these commands:
 
 ```bash
 sudo systemctl stop ufw
