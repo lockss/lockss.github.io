@@ -8,7 +8,7 @@ title: Creating the lockss User
 The LOCKSS system runs under a system user named `lockss`, who is under a group named `lockss`, and who is capable of using `sudo`. *See the [Security Considerations](../introduction/security) section for more about this short-term requirement.*
 
 <!-- #osversion -->
-## How to Do It on CentOS
+## Creating the User on CentOS
 
 Type these commands:
 
@@ -20,7 +20,7 @@ sudo passwd lockss
 
 By default on **CentOS**, `sudo` privileges and membership in the `wheel` group are equated. Adjust the above commands accordingly if your CentOS system has `sudo` configured differently.
 
-## How to Do It on Debian and Ubuntu
+## Creating the User on Debian and Ubuntu
 
 Type these commands:
 
