@@ -48,7 +48,7 @@ On many flavors of Linux, you can install Git with the built-in package manager:
 *   Ubuntu: Apt
 <!-- #packagemanagers -->
 
-### Installing Git with Apt
+### Installing Snap with Apt
 
 <!-- #packagemanagers -->
 Apt is the package manager on **Debian** and **Ubuntu**.
@@ -61,7 +61,7 @@ sudo apt update
 sudo apt install snapd
 ```
 
-### Installing Git with Dnf
+### Installing Snap with Dnf
 
 <!-- #packagemanagers -->
 Dnf is the package manager on **CentOS 8**.
@@ -76,7 +76,7 @@ sudo dnf upgrade
 sudo dnf install snapd
 ```
 
-### Installing Git with Yum
+### Installing Snap with Yum
 
 Yum is the package manager on **CentOS 7**.
 
