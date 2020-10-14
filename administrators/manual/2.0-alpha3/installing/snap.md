@@ -40,7 +40,7 @@ then you need to install Snap.
 
 ## Installing Snap
 
-On many flavors of Linux, you can install Git with the built-in package manager:
+On many flavors of Linux, you can install Snap with the built-in package manager:
 
 *   CentOS 7: Yum
 *   CentOS 8: Dnf
