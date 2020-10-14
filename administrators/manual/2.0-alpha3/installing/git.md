@@ -79,13 +79,10 @@ Use Dnf to install Git on Fedora:
     sudo dnf install git
 ```
 
-### Git on Ubuntu
-
-<!-- #osversion -->
-*Ubuntu 16.04 LTS (Xenial) or better required*
+### How to Do It on Ubuntu
 
 Use Apt to install Git on Ubuntu:
 
 ```bash
-    sudo apt-get install git
+sudo apt-get install git
 ```

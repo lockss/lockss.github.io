@@ -13,7 +13,7 @@ More complete instructions can be found at "[Installing `snapd`](https://snapcra
 
 ## Checking for Snap
 
-Some Linux flavors come with Snap pre-installed. To determine if your operating system is already be equipped with Snap, type:
+Some Linux flavors come with Snap pre-installed, for instance **Ubuntu**. To determine if your operating system is already be equipped with Snap, type:
 
 ```bash
 snap version
@@ -73,7 +73,7 @@ sudo dnf install snapd
 
 *   "[Installing `snap` on CentOS](https://snapcraft.io/docs/installing-snap-on-centos)" on Snapcraft
 
-## Snap on Debian
+### Snap on Debian
 
 <!-- #osversion -->
 *Debian 9 (Stretch) required*
@@ -93,7 +93,7 @@ After this, install the core snap in order to get the latest snapd.
 	snap refresh core
 ```
 
-## Snap on Fedora
+### Snap on Fedora
 
 <!-- #osversion -->
 *Fedora 28 or better required*
@@ -104,7 +104,7 @@ Use DNF to install Snap on Fedora:
     sudo dnf install snapd
 ```
 
-## Snap on RHEL/Oracle Linux
+### Snap on RHEL/Oracle Linux
 
 <!-- #osversion -->
 *RHEL/Oracle Linux 7 required*
@@ -130,6 +130,14 @@ Use Yum to install Snap on CentOS:
     sudo yum install snapd
 ```
 
+### How to Do It on Ubuntu
+
+In the event Snap is not installed on your Ubuntu system, use these Yum commands:
+
+```bash
+sudo apt-get install snapd
+```
+
 ## Enabling Classic Support
 
 MicroK8s uses the so-called classic Snap format, which expects a top-level directory named `/snap` on your system. Nowadays this directory is located at `/var/lib/snapd/snap`. In order for Snap to install MicroK8s correctly, you need to create a symbolic link from `/snap` to `/var/lib/snapd/snap` with this command:
@@ -151,6 +159,8 @@ sudo systemctl enable --now snapd.socket
 Log out and back in again (or restart your system) to ensure Snap's paths are updated correctly.
 
 ## Configuring Snap Updates
+
+*FIXME*
 
 The snap daemon will automatically update any installed snaps and by default it will check every four hours for updates.  For stability, you should consider adjusting the frequency in which snap checks and updates your snaps. To modify update schedules there are four system-wide options:
 
