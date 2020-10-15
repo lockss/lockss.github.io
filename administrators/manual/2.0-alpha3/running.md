@@ -8,9 +8,9 @@ title: Running the LOCKSS System
 After [configuring the LOCKSS system] and anytime after updating the LOCKSS Installer to a new version and stopping your LOCKSS stack:
 
 #### Starting the LOCKSS system
-* Run `scripts/start-lockss`: This script will calls in turn:
+* Run `scripts/start-lockss`: This script will call in turn:
 
-    *  `scripts/generate-lockss`. This script takes your configuration data and turns into into a set of configuration files containing the right values.
+    *  `scripts/generate-lockss`. This script takes your configuration data and turns it into a set of configuration files containing the right values.
     *  `scripts/assemble-lockss`. This script puts the configuration files and puts them in the right places, and ensures that all storage volumes are ready for use (creating them if necessary).
     *  `scripts/deploy-lockss`. This script deploys your LOCKSS stack by invoking Docker.
 

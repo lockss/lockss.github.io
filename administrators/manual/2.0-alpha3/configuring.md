@@ -11,7 +11,7 @@ After [installing the LOCKSS system](installing) and [downloading the LOCKSS Ins
 
 (If you have experience with a classic LOCKSS daemon version 1.x, this is the equivalent of `hostconfig`.)
 
-When run the first time the questions asked by the script often come with a suggested value, displayed in square brackets; hit Enter to accept the suggested value, or type the correct value and hit Enter.  Any subsequent runs will use the previous values ad the suggested value, review and hit Enter to leave unchanged.
+When run the first time the questions asked by the script often come with a suggested value, displayed in square brackets; hit Enter to accept the suggested value, or type the correct value and hit Enter.  Any subsequent runs will use the previous values as the suggested value; review and hit Enter to leave unchanged.
 
  Questions include:
 
