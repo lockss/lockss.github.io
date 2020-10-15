@@ -11,7 +11,7 @@ You can download the LOCKSS Installer from GitHub using a [Git](git) command, as
 git clone https://github.com/lockss/lockss-installer
 ```
 
-All the remaining instructions assume that the current working directory is 'lockss-installer';  cd to it now:
+All the remaining instructions assume that the current working directory is `lockss-installer`;  cd to it now:
 
 ```bash
 cd lockss-installer
