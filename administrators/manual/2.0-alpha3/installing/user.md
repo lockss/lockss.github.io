@@ -13,7 +13,7 @@ The LOCKSS system runs under a system user named `lockss`, which is in a group n
 Type these commands:
 
 ```bash
-sudo useradd --system --user-group --create-home --shell=/bin/false --groups=wheel lockss
+sudo useradd --system --user-group --groups=wheel --create-home --shell=/bin/bash lockss
 
 sudo passwd lockss
 ```
@@ -25,7 +25,7 @@ By default on **CentOS**, `sudo` privileges and membership in the `wheel` group 
 Type these commands:
 
 ```bash
-sudo useradd --system --user-group --create-home --shell=/bin/false --groups=sudo lockss
+sudo useradd --system --user-group --groups=sudo --create-home --shell=/bin/bash lockss
 
 sudo passwd lockss
 ```
