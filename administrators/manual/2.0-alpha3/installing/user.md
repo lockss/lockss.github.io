@@ -5,7 +5,7 @@ title: Creating the lockss User
 
 *This information applies to version 2.0-alpha3 of the LOCKSS system.*
 
-The LOCKSS system runs under a system user named `lockss`, which is in a group named `lockss`, and which is capable of using `sudo`. The `lockss` user's password will be needed at various points during installation, both by explicit invocations of `sodu`, and in some cases by `microk8s` commands. *See the [Security Considerations](../introduction/security) section for more about this short-term requirement.*
+The LOCKSS system runs under a system user named `lockss`, which is in a group named `lockss`, and which is capable of using `sudo`. The `lockss` user's password will be needed at various points during installation, both by explicit invocations of `sudo`, and in some cases by `microk8s` commands. *See the [Security Considerations](../introduction/security) section for more about this short-term requirement.*
 
 <!-- #osversion -->
 ## Creating the User on CentOS, OpenSUSE and RHEL
