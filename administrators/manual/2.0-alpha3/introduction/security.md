@@ -17,4 +17,4 @@ LOCKSS 2.0-alpha3 is the first version of the LAAWS (LOCKSS Architected As Web S
 
 ## System Privileges
 
-Likewise, to demonstrate basic functionality, LOCKSS 2.0-alpha3 runs as a dedicated `lockss` system user **with `sudo` privieleges**. This requirement will be relaxed in future versions as we integrate better with the underlying operating system.
+Likewise, to demonstrate basic functionality, LOCKSS 2.0-alpha3 runs as a dedicated `lockss` system user **with `sudo` privileges**. This requirement will be relaxed in future versions as we integrate better with the underlying operating system.
