@@ -41,5 +41,5 @@ By default on **Debian**, **Linux Mint** and **Ubuntu**, `sudo` privileges and m
 All commands shown in this document except those that explicitly invoke `sudo` should be issued from a shell running as the `lockss` user. Depending on your preference, you may login as `lockss`, or switch to the `lockss` user with this command:
 
 ```bash
-sudo -i -u lockss /bin/bash
+sudo -i -u lockss
 ```
