@@ -15,11 +15,12 @@ The LOCKSS system requires a **64-bit Linux** host compatible with [**Systemd**]
 
 Some examples we have experience with include:
 
-*   [CentOS](https://www.centos.org/) 7, version 7.6 or later. (**Please note:** Snap is not available on CentOS 7.5 or earlier.)
+*   [CentOS](https://www.centos.org/) 7, version 7.6 or later. **Recommended.** (Please note: Snap is not available on CentOS 7.5 or earlier. Version 7.6 or later is required.)
 *   [CentOS](https://www.centos.org/) 8.
 *   [Debian](https://www.debian.org/) 10 (Buster)
+*   [RHEL](https://www.redhat.com/) 8
 *   [Ubuntu](https://ubuntu.com/) 20.04 LTS (Focal Fossa)
 
-Savvy users will probably succeed at installing LOCKSS 2.0-alpha3 on other Linux flavors. However, some examples we do not currently recommend include:
+LOCKSS 2.0-alpha3 can probably be installed successfully on slightly different versions of the operating systems above with ease. Additionally, savvy users will likely succeed at installing LOCKSS 2.0-alpha3 on other Linux flavors.
 
-*   [Arch Linux](https://www.archlinux.org/). Although several members of the LOCKSS Team are very fond of Arch Linux and use it daily, the MicroK8s Kubernetes environment does not work very well with it. References: [MicroK8s issue 1034](https://github.com/ubuntu/microk8s/issues/1034).
+*Currently, we do not recommend [Arch Linux](https://www.archlinux.org/) or [Fedora Linux](https://getfedora.org/) 32, because MicroK8s 1.18.9, the currently available version in the required 1.18 series, does not seem to work on these platforms as documented. This highlights an inconvenience of the default Snap-only distribution of MicroK8s that we hope to address in 2.0-alpha4.*

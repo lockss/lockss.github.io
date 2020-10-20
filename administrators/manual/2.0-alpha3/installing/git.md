@@ -42,6 +42,7 @@ On many flavors of Linux, you can install Git with the built-in package manager:
 *   CentOS 7: Yum
 *   CentOS 8: Dnf
 *   Debian: Apt
+*   RHEL 8: Dnf
 *   Ubuntu: Apt
 <!-- #packagemanagers -->
 
@@ -61,11 +62,13 @@ sudo apt install git
 ### Installing Git with Dnf
 
 <!-- #packagemanagers -->
-Dnf is the package manager on **CentOS 8**.
+Dnf is the package manager on **CentOS 8** and **RHEL 8**.
 
 Use this Dnf command to install Git:
 
 ```bash
+sudo dnf update
+
 sudo dnf install git
 ```
 

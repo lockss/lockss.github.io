@@ -9,7 +9,7 @@ Version 2.0-alpha3 of the LOCKSS system requires, in the short term, disabling a
 
 ## Disabling `firewalld`
 
-By default, **CentOS** comes with `firewalld`. You can check whether `firewalld` is running with:
+By default, **CentOS** and **RHEL** come with `firewalld`. You can check whether `firewalld` is running with:
 
 ```bash
 sudo firewall-cmd --state

@@ -45,6 +45,7 @@ On many flavors of Linux, you can install Snap with the built-in package manager
 *   CentOS 7: Yum
 *   CentOS 8: Dnf
 *   Debian: Apt
+*   RHEL 8: Dnf
 *   Ubuntu: Apt
 <!-- #packagemanagers -->
 
@@ -64,15 +65,35 @@ sudo apt install snapd
 ### Installing Snap with Dnf
 
 <!-- #packagemanagers -->
-Dnf is the package manager on **CentOS 8**.
+Dnf is the package manager on **CentOS 8** and **RHEL 8**.
 
-Use this Dnf command to install Git:
+#### Pre-Installing Snap on CentOS 8
+
+Before you can install Snap on **CentOS 8**, you first need to type these Dnf commands:
 
 ```bash
+sudo dnf update
+
 sudo dnf install epel-release
 
 sudo dnf upgrade
+```
 
+#### Pre-Installing Snap on RHEL 8
+
+Before you can install Snap on **RHEL 8**, you first need to type these Dnf commands:
+
+```bash
+sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+
+sudo dnf upgrade
+```
+
+#### Installing Snap on All Dnf Systems
+
+After taking pre-installation steps necessary for your particular Linux flavor, use this Dnf command to install Git:
+
+```bash
 sudo dnf install snapd
 ```
 
