@@ -42,6 +42,8 @@ On many flavors of Linux, you can install Git with the built-in package manager:
 *   CentOS 7: Yum
 *   CentOS 8: Dnf
 *   Debian: Apt
+*   Linux Mint: Apt
+*   OpenSUSE: Zypper
 *   RHEL 8: Dnf
 *   Ubuntu: Apt
 <!-- #packagemanagers -->
@@ -49,7 +51,7 @@ On many flavors of Linux, you can install Git with the built-in package manager:
 ### Installing Git with Apt
 
 <!-- #packagemanagers -->
-Apt is the package manager on **Debian** and **Ubuntu**.
+Apt is the package manager on **Debian**, **Linux Mint** and **Ubuntu**.
 
 Use these Apt commands to install Git:
 
@@ -83,4 +85,17 @@ Use these Yum commands to install Git:
 sudo yum update
 
 sudo yum install git
+```
+
+### Installing Git with Zypper
+
+Zypper is the package manager on **OpenSUSE**.
+
+<!-- #packagemanagers -->
+Use these Zypper commands to install Git:
+
+```bash
+sudo zypper refresh
+
+sudo zypper install git
 ```

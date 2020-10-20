@@ -45,6 +45,8 @@ On many flavors of Linux, you can install Snap with the built-in package manager
 *   CentOS 7: Yum
 *   CentOS 8: Dnf
 *   Debian: Apt
+*   Linux Mint: Apt
+*   OpenSUSE: Zypper
 *   RHEL 8: Dnf
 *   Ubuntu: Apt
 <!-- #packagemanagers -->
@@ -52,7 +54,21 @@ On many flavors of Linux, you can install Snap with the built-in package manager
 ### Installing Snap with Apt
 
 <!-- #packagemanagers -->
-Apt is the package manager on **Debian** and **Ubuntu**.
+Apt is the package manager on **Debian**, **Linux Mint** and **Ubuntu**.
+
+#### Pre-Installing Snap on Linux Mint 20
+
+Before you can install Snap on **Linux Mint 20**, you first need to type this command:
+
+```bash
+sudo rm /etc/apt/preferences.d/nosnap.pref
+```
+
+This step is not needed for Linux Mint 19.
+
+#### Installing Snap on All Apt Systems
+
+After taking pre-installation steps necessary for your particular Linux flavor, use these Apt commands to install Snap:
 
 Use these Apt commands to install Snap:
 
@@ -91,7 +107,7 @@ sudo dnf upgrade
 
 #### Installing Snap on All Dnf Systems
 
-After taking pre-installation steps necessary for your particular Linux flavor, use this Dnf command to install Git:
+After taking pre-installation steps necessary for your particular Linux flavor, use this Dnf command to install Snap:
 
 ```bash
 sudo dnf install snapd
@@ -102,7 +118,7 @@ sudo dnf install snapd
 Yum is the package manager on **CentOS 7**.
 
 <!-- #packagemanagers -->
-Use these Yum commands to install Git:
+Use these Yum commands to install Snap:
 
 ```bash
 sudo yum update
@@ -111,6 +127,38 @@ sudo yum install epel-release
 
 sudo yum install snapd
 ```
+
+### Installing Snap with Zypper
+
+Zypper is the package manager on **OpenSUSE**.
+
+<!-- #packagemanagers -->
+First, use one of these Zypper commands (note the slight variation based on the exact version of your system):
+
+```bash
+# For OpenSUSE Leap 15.0:
+sudo zypper addrepo --refresh https://download.opensuse.org/repositories/system:/snappy/openSUSE_Leap_15.0 snappy
+
+# For OpenSUSE Leap 15.1:
+sudo zypper addrepo --refresh https://download.opensuse.org/repositories/system:/snappy/openSUSE_Leap_15.1 snappy
+
+# For OpenSUSE Leap 15.2:
+sudo zypper addrepo --refresh https://download.opensuse.org/repositories/system:/snappy/openSUSE_Leap_15.2 snappy
+```
+
+Then use these Zypper commands to install Snap:
+
+```bash
+sudo zypper --gpg-auto-import-keys refresh
+
+sudo zypper dup --from snappy
+
+sudo yum install epel-release
+
+sudo yum install snapd
+```
+
+*Reference: [Installing snap on openSUSE](https://snapcraft.io/docs/installing-snap-on-opensuse)*
 
 ## Enabling Classic Support
 

@@ -17,9 +17,11 @@ Some examples we have experience with include:
 
 *   [CentOS](https://www.centos.org/) 7, version 7.6 or later. **Recommended.** (Please note: Snap is not available on CentOS 7.5 or earlier. Version 7.6 or later is required.)
 *   [CentOS](https://www.centos.org/) 8.
-*   [Debian](https://www.debian.org/) 10 (Buster)
-*   [RHEL](https://www.redhat.com/) 8
-*   [Ubuntu](https://ubuntu.com/) 20.04 LTS (Focal Fossa)
+*   [Debian](https://www.debian.org/) 10 (Buster).
+*   [Linux Mint](https://linuxmint.com/) 19
+*   [OpenSUSE](https://www.opensuse.org/) Leap 15.
+*   [RHEL](https://www.redhat.com/) 8.
+*   [Ubuntu](https://ubuntu.com/) 20.04 LTS (Focal Fossa).
 
 LOCKSS 2.0-alpha3 can probably be installed successfully on slightly different versions of the operating systems above with ease. Additionally, savvy users will likely succeed at installing LOCKSS 2.0-alpha3 on other Linux flavors.
 
