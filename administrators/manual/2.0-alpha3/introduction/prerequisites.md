@@ -5,6 +5,10 @@ title: System Prerequisites
 
 *This information applies to version 2.0-alpha3 of the LOCKSS system.*
 
+*   **Previous: [Introduction](.)**
+*   **Up: [Introduction](.)**
+*   **Next: [Security Considerations](security)**
+
 ## Machine
 
 The LOCKSS system runs on a **64-bit Linux host** (physical or virtual), with at least **4 cores** (8 or more preferable), at least **8 GB of memory** (16 GB or more preferable) and at least **50 GB of diskspace** (100 GB or more preferable).
