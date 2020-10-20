@@ -11,11 +11,11 @@ Unless otherwise noted, all ports are **TCP**.
 
 All ports in the 24600-24699 range should be considered reserved. The LCAP (LOCKSS polling and repair) port retains its historical value of 9729.
 
-*   5432: PostgreSQL
-*   8080: Pywb replay engine
-*   8983: Solr
+*   8080: Open Wayback replay engine
 *   9729: LCAP (LOCKSS polling and repair)
 *   24600: *reserved* (currently LOCKSS Configuration Service UI)
+*   24602: PostgreSQL
+*   24603: Solr
 *   24606: ActiveMQ
 *   24610: LOCKSS Repository Service - REST port
 *   24619: *reserved* (HDFS FS port)
@@ -33,3 +33,4 @@ All ports in the 24600-24699 range should be considered reserved. The LCAP (LOCK
 *   24673: *reserved*
 *   24674: ICP server **(UDP)**
 *   24680: LOCKSS Content Server (ServeContent)
+*   24681: PyWB Replay Engine
