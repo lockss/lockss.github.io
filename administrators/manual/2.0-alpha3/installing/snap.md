@@ -3,6 +3,10 @@ layout: page
 title: Installing Snap
 ---
 
+*   **Previous: [Downloading the LOCKSS Installer](lockss-installer)**
+*   **Up: [Installing the LOCKSS System](.)**
+*   **Next: [Installing MicroK8s](microk8s)**
+
 *This information applies to version 2.0-alpha3 of the LOCKSS system.*
 
 [Snap](https://snapcraft.io/) is a Linux package manager maintained by [Canonical](https://canonical.com/), makers of [Ubuntu](https://ubuntu.com/).

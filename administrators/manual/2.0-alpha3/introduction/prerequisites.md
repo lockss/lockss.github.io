@@ -3,11 +3,11 @@ layout: page
 title: System Prerequisites
 ---
 
-*This information applies to version 2.0-alpha3 of the LOCKSS system.*
-
 *   **Previous: [Introduction](.)**
 *   **Up: [Introduction](.)**
 *   **Next: [Security Considerations](security)**
+
+*This information applies to version 2.0-alpha3 of the LOCKSS system.*
 
 ## Machine
 

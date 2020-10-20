@@ -3,6 +3,10 @@ layout: page
 title: Checking the LOCKSS system
 ---
 
+*   **Previous: [Installing Snap](snap)**
+*   **Up: [Installing the LOCKSS System](.)**
+*   **Next: [Configuring the LOCKSS System](../configuring)**
+
 *This information applies to version 2.0-alpha3 of the LOCKSS system.*
 
 *FIXME*

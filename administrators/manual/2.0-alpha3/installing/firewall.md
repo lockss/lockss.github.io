@@ -3,6 +3,10 @@ layout: page
 title: Disabling Packet Filters
 ---
 
+*   **Previous: [Creating the `lockss` User](user)**
+*   **Up: [Installing the LOCKSS System](.)**
+*   **Next: [Installing Git](git)**
+
 *This information applies to version 2.0-alpha3 of the LOCKSS system.*
 
 Version 2.0-alpha3 of the LOCKSS system requires, in the short term, disabling any of the user-friendly wrappers around `iptables`, such as`firewalld` or `ufw`, which can interfere with Kubernetes' iptables manipulations. *See the [Security Considerations](../introduction/security) section for more about this short-term requirement.*

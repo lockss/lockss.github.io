@@ -3,6 +3,10 @@ layout: page
 title: Installing Microk8s
 ---
 
+*   **Previous: [Installing Snap](snap)**
+*   **Up: [Installing the LOCKSS System](.)**
+*   **Next: [Checking the System](check-sys)**
+
 *This information applies to version 2.0-alpha3 of the LOCKSS system.*
 
 ## Overview

@@ -3,6 +3,10 @@ layout: page
 title: Creating the lockss User
 ---
 
+*   **Previous: [Installing the LOCKSS System](.)**
+*   **Up: [Installing the LOCKSS System](.)**
+*   **Next: [Disabling Packet Filters](firewall)**
+
 *This information applies to version 2.0-alpha3 of the LOCKSS system.*
 
 The LOCKSS system runs under a system user named `lockss`, which is in a group named `lockss`, and which is capable of using `sudo`. The `lockss` user's password will be needed at various points during installation, both by explicit invocations of `sudo`, and in some cases by `microk8s` commands. *See the [Security Considerations](../introduction/security) section for more about this short-term requirement.*

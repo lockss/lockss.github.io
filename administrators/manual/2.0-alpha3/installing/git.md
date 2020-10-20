@@ -3,6 +3,10 @@ layout: page
 title: Installing Git
 ---
 
+*   **Previous: [Disabling Packet Filters](firewall)**
+*   **Up: [Installing the LOCKSS System](.)**
+*   **Next: [Downloading the LOCKSS Installer](lockss-installer)**
+
 *This information applies to version 2.0-alpha3 of the LOCKSS system.*
 
 ## Overview

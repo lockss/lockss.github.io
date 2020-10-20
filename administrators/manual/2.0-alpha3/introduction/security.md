@@ -3,11 +3,11 @@ layout: page
 title: Security Considerations
 ---
 
-*This information applies to version 2.0-alpha3 of the LOCKSS system.*
-
 *   **Previous: [System Prerequisites](prerequisites)**
 *   **Up: [Introduction](.)**
 *   **Next: [Installing the LOCKSS System](../installing)**
+
+*This information applies to version 2.0-alpha3 of the LOCKSS system.*
 
 **LOCKSS 2.0-alpha3 is a technology preview, not yet suitable for production environments.** Although the LOCKSS software itself and especially the LOCKSS peer-to-peer protocol remain as secure as ever, the operating environment for alpha versions of LOCKSS 2.0 is still being hardened. Please read about the security considerations below that are relevant as of LOCKSS 2.0-alpha3.
 
