@@ -51,6 +51,7 @@ On many flavors of Linux, you can install Snap with the built-in package manager
 *   Debian: Apt
 *   Linux Mint: Apt
 *   OpenSUSE: Zypper
+*   RHEL 7: Yum
 *   RHEL 8: Dnf
 *   Ubuntu: Apt
 <!-- #packagemanagers -->
@@ -81,6 +82,8 @@ sudo apt update
 
 sudo apt install snapd
 ```
+
+You can then proceed to the [next step](#enabling-classic-confinement).
 
 ### Installing Snap with Dnf
 
@@ -117,20 +120,44 @@ After taking pre-installation steps necessary for your particular Linux flavor, 
 sudo dnf install snapd
 ```
 
+You can then proceed to the [next step](#enabling-classic-confinement).
+
 ### Installing Snap with Yum
 
-Yum is the package manager on **CentOS 7**.
+Yum is the package manager on **CentOS 7** and **RHEL 7**.
 
-<!-- #packagemanagers -->
-Use these Yum commands to install Snap:
+#### Pre-Installing Snap on CentOS 7
+
+Before you can install Snap on **CentOS 7**, you first need to type these Yum commands:
 
 ```bash
 sudo yum update
 
 sudo yum install epel-release
+```
 
+#### Pre-Installing Snap on RHEL 7
+
+Before you can install Snap on **RHEL 7**, you first need to type these commands:
+
+```bash
+sudo rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+
+sudo subscription-manager repos --enable "rhel-*-optional-rpms" --enable "rhel-*-extras-rpms"
+```
+
+#### Installing Snap on All Yum Systems
+
+After taking pre-installation steps necessary for your particular Linux flavor, use this Yum command to install Snap:
+
+```bash
 sudo yum install snapd
 ```
+
+You can then proceed to the [next step](#enabling-classic-confinement).
+
+*References: [Installing snap on CentOS](https://snapcraft.io/docs/installing-snap-on-centos), [Installing snap on Red Hat Enterprise Linux (RHEL)
+](https://snapcraft.io/docs/installing-snap-on-red-hat)*
 
 ### Installing Snap with Zypper
 
@@ -162,11 +189,13 @@ sudo yum install epel-release
 sudo yum install snapd
 ```
 
-*Reference: [Installing snap on openSUSE](https://snapcraft.io/docs/installing-snap-on-opensuse)*
+You can then proceed to the [next step](#enabling-classic-confinement).
 
-## Enabling Classic Support
+*References: [Installing snap on openSUSE](https://snapcraft.io/docs/installing-snap-on-opensuse)*
 
-MicroK8s uses the so-called classic Snap format, which expects a top-level directory named `/snap` on your system. Nowadays this directory is located at `/var/lib/snapd/snap`. In order for Snap to install MicroK8s correctly, you need to create a symbolic link from `/snap` to `/var/lib/snapd/snap` with this command:
+## Enabling Classic Confinement
+
+MicroK8s uses Snap's so-called classic confinement model, which expects a top-level directory named `/snap` on your system. Nowadays this directory is located at `/var/lib/snapd/snap`. In order for Snap to install MicroK8s correctly, you need to create a symbolic link from `/snap` to `/var/lib/snapd/snap` with this command:
 
 ```bash
 sudo ln -s /var/lib/snapd/snap /snap
