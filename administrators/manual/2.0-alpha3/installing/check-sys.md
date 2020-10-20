@@ -9,9 +9,7 @@ title: Checking the LOCKSS system
 
 *This information applies to version 2.0-alpha3 of the LOCKSS system.*
 
-*FIXME*
-
-After [installing the LOCKSS system](index) and [downloading the LOCKSS Installer](installing/lockss-installer), prepare  the system for running by typing:
+After [installing the LOCKSS system](index), you can confirm the status of installed components by running:
 
 ```bash
     sudo scripts/check-sys
@@ -19,8 +17,9 @@ After [installing the LOCKSS system](index) and [downloading the LOCKSS Installe
 
 in the `lockss-installer` directory.
 
-The script will do its best to install any missing elements needed to run the LOCKSS cluster on the host machine. See the  [System Pre-Requisites](system-pre-requisites) document for required system elements.
+The script will do its best to check for any missing elements and permissions needed to run the LOCKSS cluster on the host machine.
 
-1.  Check for snap.d and warn if missing.
-1.  Check for microk8s and warn if missing
-1.  Check for a user `lockss` and create the `lockss` user and group if missing.
+1.  Check for snap.d
+1.  Check for microk8s
+1.  Check for a user `lockss`.
+1.  Check user `lockss` has appropriate group memberships and permissions.

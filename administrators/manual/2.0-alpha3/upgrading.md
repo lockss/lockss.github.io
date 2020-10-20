@@ -30,8 +30,8 @@ On the command line in the `lockss-installer` directory, type:
     sudo scripts/upgrade-alpha2-to-alpha3
 ```
 
-The script will perform a number of system-level changes and need to be root.
-
+The script will perform a number of system-level changes as root.
+It will not remove docker from your system but will remove any lockss system docker components.
 
 ## Re-Configure the System
 
