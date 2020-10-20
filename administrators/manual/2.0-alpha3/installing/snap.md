@@ -215,13 +215,30 @@ sudo systemctl enable --now snapd.socket
 
 Log out and back in again (or restart your system) to ensure Snap's paths are updated correctly.
 
+## Verifying Snap
+
+Snap offers a way to verify that things work correctly, by installing and running the `hello-world` Snap package. Type this Snap command:
+
+```bash
+sudo snap install hello-world
+```
+
+and then verify that this command:
+
+```bash
+hello-world
+```
+
+outputs the greeting `Hello World!`.
+
 ## Configuring Snap Updates
 
-The snap daemon will automatically update any installed snaps and by default it will check every four hours for updates.  
-For stability, you should adjust the frequency at which snap checks and updates your snaps. 
-To adjust your update schedule to a year use a refresh hold:
- 
+The snap daemon will automatically update any installed Snap packages and by default it will check every four hours for updates.
+
+For stability, you should adjust the frequency at which Snap checks and updates your Snap packages.
+
+To adjust your update schedule to a year (the maximum allowed), use a refresh hold:
+
 ```bash
-  sudo snap set system refresh.hold="$(date --date='364 days' +%Y-%m-%dT%H:%M:%S%:z)"
-  sudo snap get system refresh.hold
-```	
+sudo snap set system refresh.hold="$(date --date='364 days' +%Y-%m-%dT%H:%M:%S%:z)"
+```

@@ -15,7 +15,7 @@ The LOCKSS system runs on a **64-bit Linux host** (physical or virtual), with at
 
 ## Operating System
 
-The LOCKSS system requires a **64-bit Linux** host compatible with [**Systemd**](https://www.freedesktop.org/wiki/Software/systemd/), [**Snap**](https://snapcraft.io/docs/installing-snapd), [**MicroK8s**](https://microk8s.io/).
+The LOCKSS system requires a **64-bit Linux** host compatible with [**Systemd**](https://www.freedesktop.org/wiki/Software/systemd/), [**Snap**](https://snapcraft.io/docs/installing-snapd) and [**MicroK8s**](https://microk8s.io/).
 
 Some examples we have experience with include:
 
