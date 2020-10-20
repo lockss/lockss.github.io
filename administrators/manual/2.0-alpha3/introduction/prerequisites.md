@@ -11,11 +11,11 @@ title: System Prerequisites
 
 ## Machine
 
-The LOCKSS system runs on a **64-bit Linux host** (physical or virtual), with at least **4 cores** (8 or more preferable), at least **8 GB of memory** (16 GB or more preferable) and at least **50 GB of diskspace** (100 GB or more preferable).
+The LOCKSS system runs on a **64-bit Linux host** (physical or virtual), with at least **4 cores** (8 or more preferable), at least **8 GB of memory** (16 GB or more preferable) and at least **50 GB of disk space** (100 GB or more preferable).
 
 ## Operating System
 
-The LOCKSS system requires a **64-bit Linux** host compatible with [**Systemd**](https://www.freedesktop.org/wiki/Software/systemd/), [**Snap**](https://snapcraft.io/docs/installing-snapd), and the lightweight Kubernetes runtime [**MicroK8s**](https://microk8s.io/).
+The LOCKSS system requires a **64-bit Linux** host compatible with [**Systemd**](https://www.freedesktop.org/wiki/Software/systemd/), [**Snap**](https://snapcraft.io/docs/installing-snapd), [**MicroK8s**](https://microk8s.io/).
 
 Some examples we have experience with include:
 
