@@ -32,4 +32,4 @@ title: LOCKSS 2.0-alpha3 System Manual
         1.  [**Replaying Web Content with Pywb**](using/pywb)
 1.  [**Appendix**](appendix)
     1.  [**Network Ports**](appendix/ports)
-    1.  [**Using Microk8s**](appendix/microk8s)
+    1.  [**Using MicroK8s**](appendix/microk8s)

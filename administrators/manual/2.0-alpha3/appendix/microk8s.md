@@ -1,15 +1,15 @@
 ---
 layout: page
-title: Using Microk8s
+title: Using MicroK8s
 ---
 
 *This information applies to version 2.0-alpha3 of the LOCKSS system.*
 
 ## Overview
 
-This document will provide instructions to using Microk8s and Kubernetes commandline to access your cluster.
+This document will provide instructions to using MicroK8s and Kubernetes commandline to access your cluster.
 
-## Using Microk8s
+## Using MicroK8s
 Typing microk8s will give a list of all commands:
 
 ```bash

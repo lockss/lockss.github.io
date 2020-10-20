@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Installing Microk8s
+title: Installing MicroK8s
 ---
 
 *   **Previous: [Installing Snap](snap)**
@@ -11,13 +11,13 @@ title: Installing Microk8s
 
 ## Overview
 
-[Microk8s](https://microk8s.io/) is a lightweight Kubernetes environment. ([Kubernetes](https://kubernetes.io/) is a system for managing and deploying containerized applications like the LOCKSS system.) This page will walk you through the initial installation of Microk8s.
+[MicroK8s](https://microk8s.io/) is a lightweight Kubernetes environment. ([Kubernetes](https://kubernetes.io/) is a system for managing and deploying containerized applications like the LOCKSS system.) This page will walk you through the initial installation of MicroK8s.
 
 The LOCKSS system requires **MicroK8s 1.18**.
 
 All the commands on this page should be run as the `lockss` user.
 
-## Installing Microk8s
+## Installing MicroK8s
 
 ```bash
 sudo snap install microk8s --classic --channel=1.18/stable
@@ -87,12 +87,12 @@ dns: disabled
 
 #### Additional documentation:
 
-*   [Using Microk8s](../appendix/using-microk8s)
+*   [Using MicroK8s](../appendix/using-microk8s)
 
-##### Microk8s References
+##### MicroK8s References
 
 *   [Complete MicroK8s Documentation](https://microk8s.io/docs)
-*   [Microk8s Commands](https://microk8s.io/docs/commands) 
+*   [MicroK8s Commands](https://microk8s.io/docs/commands) 
 *   [Troubleshooting Guide](https://microk8s.io/docs/troubleshooting)
 
 #### Kubectl References

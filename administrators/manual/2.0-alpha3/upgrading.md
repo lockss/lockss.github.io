@@ -7,8 +7,8 @@ title: Upgrading From LOCKSS 2.0-alpha2
 
 If you have been using version 2.0-alpha2 of the LOCKSS system, an upgrade path has been provided to version 2.0-alpha3. 
 
-## Install Microk8s
-The LOCKSS daemon no longer runs in Docker Swarm or requires Docker.  It now runs in a packaged version of kubernetes, **Microk8s**. You will need to install Microk8s before updating. See [installing the LOCKSS system](installing/microk8s).
+## Install MicroK8s
+The LOCKSS daemon no longer runs in Docker Swarm or requires Docker.  It now runs in a packaged version of kubernetes, **MicroK8s**. You will need to install MicroK8s before updating. See [installing the LOCKSS system](installing/microk8s).
 
 ## Update `lockss-installer`
 
