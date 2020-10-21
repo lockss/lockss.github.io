@@ -19,13 +19,13 @@ The LOCKSS system requires a **64-bit Linux** host compatible with [**Systemd**]
 
 Some examples we have experience with include:
 
-*   [CentOS](https://www.centos.org/) 8, 7 (7.6 or later). **Recommended.** *Please note: Snap is not available on CentOS 7.5 or earlier; version 7.6 or later is required.*
-*   [Debian](https://www.debian.org/) 10 (Buster).
-*   [Linux Mint](https://linuxmint.com/) 19
-*   [OpenSUSE](https://www.opensuse.org/) Leap 15.
-*   [RHEL](https://www.redhat.com/) 8, 7.
-*   [Ubuntu](https://ubuntu.com/) 20.04 LTS (Focal Fossa).
+*   [CentOS](https://www.centos.org/) 8.2, 8.1, 8.0, 7.8, 7.6. **Recommended.** *Please note: Snap is not available on CentOS 7.5 or earlier; version 7.6 or later is required.*
+*   [Debian](https://www.debian.org/) 10.6.
+*   [Linux Mint](https://linuxmint.com/) 19.
+*   [OpenSUSE](https://www.opensuse.org/) Leap 15.2.
+*   [RHEL](https://www.redhat.com/) 8.2, 7.8.
+*   [Ubuntu](https://ubuntu.com/) 20.04 LTS, 19.10, 19.04, 18.10, 18.04 LTS
 
-LOCKSS 2.0-alpha3 can probably be installed successfully on slightly different versions of the operating systems above with ease. Additionally, savvy users will likely succeed at installing LOCKSS 2.0-alpha3 on other Linux flavors.
+LOCKSS 2.0-alpha3 can probably be installed successfully on slightly different versions of the operating systems above, for instance CentOS 7.7. Additionally, savvy users will likely succeed at installing LOCKSS 2.0-alpha3 on other Linux flavors.
 
 *Currently, we do not recommend [Arch Linux](https://www.archlinux.org/) or [Fedora Linux](https://getfedora.org/) 32, because MicroK8s 1.18.9, the currently available version in the required 1.18 series, does not seem to work on these platforms as documented. This highlights an inconvenience of the default Snap-only distribution of MicroK8s that we hope to address in 2.0-alpha4.*

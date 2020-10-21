@@ -68,14 +68,11 @@ sudo apt install git
 
 ### Installing Git with Dnf
 
-<!-- #packagemanagers -->
 Dnf is the package manager on **CentOS 8** and **RHEL 8**.
 
 Use this Dnf command to install Git:
 
 ```bash
-sudo dnf update
-
 sudo dnf install git
 ```
 
@@ -83,12 +80,9 @@ sudo dnf install git
 
 Yum is the package manager on **CentOS 7** and **RHEL 7**.
 
-<!-- #packagemanagers -->
-Use these Yum commands to install Git:
+Use this Yum commands to install Git:
 
 ```bash
-sudo yum update
-
 sudo yum install git
 ```
 
