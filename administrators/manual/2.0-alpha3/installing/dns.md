@@ -3,6 +3,10 @@ layout: page
 title: Configuring DNS
 ---
 
+*   **Previous: [Installing MicroK8s](microk8s)**
+*   **Up: [Installing the LOCKSS System](.)**
+*   **Next: [Checking the LOCKSS System](check-sys)**
+
 *This information applies to version 2.0-alpha3 of the LOCKSS system.*
 
 After MicroK8s is up and running, adjustments need to be made to DNS processing in MicroK8s, which is handled by a MicroK8s component named CoreDNS. By default, CoreDNS is configured to use Google's nameservers; this is often undesirable in an institutional network, and unworkable for LOCKSS hosts with no public DNS records.

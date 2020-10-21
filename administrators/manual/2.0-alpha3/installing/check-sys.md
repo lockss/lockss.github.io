@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Checking the LOCKSS system
+title: Checking the LOCKSS System
 ---
 
-*   **Previous: [Installing Snap](snap)**
+*   **Previous: [Configuring DNS](dns)**
 *   **Up: [Installing the LOCKSS System](.)**
 *   **Next: [Configuring the LOCKSS System](../configuring)**
 

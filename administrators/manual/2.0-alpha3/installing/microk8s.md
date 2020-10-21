@@ -5,7 +5,7 @@ title: Installing MicroK8s
 
 *   **Previous: [Installing Snap](snap)**
 *   **Up: [Installing the LOCKSS System](.)**
-*   **Next: [Checking the System](check-sys)**
+*   **Next: [Configuring DNS](dns)**
 
 *This information applies to version 2.0-alpha3 of the LOCKSS system.*
 
