@@ -3,6 +3,10 @@ layout: page
 title: Releases
 ---
 
+## Stable
+
+*   [LOCKSS Daemon 1.74.10](https://github.com/lockss/lockss-daemon/releases/tag/release-candidate_1-74-b10) (2020-06-29)
+
 ## Upcoming
 
 *   LOCKSS 2.0-alpha3
@@ -13,10 +17,6 @@ title: Releases
 *   [LOCKSS 2.0-alpha2](2.0-alpha2) (2020-02-06)
 *   [LOCKSS 2.0-alpha1](2.0-alpha1) (2019-05-13)
 *   [LOCKSS 2.0-alpha technology preview](2.0-alpha-preview) (2019-04-05)
-
-## Stable
-
-*   [LOCKSS Daemon 1.74.10](https://github.com/lockss/lockss-daemon/releases/tag/release-candidate_1-74-b10) (2020-06-29)
 
 ## Archive
 

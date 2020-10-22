@@ -9,9 +9,9 @@ The LOCKSS system consists of these components:
 
 *   Core components
 
-    *   [LOCKSS Repository Service](https://github.com/lockss/laaws-repository-service): responsible for object storage
-
     *   [LOCKSS Configuration Service](https://github.com/lockss/laaws-configservice): responsible for centralizing configuration and state data for the other components of the system
+
+    *   [LOCKSS Repository Service](https://github.com/lockss/laaws-repository-service): responsible for object storage
 
     *   [LOCKSS Poller Service](https://github.com/lockss/laaws-poller): responsible for operating the peer-to-peer LOCKSS audit-and-repair protocol
 
