@@ -62,7 +62,7 @@ mkdir -p ~/.kube
 
 sudo chown -f -R lockss ~/.kube
 
-microk8s config > ~/.kube/config
+microk8s config --use-loopback > ~/.kube/config
 ```
 
 ## Starting MicroK8s
