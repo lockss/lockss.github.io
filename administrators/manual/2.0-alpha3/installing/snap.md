@@ -159,14 +159,14 @@ Zypper is the package manager on **OpenSUSE**.
 First, use one of these Zypper commands (note the slight variation based on the exact version of your system):
 
 ```bash
-# For OpenSUSE Leap 15.0:
-sudo zypper addrepo --refresh https://download.opensuse.org/repositories/system:/snappy/openSUSE_Leap_15.0 snappy
+# For OpenSUSE Leap 15.2:
+sudo zypper addrepo --refresh https://download.opensuse.org/repositories/system:/snappy/openSUSE_Leap_15.2 snappy
 
 # For OpenSUSE Leap 15.1:
 sudo zypper addrepo --refresh https://download.opensuse.org/repositories/system:/snappy/openSUSE_Leap_15.1 snappy
 
-# For OpenSUSE Leap 15.2:
-sudo zypper addrepo --refresh https://download.opensuse.org/repositories/system:/snappy/openSUSE_Leap_15.2 snappy
+# For OpenSUSE Leap 15.0:
+sudo zypper addrepo --refresh https://download.opensuse.org/repositories/system:/snappy/openSUSE_Leap_15.0 snappy
 ```
 
 Then use these Zypper commands to install Snap:
@@ -176,9 +176,7 @@ sudo zypper --gpg-auto-import-keys refresh
 
 sudo zypper dup --from snappy
 
-sudo yum install epel-release
-
-sudo yum install snapd
+sudo zypper install snapd
 ```
 
 You can then proceed to the [next step](#enabling-classic-confinement).
