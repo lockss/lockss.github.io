@@ -19,9 +19,21 @@ All the commands on this page should be run as the `lockss` user.
 
 ## Installing MicroK8s
 
+To install the MicroK8s Snap package, run this Snap command:
+
 ```bash
 sudo snap install microk8s --classic --channel=1.18/stable
 ```
+
+### Troubleshooting
+
+In some flavors of Linux (including Debian 9), sometimes the above command fails. Try running the following command first:
+
+```
+sudo snap install core
+```
+
+then retry installing the MicroK8s Snap package.
 
 ## Joining the `microk8s` Group
 
