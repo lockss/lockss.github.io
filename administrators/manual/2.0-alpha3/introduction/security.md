@@ -5,7 +5,7 @@ title: Security Considerations
 
 *   **Previous: [System Prerequisites](prerequisites)**
 *   **Up: [Introduction](.)**
-*   **Next: [Installing the LOCKSS System](../installing)**
+*   **Next: [Upgrading From LOCKSS 2.0-alpha2](upgrading)**
 
 *This information applies to version 2.0-alpha3 of the LOCKSS system.*
 

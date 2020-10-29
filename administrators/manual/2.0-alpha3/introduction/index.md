@@ -17,3 +17,4 @@ This section of the manual is an introduction to LOCKSS 2.0-alpha3.
 
 1.  [**System Prerequisites**](prerequisites)
 1.  [**Security Considerations**](security)
+1.  [**Upgrading From LOCKSS 2.0-alpha2**](upgrading)
