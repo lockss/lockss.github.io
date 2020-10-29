@@ -11,7 +11,7 @@ title: Configuring DNS
 
 After MicroK8s is up and running, adjustments need to be made to DNS processing in MicroK8s, which is handled by a MicroK8s component named CoreDNS. By default, CoreDNS is configured to use Google's nameservers; this is often undesirable in an institutional network, and unworkable for LOCKSS hosts with no public DNS records.
 
-This section will reconfigure CoreDNS to use the same nameservers configured for normal use on the host, i.e., those specified in `/etc/resolv.conf`. This can be done automatically as long as `/etc/resolv.conf` does not contain any loopback adresses; if it does, you will need to enter the IP addresses of the nameservers.
+This section will reconfigure CoreDNS to use the same name servers configured for normal use on the host, i.e., those specified in `/etc/resolv.conf`. This can be done automatically as long as `/etc/resolv.conf` does not contain any loopback adresses; if it does, you will need to enter IP addresses of upstream name servers.
 
 ## Configuring DNS
 
@@ -20,7 +20,7 @@ From the `lockss-installer` directory and as the `lockss` user, run the followin
 ```bash
 scripts/configure-dns
 ```
-You may be prompted for the `lockss` password for `sudo`, and if the script detects that `/etc/resolv.conf` contains loopback addresses, you will be prompted for a semicolon-separated list of IP addresses of upstream DNS servers that MicroK8s should use. Enter up to 3 non-loopback addresses from `/etc/resolv.conf`.
+You may be prompted for the `lockss` password for `sudo`, and if the script detects that `/etc/resolv.conf` contains loopback addresses, you will be prompted for a semicolon-separated list of IP addresses of upstream DNS servers that MicroK8s should use. Enter up to 3 non-loopback addresses from `/etc/resolv.conf`. Please note that IPv6 addresses do not currently work if entered at this prompt.
 
 ## Example 1
 
