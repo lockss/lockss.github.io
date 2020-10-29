@@ -13,7 +13,7 @@ After MicroK8s is up and running, adjustments need to be made to DNS processing 
 
 This section will reconfigure CoreDNS to use the same name servers configured for normal use on the host, i.e., those specified in `/etc/resolv.conf`. This can be done automatically as long as `/etc/resolv.conf` does not contain any loopback adresses; if it does, you will need to enter IP addresses of upstream name servers.
 
-## Configuring DNS
+## Configuring CoreDNS
 
 From the `lockss-installer` directory and as the `lockss` user, run the following script:
 
