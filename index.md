@@ -11,16 +11,16 @@ A complete list of our guides may be found in our [Administrators](administrator
 
 ## Classic LOCKSS Documentation
 
-The current [stable release](administrators/index#stable) of the LOCKSS daemon is 1.74.10, released on 2020-06-29.
+The current [stable release](administrators/index#stable) of the LOCKSS daemon is **LOCKSS 1.74.10**, released on 2020-06-29.
 
 *   For the complete guide, please see the [Classic LOCKSS System Manual](administrators/classic-lockss/)
 
 ## LOCKSS 2.0 Documentation
 
-The current [development release](administrators/index#development) of LOCKSS 2.0 is LOCKSS 2.0-alpha2, released on 2020-02-06.
+The current development release of LOCKSS 2.0 is **LOCKSS 2.0-alpha3**, released on 2020-10-29.
 
-*   For release notes and information about LOCKSS 2.0-alpha2, please see the [LOCKSS 2.0-alpha2](administrators/releases/2.0-alpha2) release page.
-*   For installation and configuration information, please see the [LOCKSS 2.0 System manual](administrators/manual/)
+*   For release notes and information about LOCKSS 2.0-alpha3, please see the [LOCKSS 2.0-alpha3](administrators/releases/2.0-alpha3) release page.
+*   For installation and configuration information, please see the [LOCKSS 2.0-alpha3 System Manual](administrators/manual/2.0-alpha3)
 
 ## LOCKSS Network Documentation
 

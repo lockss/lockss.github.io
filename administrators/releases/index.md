@@ -9,11 +9,12 @@ title: Releases
 
 ## Upcoming
 
-*   LOCKSS 2.0-alpha3
+*   LOCKSS 2.0-alpha4
 *   LOCKSS Daemon 1.74.11
 
 ## Development
 
+*   [LOCKSS 2.0-alpha3](2.0-alpha3) (2020-10-29)
 *   [LOCKSS 2.0-alpha2](2.0-alpha2) (2020-02-06)
 *   [LOCKSS 2.0-alpha1](2.0-alpha1) (2019-05-13)
 *   [LOCKSS 2.0-alpha technology preview](2.0-alpha-preview) (2019-04-05)

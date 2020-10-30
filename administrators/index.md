@@ -16,8 +16,6 @@ title: Administrators
 
 ## News
 
+*   **2020-10-29** - **LOCKSS 2.0-alpha3 Available for Testing** - The LOCKSS Program is pleased to announce that LOCKSS 2.0-alpha3 is now available for testing. [**Read more...**](releases/2.0-alpha3)
+
 *   **2020-02-06** - **LOCKSS 2.0-alpha2 Available for Testing** - The LOCKSS Program is pleased to announce that LOCKSS 2.0-alpha2 is now available for testing. [**Read more...**](releases/2.0-alpha2)
-
-*   **2019-05-13** - **LOCKSS 2.0-alpha1 Available for Testing** - The LOCKSS Program is pleased to announce that LOCKSS 2.0-alpha1 is now available for testing. [**Read more...**](releases/2.0-alpha1)
-
-*   **2019-04-05** - **LOCKSS 2.0-Alpha Technology Preview** - At the 2019 LOCKSS Alliance Meeting, the LOCKSS engineering team presented a Technology Preview of the upcoming LOCKSS 2.0-alpha1 release. [**Read more...**](releases/2.0-alpha-preview)
