@@ -14,7 +14,7 @@ The Atypon publishing platform requires librarians to register the Global LOCKSS
 * American Physiological Society
 * American Psychiatric Association Publishing
 * American Public Health Association
-* American Roentgen Ray Society
+* American Roentgen Ray Society  <!--Not Preserved by LOCKSS. RT3856.-->
 * American Society of Clinical Oncology
 * American Speech-Language-Hearing Association
 * British Institute of Radiology
