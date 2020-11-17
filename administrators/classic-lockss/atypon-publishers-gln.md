@@ -10,17 +10,15 @@ The Atypon publishing platform requires librarians to register the Global LOCKSS
 <!--tdbout -R -t publisher -Q 'plugin ~ "typon"' tdb/prod/*.tdb | sort -u #add TnF + Edinburgh)-->
 
 * Accreditation Council for Graduate Medical Education
-* American Dental Society of Anesthesiology
 * American Institute of Aeronautics and Astronautics
 * American Physiological Society
-* American Podiatric Medical Association
 * American Psychiatric Association Publishing
 * American Public Health Association
+* American Roentgen Ray Society
 * American Society of Clinical Oncology
 * American Speech-Language-Hearing Association
 * British Institute of Radiology
 * Edinburgh University Press
-* Federation of American Societies for Experimental Biology
 * Future Medicine
 * Future Science
 * Inderscience
@@ -40,16 +38,17 @@ The Atypon publishing platform requires librarians to register the Global LOCKSS
 <!--tdbout -D -t plugin -Q 'plugin ~ "typon"' tdb/prod/*.tdb | sort -u-->
 
 * Allen Press
-* American Roentgen Ray Society
 * BioOne
 * Emerald Group Publishing
 * Endocrine Society
 * MultiScience
-* Radiological Society of North America
 
 ### Past publishers -- before November 2020:
 
 * American Meteorological Society
+* American Dental Society of Anesthesiology
+* American Podiatric Medical Association
 * Endocrine Society
+* Federation of American Societies for Experimental Biology
 * HBKU Press
 
