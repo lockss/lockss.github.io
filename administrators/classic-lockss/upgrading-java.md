@@ -3,9 +3,11 @@ layout: page
 title: Java 8 Upgrade Instructions
 ---
 
+
+
 To get back to the Classic LOCKSS Homepage use [this link](./index.md)
 
-Java 8 Upgrade Instructions:
+## Java 8 Upgrade Instructions:
 
 1. Login as root (or gain root privilege)
 
