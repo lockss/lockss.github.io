@@ -37,4 +37,5 @@ title: Classic LOCKSS System Manual
    3. [Software Overview and Config (external link)](http://www.adpn.org/wiki/LOCKSS_Software)
    4. [Security](/security-practices)
    5. [LOCKSS Content Audit Protocol (external link)](http://documents.clockss.org/index.php?title=LOCKSS:_Polling_and_Repair_Protocol)
+   6. [Upgrading LOCKSS BOX to Java 8](upgrading-java)
 
