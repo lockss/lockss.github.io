@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Java 8 Upgrade Instructions:
+title: Java 8 Upgrade Instructions
 ---
 
 To get back to the Classic LOCKSS Homepage use [this link](./index.md)
