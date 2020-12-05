@@ -42,7 +42,9 @@ https://github.com/pkp/ojs/pull/2215/commits/22f1d220. The 3.1.2 GitHub mileston
 https://github.com/pkp/pkp-lib/milestone/32.
 
 To enable preservation:
-1. In the Website Settings section, on the Archiving tab, check the boxes to "Enable LOCKSS" &/or "Enable 
+1. View the Website Setting section. For reference see: 
+https://docs.pkp.sfu.ca/learning-ojs/en/settings-distribution#archiving
+2. On the Archiving tab, check the boxes to "Enable LOCKSS" &/or "Enable 
 CLOCKSS" as desired.
-2. To review the manifest page, click on "Publisher Manifest" next to the check boxes. The resulting page 
-should show a listing of your journal issues.
+2. To review the manifest page, click on "Publisher Manifest" next to the check boxes. 
+The resulting page should show a listing of your journal issues.
