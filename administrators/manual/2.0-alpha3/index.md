@@ -3,8 +3,6 @@ layout: page
 title: LOCKSS 2.0-alpha3 System Manual
 ---
 
-# Version 2.0-alpha3 of the LOCKSS system has not yet been released. This page is under construction.
-
 *   **Up: [LOCKSS System Manual](..)**
 *   **Next: [Introduction](introduction)**
 
