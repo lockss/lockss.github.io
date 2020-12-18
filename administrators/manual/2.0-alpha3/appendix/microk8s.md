@@ -82,7 +82,7 @@ To check the status of your cluster and which addons are enabled.
 	storage: disabled
 ```
 ### Starting and Stopping
-MicroK8s will continue running until you decide to stop it. You can stop top MicroK8s and its services by typing the command:
+MicroK8s will continue running until you decide to stop it. You can stop MicroK8s and its services by typing the command:
 
 ```bash
   microk8s stop
@@ -218,7 +218,7 @@ MicroK8s bundles its own version of kubectl for accessing Kubernetes. Use it to 
 
 ```bash
 microk8s kubectl get pods 
-microk8s kkubectl logs <podname>
+microk8s kubectl logs <podname>
 ```
 
 ### To describe a running pod:

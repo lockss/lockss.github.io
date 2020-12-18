@@ -5,7 +5,7 @@ title: Configuring the LOCKSS System
 
 *This information applies to version 2.0-alpha3 of the LOCKSS system.*
 
-After [installing the LOCKSS system](installing) and [downloading the LOCKSS Installer](installing/lockss-installer), configure the system with the configure script:
+After [installing the LOCKSS system](installing), configure the system with the configure script:
 
     scripts/configure-lockss
 
@@ -20,9 +20,9 @@ The questions are:
 1.  `Is this machine behind NAT?:` Enter `Y` if the machine is not publicly routable but will be accessible via network address translation (NAT), or `N` otherwise.
     1.  `External IP address for NAT:` If you answered `Y` to the previous question, enter the publicly routable IP address of the NAT router.
 1.  `Initial subnet for admin UI access:` Enter a semicolon-separated list of subnets in CIDR or mask notation that should initially have access to the Web user interfaces of the system. The access list can be modified later via the UI.
-1.  `LOCKSS subnet for container access:` This is calculated from the microk8s node and should not need to be modified in a standard installation.
+1.  `LOCKSS subnet for container access:` This is calculated from the MicroK8s node and should not need to be modified in a standard installation.
 1.  `LCAP V3 protocol port:` Enter the port on the publicly routable IP address that will be used to receive LCAP (LOCKSS polling and repair) traffic. Historically, most LOCKSS nodes use 9729.
-1.  `PROXY port:` Port for the LOCKSS content prosy.  Accept the default - it can be changed later if necessary.
+1.  `PROXY port:` Port for the LOCKSS content proxy.  Accept the default - it can be changed later if necessary.
 1.  `Mail relay for this machine:` Hostname of this machine's outgoing mail server.
 1.  `Does mail relay <mailhost> need user & password`: Enter `Y` if the outgoing mail server requires password authentication, `N` otherwise.
     1. `User for <mailhost>:` If you answered `Y` to the outgoing mail server password authentication question, enter the username for the mail server.
@@ -32,11 +32,11 @@ The questions are:
 1.  `Configuration URL:` Enter the URL of the LOCKSS network configuration file. If you are not running your own LOCKSS network, use `http://props.lockss.org:8001/demo/lockss.xml`, the configuration file for a demo network set up for LOCKSS 2.0 pre-release testing.
 1.  `Configuration proxy (host:port):` If a proxy server is required to reach the configuration server, enter its host:port here, otherwise leave this blank.
 1.  `Preservation group(s):` Enter a semicolon-separated list of preservation network identifiers. If you are not joining an existing network or running your own, enter `demo`, the network identifier for the demo network set up for LOCKSS 2.0 pre-release testing.
-1.  `Content data storage directory:` Enter the full path of a directory to use as the root of the main storage area of the LOCKSS system. This is where preserved content will be stored, along with several databases; it's the analog of `/cache0` in the classic LOCKSS system.
+1.  `Content data storage directory:` Enter the full path of a directory to use as the root of the main storage area of the LOCKSS system. This is where preserved content will be stored, along with several databases; it is the analog of `/cache0` in the classic LOCKSS system.
 1.  `Use additional directories for content storage?:` If you want to use more than one filesystem to store preserved content answer `Y`.
-    1.  `Enter path to additional content storage directory <n> (q to quit):` If you entered `Y` to `additional directories` you will be prompted repeatedly for those paths; enter them one at a time, then enter `q` when done.
-1.  `Service logs directory:` Defaults to the content data storage directory; enter a different path if you want to put the logs elsewhere. *In the classic LOCKSS system this was `/var/log/lockss`, but now there will be a set of subdirs, one for each component service.*.
-1.  `Temporary storage directory:` Defaults to the content data storeage directory. If that directory is remote (e.g., NFS), performance can be improved by supplying a local disk directory here. Don't use a RAM-based tmpfs; in some circumstances a substantial amount of temp space (10s of GB) may be needed.
+    1.  `Enter path to additional content storage directory <n> (q to quit):` If you entered `Y` to `Use additional directories` you will be prompted repeatedly for those paths; enter them one at a time, then enter `q` when done.
+1.  `Service logs directory:` Defaults to the content data storage directory; enter a different path if you want to put the logs elsewhere. *In the classic LOCKSS system this was `/var/log/lockss`, but now there will be a set of subdirectories, one for each component service.*
+1.  `Temporary storage directory:` Defaults to the content data storage directory. If that directory is remote (e.g., NFS), performance can be improved by supplying a local disk directory here. Don't use a RAM-based tmpfs; in some circumstances a substantial amount of temporary space (tens of GB) may be needed.
 1.  `User name for web UI administration:` Enter a username for the primary administrative user in the LOCKSS system's Web user interfaces.
 1.  `Password for web UI administration user <uiuser>:` Enter a password for the primary administrative user.
 1.  `Password for web UI administration user <uiuser> (again):` Re-enter the password for the primary administrative user (if the two passwords do not match, the password will be asked again).

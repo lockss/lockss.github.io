@@ -13,8 +13,8 @@ title: Security Considerations
 
 ## Networking
 
-LOCKSS 2.0-alpha3 is the first version of the LAAWS (LOCKSS Architected As Web Services) initiative deployed in a Kubernetes environment. The Kubernetes networking model is sophisticated and requires complex interactions with the host operating system's network and firewall stacks. LOCKSS 2.0-alpha3, for the purposes of demonstrating basic functionality, requires disabling any of the user-friendly wrappers around `iptables`, such as`firewalld` or `ufw`, which can interfere with Kubernetes' `iptables` manipulations. Better integration with these firewall wrappers will arrive in LOCKSS 2.0-alpha4.
+LOCKSS 2.0-alpha3 is the first version of the LAAWS (LOCKSS Architected As Web Services) initiative deployed in a Kubernetes environment. The Kubernetes networking model is sophisticated and requires complex interactions with the host operating system's network and firewall stacks. LOCKSS 2.0-alpha3, for the purposes of demonstrating basic functionality, requires disabling any of the user-friendly wrappers around `iptables`, such as `firewalld` or `ufw`, which can interfere with Kubernetes' `iptables` manipulations. Better integration with these firewall wrappers will arrive in LOCKSS 2.0-alpha4.
 
 ## System Privileges
 
-Likewise, to demonstrate basic functionality, LOCKSS 2.0-alpha3 runs as a dedicated `lockss` system user lwith `sudo` privileges. This requirement will be relaxed in future versions as we integrate better with the underlying operating system.
+Likewise, to demonstrate basic functionality, LOCKSS 2.0-alpha3 runs as a dedicated `lockss` system user with `sudo` privileges. This requirement will be relaxed in future versions as we integrate better with the underlying operating system.

@@ -17,7 +17,7 @@ Although there is an upgrade path from LOCKSS 2.0-alpha2, [LOCKSS 2.0-alpha3](..
 
 ## Upgrade Path
 
-If you intend to upgrade a LOCKSS 2.0-apha2 system, please read this section.
+If you intend to upgrade a LOCKSS 2.0-alpha2 system, please read this section.
 
 ### Updating the LOCKSS Installer
 
@@ -46,7 +46,7 @@ The LOCKSS system's containers are no longer orchestrated by Docker Swarm and no
 
 ### Modifying the Environment
 
-In order for LOCKSS 20.-alpha3 to work properly, you will need to disable frontends to `iptables` like `firewalld` or `ufw`, and configure MicroK8s to use DNS in a way that avoids loopback addresses. See [Disabling Packet Filters](firewall) and [Configuring DNS](../installing/dns) for details.
+In order for LOCKSS 2.0-alpha3 to work properly, you will need to disable frontends to `iptables` like `firewalld` or `ufw`, and configure MicroK8s to use DNS in a way that avoids loopback addresses. See [Disabling Packet Filters](../installing/firewall) and [Configuring DNS](../installing/dns) for details.
 
 ### Reconfiguring the System
 

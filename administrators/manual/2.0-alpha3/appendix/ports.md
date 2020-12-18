@@ -11,7 +11,7 @@ Unless otherwise noted, all ports are **TCP**.
 
 All ports in the 24600-24699 range should be considered reserved. The LCAP (LOCKSS polling and repair) port retains its historical value of 9729.
 
-*   8080: Open Wayback replay engine
+*   8080: Pywb or OpenWayback replay engine
 *   9729: LCAP (LOCKSS polling and repair)
 *   24600: *reserved* (currently LOCKSS Configuration Service UI)
 *   24602: PostgreSQL
@@ -33,4 +33,5 @@ All ports in the 24600-24699 range should be considered reserved. The LCAP (LOCK
 *   24673: *reserved*
 *   24674: ICP server **(UDP)**
 *   24680: LOCKSS Content Server (ServeContent)
-*   24681: PyWB Replay Engine
+*   24681: *reserved* Pywb replay engine
+*   24682: *reserved* OpenWayback replay engine

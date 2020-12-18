@@ -75,8 +75,6 @@ This step is not needed for Linux Mint 19.
 
 After taking pre-installation steps necessary for your particular Linux flavor, use these Apt commands to install Snap:
 
-Use these Apt commands to install Snap:
-
 ```bash
 sudo apt update
 
