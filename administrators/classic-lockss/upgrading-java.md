@@ -9,7 +9,7 @@ title: Upgrading to Java 8
 
 ## Upgrade instructions
 
-*This document outlines the upgrade process for CentOS/RHEL 7 only. For CentOS/RHEL 6 and below these instructions will not work. Please email lockss-support@lockss.org for further instructions.*
+***This document outlines the upgrade process for CentOS/RHEL 7 only. For CentOS/RHEL 6 and below these instructions will not work. Please email lockss-support@lockss.org for further instructions.***
 
 1.  Check the currently installed Java version:
     
@@ -23,9 +23,9 @@ title: Upgrading to Java 8
     
     If the output indicates a version number beginning with 1.7, Java 7 needs to be uninstalled and Java 8 installed. Example:
     
-        java version "1.7.0_261"
-        OpenJDK Runtime Environment (IcedTea 2.6.22) (Arch Linux build 7.u261_2.6.22-1-x86_64)
-        OpenJDK 64-Bit Server VM (build 24.261-b02, mixed mode)
+        java version "1.7.0_221"
+        OpenJDK Runtime Environment (rhel-2.6.18.0.el7_6-x86_64 u221-b02)
+        OpenJDK 64-Bit Server VM (build 24.221-b02, mixed mode)
 
 2.  Login as root (or gain root privilege)
 
