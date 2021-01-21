@@ -9,6 +9,8 @@ title: Upgrading to Java 8
 
 ## Upgrade instructions
 
+*This document outlines the upgrade process for CentOS/RHEL 7 only. For CentOS/RHEL 6 and below these instructions will not work. Please email lockss-support@lockss.org for further instructions.*
+
 1.  Check the currently installed Java version:
     
         java -version
@@ -29,10 +31,6 @@ title: Upgrading to Java 8
 
 3.  Stop the LOCKSS daemon:
     
-        # CentOS 6 and RHEL 6 variants:
-        service lockss stop
-        
-        # CentOS 7 and RHEL 7 variants:
         systemctl stop lockss
 
 4.  Uninstall Java 7; the two versions can live alongside each other but we recommend uninstalling Java 7:
@@ -53,9 +51,5 @@ title: Upgrading to Java 8
         java -version
 
 7.  Restart the LOCKSS daemon:
-    
-        # CentOS 6 and RHEL 6 variants:
-        service lockss start
-        
-        # CentOS 7 and RHEL 7 variants:
+
         systemctl start lockss
