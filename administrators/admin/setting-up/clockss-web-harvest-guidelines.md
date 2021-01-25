@@ -50,22 +50,22 @@ For harvest, the crawler needs to be able to collect content and have a point in
 
 
 
-*   [https://www.publisher.com/journals/xyz/12](https://www.publisher.com/journals/xyz/12)
-*   [https://www.publisher.journalid.com/content?year=2017](https://www.publisher.journalid.com/content?year=2017)
-*   [https://www.publisher.com/ebooks/isbn/97811111111](https://www.publisher.com/ebooks/isbn/97811111111)
-*   [https://www.publisher.com/ebooks?search&year=2017&order=newest_first](https://www.publisher.com/ebooks?search&year=2017&order=newest_first)
+*   https://www.publisher.com/journals/xyz/12
+*   https://www.publisher.journalid.com/content?year=2017
+*   https://www.publisher.com/ebooks/isbn/97811111111
+*   https://www.publisher.com/ebooks?search&year=2017&order=newest_first
 
 In some cases, such as when the website does not normally provide content in defined units, the start page might be an artificial manifest page provided for the purposes of preservation, such as:
 
 
 
-*   [https://www.publisher.com/xyz/lockss_manifest?volume=27](https://www.publisher.com/xyz/lockss_manifest?volume=27)
+*   https://www.publisher.com/xyz/lockss_manifest?volume=27
 
 Or, if the website supports an API, the crawler can generate a request that returns and XML response that can be parsed for a list of all the article URIs associated with a given set of content, such as:
 
 
 
-*   [https://www.publisher.com/api/search?type=data_sets&publication_start=2019-03-01&publication_end=2019-04-01](https://www.publisher.com/api/search?type=data_sets&publication_start=2019-03-01&publication_end=2019-04-01)
+*   https://www.publisher.com/api/search?type=data_sets&publication_start=2019-03-01&publication_end=2019-04-01
 
 
 ### Site behavior
