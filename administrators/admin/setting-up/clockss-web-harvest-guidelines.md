@@ -27,28 +27,33 @@ CLOCKSS can use web harvesters to programmatically discover and collect content 
 
 ### Permission statements
 
-There must be a permission statement for each domain serving substantive content. It is not required for CDN support for auxiliary files.
+In the majority of cases, there must be a permission statement for each domain serving substantive content.
 
-For open access content, the permission statement could be a legal Creative Commons license including the ‘rel=“license”’ attribute.
+The permission statement the CLOCKSS system is:
 
-Alternatively, and for subscription content, the permission statement needs to be:
+*  CLOCKSS system has permission to ingest, preserve, and serve this Archival Unit
 
+The permission statement for the Global LOCKSS Network is:
 
+*  LOCKSS system has permission to collect, preserve, and serve this Archival Unit
 
-*   CLOCKSS system has permission to ingest, preserve, and serve this Archival Unit
+The permission statements need not be visible and could be an html comment embedded in an appropriate web page.
 
-This does not need to be visible and could be a comment in the html of a web page.
+Note:
 
-When all the content at the site is open access, it is sufficient to have one permission statement somewhere under the domain.
+*  No permission statement is required for CDN support for auxiliary files.
 
-If all content is available for preservation, it is sufficient to have one permission statement somewhere under the domain instead of at the starting point for each set of content.
+*  For open access content, the permission statement could be a legal Creative Commons license including the ‘rel=“license”’ attribute.
+
+*  When all the content at the site is open access, it is sufficient to have one permission statement somewhere under the domain.
+
+*  If all content is available for preservation, it is sufficient to have one permission statement somewhere under the domain instead of at the starting point for each set of 
+content.
 
 
 ### Defined content sets and starting points for collection
 
 For harvest, the crawler needs to be able to collect content and have a point in time at which that collection is complete with a repeatable, defined set of components. The crawler needs to be able to determine a start URI or URIs for this content based on information unique to the content. This might be a URI defined by the domain, the journal identifier, and a particular volume or year, such as:
-
-
 
 *   https://www.publisher.com/journals/xyz/12
 *   https://www.publisher.journalid.com/content?year=2017
