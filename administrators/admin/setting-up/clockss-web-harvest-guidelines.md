@@ -4,7 +4,7 @@ title: CLOCKSS Web Harvest Guidelines
 ---
 
 
-_Version: May 2019_
+_Version: Feb 2021_
 
 _Archived: [https://lockss.github.io/clockss-web-harvest-guidelines](https://lockss.github.io/clockss-web-harvest-guidelines)_
 <!--![CLOCKSS Logo](/images/clockss-logo.png)-->
@@ -29,7 +29,7 @@ CLOCKSS can use web harvesters to programmatically discover and collect content 
 
 In the majority of cases, there must be a permission statement for each domain serving substantive content.
 
-The permission statement the CLOCKSS system is:
+The permission statement for the CLOCKSS system is:
 
 *  CLOCKSS system has permission to ingest, preserve, and serve this Archival Unit
 
@@ -45,10 +45,9 @@ Note:
 
 *  For open access content, the permission statement could be a legal Creative Commons license including the ‘rel=“license”’ attribute.
 
-*  When all the content at the site is open access, it is sufficient to have one permission statement somewhere under the domain.
-
-*  If all content is available for preservation, it is sufficient to have one permission statement somewhere under the domain instead of at the starting point for each set of 
-content.
+*  When all the content at the site is open access or available for preservation, it is 
+sufficient to have one permission statement somewhere under the domain instead of at the starting point
+for each set of content.
 
 
 ### Defined content sets and starting points for collection
