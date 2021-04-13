@@ -3,17 +3,4 @@ layout: page
 title: Downloading the LOCKSS Installer
 ---
 
-*This information applies to version 2.0-alpha2 of the LOCKSS system.*
-
-You can download the LOCKSS Installer from GitHub using a [Git](git) command:
-As the `lockss` user created in [system-pre-requisites](system-pre-requisites)
-
-```bash
-    git clone https://github.com/lockss/lockss-installer
-```
-
-You can then enter the `lockss-installer` directory:
-
-```bash
-    cd lockss-installer
-```
+**This page has moved to <https://lockss.readthedocs.io/projects/manual/en/2.0-alpha2/installing/lockss-installer.html>**

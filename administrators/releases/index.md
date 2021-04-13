@@ -14,13 +14,13 @@ title: Releases
 
 ## Development
 
-*   [LOCKSS 2.0-alpha3](2.0-alpha3) (2020-10-29)
+*   [LOCKSS 2.0-alpha3](https://lockss.readthedocs.io/projects/manual/en/2.0-alpha3/) (2020-10-29)
 
-*   [LOCKSS 2.0-alpha2](2.0-alpha2) (2020-02-06)
+*   [LOCKSS 2.0-alpha2](https://lockss.readthedocs.io/projects/manual/en/2.0-alpha2/) (2020-02-06)
 
-*   [LOCKSS 2.0-alpha1](2.0-alpha1) (2019-05-13)
+*   [LOCKSS 2.0-alpha1](https://lockss.readthedocs.io/projects/manual/en/2.0-alpha1/) (2019-05-13)
 
-*   [LOCKSS 2.0-alpha technology preview](2.0-alpha-preview) (2019-04-05)
+*   [LOCKSS 2.0-alpha technology preview](https://lockss.readthedocs.io/projects/manual/en/2.0-alpha-preview/) (2019-04-05)
 
 ## Archive
 

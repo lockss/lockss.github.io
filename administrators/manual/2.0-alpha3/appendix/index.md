@@ -3,7 +3,4 @@ layout: page
 title: Appendix
 ---
 
-*This information applies to version 2.0-alpha3 of the LOCKSS system.*
-
-1.  [**Network Ports**](ports)
-1.  [**Using MicroK8s**](microk8s)
+**This page has moved to <https://lockss.readthedocs.io/projects/manual/en/2.0-alpha3/appendix/index.html>**

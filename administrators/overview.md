@@ -28,11 +28,3 @@ The LOCKSS system can interoperate with these components:
     *   [Pywb](https://github.com/webrecorder/pywb): the state-of-the-art Web replay engine from [Webrecorder.io](https://webrecorder.io/)
 
     *   [OpenWayback](https://github.com/iipc/openwayback): the Web replay engine developed by the [IIPC](http://netpreserve.org/) community
-
-*   Web archive front-ends *(coming soon)*
-
-    *   [Shine](https://github.com/ukwa/shine) *(coming soon)*
-
-    *   [SolrWayback](https://github.com/netarchivesuite/solrwayback) *(coming soon)*
-
-    *   [Warclight](https://github.com/archivesunleashed/warclight) *(coming soon)*

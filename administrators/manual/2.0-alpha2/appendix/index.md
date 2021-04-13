@@ -3,6 +3,4 @@ layout: page
 title: Appendix
 ---
 
-*This information applies to version 2.0-alpha2 of the LOCKSS system.*
-
-1.  [**Network Ports**](ports)
+**This page has moved to <https://lockss.readthedocs.io/projects/manual/en/2.0-alpha2/appendix/index.html>**

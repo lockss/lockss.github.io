@@ -17,10 +17,7 @@ The current [stable release](administrators/index#stable) of the LOCKSS daemon i
 
 ## LOCKSS 2.0 Documentation
 
-The current development release of LOCKSS 2.0 is **LOCKSS 2.0-alpha3**, released on 2020-10-29.
-
-*   For release notes and information about LOCKSS 2.0-alpha3, please see the [LOCKSS 2.0-alpha3](administrators/releases/2.0-alpha3) release page.
-*   For installation and configuration information, please see the [LOCKSS 2.0-alpha3 System Manual](administrators/manual/2.0-alpha3)
+The current development release of LOCKSS 2.0 is **LOCKSS 2.0-alpha3**, released on 2020-10-29. For installation and configuration information, please see <https://lockss.readthedocs.io/projects/manual/en/2.0-alpha3/>.
 
 ## LOCKSS Network Documentation
 
