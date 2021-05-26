@@ -13,7 +13,7 @@ This document takes a look at the steps needed to secure the LOCKSS admin interf
 
 The first thing you must do is gather information regarding your server and your organization. This information is used to create the Keystore and Key pair, which is then used to create a CSR (Certificate Signing Request). Below is a picture of a chart used to gather this information. Some of the fields have recommended values prepopulated.
 
-<img src="./images/lockssSystemValues-SSL.png" border="1" />
+<img src="./images/lockssSystemValues-SSL.png"/>
 
 _Please do NOT use “examplePass” as your Keystore and Key password. It is only shown here as an example. However, We do suggest keeping the Keystore password and the Key password the same for simplicity (You could make them two different passwords if you choose, or if your organization suggests doing so)._
 
