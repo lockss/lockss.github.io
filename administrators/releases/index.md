@@ -9,10 +9,12 @@ title: Releases
 
 ## Upcoming
 
-*   LOCKSS 2.0-alpha5
+*   LOCKSS 2.0-beta1
 *   LOCKSS Daemon 1.76
 
 ## Development
+
+*   [LOCKSS 2.0-alpha5](https://lockss.readthedocs.io/projects/manual/en/2.0-alpha5/) (2021-12-17)
 
 *   [LOCKSS 2.0-alpha4](https://lockss.readthedocs.io/projects/manual/en/2.0-alpha4/) (2021-06-28)
 

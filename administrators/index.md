@@ -15,6 +15,6 @@ title: Administrators
 
 ## News
 
-*   **2021-06-28** - **LOCKSS 2.0-alpha4 Available for Testing** - The LOCKSS Program is pleased to announce that LOCKSS 2.0-alpha4 is now available for testing. [**Read more...**](https://lockss.readthedocs.io/projects/manual/en/2.0-alpha4/)
+*   **2021-12-17** - **LOCKSS 2.0-alpha5 Available for Testing** - The LOCKSS Program is pleased to announce that LOCKSS 2.0-alpha5 is now available for testing. [**Read more...**](https://lockss.readthedocs.io/projects/manual/en/2.0-alpha5/)
 
-*   **2020-10-29** - **LOCKSS 2.0-alpha3 Available for Testing** - The LOCKSS Program is pleased to announce that LOCKSS 2.0-alpha3 is now available for testing. [**Read more...**](https://lockss.readthedocs.io/projects/manual/en/2.0-alpha3/)
+*   **2021-06-28** - **LOCKSS 2.0-alpha4 Available for Testing** - The LOCKSS Program is pleased to announce that LOCKSS 2.0-alpha4 is now available for testing. [**Read more...**](https://lockss.readthedocs.io/projects/manual/en/2.0-alpha4/)
