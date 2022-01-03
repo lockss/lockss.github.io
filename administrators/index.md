@@ -3,7 +3,7 @@ layout: page
 title: Administrators
 ---
 
-## [Releases](releases)
+## [Releases](https://lockss.readthedocs.io/en/latest/releases.html)
 
 ## [Classic LOCKSS System Manual](classic-lockss)
 
