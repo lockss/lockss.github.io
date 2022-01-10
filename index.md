@@ -11,7 +11,7 @@ A complete list of our guides may be found in our [Administrators](administrator
 
 ## Classic LOCKSS Documentation
 
-The latest [stable release](https://lockss.readthedocs.io/en/latest/releases.html#stable-releases) of the LOCKSS daemon is **LOCKSS 1.75.8**, released on 2021-12-06.
+The latest [stable release](https://lockss.readthedocs.io/en/latest/releases.html#stable-releases) of the LOCKSS daemon is **LOCKSS 1.75.9**, released on 2022-01-10.
 
 *   For the complete guide, please see the [Classic LOCKSS System Manual](administrators/classic-lockss/)
 
