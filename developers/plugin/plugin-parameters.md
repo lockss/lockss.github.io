@@ -287,14 +287,14 @@ Definitional parameters give an AU its identity -- change the value for a defini
 #### Numeric Issue Range
 
 *   Parameter key: `num_issue_range`
-*   Parameter type: numeric range (`7`)
+*   Parameter type: numeric range (`8`)
 
 ```xml
       <org.lockss.daemon.ConfigParamDescr>
-        <key>issue_range</key>
-        <type>7</type>
-        <displayName>Issue Range</displayName>
-        <description>A Range of issues in the form: aaa-zzz</description>
+        <key>num_issue_range</key>
+        <displayName>Numeric Issue Range</displayName>
+        <description>A Range of issues in the form: min-max</description>
+        <type>8</type>
         <size>20</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>

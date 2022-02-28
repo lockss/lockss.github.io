@@ -36,7 +36,7 @@ This manual groups plugin components into conceptual categories:
 *   **[Identifying elements](#identifying-elements)**: elements related to the identification, versioning and parameterization of the plugin.
 *   **[Crawl control](#crawl-control)**: components related to the definition and behavior of content crawls.
 *   **[Crawl validation](#crawl-validation)**: components related to content validation in the context of a crawl.
-*   **[Poll control](#poll-control)**: components related to the definition and behavior of content crawls.
+*   **[Poll control](#poll-control)**: elements that influence the operation of the LOCKSS audit and repair protocol.
 *   **[Hash filters](#hash-filters)**: components related to content canonicalization for inter-node comparison purposes.
 *   **[Metadata extraction](#metadata-extraction)**: components related to the extraction and interpretation of metadata from preserved content.
 *   **[Web replay](#web-replay)**: components related to supporting the replay of Web content.
