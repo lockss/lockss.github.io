@@ -9,9 +9,7 @@ title: Introduction to Hash Filters
 
 ## Key
 
-Key: `<mediatype>_hash_filter_factory` (for example `text/html_hash_filter_factory`)
-
-Deprecated key: `<mediatype>_filter_factory`
+Key: `<mediatype>_filter_factory` (for example `text/html_filter_factory`)
 
 ## Value Type
 
