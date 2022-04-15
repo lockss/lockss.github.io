@@ -9,9 +9,8 @@ LOCKSS software into a suite of REST services.
 
 ## REST APIs
 
-**Parts of this section have moved to <https://lockss.readthedocs.io/en/latest/developers/apis/index.html>**
+**Most of this section has moved to <https://lockss.readthedocs.io/en/latest/developers/apis/index.html>**
 
-*   [LOCKSS Poller Service REST API](apis/lockss-poller-service.html)
 *   [LOCKSS Crawler Service REST API](apis/lockss-crawler-service.html)
 
 ## See Also
