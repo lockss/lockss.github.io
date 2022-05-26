@@ -3,15 +3,17 @@ layout: page
 title: Enable OJS Platform for Preservation in LOCKSS or CLOCKSS
 ---
 
-Once an agreement is reached with LOCKSS reguarding preservation, settings within the OJS Administrative 
+Once an agreement is reached regarding preservation, settings within the OJS Administrative 
 interface make it possible for collection and preservation through the 
 LOCKSS Global Network or the CLOCKSS Network.
 
 For more information contact us at: <a href="https://www.lockss.org/contact">https://www.lockss.org/contact</a>
 
-### OJS 2.X.X
+## OJS 2.X.X
 
-Configuring OJS v2.X.X content for CLOCKSS/LOCKSS preservation:
+OJS 2.x is retired and is not recommended for ongoing use. Please upgrade to OJS 3.x. For more information see <a href="https://pkp.sfu.ca/ojs/ojs_download/">https://pkp.sfu.ca/ojs/ojs_download/</a>.
+
+### Configuring OJS v2.X.X content for CLOCKSS/LOCKSS preservation:
 
 1. Go to the Journal Management screen for each journal and click "Journal Setup".
 2. Select the second item, "Policies".
@@ -28,24 +30,24 @@ were not saved properly. Otherwise, you will see a LOCKSS-related page with the 
 which should appear towards the bottom of the page.
 
 
-### OJS 3.X.X
+## OJS 3.X.X
 
-We recommend using a recent stable version of OJS3, OJS v3.1.3 at minimum. <a href="https://pkp.sfu.ca/ojs/ojs_download/">https://pkp.sfu.ca/ojs/ojs_download/</a>
+We recommend using a recent stable version of OJS3, OJS v3.1.3 at minimum. For more information see <a href="https://pkp.sfu.ca/ojs/ojs_download/">https://pkp.sfu.ca/ojs/ojs_download/</a>.
 
-#### Known Issues
+### Known Issues
 
-##### OJS v3.1.2.1 
+#### OJS v3.1.2.1 
 
 This version of OJS has a bug in the permission statement for the GLN. Please upgrade to a more recent version, OJS v3.1.3 or higher. If that is not an option, it may be possible to manually correct the permission statement.
 
-##### OJS v3.1.1.X and before
+#### OJS v3.1.1.X and before
 
 These versions of OJS3 are not enabled for preservation in either CLOCKSS or the GLN. Please upgrade to a more recent version, OJS v3.1.3 or higher, or apply a patch before enabling CLOCKSS &/or LOCKSS preservation.
 
 The information we have is that a potential fix can be found at: 
 <a href="https://github.com/pkp/ojs/pull/2215/commits/22f1d220">https://github.com/pkp/ojs/pull/2215/commits/22f1d220</a>.
 
-#### Configuring OJS v3.X.X content for LOCKSS/CLOCKSS preservation:
+### Configuring OJS v3.X.X content for LOCKSS/CLOCKSS preservation:
 1. View the <a href="https://docs.pkp.sfu.ca/learning-ojs/en/settings-distribution">Distribution Settings</a> section of the administrative interface.
 2. On the <a href="https://docs.pkp.sfu.ca/learning-ojs/en/settings-distribution#archiving">Archiving tab</a>, check the boxes to "Enable LOCKSS" &/or "Enable 
 CLOCKSS" as desired.
