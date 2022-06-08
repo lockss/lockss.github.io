@@ -37,8 +37,9 @@ see <a href="https://pkp.sfu.ca/ojs/ojs_download/">https://pkp.sfu.ca/ojs/ojs_do
 
 #### OJS 3.1.2.1 
 
-This version of OJS has a bug in the permission statement for the GLN. Please upgrade to a more recent version, 
-OJS 3.1.3 or higher. If that is not an option, it may be possible to manually correct the permission statement.
+This version of OJS has an incorrect permission statement for the GLN. Please upgrade to a more recent version, 
+OJS 3.1.3 or higher. If that is not an option, it may be possible to manually correct the permission statement. 
+The correct permission statement for the GLN is: LOCKSS system has permission to collect, preserve, and serve this Archival Unit.
 
 #### OJS 3.1.1.X and before
 
