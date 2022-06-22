@@ -104,9 +104,9 @@ For an accurate evaluation, please deliver the following:
 
 
 
- - [ ] a description of the file structure: flat directory? directory tree? zip or tar file? How many levels deep is the file structure?
+ - [ ] a description of the file structure: flat directory or directory tree? zip or tar file? How many levels deep is the file structure?
  - [ ] a description of the relationship between the metadata files and the content files: Is there one metadata file for each content file (1:1) or is there one metadata file for multiple content files (1:M)? Are metadata and content files in the same directory or seperated?
- - [ ] the schema of valid XML files (if used): JATS 2, JATS 3, Crossref 2, Crossref 3, ONIX 2, ONIX 3, NLM, or custom schema?
+ - [ ] the XML schema, for example: JATS 2, JATS 3, Crossref 2, Crossref 3, ONIX 2, ONIX 3, NLM, or other schema?
 
 
 #### Sample content
