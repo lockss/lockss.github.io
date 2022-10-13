@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Classic LOCKSS System Manual
+title: LOCKSS 1.x System Manual
 ---
 
 *This information applies to the classic LOCKSS daemon (version 1.x).*

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: LOCKSS Network Admin Guide
+title: LOCKSS Network Administrator Guide
 ---
 
 This guide is under construction. It will document [LOCKSS](https://www.lockss.org/) network setup and administration, content processing operations, and more.
