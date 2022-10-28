@@ -5,15 +5,15 @@ title: Home
 
 The LOCKSS Documentation Portal is being migrated from GitHub Pages to Read the Docs.
 
-Please visit [https://lockss.readthedocs.io/](https://lockss.readthedocs.io/) for the following information and more:
+Please visit [https://docs.lockss.org/](https://docs.lockss.org/) for the following information and more:
 
-*   [**Releases**](https://lockss.readthedocs.io/en/latest/releases.html)
+*   [**Releases**](https://docs.lockss.org/en/latest/releases.html)
 
-*   [**Security**](https://lockss.readthedocs.io/en/latest/security)
+*   [**Security**](https://docs.lockss.org/en/latest/security)
 
-*   [**LOCKSS 2.x System Manual**](https://lockss.readthedocs.io/projects/manual)
+*   [**LOCKSS 2.x System Manual**](https://docs.lockss.org/projects/manual)
 
-*   [**LOCKSS Plugin Developer Guide**](https://lockss.readthedocs.io/en/latest/plugin)
+*   [**LOCKSS Plugin Developer Guide**](https://docs.lockss.org/en/latest/plugin)
 
 This site still contains:
 
