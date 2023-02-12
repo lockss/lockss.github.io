@@ -104,6 +104,6 @@ Enable IP address access to all content you wish preserved:
 *   156.56.241.164 located at Indiana University
 *   156.56.241.166 located at Indiana University
 
-Note that you may need to separate these IP addresses from the Rice, Indiana, and Stanford subscription records and set up a new CLOCKSS subscription. These IP addresses are used for all development and testing as well as preservation for the CLOCKSS Archive.
+Note that you may need to separate these IP addresses from the Rice, Indiana, and Stanford subscription records and set up a new CLOCKSS subscription. These IP addresses are used for all development and testing as well as preservation for the CLOCKSS Archive. Contact us for information about how to configure IP Registry.
 
 
