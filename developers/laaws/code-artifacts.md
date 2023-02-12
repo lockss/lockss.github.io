@@ -3,7 +3,7 @@ layout: page
 title: Code Artifacts
 ---
 
-**This page is not currently up to date. We are working on migrating this information to the new LOCKSS Documentation Portal at <https://lockss.readthedocs.io/>**
+**This page is not currently up to date. We are working on migrating this information to the new LOCKSS Documentation Portal at <https://docs.lockss.org/>**
 
 The Maven code artifacts of the LOCKSS software are:
 
