@@ -94,16 +94,18 @@ Or, if the website supports an API, the crawler can generate a request that retu
 
 ### IP Addresses
 
-Enable IP address access to all content you wish preserved:
+The following CLOCKSS IP addresses need to be enabled to access the full text of the content to be preserved:
 
 
-
-*   171.66.236.0/24 (171.66.236.0 through 171.66.236.255) located at Stanford University
-*   128.42.174.11 located at Rice University
-*   128.42.174.12 located at Rice University
-*   156.56.241.164 located at Indiana University
-*   156.56.241.166 located at Indiana University
-
-Note that you may need to separate these IP addresses from the Rice, Indiana, and Stanford subscription records and set up a new CLOCKSS subscription. These IP addresses are used for all development and testing as well as preservation for the CLOCKSS Archive. Contact us for information about how to configure IP Registry.
+*   171.66.236.0/24 (i.e. 171.66.236.0 through 171.66.236.255) Stanford University
+*   128.42.174.11 Rice University
+*   128.42.174.12 Rice University
+*   156.56.241.164 Indiana University
+*   156.56.241.166 Indiana University
 
 
+Note: If you use IP Registry to manage IP access to your site, please enable access to two organizations via the IP Registry: LOCKSS Program and CLOCKSS Archive.
+
+The LOCKSS Program contains the range at Stanford University from which most of our operations occur, and the CLOCKSS Archive contains the remaining 4 necessary IP addresses located at two of our network nodes.
+
+To be clear, content will only be included in the CLOCKSS archive. If you would like your content to also be included in the Global LOCKSS Network please reach out to lockss-publishers@lockss.org.
