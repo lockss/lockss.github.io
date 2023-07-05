@@ -90,7 +90,7 @@ Please establish and implement standards for:
  - [ ] uniquely-named deliveries; and 
  - [ ] a defined schedule: annually, monthly, or continually.
 
-> Note: if a standard part of your delivery process is email delivery notifications, we will provide an email alias.
+> Note: If you can make delivery notifications part of your delivery process, we will provide a custom email alias.
 
 
 ## Evaluation
