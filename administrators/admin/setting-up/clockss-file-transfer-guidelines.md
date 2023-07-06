@@ -90,7 +90,7 @@ Please establish and implement standards for:
  - [ ] uniquely-named deliveries; and 
  - [ ] a defined schedule: annually, monthly, or continually.
 
-> Note: We can provide a custom email alias for your detailed delivery manifest. (Not required, but very valuable.)
+> Note: We can provide a custom email alias for your detailed delivery manifest (highly recommended).
 
 
 ## Evaluation
