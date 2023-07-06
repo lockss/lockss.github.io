@@ -3,7 +3,7 @@ layout: page
 title: CLOCKSS File Transfer Guidelines
 ---
 
-_Version: 2/10/2020_
+_Version: 07/06/2023_
 
 _Archived: [https://lockss.github.io/clockss-file-transfer-guidelines](https://lockss.github.io/clockss-file-transfer-guidelines)_
 <!--![CLOCKSS Logo](/images/clockss-logo.png)-->
@@ -80,8 +80,8 @@ We accept data:
 
 
 
- - [ ] pushed to our CLOCKSS FTP server (CLOCKSS SFTP coming soon); or 
- - [ ] which we can pull from FTP or SFTP servers. We have some ability to pull from an AWS bucket, rsync target, or other custom source.
+ - [ ] pushed to our CLOCKSS FTP server (using either FTP or SFTP); or 
+ - [ ] which we can pull from FTP servers. We have some ability to pull from an AWS bucket, rsync target, or other custom source.
 
 Please establish and implement standards for: 
 
