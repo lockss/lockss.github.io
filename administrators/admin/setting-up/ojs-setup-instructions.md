@@ -34,6 +34,10 @@ CLOCKSS" as desired.
 3. To review the manifest page, click on "Publisher Manifest" next to the check boxes. 
 The resulting page should show a listing of your journal issues.
 
+### Configuring OJS 3.X content for PKP Preservation Network (PN):
+
+Instructions for configuring OJS for PN can be found at: <a href="https://docs.pkp.sfu.ca/pkp-pn/en/">https://docs.pkp.sfu.ca/pkp-pn/en/</a>.
+
 
 ## OJS 2.X
 
@@ -47,11 +51,11 @@ OJS 2.X is retired and is not recommended for ongoing use. Please upgrade to OJS
 4. Check the box "Enable LOCKSS..." to turn on the LOCKSS feature.
 5. In text box beneath, type in the following sentence exactly as written: CLOCKSS system has permission to 
 ingest, preserve, and serve this Archival Unit
-6. Save your changes.
-7. Verify changes by going to front page of your journal(s) in your browser:
+6. Save the changes.
+7. Verify changes by going to front page of the journal(s) in your browser:
 8. Edit the URL in your browser URL bar (if applicable, delete the word 'index' from the very end of the 
 URL) so that it ends with /gateway/lockss. (If you are redirected back to the front page, the configuration changes 
 were not saved properly. Otherwise, you will see a LOCKSS-related page with the LOCKSS logo.)
-9. Verify CLOCKSS by going to About and to Editorial Policies. Search for the CLOCKSS permission statement, 
+9. Verify CLOCKSS by going to the "About" page and then to the "Editorial Policies" section. Search for the CLOCKSS permission statement, 
 which should appear towards the bottom of the page.
 
