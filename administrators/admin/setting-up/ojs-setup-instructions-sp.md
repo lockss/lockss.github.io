@@ -37,7 +37,7 @@ Un posible parche se puede encontrar en: <a href="https://github.com/pkp/ojs/pul
 2. En la pestaña de <a href="https://docs.pkp.sfu.ca/learning-ojs/en/settings-distribution#archiving">Archiving</a>, marque las casillas para "Enable LOCKSS" y/o "Enable CLOCKSS" según sea necesario.
 3. Para revisar la página de manifiesto, haga clic en "Publisher Manifest" junto a las casillas de verificación. La página resultante debería mostrar una lista de los problemas de su revista.
 
-###Configuración del contenido de OJS 3.X para la Red de Preservación de PKP (PN):
+### Configuración del contenido de OJS 3.X para la Red de Preservación de PKP (PN):
 
 Las instrucciones para configurar OJS para la PN se encuentran en: <a href="https://docs.pkp.sfu.ca/pkp-pn/en/">https://docs.pkp.sfu.ca/pkp-pn/en/</a>.
 
