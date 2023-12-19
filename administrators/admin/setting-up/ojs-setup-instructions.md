@@ -36,7 +36,7 @@ The resulting page should show a listing of your journal issues.
 
 ### Configuring OJS 3.X content for PKP Preservation Network (PN):
 
-Instructions for configuring OJS for PN can be found at: <a href="https://docs.pkp.sfu.ca/pkp-pn/en/">https://docs.pkp.sfu.ca/pkp-pn/en/</a>.
+Instructions for configuring OJS for PN can be found at: <a href="https://docs.pkp.sfu.ca/pkp-pn/">https://docs.pkp.sfu.ca/pkp-pn/</a>.
 
 
 ## OJS 2.X
