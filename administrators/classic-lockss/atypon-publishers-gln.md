@@ -24,6 +24,7 @@ The Atypon publishing platform requires librarians to register the Global LOCKSS
 * Federation of American Societies for Experimental Biology
 * Future Medicine
 * Future Science
+* Geological Society of London
 * Inderscience
 * Liverpool University Press
 * Mark Allen Group
@@ -35,5 +36,4 @@ The Atypon publishing platform requires librarians to register the Global LOCKSS
 * Royal Society Publishing
 * SAGE Publications
 * Society for Industrial and Applied Mathematics
-* Wageningen Academic Publishers
 * Taylor & Francis
