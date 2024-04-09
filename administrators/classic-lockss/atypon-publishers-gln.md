@@ -37,36 +37,3 @@ The Atypon publishing platform requires librarians to register the Global LOCKSS
 * Society for Industrial and Applied Mathematics
 * Wageningen Academic Publishers
 * Taylor & Francis
-
-<!--
-### Past publishers -- before July 2019:
-
-<!--tdbout -D -t plugin -Q 'plugin ~ "typon"' tdb/prod/*.tdb | sort -u-->
-
-* Allen Press
-* BioOne
-* Emerald Group Publishing
-* Endocrine Society
-* MultiScience
-
-### Past publishers -- before November 2020:
-
-* American Meteorological Society
-* American Dental Society of Anesthesiology
-* American Podiatric Medical Association
-* Endocrine Society
-* Federation of American Societies for Experimental Biology
-* HBKU Press
-
-### Past publishers -- before May 2022:
-
-* Accreditation Council for Graduate Medical Education
-* American Roentgen Ray Society
-* Liverpool University Press
-
-### Past publishers -- before April 2024:
-
-* American Thoracic Society
-* British Editorial Society of Bone and Joint Surgery
-
--->
