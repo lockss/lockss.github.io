@@ -29,13 +29,21 @@ CLOCKSS can use web harvesters to programmatically discover and collect content 
 
 In the majority of cases, there must be a permission statement for each domain serving substantive content.
 
-The permission statement for the CLOCKSS system is:
+The standard CLOCKSS permission statement is:
 
 *  CLOCKSS system has permission to ingest, preserve, and serve this Archival Unit
 
-The permission statement for the Global LOCKSS Network is:
+The open access CLOCKSS permission statement is:
+
+*  CLOCKSS system has permission to ingest, preserve, and serve this open access Archival Unit
+
+The standard Global LOCKSS Network permission statement is:
 
 *  LOCKSS system has permission to collect, preserve, and serve this Archival Unit
+
+The open-access Global LOCKSS Network permission statement is:
+
+*  LOCKSS system has permission to collect, preserve, and serve this open access Archival Unit
 
 The permission statements need not be visible and could be an html comment embedded in an appropriate web page.
 
@@ -47,7 +55,7 @@ Note:
 
 *  When all the content at the site is open access or available for preservation, it is 
 sufficient to have one permission statement somewhere under the domain instead of at the starting point
-for each set of content.
+for each set or volume or year of content.
 
 
 ### Defined content sets and starting points for collection
