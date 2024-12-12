@@ -1,6 +1,6 @@
 ---
 layout: page
-title: CLOCKSS Web Harvest Guidelines
+title: LOCKSS Program Web Harvest Guidelines
 ---
 
 
@@ -12,7 +12,7 @@ _Archived: [https://lockss.github.io/clockss-web-harvest-guidelines](https://loc
 
 ## Overview
 
-CLOCKSS can use web harvesters to programmatically discover and collect content from your website. In order to support this method of preservation, the following general conditions must be met:
+The LOCKSS software can use web harvesters to programmatically discover and collect content from your website. In order to support this method of preservation, the following general conditions must be met:
 
 
 
@@ -27,7 +27,9 @@ CLOCKSS can use web harvesters to programmatically discover and collect content 
 
 ### Permission statements
 
-In the majority of cases, there must be a permission statement for each domain serving substantive content.
+In the majority of cases, there must be a permission statement for each domain serving substantive content. 
+The permission statement(s) need not be visible and could be an html comment embedded in an appropriate web page.
+The permission statement(s) should appear conditionally depending on if the crawler has access to content.
 
 The standard CLOCKSS permission statement is:
 
@@ -45,7 +47,6 @@ The open-access Global LOCKSS Network permission statement is:
 
 *  LOCKSS system has permission to collect, preserve, and serve this open access Archival Unit
 
-The permission statements need not be visible and could be an html comment embedded in an appropriate web page.
 
 Note:
 
