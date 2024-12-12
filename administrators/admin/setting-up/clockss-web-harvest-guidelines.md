@@ -4,7 +4,7 @@ title: CLOCKSS Web Harvest Guidelines
 ---
 
 
-_Version: Feb 2021_
+_Version: Dec 2024_
 
 _Archived: [https://lockss.github.io/clockss-web-harvest-guidelines](https://lockss.github.io/clockss-web-harvest-guidelines)_
 <!--![CLOCKSS Logo](/images/clockss-logo.png)-->
@@ -95,7 +95,7 @@ Or, if the website supports an API, the crawler can generate a request that retu
 
 
 
-*   For scholarly publication content, such as articles or books, you need to provide basic bibliographic metadata in a non-proprietary machine-readable format, such as the HTML metadata tags, RIS, or XML files.
+*   For scholarly publication content, such as articles or books, please provide basic bibliographic metadata in a non-proprietary machine-readable format, such as the HTML metadata tags, RIS, or XML files.
 *   The metadata for scholarly content should include: DOI, publication, publication date, ISSN or ISBN and as appropriate: publication title, item title, series title, volume, issue and page number.
 *   For items other scholarly published content, the metadata should provide enough information to uniquely identify the item - DOI if applicable or proprietary identifier, provider and so forth.
 
@@ -116,4 +116,3 @@ Note: If you use IP Registry to manage IP access to your site, please enable acc
 
 The LOCKSS Program contains the range at Stanford University from which most of our operations occur, and the CLOCKSS Archive contains the remaining 4 necessary IP addresses located at two of our network nodes.
 
-To be clear, content will only be included in the CLOCKSS archive. If you would like your content to also be included in the Global LOCKSS Network please reach out to lockss-publishers@lockss.org.
