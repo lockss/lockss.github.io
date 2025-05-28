@@ -32,7 +32,7 @@ title: LOCKSS 1.x System Manual
      - [Integrate with WebBridge (PDF)](/assets/WebBridge_LR_Integration_Guide.pdf)
 
 1. ### Appendix
-   1. [LCAP over SSL](/assets/LCAP_over_SSL.docx)
+   1. [LCAP over SSL](/assets/LCAP_over_SSL.pdf)
    2. [Metadata Database (external link)](http://documents.clockss.org/index.php?title=LOCKSS:_Metadata_Database)
    3. [Software Overview and Config (external link)](http://www.adpn.org/wiki/LOCKSS_Software)
    4. [Security](/security-practices)
