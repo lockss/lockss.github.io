@@ -107,7 +107,7 @@ _Do not accept the default value – enter the Preservation group(s) you listed 
 25.  Compare your settings with your Installation Checklist.  If it’s OK, press Y to save the LOCKSS configuration you have just created.  Otherwise, press N and you will be taken back to the beginning.
 26.  After confirming the configuration, you’ll be asked to confirm the creation of your content storage directory(s), /var/log/lockss, and /cache0/gamma/tmp – answer Y to all questions.
 27.  Start the LOCKSS daemon 
-  - RHEL7 Linux Variants: “systemctl start lockss”
+  - RHEL7 (or newer) Linux Variants: “systemctl start lockss”
   - RHEL6 Linux Variants:  “service lockss start” 
 
 
@@ -115,12 +115,10 @@ _Do not accept the default value – enter the Preservation group(s) you listed 
 
 The LOCKSS daemon starts automatically when the LOCKSS server is booted.
 
-
 Go to the computer you want to use the Web Administrative UI from.  Open an Internet Browser, enter the Fully Qualified Hostname from your Installation Checklist into the address bar, and then add on “:8081” to the end.  
 
 When you connect, you should be challenged for a username and password:
 
+Enter the Web Administrative User (we used "lockss" in our example above), and enter the Web Administrative UI password you listed in the Installation Checklist.  Click on the OK button, and you should see the Web Administrative UI home page that looks something like this:
 
-
-
-Enter the username as “lockss” and enter the Web Administrative UI password you listed in the Installation Checklist.  Click on the OK button, and you should see the Web Administrative UI home page that looks something like this:
+<img src="../images/lockssHomepage.png" border="1" />
