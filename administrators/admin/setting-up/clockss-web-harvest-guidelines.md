@@ -109,8 +109,14 @@ The following CLOCKSS IP addresses need to be enabled to access the full text of
 *   171.66.236.0/24 (i.e. 171.66.236.0 through 171.66.236.255) Stanford University
 *   128.42.174.11 Rice University
 *   128.42.174.12 Rice University
+*   128.42.151.15 Rice University
+*   128.42.151.16 Rice University
 *   156.56.241.164 Indiana University
 *   156.56.241.166 Indiana University
+*   129.215.128.111 University of Edinburgh
+*   129.215.128.112 University of Edinburgh
+*   129.215.128.113 University of Edinburgh
+*   129.215.128.114 University of Edinburgh
 
 
 Note: If you use IP Registry to manage IP access to your site, please enable access to two organizations via the IP Registry: LOCKSS Program and CLOCKSS Archive.
