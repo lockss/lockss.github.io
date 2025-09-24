@@ -119,7 +119,5 @@ The following CLOCKSS IP addresses need to be enabled to access the full text of
 *   129.215.128.114 University of Edinburgh
 
 
-Note: If you use IP Registry to manage IP access to your site, please enable access to two organizations via the IP Registry: LOCKSS Program and CLOCKSS Archive.
-
-The LOCKSS Program contains the range at Stanford University from which most of our operations occur, and the CLOCKSS Archive contains the remaining 4 necessary IP addresses located at two of our network nodes.
+Note: If you use IP Registry to manage IP access to your site, please enable access to two organizations via the IP Registry: LOCKSS Program and CLOCKSS Archive. The LOCKSS Program contains the range at Stanford University from which most of our operations occur, and the CLOCKSS Archive contains the other necessary IP addresses located at our network nodes.
 
