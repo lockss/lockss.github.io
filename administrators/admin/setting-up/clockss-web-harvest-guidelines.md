@@ -107,8 +107,6 @@ The following CLOCKSS IP addresses need to be enabled to access the full text of
 
 
 *   171.66.236.0/24 (i.e. 171.66.236.0 through 171.66.236.255) Stanford University
-*   128.42.174.11 Rice University
-*   128.42.174.12 Rice University
 *   128.42.151.15 Rice University
 *   128.42.151.16 Rice University
 *   156.56.241.164 Indiana University
