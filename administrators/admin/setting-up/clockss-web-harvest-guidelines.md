@@ -4,7 +4,7 @@ title: LOCKSS Program Web Harvest Guidelines
 ---
 
 
-_Version: Sept 2025_
+_Version: April 2026_
 
 _Archived: [https://lockss.github.io/clockss-web-harvest-guidelines](https://lockss.github.io/clockss-web-harvest-guidelines)_
 <!--![CLOCKSS Logo](/images/clockss-logo.png)-->
